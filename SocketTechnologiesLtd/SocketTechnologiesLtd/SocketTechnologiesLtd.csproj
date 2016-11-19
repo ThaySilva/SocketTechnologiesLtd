@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B848AC9E-E0D8-48E7-9902-95B1D171C528}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SocketTechnologiesLtd</RootNamespace>
+    <AssemblyName>SocketTechnologiesLtd</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\ACC_Department\AccDep_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ACC_Department\AccDep_Form.designer.cs">
+      <DependentUpon>AccDep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ACC_Department\CustomerPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ACC_Department\CustomerPayment.designer.cs">
+      <DependentUpon>CustomerPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ACC_Department\InvoiceOut_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ACC_Department\InvoiceOut_Form.designer.cs">
+      <DependentUpon>InvoiceOut_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ACC_Department\PS_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ACC_Department\PS_Form.Designer.cs">
+      <DependentUpon>PS_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\AddCustomer.designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\COE_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\COE_Form.designer.cs">
+      <DependentUpon>COE_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\CreateAFieldRequestResponse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\CreateAFieldRequestResponse.designer.cs">
+      <DependentUpon>CreateAFieldRequestResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\createScrapNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\createScrapNote.designer.cs">
+      <DependentUpon>createScrapNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\CSDep_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\CSDep_Form.designer.cs">
+      <DependentUpon>CSDep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\CusCreditNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\CusCreditNote.designer.cs">
+      <DependentUpon>CusCreditNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\Cust_Purchase_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\Cust_Purchase_Order.designer.cs">
+      <DependentUpon>Cust_Purchase_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\EditCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\EditCustomerDetails.designer.cs">
+      <DependentUpon>EditCustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\FSRequest_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\FSRequest_Form.designer.cs">
+      <DependentUpon>FSRequest_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\QO_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\QO_Form.Designer.cs">
+      <DependentUpon>QO_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\RfQ_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\RfQ_Form.designer.cs">
+      <DependentUpon>RfQ_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\RGA_RequestFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\RGA_RequestFrom.designer.cs">
+      <DependentUpon>RGA_RequestFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\RtQ_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\RtQ_Form.designer.cs">
+      <DependentUpon>RtQ_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\TE_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\TE_Form.designer.cs">
+      <DependentUpon>TE_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\ViewCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\ViewCustomerDetails.designer.cs">
+      <DependentUpon>ViewCustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\ViewTechnicalEnquiries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\ViewTechnicalEnquiries.designer.cs">
+      <DependentUpon>ViewTechnicalEnquiries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ENG_Department\EngDep_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ENG_Department\EngDep_Form.designer.cs">
+      <DependentUpon>EngDep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\ExceptinAuthorisationResponse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\ExceptinAuthorisationResponse.designer.cs">
+      <DependentUpon>ExceptinAuthorisationResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\ManDep_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\ManDep_Form.designer.cs">
+      <DependentUpon>ManDep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\MRBReport_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\MRBReport_Form.designer.cs">
+      <DependentUpon>MRBReport_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\SPARes_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\SPARes_Form.Designer.cs">
+      <DependentUpon>SPARes_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\WeeklyReportForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\WeeklyReportForm2.designer.cs">
+      <DependentUpon>WeeklyReportForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\Create_PMRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\Create_PMRP.Designer.cs">
+      <DependentUpon>Create_PMRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\Customer_Order_Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\Customer_Order_Status.designer.cs">
+      <DependentUpon>Customer_Order_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\FGTN_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\FGTN_Form.Designer.cs">
+      <DependentUpon>FGTN_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\ProdDep_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\ProdDep_Form.designer.cs">
+      <DependentUpon>ProdDep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\TER_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\TER_Form.designer.cs">
+      <DependentUpon>TER_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\ViewLotsInAProductionShedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\ViewLotsInAProductionShedule.designer.cs">
+      <DependentUpon>ViewLotsInAProductionShedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\ViewProductionRequirementsMaterialsPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\ViewProductionRequirementsMaterialsPlan.designer.cs">
+      <DependentUpon>ViewProductionRequirementsMaterialsPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\ForwardRejectGoodNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\ForwardRejectGoodNote.designer.cs">
+      <DependentUpon>ForwardRejectGoodNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\Log_Quotation_In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\Log_Quotation_In.Designer.cs">
+      <DependentUpon>Log_Quotation_In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\PurDep_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\PurDep_Form.designer.cs">
+      <DependentUpon>PurDep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\PurWeeklyReports_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\PurWeeklyReports_Form.designer.cs">
+      <DependentUpon>PurWeeklyReports_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\RfQO_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\RfQO_Form.Designer.cs">
+      <DependentUpon>RfQO_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\View_Purchase_Order_Requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\View_Purchase_Order_Requests.Designer.cs">
+      <DependentUpon>View_Purchase_Order_Requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\WeeklyReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\WeeklyReports.designer.cs">
+      <DependentUpon>WeeklyReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\STO_Department\DeleveryNoteIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\STO_Department\DeleveryNoteIn.designer.cs">
+      <DependentUpon>DeleveryNoteIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\STO_Department\delivery_In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\STO_Department\delivery_In.designer.cs">
+      <DependentUpon>delivery_In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\STO_Department\Delivery_Out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\STO_Department\Delivery_Out.designer.cs">
+      <DependentUpon>Delivery_Out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\STO_Department\GRN_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\STO_Department\GRN_Form.Designer.cs">
+      <DependentUpon>GRN_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\STO_Department\StoDep_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\STO_Department\StoDep_Form.designer.cs">
+      <DependentUpon>StoDep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\STO_Department\Stores_Weekly_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\STO_Department\Stores_Weekly_Reports.Designer.cs">
+      <DependentUpon>Stores_Weekly_Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\STO_Department\ViewFinishedGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\STO_Department\ViewFinishedGoods.designer.cs">
+      <DependentUpon>ViewFinishedGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SYSADMIN_Department\AddNewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SYSADMIN_Department\AddNewEmployee.designer.cs">
+      <DependentUpon>AddNewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SYSADMIN_Department\ConfirmAddNewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SYSADMIN_Department\ConfirmAddNewEmployee.designer.cs">
+      <DependentUpon>ConfirmAddNewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SYSADMIN_Department\Select2Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SYSADMIN_Department\Select2Employee.designer.cs">
+      <DependentUpon>Select2Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SYSADMIN_Department\SelectEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SYSADMIN_Department\SelectEmployee.designer.cs">
+      <DependentUpon>SelectEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SYSADMIN_Department\SystAdmin_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SYSADMIN_Department\SystAdmin_Form.designer.cs">
+      <DependentUpon>SystAdmin_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ACC_Department\AccDep_Form.resx">
+      <DependentUpon>AccDep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ACC_Department\CustomerPayment.resx">
+      <DependentUpon>CustomerPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ACC_Department\InvoiceOut_Form.resx">
+      <DependentUpon>InvoiceOut_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ACC_Department\PS_Form.resx">
+      <DependentUpon>PS_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\COE_Form.resx">
+      <DependentUpon>COE_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\CreateAFieldRequestResponse.resx">
+      <DependentUpon>CreateAFieldRequestResponse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\createScrapNote.resx">
+      <DependentUpon>createScrapNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\CSDep_Form.resx">
+      <DependentUpon>CSDep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\CusCreditNote.resx">
+      <DependentUpon>CusCreditNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\Cust_Purchase_Order.resx">
+      <DependentUpon>Cust_Purchase_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\EditCustomerDetails.resx">
+      <DependentUpon>EditCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\FSRequest_Form.resx">
+      <DependentUpon>FSRequest_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\QO_Form.resx">
+      <DependentUpon>QO_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\RfQ_Form.resx">
+      <DependentUpon>RfQ_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\RGA_RequestFrom.resx">
+      <DependentUpon>RGA_RequestFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\RtQ_Form.resx">
+      <DependentUpon>RtQ_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\TE_Form.resx">
+      <DependentUpon>TE_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\ViewCustomerDetails.resx">
+      <DependentUpon>ViewCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\ViewTechnicalEnquiries.resx">
+      <DependentUpon>ViewTechnicalEnquiries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ENG_Department\EngDep_Form.resx">
+      <DependentUpon>EngDep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MAN_Department\ExceptinAuthorisationResponse.resx">
+      <DependentUpon>ExceptinAuthorisationResponse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MAN_Department\ManDep_Form.resx">
+      <DependentUpon>ManDep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MAN_Department\MRBReport_Form.resx">
+      <DependentUpon>MRBReport_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MAN_Department\SPARes_Form.resx">
+      <DependentUpon>SPARes_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MAN_Department\WeeklyReportForm2.resx">
+      <DependentUpon>WeeklyReportForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PROD_Department\Create_PMRP.resx">
+      <DependentUpon>Create_PMRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PROD_Department\Customer_Order_Status.resx">
+      <DependentUpon>Customer_Order_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PROD_Department\FGTN_Form.resx">
+      <DependentUpon>FGTN_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PROD_Department\ProdDep_Form.resx">
+      <DependentUpon>ProdDep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PROD_Department\TER_Form.resx">
+      <DependentUpon>TER_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PROD_Department\ViewLotsInAProductionShedule.resx">
+      <DependentUpon>ViewLotsInAProductionShedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PROD_Department\ViewProductionRequirementsMaterialsPlan.resx">
+      <DependentUpon>ViewProductionRequirementsMaterialsPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PUR_Department\ForwardRejectGoodNote.resx">
+      <DependentUpon>ForwardRejectGoodNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PUR_Department\Log_Quotation_In.resx">
+      <DependentUpon>Log_Quotation_In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PUR_Department\PurDep_Form.resx">
+      <DependentUpon>PurDep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PUR_Department\PurWeeklyReports_Form.resx">
+      <DependentUpon>PurWeeklyReports_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PUR_Department\RfQO_Form.resx">
+      <DependentUpon>RfQO_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PUR_Department\View_Purchase_Order_Requests.resx">
+      <DependentUpon>View_Purchase_Order_Requests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PUR_Department\WeeklyReports.resx">
+      <DependentUpon>WeeklyReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\STO_Department\DeleveryNoteIn.resx">
+      <DependentUpon>DeleveryNoteIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\STO_Department\delivery_In.resx">
+      <DependentUpon>delivery_In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\STO_Department\Delivery_Out.resx">
+      <DependentUpon>Delivery_Out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\STO_Department\GRN_Form.resx">
+      <DependentUpon>GRN_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\STO_Department\StoDep_Form.resx">
+      <DependentUpon>StoDep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\STO_Department\Stores_Weekly_Reports.resx">
+      <DependentUpon>Stores_Weekly_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\STO_Department\ViewFinishedGoods.resx">
+      <DependentUpon>ViewFinishedGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SYSADMIN_Department\AddNewEmployee.resx">
+      <DependentUpon>AddNewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SYSADMIN_Department\ConfirmAddNewEmployee.resx">
+      <DependentUpon>ConfirmAddNewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SYSADMIN_Department\Select2Employee.resx">
+      <DependentUpon>Select2Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SYSADMIN_Department\SelectEmployee.resx">
+      <DependentUpon>SelectEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SYSADMIN_Department\SystAdmin_Form.resx">
+      <DependentUpon>SystAdmin_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessEntities\BusinessEntities\BusinessEntities.csproj">
+      <Project>{421deb4e-3592-46d0-91dd-738a57f297ec}</Project>
+      <Name>BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessLayer\BusinessLayer\BusinessLayer.csproj">
+      <Project>{bbe8ae8e-71e4-460b-884a-b8e62ffcb43e}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataAccessLayer\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{83b2f92a-874e-4a5b-ad60-5c0c584cd939}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

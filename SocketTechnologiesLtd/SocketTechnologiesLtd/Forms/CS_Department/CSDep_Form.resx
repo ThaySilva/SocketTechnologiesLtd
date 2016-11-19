@@ -1,0 +1,1771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_Logout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_Logout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>867, 24</value>
+  </data>
+  <data name="btn_Logout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 34</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_Logout.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btn_Logout.Text" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="&gt;&gt;btn_Logout.Name" xml:space="preserve">
+    <value>btn_Logout</value>
+  </data>
+  <data name="&gt;&gt;btn_Logout.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_Logout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_Logout.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btn_CSRequests.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CSRequests.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 149</value>
+  </data>
+  <data name="btn_CSRequests.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_CSRequests.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btn_CSRequests.Text" xml:space="preserve">
+    <value>Requests</value>
+  </data>
+  <data name="btn_CSRequests.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CSRequests.Name" xml:space="preserve">
+    <value>btn_CSRequests</value>
+  </data>
+  <data name="&gt;&gt;btn_CSRequests.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CSRequests.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CSRequests.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btn_CSManageScrapNote.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CSManageScrapNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 3</value>
+  </data>
+  <data name="btn_CSManageScrapNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_CSManageScrapNote.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btn_CSManageScrapNote.Text" xml:space="preserve">
+    <value>Manage Scrap Notes</value>
+  </data>
+  <data name="btn_CSManageScrapNote.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManageScrapNote.Name" xml:space="preserve">
+    <value>btn_CSManageScrapNote</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManageScrapNote.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManageScrapNote.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManageScrapNote.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btn_CSManageCustomers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CSManageCustomers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="btn_CSManageCustomers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_CSManageCustomers.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btn_CSManageCustomers.Text" xml:space="preserve">
+    <value>Manage Customers</value>
+  </data>
+  <data name="btn_CSManageCustomers.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManageCustomers.Name" xml:space="preserve">
+    <value>btn_CSManageCustomers</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManageCustomers.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManageCustomers.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManageCustomers.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btn_CreateCCN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateCCN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 295</value>
+  </data>
+  <data name="btn_CreateCCN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 142</value>
+  </data>
+  <data name="btn_CreateCCN.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btn_CreateCCN.Text" xml:space="preserve">
+    <value>Create Customer Credit Note</value>
+  </data>
+  <data name="btn_CreateCCN.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCCN.Name" xml:space="preserve">
+    <value>btn_CreateCCN</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCCN.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCCN.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCCN.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btn_CSResponses.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CSResponses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 149</value>
+  </data>
+  <data name="btn_CSResponses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_CSResponses.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btn_CSResponses.Text" xml:space="preserve">
+    <value>Responses</value>
+  </data>
+  <data name="btn_CSResponses.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CSResponses.Name" xml:space="preserve">
+    <value>btn_CSResponses</value>
+  </data>
+  <data name="&gt;&gt;btn_CSResponses.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CSResponses.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CSResponses.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_CSWeeklyReports.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CSWeeklyReports.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 149</value>
+  </data>
+  <data name="btn_CSWeeklyReports.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_CSWeeklyReports.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btn_CSWeeklyReports.Text" xml:space="preserve">
+    <value>Generate Weekly Reports</value>
+  </data>
+  <data name="btn_CSWeeklyReports.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CSWeeklyReports.Name" xml:space="preserve">
+    <value>btn_CSWeeklyReports</value>
+  </data>
+  <data name="&gt;&gt;btn_CSWeeklyReports.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CSWeeklyReports.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CSWeeklyReports.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btn_CSManagaCustomerOrder.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CSManagaCustomerOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 3</value>
+  </data>
+  <data name="btn_CSManagaCustomerOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_CSManagaCustomerOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btn_CSManagaCustomerOrder.Text" xml:space="preserve">
+    <value>Manage Customer Orders</value>
+  </data>
+  <data name="btn_CSManagaCustomerOrder.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManagaCustomerOrder.Name" xml:space="preserve">
+    <value>btn_CSManagaCustomerOrder</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManagaCustomerOrder.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManagaCustomerOrder.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CSManagaCustomerOrder.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="CSHomeScreenPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="CSHomeScreenPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateTE.Name" xml:space="preserve">
+    <value>btn_CreateTE</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateTE.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateTE.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateTE.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_ManageQuotations.Name" xml:space="preserve">
+    <value>btn_ManageQuotations</value>
+  </data>
+  <data name="&gt;&gt;btn_ManageQuotations.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ManageQuotations.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ManageQuotations.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CSHomeScreenPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSHomeScreenPanel.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CSHomeScreenPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 440</value>
+  </data>
+  <data name="CSHomeScreenPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;CSHomeScreenPanel.Name" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;CSHomeScreenPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSHomeScreenPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSHomeScreenPanel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="CSHomeScreenPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_CreateTE" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_ManageQuotations" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSResponses" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSManageScrapNote" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSManageCustomers" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSManagaCustomerOrder" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSRequests" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSWeeklyReports" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateCCN" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="btn_CreateTE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateTE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 295</value>
+  </data>
+  <data name="btn_CreateTE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 142</value>
+  </data>
+  <data name="btn_CreateTE.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btn_CreateTE.Text" xml:space="preserve">
+    <value>Create Technical Enquiry</value>
+  </data>
+  <data name="btn_CreateTE.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateTE.Name" xml:space="preserve">
+    <value>btn_CreateTE</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateTE.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateTE.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateTE.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_ManageQuotations.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_ManageQuotations.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 295</value>
+  </data>
+  <data name="btn_ManageQuotations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 142</value>
+  </data>
+  <data name="btn_ManageQuotations.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btn_ManageQuotations.Text" xml:space="preserve">
+    <value>Manage Quotations</value>
+  </data>
+  <data name="btn_ManageQuotations.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_ManageQuotations.Name" xml:space="preserve">
+    <value>btn_ManageQuotations</value>
+  </data>
+  <data name="&gt;&gt;btn_ManageQuotations.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ManageQuotations.Parent" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ManageQuotations.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CSRequestsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="CSRequestsPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRfQ.Name" xml:space="preserve">
+    <value>btn_CreateRfQ</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRfQ.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRfQ.Parent" xml:space="preserve">
+    <value>CSRequestsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRfQ.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSR.Name" xml:space="preserve">
+    <value>btn_CreateFSR</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSR.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSR.Parent" xml:space="preserve">
+    <value>CSRequestsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSR.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRGAR.Name" xml:space="preserve">
+    <value>btn_CreateRGAR</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRGAR.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRGAR.Parent" xml:space="preserve">
+    <value>CSRequestsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRGAR.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CSRequestsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSRequestsPanel.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CSRequestsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 440</value>
+  </data>
+  <data name="CSRequestsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="CSRequestsPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CSRequestsPanel.Name" xml:space="preserve">
+    <value>CSRequestsPanel</value>
+  </data>
+  <data name="&gt;&gt;CSRequestsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSRequestsPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSRequestsPanel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CSRequestsPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_CreateRfQ" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateFSR" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateRGAR" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="btn_CreateRfQ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateRfQ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 3</value>
+  </data>
+  <data name="btn_CreateRfQ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_CreateRfQ.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btn_CreateRfQ.Text" xml:space="preserve">
+    <value>Create Request For Quotation</value>
+  </data>
+  <data name="btn_CreateRfQ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRfQ.Name" xml:space="preserve">
+    <value>btn_CreateRfQ</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRfQ.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRfQ.Parent" xml:space="preserve">
+    <value>CSRequestsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRfQ.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_CreateFSR.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateFSR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 149</value>
+  </data>
+  <data name="btn_CreateFSR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_CreateFSR.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btn_CreateFSR.Text" xml:space="preserve">
+    <value>Create Field Service Request</value>
+  </data>
+  <data name="btn_CreateFSR.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSR.Name" xml:space="preserve">
+    <value>btn_CreateFSR</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSR.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSR.Parent" xml:space="preserve">
+    <value>CSRequestsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSR.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_CreateRGAR.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateRGAR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 295</value>
+  </data>
+  <data name="btn_CreateRGAR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 142</value>
+  </data>
+  <data name="btn_CreateRGAR.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btn_CreateRGAR.Text" xml:space="preserve">
+    <value>Create Returned Goods Authorisation Request</value>
+  </data>
+  <data name="btn_CreateRGAR.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRGAR.Name" xml:space="preserve">
+    <value>btn_CreateRGAR</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRGAR.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRGAR.Parent" xml:space="preserve">
+    <value>CSRequestsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRGAR.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_CSExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btn_CSExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>867, 22</value>
+  </data>
+  <data name="btn_CSExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 36</value>
+  </data>
+  <data name="btn_CSExit.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btn_CSExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="&gt;&gt;btn_CSExit.Name" xml:space="preserve">
+    <value>btn_CSExit</value>
+  </data>
+  <data name="&gt;&gt;btn_CSExit.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CSExit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_CSExit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="CSResponsesPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="CSResponsesPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewTERes.Name" xml:space="preserve">
+    <value>btn_ViewTERes</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewTERes.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewTERes.Parent" xml:space="preserve">
+    <value>CSResponsesPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewTERes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSRes.Name" xml:space="preserve">
+    <value>btn_CreateFSRes</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSRes.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSRes.Parent" xml:space="preserve">
+    <value>CSResponsesPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSRes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewRGARes.Name" xml:space="preserve">
+    <value>btn_ViewRGARes</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewRGARes.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewRGARes.Parent" xml:space="preserve">
+    <value>CSResponsesPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewRGARes.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CSResponsesPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSResponsesPanel.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CSResponsesPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 440</value>
+  </data>
+  <data name="CSResponsesPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="CSResponsesPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CSResponsesPanel.Name" xml:space="preserve">
+    <value>CSResponsesPanel</value>
+  </data>
+  <data name="&gt;&gt;CSResponsesPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSResponsesPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSResponsesPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CSResponsesPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_ViewTERes" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateFSRes" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_ViewRGARes" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="btn_ViewTERes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_ViewTERes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 3</value>
+  </data>
+  <data name="btn_ViewTERes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_ViewTERes.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btn_ViewTERes.Text" xml:space="preserve">
+    <value>View Technical Enquiry Response</value>
+  </data>
+  <data name="btn_ViewTERes.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewTERes.Name" xml:space="preserve">
+    <value>btn_ViewTERes</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewTERes.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewTERes.Parent" xml:space="preserve">
+    <value>CSResponsesPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewTERes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_CreateFSRes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateFSRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 149</value>
+  </data>
+  <data name="btn_CreateFSRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_CreateFSRes.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btn_CreateFSRes.Text" xml:space="preserve">
+    <value>Create Field Service Response</value>
+  </data>
+  <data name="btn_CreateFSRes.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSRes.Name" xml:space="preserve">
+    <value>btn_CreateFSRes</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSRes.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSRes.Parent" xml:space="preserve">
+    <value>CSResponsesPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateFSRes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_ViewRGARes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_ViewRGARes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 295</value>
+  </data>
+  <data name="btn_ViewRGARes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 142</value>
+  </data>
+  <data name="btn_ViewRGARes.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btn_ViewRGARes.Text" xml:space="preserve">
+    <value>View Returned Goods Authorisation Response</value>
+  </data>
+  <data name="btn_ViewRGARes.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewRGARes.Name" xml:space="preserve">
+    <value>btn_ViewRGARes</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewRGARes.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewRGARes.Parent" xml:space="preserve">
+    <value>CSResponsesPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewRGARes.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CSWeeklyReportsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="CSWeeklyReportsPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_OEReport.Name" xml:space="preserve">
+    <value>btn_OEReport</value>
+  </data>
+  <data name="&gt;&gt;btn_OEReport.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_OEReport.Parent" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_OEReport.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_FSRReport.Name" xml:space="preserve">
+    <value>btn_FSRReport</value>
+  </data>
+  <data name="&gt;&gt;btn_FSRReport.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_FSRReport.Parent" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_FSRReport.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_ORReport.Name" xml:space="preserve">
+    <value>btn_ORReport</value>
+  </data>
+  <data name="&gt;&gt;btn_ORReport.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ORReport.Parent" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ORReport.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_SNReport.Name" xml:space="preserve">
+    <value>btn_SNReport</value>
+  </data>
+  <data name="&gt;&gt;btn_SNReport.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_SNReport.Parent" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_SNReport.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_RFQReport.Name" xml:space="preserve">
+    <value>btn_RFQReport</value>
+  </data>
+  <data name="&gt;&gt;btn_RFQReport.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_RFQReport.Parent" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_RFQReport.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="CSWeeklyReportsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSWeeklyReportsPanel.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CSWeeklyReportsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 440</value>
+  </data>
+  <data name="CSWeeklyReportsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="CSWeeklyReportsPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CSWeeklyReportsPanel.Name" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;CSWeeklyReportsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSWeeklyReportsPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSWeeklyReportsPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CSWeeklyReportsPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_OEReport" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_FSRReport" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_ORReport" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_SNReport" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_RFQReport" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333,Absolute,20,Absolute,20" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="btn_OEReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_OEReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 149</value>
+  </data>
+  <data name="btn_OEReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_OEReport.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btn_OEReport.Text" xml:space="preserve">
+    <value>Generate Order Enquiries Report</value>
+  </data>
+  <data name="btn_OEReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_OEReport.Name" xml:space="preserve">
+    <value>btn_OEReport</value>
+  </data>
+  <data name="&gt;&gt;btn_OEReport.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_OEReport.Parent" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_OEReport.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_FSRReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_FSRReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 3</value>
+  </data>
+  <data name="btn_FSRReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_FSRReport.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btn_FSRReport.Text" xml:space="preserve">
+    <value>Generate Field Service Request Report</value>
+  </data>
+  <data name="btn_FSRReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_FSRReport.Name" xml:space="preserve">
+    <value>btn_FSRReport</value>
+  </data>
+  <data name="&gt;&gt;btn_FSRReport.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_FSRReport.Parent" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_FSRReport.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_ORReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_ORReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 295</value>
+  </data>
+  <data name="btn_ORReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 142</value>
+  </data>
+  <data name="btn_ORReport.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btn_ORReport.Text" xml:space="preserve">
+    <value>Generate Orders Received Report</value>
+  </data>
+  <data name="btn_ORReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_ORReport.Name" xml:space="preserve">
+    <value>btn_ORReport</value>
+  </data>
+  <data name="&gt;&gt;btn_ORReport.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ORReport.Parent" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ORReport.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_SNReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_SNReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 149</value>
+  </data>
+  <data name="btn_SNReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_SNReport.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btn_SNReport.Text" xml:space="preserve">
+    <value>Generate Scrap Notes Report</value>
+  </data>
+  <data name="btn_SNReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_SNReport.Name" xml:space="preserve">
+    <value>btn_SNReport</value>
+  </data>
+  <data name="&gt;&gt;btn_SNReport.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_SNReport.Parent" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_SNReport.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btn_RFQReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_RFQReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 149</value>
+  </data>
+  <data name="btn_RFQReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 140</value>
+  </data>
+  <data name="btn_RFQReport.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btn_RFQReport.Text" xml:space="preserve">
+    <value>Generate Request for Quotation Report</value>
+  </data>
+  <data name="btn_RFQReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_RFQReport.Name" xml:space="preserve">
+    <value>btn_RFQReport</value>
+  </data>
+  <data name="&gt;&gt;btn_RFQReport.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_RFQReport.Parent" xml:space="preserve">
+    <value>CSWeeklyReportsPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_RFQReport.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCOE.Name" xml:space="preserve">
+    <value>btn_CreateCOE</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCOE.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCOE.Parent" xml:space="preserve">
+    <value>CSManageCustomerOrdersPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCOE.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewCOS.Name" xml:space="preserve">
+    <value>btn_ViewCOS</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewCOS.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewCOS.Parent" xml:space="preserve">
+    <value>CSManageCustomerOrdersPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewCOS.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCPO.Name" xml:space="preserve">
+    <value>btn_CreateCPO</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCPO.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCPO.Parent" xml:space="preserve">
+    <value>CSManageCustomerOrdersPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCPO.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateWO.Name" xml:space="preserve">
+    <value>btn_CreateWO</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateWO.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateWO.Parent" xml:space="preserve">
+    <value>CSManageCustomerOrdersPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateWO.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 440</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CSManageCustomerOrdersPanel.Name" xml:space="preserve">
+    <value>CSManageCustomerOrdersPanel</value>
+  </data>
+  <data name="&gt;&gt;CSManageCustomerOrdersPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSManageCustomerOrdersPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSManageCustomerOrdersPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_CreateCOE" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_ViewCOS" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateCPO" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateWO" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="btn_CreateCOE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateCOE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 223</value>
+  </data>
+  <data name="btn_CreateCOE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 104</value>
+  </data>
+  <data name="btn_CreateCOE.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btn_CreateCOE.Text" xml:space="preserve">
+    <value>Create Customer Order Enquiry</value>
+  </data>
+  <data name="btn_CreateCOE.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCOE.Name" xml:space="preserve">
+    <value>btn_CreateCOE</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCOE.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCOE.Parent" xml:space="preserve">
+    <value>CSManageCustomerOrdersPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCOE.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_ViewCOS.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_ViewCOS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 113</value>
+  </data>
+  <data name="btn_ViewCOS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 104</value>
+  </data>
+  <data name="btn_ViewCOS.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btn_ViewCOS.Text" xml:space="preserve">
+    <value>View Customer Order Status</value>
+  </data>
+  <data name="btn_ViewCOS.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewCOS.Name" xml:space="preserve">
+    <value>btn_ViewCOS</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewCOS.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewCOS.Parent" xml:space="preserve">
+    <value>CSManageCustomerOrdersPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewCOS.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_CreateCPO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateCPO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 113</value>
+  </data>
+  <data name="btn_CreateCPO.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 104</value>
+  </data>
+  <data name="btn_CreateCPO.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btn_CreateCPO.Text" xml:space="preserve">
+    <value>Create Customer Purchase Order</value>
+  </data>
+  <data name="btn_CreateCPO.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCPO.Name" xml:space="preserve">
+    <value>btn_CreateCPO</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCPO.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCPO.Parent" xml:space="preserve">
+    <value>CSManageCustomerOrdersPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateCPO.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_CreateWO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateWO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 223</value>
+  </data>
+  <data name="btn_CreateWO.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 104</value>
+  </data>
+  <data name="btn_CreateWO.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btn_CreateWO.Text" xml:space="preserve">
+    <value>Create Work Order</value>
+  </data>
+  <data name="btn_CreateWO.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateWO.Name" xml:space="preserve">
+    <value>btn_CreateWO</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateWO.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateWO.Parent" xml:space="preserve">
+    <value>CSManageCustomerOrdersPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateWO.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CSManageScrapPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="CSManageScrapPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewSC.Name" xml:space="preserve">
+    <value>btn_ViewSC</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewSC.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewSC.Parent" xml:space="preserve">
+    <value>CSManageScrapPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewSC.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateSN.Name" xml:space="preserve">
+    <value>btn_CreateSN</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateSN.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateSN.Parent" xml:space="preserve">
+    <value>CSManageScrapPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateSN.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CSManageScrapPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSManageScrapPanel.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="CSManageScrapPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 437</value>
+  </data>
+  <data name="CSManageScrapPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="CSManageScrapPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CSManageScrapPanel.Name" xml:space="preserve">
+    <value>CSManageScrapPanel</value>
+  </data>
+  <data name="&gt;&gt;CSManageScrapPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSManageScrapPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSManageScrapPanel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="CSManageScrapPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_ViewSC" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateSN" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="btn_ViewSC.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_ViewSC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 221</value>
+  </data>
+  <data name="btn_ViewSC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 103</value>
+  </data>
+  <data name="btn_ViewSC.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btn_ViewSC.Text" xml:space="preserve">
+    <value>View Scrap Certificate</value>
+  </data>
+  <data name="btn_ViewSC.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewSC.Name" xml:space="preserve">
+    <value>btn_ViewSC</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewSC.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewSC.Parent" xml:space="preserve">
+    <value>CSManageScrapPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_ViewSC.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_CreateSN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateSN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 112</value>
+  </data>
+  <data name="btn_CreateSN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 103</value>
+  </data>
+  <data name="btn_CreateSN.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btn_CreateSN.Text" xml:space="preserve">
+    <value>Create Scrap Note</value>
+  </data>
+  <data name="btn_CreateSN.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateSN.Name" xml:space="preserve">
+    <value>btn_CreateSN</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateSN.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateSN.Parent" xml:space="preserve">
+    <value>CSManageScrapPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateSN.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CSManageQuotation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="CSManageQuotation.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btn_CreateRTQ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateRTQ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 221</value>
+  </data>
+  <data name="btn_CreateRTQ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 103</value>
+  </data>
+  <data name="btn_CreateRTQ.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btn_CreateRTQ.Text" xml:space="preserve">
+    <value>Create Refusal to Quote</value>
+  </data>
+  <data name="btn_CreateRTQ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRTQ.Name" xml:space="preserve">
+    <value>btn_CreateRTQ</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRTQ.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRTQ.Parent" xml:space="preserve">
+    <value>CSManageQuotation</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateRTQ.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_CreateQO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btn_CreateQO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 112</value>
+  </data>
+  <data name="btn_CreateQO.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 103</value>
+  </data>
+  <data name="btn_CreateQO.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btn_CreateQO.Text" xml:space="preserve">
+    <value>Create Quotation Out</value>
+  </data>
+  <data name="btn_CreateQO.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateQO.Name" xml:space="preserve">
+    <value>btn_CreateQO</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateQO.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateQO.Parent" xml:space="preserve">
+    <value>CSManageQuotation</value>
+  </data>
+  <data name="&gt;&gt;btn_CreateQO.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CSManageQuotation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSManageQuotation.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="CSManageQuotation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 437</value>
+  </data>
+  <data name="CSManageQuotation.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="CSManageQuotation.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CSManageQuotation.Name" xml:space="preserve">
+    <value>CSManageQuotation</value>
+  </data>
+  <data name="&gt;&gt;CSManageQuotation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSManageQuotation.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSManageQuotation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CSManageQuotation.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_CreateRTQ" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateQO" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>982, 585</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAEBAAAAAAIABoBAAANgAAACAgAAAAACAAqBAAAJ4EAAAwMAAAAAAgAKglAABGFQAAKAAAABAA
+        AAAgAAAAAQAgAAAAAABABAAAAAAAAAAAAAAAAAAAAAAAAP///wH///8B////Af///wH///8BNjY2A0tL
+        Swf///8B////AVRUVAdGRkYD////Af///wH///8B////Af///wH///8B////Af///wFOTk4JSUlJD1pa
+        WnVgYGDHR0dHCUpKSg1jY2PNXV1dY05OThdQUFAJ////Af///wH///8B////Af///wE1NTUHYWFhm19f
+        X59aWlpXV1dXKTc3NwM7OzsFV1dXKVlZWVVhYWGpYGBglzMzMwX///8B////Af///wFHR0cVXl5er1lZ
+        WVtLS0sJ////Af///wH///8B////Af///wH///8BS0tLB1hYWFdgYGCnVVVVJ////wFNTU0NW1tbb1ZW
+        Vkv///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BXFxcU1ZWVUcjIyMDUVFRLV1i
+        Zp0hh9x7I4jeayOI3mshieB5I4DPNSZspg0hhtt/KE9zAyGG23Ejh9t5JIfbdyKI3odJZ4C1XV1dXVdX
+        V2dQV101IoHSSyR+yS0kfsotJIndeR2B1U8pV30JIYnhu////wEeiOGdKYHMOSd9xh8lgc81RWR+SVZW
+        VktfX1/DOzw8CS5ehgn///8B////ASaK3Vkaf9NHK0ZdByGJ37P///8BHojglS6EzR3///8B////ATw8
+        PAlaWlqXUlJSXSljkxUhiuLNIoXYlSKF2JUhieC3IoPUUytGXQchid+z////AR6I4JUuhM0d////Af//
+        /wEuLi4FXl5ev11dXbtKVF0lIofbk////wH///8BLDhIA////wErRVsHIYnfs////wEeiOCVLoTNHf//
+        /wH///8BU1NTH1dXV1tCQkIRT1hgaSGK4sEkhdZtJYXXayKI3Ychh92BIoXYdyGL5M0ihtp1IIvlwyiA
+        yiX///8B////AVpaWmVbW1t7REREFV5fYL04bJdZJn3GGyZ9xxkkf8wrJIDOKSWC0B8lgc4fJYHPHySB
+        zjMmc7QJ////AVhYWCtaWlp5LS0tBf///wFCQkIPXl5eoVhYWDP///8B////Af///wH///8B////Af//
+        /wH///8B////AVdXVy9fX1+nV1dXWf///wH///8BQEBAA1paWklZWVllYGBggVdXVyk1NTUF////Af//
+        /wE1NTUFV1dXKWFhYYVfX1+nRUVFDS0tLQP///8B////Af///wH///8BT09PEV9fX39YWFhdZGRkzVxc
+        XIVdXV2NZmZm011dXX1aWlpTV1dXJf///wH///8B////Af///wH///8B////Af///wH///8BOzs7BVdX
+        VzNPT08RTk5OEVhYWDdEREQH////Af///wH///8B////Af///wEAAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//KAAAACAAAABAAAAAAQAgAAAA
+        AACAEAAAAAAAAAAAAAAAAAAAAAAAAP///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wE4ODgHS0tLDUxMTAv///8B////Af///wH///8BU1NTC1VVVQ1HR0cH////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8BQUFBH1RUVJNbW1vLWFhYkUxMTAf///8B////AUxMTA1cXFynYWFhw1lZ
+        WYNFRUUP////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////ATY2NgNQUFAhSUlJLUhISAtPT089ZGRk52lpafVhYWHLRkZGGf///wH///8BSUlJJWNj
+        Y9dpaWn1YmJi0VRUVCtEREQPUFBQT1JSUiE2NjYD////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wEiIiIDUVFRQWNjY8liYmLNW1tblVpaWqNcXFyTWlpaY1NTUz03NzcL////Af//
+        /wE7OzsPVFRUP1paWmNbW1uPWVlZn1tbW6FmZmbvY2NjyVBQUEMkJCQD////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8BOTk5DzQ0NAlYWFhxaGho72JiYr9VVVVZT09PH0tLSwksLCwD////Af//
+        /wH///8B////Af///wH///8BKysrA0tLSwlPT08fVlZWWWNjY79nZ2fvVFRUYTQ0NAU2NjYJ////Af//
+        /wH///8B////Af///wH///8B////AT8/PxlWVlaRWFhYgVxcXLdZWVlzS0tLHf///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BS0tLHVlZWXFZWVmlU1NTZVhY
+        WIFJSUkT////Af///wH///8B////Af///wH///8BSkpKOWNjY+FiYmLFUVFRQURERAP///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BRUVFA1FR
+        UT9hYWHBaWlp+VlZWYMjIyMH////Af///wH///8BNDQ0Azk5OQ1NTU0xWVlZrVNTUzktLS0D////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8BLCwsA1NTUzlhYWHRVlZWbyQkJAP///8B////Af///wFOTk4vYGBgxV1dXb1RUVFDMjIyA///
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8BLy8vA1NSUkFZWViXRUVFFSMjIwf///8BFhYWBVVVVXtoaGj3W1xdgSdr
+        oycldbchJn/LESaAyxEmgMsRJoDLESZ9xxMkc7UnJW6sGf///wH///8BKGedBSN0uTkjcbMj////Af//
+        /wEncK4XJHe9Oyd2uSEoeb4bKHm+Gyh5vhsod7sdJnKzO0lba5FYWFiVVlZWbzk5OQf///8BTExMNV1d
+        Xbk6YoRBIYnhyyGM5tsiid/DIonfwyKJ38Miid/DIongxSCN6eMihtqpLmGODf///wEmbKctII3o7yGG
+        2rMtPlEFI1yNByKB0YEfj+zxIorh2SOJ39Ejid/RI4nf0SOJ39MfjuvxKH7G019iZNdlZWXVT09PLT4+
+        Pg1QUFBJV1dXdytonBkhg9WTIoTWkSR9yVskfslZJH7JWSR+ylkkfspjIYzm0R6E2qUuW4IH////ASle
+        ixcgjejpIoXYmy1BVQMlVoADHXzMZx+P7OMogs5rKH3GOyd9xjsnfcY7J33FRSOE1Ysle8RnWVtcgV1c
+        XKVJSUkjUlJShV9fX8FRUVE/////ASJFZQcnQVcF////Af///wH///8B////ATR8uQsmi+CnGn/Tjf//
+        /wH///8BK0VbCyGL5d0ihNeJ////Af///wEYeMhTII7q2S6EzTn///8B////Af///wH///8BQDMpA///
+        /wFQUFA9UVFRZf///wFdXV3bZWVl3UFBQRn///8B////Af///wH///8B////Af///wH///8BNH27CyaL
+        4acaf9ON////Af///wErRl0LIYzl3SKE14n///8B////ARh4yVMgjurZLoTNOf///wH///8B////Af//
+        /wH///8B////AUNDQxdWVlaPSkpKOVdXV51fX1+5Ly8vC////wEvYIoRLVqAD////wH///8B////Af//
+        /wEzerYLJorfqRp/043///8B////AStGXQshjOXdIoTXif///wH///8BGHjJUyCO6tkuhM05////Af//
+        /wH///8B////Af///wH///8BLCwsCWFhYcFcXFzVQkJCEVRUVH8xMTEJI3K2HyGI38shi+TdIofdwSKH
+        3cEih93BIofdwSGI3cUfj+3vIIjetTBijA3///8BK0ZdCyGM5d0ihNeJ////Af///wEYeMlTII7q2S6E
+        zTn///8B////Af///wH///8B////Af///wEfHx8HY2NjxWBgYPFKSkpHVlZWmTs7Ow8lc7UbIYrjxyGJ
+        4cMjgM9rI4HQZyOB0GcjgdBnI4HQcSGH3rUkgtKFMF+HCf///wErRl0LIYzl3SKE14n///8B////ARh4
+        yVMgjurZLoTNOf///wH///8B////Af///wH///8B////ATY2Ng1dXV2zVlZWk1lZWcVmZmbpSUlJJy1w
+        qgsjid6jIoTWhf///wH///8B////Af///wH///8BLDxQBSwuPAP///8B////AStGXQshjOXdIoTXif//
+        /wH///8BGHjJUyCO6tkuhM05////Af///wH///8B////Af///wH///8BSkpKJ1dXV4krKysHUVFRfV9f
+        X79TU1NTLWqfDSOJ3qMihNaF////Af///wH///8B////Af///wH///8B////Af///wH///8BK0RaCyGM
+        5d0ihNeJ////Af///wEYeMhTII7q2S6EzTn///8B////Af///wH///8B////ASkpKQNXV1dXXV1ds0RE
+        RCsqKioJREREI1NTU4E6X34dIonerSKE1pcuaZ0bL2ufGS9snxkvbJ8ZLG2kHyJ7xVEjdrw/KGukHyhs
+        pB8pYpQlIYzl4SOD1JcobKQfKGukHx16yGsgjurdK4LKPf///wH///8B////Af///wH///8BSUlJDWBg
+        YJ9lZWXrTExMT////wFHR0cTWFhYn0Jfd2cgjObZII3p5SOI3r8jiN69I4jevSOI3r0jid/DH4/s6yCN
+        6OEhiuLJIYriySGK4ssfjuvjIIzm2SGK4skhiuLJIIzn3SCP7esmf8tV////Af///wH///8B////Af//
+        /wFRUVFBWVlZp1dXV5U+Pj4b////AUZGRkFkZGTrXWFluyh3uXckgM5hJn3GNSZ9xzMmfcczJn3HMyV8
+        xjkkgdBxJIDOXySBzz8lgtA9JYLQPSWBzj0lgc49JYLQPSWBzz8kf8xXJILRcyZ0tR////8B////Af//
+        /wH///8BREREEVhYWJNRUVE/Ly8vDR8fHwP///8BPDw8EVhYWKFcXFytVlZWf0NGSQ////8B////Af//
+        /wH///8B////AS1mmAP///8B////Af///wH///8B////Af///wH///8B////Af///wEvap0D////Af//
+        /wH///8B////AUVFRQ9cXFyLYmJi1UpKSjn///8B////Af///wEwMDADPT09F0VFRRtWVlaLV1dXb0FB
+        QQ3///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wFBQUELWVlZcWdnZ+9hYWHbREREO////wH///8B////Af///wH///8BREREDVtb
+        W5dnZ2fxXFxcm01NTR8aGhoD////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wEYGBgDTExMH1paWpVcXFynWVlZl0hISE8AAAAD////Af///wH///8B////Af//
+        /wFAQEAFVVVVU2BgYL1ZWVmPW1tbpVZWVldMTEwROjo6Bf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wE6OjoDTU1NEVZWVldhYWG7WVlZkU5OTh83NzcNLS0tBf///wH///8B////Af//
+        /wH///8B////Af///wEGBgYDNjY2ExgYGANWVlZdZGRk42FhYblaWlptUVFRLzo6Og8EBAQD////Af//
+        /wH///8B////AQMDAwM5OTkPUFBQL1paWm1gYGC3aGho9WhoaPdQUFBdGxsbA////wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////AVBQUD1iYmLLY2Nj0VtbW5NdXV2rYGBguV9f
+        X5taWlp9WFhYbVlZWW9cXFx/X19fm2NjY79iYmLLXl5eoVdXV3dgYGC/W1tbdUdHRxX///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BNTU1BU1NTSVOTk45NDQ0B0dH
+        RzNkZGTfampq/2BgYLdaWlp1XV1dh2FhYcFqamr/aGho91hYWH03NzcNAAAAAz09PRc0NDQF////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8BOzs7DVJSUk1aWlqBT09PQTs7OwNGRkYFTk5OP1tbW4VUVFRVRUVFG////wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAwAAAAYAAAAAEA
+        IAAAAAAAgCUAAAAAAAAAAAAAAAAAAAAAAAD///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BLS0tBTs7
+        Ow1ISEgTUFBQF0ZGRgv///8B////Af///wH///8B////AUlJSQNNTU0NWVlZF1NTUxFKSkoLPDw8Bf//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wEpKSkJQEBAO0hISHVQUFCnVVVVyUtLS1dEREQJ////Af///wH///8B////AUtLSw1RUVF3XFxcxVlZ
+        WZdTU1NnR0dHLRMTEwP///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////ATk5
+        OQU2NjYHNDQ0A////wE0NDQbWFhYn2RkZPFpaWn/ampq/1tbW59PT08V////Af///wH///8B////AU5O
+        TiFfX1+/ampq/2lpaf1lZWXlVlZWdxMTEwX///8BQEBACUFBQQ0/Pz8F////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wE2NjYDS0tLEVJSUjdNTU1FREREHUxMTBNKSkorXV1do2dnZ+9oaGjxaGho511dXb1FRUUpKysrA///
+        /wH///8BOTk5BUlJSTthYWHPaGho52hoaPFmZmbjWVlZg1NTUyFISEgVTk5OP1JSUmdTU1M3S0tLETY2
+        NgP///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////ASIiIgNLS0sdV1dXa2BgYMFfX1/FWFhYfVdXV3VYWFiXXV1dt2BgYLVdXV2VWVlZc1BQ
+        UFM4ODgXKSkpA////wH///8BMTExAzw8PB1RUVFXWVlZc11dXZVgYGCzW1tbr1hYWJFWVlZ9Xl5erWRk
+        ZOlhYWG/V1dXaUpKSh8kJCQD////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////AR8fHwVTU1NLYWFhz2pqav9oaGj1YWFh111dXbNaWlqHVFRUUUdH
+        RycuLi4NHR0dA////wH///8B////Af///wH///8B////Af///wH///8BHBwcAy0tLQ1HR0cnVFRUUVpa
+        WodeXl61ZGRk3WlpaflpaWn/YGBgzVBQUEsiIiIF////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////ASIiIgMzMzMPOzs7FzU1NQtXV1dVYmJi0WdnZ+diYmK3Wlpac01N
+        TTM3NzcN////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////ATc3Nw1NTU0zWlpacWJiYrVmZmbnX19fw1JSUkU1NTUFOTk5DzMzMwsrKysD////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8BJSUlAz8/PxlOTk5hVlZWf1VVVV1bW1uZXl5evVtb
+        W4FOTk41Ozs7C////wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8BPT09C09PTzVbW1uBXFxcsVdXV4VQUFBFVFRUZ1JS
+        UlVISEgV////Af///wH///8B////Af///wH///8B////Af///wH///8BMTExCUlJSUtdXV3PZWVl7V9f
+        X81bW1unVVVVWUVFRRX///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFGRkYVVVVVV1lZ
+        WZ9bW1u3Y2Nj3WFhYc1XV1dfRkZGEf///wH///8B////Af///wH///8B////Af///wH///8BNDQ0B0xM
+        TENfX1/HZmZm7V9fX6NRUVE/ODg4Cf///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8BOTk5CVFRUT1dXV2hZ2dn62lpaftbW1uvR0dHKSMjIwP///8B////Af///wH///8B////Af//
+        /wEbGxsHJiYmB01NTTVYWFipXFxcn1BQUDMtLS0F////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////ASwsLAVPT08zXl5en2VlZelZWVmXRkZGHyQkJAP///8B////Af//
+        /wH///8B////AUNDQxNTU1NfVlZWYVdXV4lYWFiZTk5ONyYmJgX///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wElJSUFT09PNVxcXKlYWFiXTk5OISsr
+        KwP///8B////Af///wH///8BSUlJB1BQUFNiYmLXZGRk111dXbVQUFBJMjIyB////wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BLy8vBVNR
+        UEdaWlmrUlJSWT4+Pg0jIyMNJCQkA////wH///8BOTk5F1dXV6lqamr9Z2dn5VdXV3E1Qk0TKFV7ES5M
+        Zgf///8B////Af///wH///8B////Af///wH///8BLThCBSZVexEpTWoLLkFRA////wH///8B////Af//
+        /wElXY0ZJWadIyZJZgf///8B////Af///wErW4QFKGKTGSdlmR8tT2sLPiwfBT0tIgU9LSIFPi4iBT0t
+        IgU9LB4FK1J0DSxchCtNVl2BVldXoVNTU21SUlJ1Pz8/E////wH///8BNjY2EVRUVIVlZWXpX19frzhX
+        cTckfchrIYXXmySBz3smf8phJoDMYSaAzGEmgMxhJoDMYSaAzGEmgMxhJIDNdSGE2Jkjfcl7JW+tHypS
+        dAP///8B////AShnnSEig9ShIIjesSR3v1svN0gD////ASlbhwUld7w1IoTWmyGI3q0khNWPJYTVgSWE
+        1oElhNaBJYTWgSWE1oElhNWBI4TWkSCI4K8odrixT11px2NjY9tjY2PfTU1NRUZGRgP///8BNDQ0BUxM
+        TD1dXV3FU1RUYSFzujchiN7LH5Hx8yCO6+khjObfIYzm3SGM5t0hjObdIYzm3SGM5t0hjObfII3q5x+R
+        8PMhi+PfJ3rASS9kkwf///8B////ASZuqkkgjenzHpHy9yKB0KEtP1MJ////ASJdkAshesZfIIzn6x+R
+        8fchjObnI4rh3SOK4t0jiuLdI4ri3SOK4t0jiuHdIY3n6x+R8vkgieLlPWGApWVlZulpaWn9V1dXkzg4
+        OAv///8BSEhIBU5OTk1ZWVmvQ0NEISR1uiUigdChIInh1yKE1qskf8x5JIDNdSSAzXUkgM11JIDNdSSA
+        zXUkf8x3I4TVqR+Q7u0fiODTJHi/OS5chAX///8B////AShikyshiuPjH5Ly9SR7xH0tQVUD////ASRX
+        gwUfecVDHYjh1SCQ7ecmhdSTJ37JUyd/y1Mnf8tTJ3/LUyd/ylMnfshVJIDOgyOH3LsjgtGbMFyBR19f
+        YL1iYmLXUVFRdy0tLQs1NTUrSkpKSVVVVZFWVlaDNTY2BShrqAckcbQjIXS6NyVztCMob6sRKHCtDydw
+        rQ8ncK0PJ2+tDyhwrQ8obqsPLnu8SyKO6dUbgda5GnfFI////wH///8B////AStKZBEih93PH5Hw8yZ2
+        uV3///8B////Af///wEZd8YvG4TbwSKP6tctgspbMGOQCTBlkwcwZZMHL2WTBzBlkgcwY48JKHS1Eyh4
+        uycnd7sdK1V5CVVVVYNUVFSLTk5OHSkpKQNLS0uNZGRk4WJiYtlOTk5P////Af///wEkPFkDIkhoAyo8
+        TgP///8B////Af///wH///8B////Af///wH///8BM3y6OyOO6M8bgNW1GHjIIf///wH///8B////AStF
+        XBEiiN3NH5Hw8yd2uVv///8B////Af///wEXeMgtG4PbvSKP6tcuhMxX////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////AU5OTk9SUlKRRkZGEf///wFUVFTBampq/WRkZNVEREQp////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BM326OyOO6M8bgNW1F3jIIf//
+        /wH///8B////ASpFXREiiN3NH5Hw8yd2ulv///8B////Af///wEXd8ktG4PbvSKP6tcuhM1X////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////AUVFRSlVVVWnOzs7JQYGBgdXV1ffampq+2Fh
+        YcE1NTUX////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BNH26OyOO
+        6M8bgNW1GHfIIf///wH///8B////AStGXREiiN3NH5Hw8yZ2ulv///8B////Af///wEYeMgtG4PbvSKP
+        6tctg8xX////Af///wH///8B////Af///wH///8B////Af///wH///8B////ATc3NxVaWlq1W1tbr0xM
+        TJNHR0dfWlpapVxcXK8rKysN////ASs8TAMuWX0RL2OQIy1XeQ////8B////Af///wH///8B////Af//
+        /wH///8BM3m0PyOO59EbgNW1GHfIIf///wH///8B////ASpFXREiiN3NH5Hw8yd2ulv///8B////Af//
+        /wEXeMktG4PbvSKP6tcuhM1X////Af///wH///8B////Af///wH///8B////Af///wH///8B////ASQk
+        JAtfX1+vampq91lZWeVDQ0MDSEhIP1dXV50wMDAL////ASRxtCUjgM6lIYri4yKG2cMjgtOnIoLUpyKC
+        1KcigtSnIoLUpyKC1KcigtOnIobZwR+Q7vEfh97TI3i+NTBafwP///8B////ASpFXREiiN3NH5Hw8yd2
+        ulv///8B////Af///wEXeMktG4PbvSKP6tcuhM1X////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////ARsbGwleXl6pa2tr+VlZWek/Pz8HSEhIM1RUVJs0NDQPJkJcAyJ3vz0gieHXHpP2/R+Q
+        7/UhjejpIY3n5SGN5+UhjeflIY3n5SGN5+UhjefnH4/t8R6T9fkhjefpKHzBTzBnlQf///8B////AStG
+        XREiiN3NH5Hw8yZ2ulv///8B////Af///wEYeMktG4PbvSKP6tcug8xX////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////AScnJw1fX1+xaWlp81paWt9DQ0NPVVVVhVlZWbM9PT0Z////ASdz
+        sh0kgtKZII3p6yOAz5MpZ541KWmfMSlonzEpaJ8xKWmfMSlooDEoZ50xJna7ZSKC06UkfMeFKG6rHzBO
+        awP///8B////ASpFXREiiN3NH5Hw8yd2ulv///8B////Af///wEXd8ktG4PbvSKP6tcuhM1X////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////ATo6OhdbW1u1V1dXi0dHR19OTk6zaGho/WNj
+        Y9lFRUUv////ASxwqRElgtB1IYvk3SOB0Gf///8B////Af///wH///8B////Af///wH///8BOgAAAytB
+        VgssMUEF////Af///wH///8B////ASpFXREiiN3NH5Hw8yd1ulv///8B////Af///wEXeMktG4PbvSKP
+        6tcuhMxX////Af///wH///8B////Af///wH///8B////Af///wH///8B////AUdHRy9YWFi1QUFBJ///
+        /wFISEiJZmZm92ZmZuVPT09X////ASxxrBElgtF3IYvk3yOC0Wf///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////AStGXREiiN3NH5Hw8yd2ulv///8B////Af//
+        /wEYeMgtG4PbvSKP6tcug81X////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVFR
+        UVdaWlq5RUVFJykpKQU9PT1HW1tbq1xcXK1UVFSFNDQ0By1wqxElgtF3IYvk3yOB0Gf///8B////Af//
+        /wH///8B////Af///wH///8B////ASIXDQP///8B////Af///wH///8B////AStDWA8iiN3NH5Hw8yZ1
+        uVv///8B////Af///wEYeMgtG4PbvSKP6tcuhMxX////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8BKysrB1paWo1iYmLdUlJSfywsLBchISELMzMzF0ZGRjdUVFSfR0dHKytyrhMlgtF/IYzm4SOA
+        z3MtaZ0PL2ufDS9soA0vbKANL2ygDS9soA0vap0PKHW2HSF4wTMidr0nJ26rFShrpBEobKQRKGykESlY
+        fx0iiN3RH5Dw8yd2uGMobKQRJ2ykEShrpBEdd8I7HIXcwyKP6tcsg8xZ////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8BREREJ2JiYsNqamr7WVlZzS4uLiH///8B////AUxMTBVTU1ONU1NTbyZt
+        qSsihdirH4/t8SKH3LMlgc9xJoLQbSaC0W0mgtFtJoLRbSaC0W0mgs9tJIPUkyCH3sMghNivIoLTfyKC
+        03UigtN1IoLTdSN+zH0hi+TlHpHy+SOC0acigtN1IoLTdSKC0nchhNeTHozo4yGP7OEogs5rNE5oBf//
+        /wH///8B////Af///wH///8B////Af///wEzMzMHU1NTaWJiYtdmZmbzTk5OkTMzMwn///8BPT09A0dH
+        RyNWVlaPXV1duzNiiGEgh97LH5Hx9yGM5+MjiN7LI4jexyOI3scjiN7HI4jexyOI3scjiN3HIYvl3x+R
+        8PcfjuzvIYvk2yGK49UhiuPVIYrj1SGK49UgjejbH47r2yGL5NchiuPVIYrj1SGK49Ugi+XfH5Du9SCO
+        6uUlgdB3NFNuCf///wH///8B////Af///wH///8B////Af///wFKSkorWFhYpVZWVotXV1eZPj4+QTg4
+        OAP///8BPDw8B0ZGRlVgYGDXZmZm61FdaJsmd7qFIofcoSSC0nkmfcZPJn3HSyZ8xksmfMZLJn3HSyZ9
+        xksmfMVNJH/NcSKH3J8jhNaNJIHPZSWBz10lgtBdJYLPXSWC0F0lgc5dJYHOXSWBz10lgtBdJYLPXSWB
+        z10kgdBtIoXYmSOF2JEleL4/MkhdA////wH///8B////Af///wH///8B////AURERBFXV1d/V1dXmUhI
+        SCUxMTEZIyMjCf///wH///8BODg4BUVFRUdeXl7baGdn919fX8lNVVtnL12EJSxhjw3///8B////Af//
+        /wH///8B////Af///wH///8BLVl+Cy1qnh0tYY0TLlh7A////wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wErXogHLWWUGS9qnRktUXAH////Af///wH///8B////Af///wH///8BODg4CVRU
+        VFlfX1/JU1NTc0hISA////8B////Af///wH///8B////ATo6OhNNTU13XFxcp1lZWZFYWFifUVBPRzEx
+        MQn///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wEwMDAHUVFRRWFhYbtmZmbxV1dXn0FBQR8dHR0D////Af///wH///8B////ATAwMAM2NjYbQ0NDKUhI
+        SCdVVVV9WFhYn1JSUkc2NjYJ////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////ATU1NQlSUlJFYGBgsWlpafNmZmb5U1NToz4+PiEbGxsD////Af///wH///8B////Af//
+        /wH///8B////AT4+PgtSUlJZX19f02FhYbVUVFRRQUFBEf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8BQEBAD1VVVVFcXFyrYWFh12VlZfFZWVnBRUVFRTMzMwn///8B////Af//
+        /wH///8B////Af///wH///8B////AUVFRRVVVVV9ZmZm72hoaPVhYWHFV1dXbUlJSSEaGhoD////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////ARgYGANISEghWFhYbV1dXbVbW1udVlZWaVRUVIVHR0dNNTU1Df//
+        /wH///8B////Af///wH///8B////Af///wH///8B////AUJCQgtSUlJLYGBguWNjY9lbW1utWlpaq1pa
+        WpVSUlJJPz8/EwAAAAP///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wEAAAADPj4+E1FRUUldXV2ZXl5ew1paWo1SUlI1PT09Dzk5
+        ORkvLy8L////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFFRUUNUFBQPVNT
+        U1dPT08xVFRUU1tbW6VfX1+/XFxcjVFRUUk9PT0XJCQkBf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8BJCQkBT4+PhdRUVFHXFxci2NjY8lnZ2fvX19fxVBQ
+        UEc1NTUH////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8BMTExBzc3NwscHBwDPz8/DVdXV2djY2PbaGho7WRkZNFeXl6jWFhYbU5OTjs9PT0bHR0dCf//
+        /wH///8B////Af///wH///8B////Af///wH///8BHBwcCT09PRtNTU07V1dXa15eXqNjY2PRZmZm7Wpq
+        avtpaWn7Xl5ew01NTUUdHR0F////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8BLi4uC1RUVGViYmLdaWlp/2NjY9tbW1u1XV1du15e
+        Xr9fX1+vXFxckVhYWHVVVVVfUlJSU1JSUklSUlJJUlJSUVVVVV9YWFh1XV1dkWFhYbFjY2PNYWFh1V5e
+        Xr1ZWVmbXl5eu2NjY+FeXl6nVFRUUUZGRhUgICAD////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BMTExA0pKSh9VVVVjWlpapVVV
+        VXVQUFAvUlJSN1JSUm1iYmLTaGho72hoaOtjY2PdXl5ex19fX8dhYWHPYmJi2WZmZuVoaGjraWlp8Who
+        aPNgYGDFU1NTYVNTUy9OTk4bTExMO09PT1FPT08nRkZGCf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////ATU1
+        NQNLS0sLSEhIG0NDQxM2NjYDMzMzA0hISENiYmLPaWlp/Wpqav9eXl6/UVFRRVFRUUNTU1NPVlZWYV9f
+        X8Fqamr/aWlp/2ZmZvFbW1ubNDQ0FTAwMAP///8BOjo6Bzw8PAk0NDQD////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////ATw8PBtQUFBdV1dXkVxcXMFQUFB9R0dHDT4+
+        PgVFRUUHSkpKEU9PT3lcXFzFWFhYmVJSUmtISEg3ISEhB////wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////ATc3NwNKSkoHUlJSC1lZ
+        WQ9NTU0L////Af///wH///8B////AUxMTAlZWVkRVFRUDUxMTAk/Pz8F////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wEAAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAA
+        AAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA
+        //8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAA
+        AAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA
+        //8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAA
+        AAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA
+        //8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8=
+</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>On</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Customer Services Department</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CSDep_Form</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+</root>
