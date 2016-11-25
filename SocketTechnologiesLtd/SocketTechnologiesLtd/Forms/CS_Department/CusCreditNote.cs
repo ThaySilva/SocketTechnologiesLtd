@@ -15,11 +15,14 @@ namespace SocketTechnologiesLtd
         public CusCreditNote()
         {
             InitializeComponent();
+            this.ControlBox = false;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+            this.TopMost = true;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void metroButton2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -16,8 +16,6 @@ namespace SocketTechnologiesLtd
         {
             InitializeComponent();
             this.ControlBox = false;
-            this.Bounds = Screen.PrimaryScreen.Bounds;
-            this.TopMost = true;
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)

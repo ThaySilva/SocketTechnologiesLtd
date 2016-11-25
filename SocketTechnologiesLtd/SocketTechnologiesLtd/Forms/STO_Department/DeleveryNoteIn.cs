@@ -35,5 +35,11 @@ namespace SocketTechnologiesLtd
             GRN_Form grn = new GRN_Form();
             grn.Show();
         }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            DiscrepancyForm df = new DiscrepancyForm();
+            df.Show();
+        }
     }
 }

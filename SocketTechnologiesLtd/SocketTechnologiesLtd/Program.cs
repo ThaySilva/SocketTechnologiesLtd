@@ -20,7 +20,7 @@ namespace SocketTechnologiesLtd
             Application.SetCompatibleTextRenderingDefault(false);
             IDataLayer _DataLayer = DataLayer.GetInstance();
             IModel _Model = Model.GetInstance(_DataLayer);
-            Application.Run(new Login_Form(_Model));
+            Application.Run(new Container(_Model));
         }
     }
 }

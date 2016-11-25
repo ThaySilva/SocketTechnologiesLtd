@@ -16,8 +16,6 @@ namespace SocketTechnologiesLtd
         {
             InitializeComponent();
             this.ControlBox = false;
-            this.Bounds = Screen.PrimaryScreen.Bounds;
-            this.TopMost = true;
             this.btn_Exit.Hide();
         }
 
@@ -43,13 +41,25 @@ namespace SocketTechnologiesLtd
         private void btn_CreateMRBR_Click(object sender, EventArgs e)
         {
             MRBReport_Form mrb = new MRBReport_Form();
+            mrb.MdiParent = this.MdiParent;
+            mrb.Dock = DockStyle.Fill;
             mrb.Show();
         }
 
         private void btn_SPARes_Click(object sender, EventArgs e)
         {
             SPARes_Form spares = new SPARes_Form();
+            spares.MdiParent = this.MdiParent;
+            spares.Dock = DockStyle.Fill;
             spares.Show();
+        }
+
+        private void btn_CreateRGARes_Click(object sender, EventArgs e)
+        {
+            RGA_Response rga = new RGA_Response();
+            rga.MdiParent = this.MdiParent;
+            rga.Dock = DockStyle.Fill;
+            rga.Show();
         }
     }
 }

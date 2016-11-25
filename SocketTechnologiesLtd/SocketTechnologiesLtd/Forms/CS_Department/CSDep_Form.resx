@@ -145,7 +145,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_Logout.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="btn_CSRequests.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -363,57 +363,6 @@
   <data name="CSHomeScreenPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;btn_CreateTE.Name" xml:space="preserve">
-    <value>btn_CreateTE</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateTE.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateTE.Parent" xml:space="preserve">
-    <value>CSHomeScreenPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateTE.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn_ManageQuotations.Name" xml:space="preserve">
-    <value>btn_ManageQuotations</value>
-  </data>
-  <data name="&gt;&gt;btn_ManageQuotations.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_ManageQuotations.Parent" xml:space="preserve">
-    <value>CSHomeScreenPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_ManageQuotations.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="CSHomeScreenPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 109</value>
-  </data>
-  <data name="CSHomeScreenPanel.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="CSHomeScreenPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>867, 440</value>
-  </data>
-  <data name="CSHomeScreenPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;CSHomeScreenPanel.Name" xml:space="preserve">
-    <value>CSHomeScreenPanel</value>
-  </data>
-  <data name="&gt;&gt;CSHomeScreenPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CSHomeScreenPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CSHomeScreenPanel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="CSHomeScreenPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_CreateTE" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_ManageQuotations" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSResponses" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSManageScrapNote" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSManageCustomers" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSManagaCustomerOrder" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSRequests" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSWeeklyReports" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateCCN" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="btn_CreateTE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -474,77 +423,38 @@
   <data name="&gt;&gt;btn_ManageQuotations.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="CSHomeScreenPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSHomeScreenPanel.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CSHomeScreenPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 440</value>
+  </data>
+  <data name="CSHomeScreenPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;CSHomeScreenPanel.Name" xml:space="preserve">
+    <value>CSHomeScreenPanel</value>
+  </data>
+  <data name="&gt;&gt;CSHomeScreenPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSHomeScreenPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSHomeScreenPanel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CSHomeScreenPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_CreateTE" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_ManageQuotations" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSResponses" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSManageScrapNote" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSManageCustomers" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSManagaCustomerOrder" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSRequests" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_CSWeeklyReports" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateCCN" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="CSRequestsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="CSRequestsPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateRfQ.Name" xml:space="preserve">
-    <value>btn_CreateRfQ</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateRfQ.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateRfQ.Parent" xml:space="preserve">
-    <value>CSRequestsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateRfQ.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateFSR.Name" xml:space="preserve">
-    <value>btn_CreateFSR</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateFSR.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateFSR.Parent" xml:space="preserve">
-    <value>CSRequestsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateFSR.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateRGAR.Name" xml:space="preserve">
-    <value>btn_CreateRGAR</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateRGAR.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateRGAR.Parent" xml:space="preserve">
-    <value>CSRequestsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateRGAR.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="CSRequestsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 109</value>
-  </data>
-  <data name="CSRequestsPanel.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="CSRequestsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>867, 440</value>
-  </data>
-  <data name="CSRequestsPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="CSRequestsPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;CSRequestsPanel.Name" xml:space="preserve">
-    <value>CSRequestsPanel</value>
-  </data>
-  <data name="&gt;&gt;CSRequestsPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CSRequestsPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CSRequestsPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="CSRequestsPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_CreateRfQ" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateFSR" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateRGAR" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="btn_CreateRfQ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -636,6 +546,36 @@
   <data name="&gt;&gt;btn_CreateRGAR.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="CSRequestsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSRequestsPanel.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CSRequestsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 440</value>
+  </data>
+  <data name="CSRequestsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="CSRequestsPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CSRequestsPanel.Name" xml:space="preserve">
+    <value>CSRequestsPanel</value>
+  </data>
+  <data name="&gt;&gt;CSRequestsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSRequestsPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSRequestsPanel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="CSRequestsPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_CreateRfQ" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateFSR" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateRGAR" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="btn_CSExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -661,79 +601,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_CSExit.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="CSResponsesPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="CSResponsesPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewTERes.Name" xml:space="preserve">
-    <value>btn_ViewTERes</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewTERes.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewTERes.Parent" xml:space="preserve">
-    <value>CSResponsesPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewTERes.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateFSRes.Name" xml:space="preserve">
-    <value>btn_CreateFSRes</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateFSRes.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateFSRes.Parent" xml:space="preserve">
-    <value>CSResponsesPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateFSRes.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewRGARes.Name" xml:space="preserve">
-    <value>btn_ViewRGARes</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewRGARes.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewRGARes.Parent" xml:space="preserve">
-    <value>CSResponsesPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewRGARes.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="CSResponsesPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 109</value>
-  </data>
-  <data name="CSResponsesPanel.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="CSResponsesPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>867, 440</value>
-  </data>
-  <data name="CSResponsesPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="CSResponsesPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;CSResponsesPanel.Name" xml:space="preserve">
-    <value>CSResponsesPanel</value>
-  </data>
-  <data name="&gt;&gt;CSResponsesPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CSResponsesPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CSResponsesPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="CSResponsesPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_ViewTERes" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateFSRes" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_ViewRGARes" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="btn_ViewTERes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -742,7 +616,7 @@
     <value>292, 3</value>
   </data>
   <data name="btn_ViewTERes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 140</value>
+    <value>283, 22</value>
   </data>
   <data name="btn_ViewTERes.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -769,10 +643,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateFSRes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 149</value>
+    <value>292, 31</value>
   </data>
   <data name="btn_CreateFSRes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 140</value>
+    <value>283, 22</value>
   </data>
   <data name="btn_CreateFSRes.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -799,10 +673,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_ViewRGARes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 295</value>
+    <value>292, 59</value>
   </data>
   <data name="btn_ViewRGARes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 142</value>
+    <value>283, 22</value>
   </data>
   <data name="btn_ViewRGARes.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -825,251 +699,35 @@
   <data name="&gt;&gt;btn_ViewRGARes.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="CSWeeklyReportsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="CSResponsesPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 462</value>
   </data>
-  <data name="CSWeeklyReportsPanel.ColumnCount" type="System.Int32, mscorlib">
+  <data name="CSResponsesPanel.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;btn_OEReport.Name" xml:space="preserve">
-    <value>btn_OEReport</value>
+  <data name="CSResponsesPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 84</value>
   </data>
-  <data name="&gt;&gt;btn_OEReport.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="CSResponsesPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
-  <data name="&gt;&gt;btn_OEReport.Parent" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_OEReport.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn_FSRReport.Name" xml:space="preserve">
-    <value>btn_FSRReport</value>
-  </data>
-  <data name="&gt;&gt;btn_FSRReport.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_FSRReport.Parent" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_FSRReport.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btn_ORReport.Name" xml:space="preserve">
-    <value>btn_ORReport</value>
-  </data>
-  <data name="&gt;&gt;btn_ORReport.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_ORReport.Parent" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_ORReport.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btn_SNReport.Name" xml:space="preserve">
-    <value>btn_SNReport</value>
-  </data>
-  <data name="&gt;&gt;btn_SNReport.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_SNReport.Parent" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_SNReport.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btn_RFQReport.Name" xml:space="preserve">
-    <value>btn_RFQReport</value>
-  </data>
-  <data name="&gt;&gt;btn_RFQReport.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_RFQReport.Parent" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_RFQReport.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="CSWeeklyReportsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 109</value>
-  </data>
-  <data name="CSWeeklyReportsPanel.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="CSWeeklyReportsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>867, 440</value>
-  </data>
-  <data name="CSWeeklyReportsPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="CSWeeklyReportsPanel.Visible" type="System.Boolean, mscorlib">
+  <data name="CSResponsesPanel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;CSWeeklyReportsPanel.Name" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
+  <data name="&gt;&gt;CSResponsesPanel.Name" xml:space="preserve">
+    <value>CSResponsesPanel</value>
   </data>
-  <data name="&gt;&gt;CSWeeklyReportsPanel.Type" xml:space="preserve">
+  <data name="&gt;&gt;CSResponsesPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CSWeeklyReportsPanel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CSResponsesPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;CSWeeklyReportsPanel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CSResponsesPanel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="CSWeeklyReportsPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_OEReport" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btn_FSRReport" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_ORReport" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_SNReport" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_RFQReport" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333,Absolute,20,Absolute,20" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="btn_OEReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="btn_OEReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 149</value>
-  </data>
-  <data name="btn_OEReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 140</value>
-  </data>
-  <data name="btn_OEReport.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="btn_OEReport.Text" xml:space="preserve">
-    <value>Generate Order Enquiries Report</value>
-  </data>
-  <data name="btn_OEReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;btn_OEReport.Name" xml:space="preserve">
-    <value>btn_OEReport</value>
-  </data>
-  <data name="&gt;&gt;btn_OEReport.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_OEReport.Parent" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_OEReport.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btn_FSRReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="btn_FSRReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 3</value>
-  </data>
-  <data name="btn_FSRReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 140</value>
-  </data>
-  <data name="btn_FSRReport.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btn_FSRReport.Text" xml:space="preserve">
-    <value>Generate Field Service Request Report</value>
-  </data>
-  <data name="btn_FSRReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;btn_FSRReport.Name" xml:space="preserve">
-    <value>btn_FSRReport</value>
-  </data>
-  <data name="&gt;&gt;btn_FSRReport.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_FSRReport.Parent" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_FSRReport.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btn_ORReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="btn_ORReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 295</value>
-  </data>
-  <data name="btn_ORReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 142</value>
-  </data>
-  <data name="btn_ORReport.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="btn_ORReport.Text" xml:space="preserve">
-    <value>Generate Orders Received Report</value>
-  </data>
-  <data name="btn_ORReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;btn_ORReport.Name" xml:space="preserve">
-    <value>btn_ORReport</value>
-  </data>
-  <data name="&gt;&gt;btn_ORReport.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_ORReport.Parent" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_ORReport.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btn_SNReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="btn_SNReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>581, 149</value>
-  </data>
-  <data name="btn_SNReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 140</value>
-  </data>
-  <data name="btn_SNReport.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="btn_SNReport.Text" xml:space="preserve">
-    <value>Generate Scrap Notes Report</value>
-  </data>
-  <data name="btn_SNReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;btn_SNReport.Name" xml:space="preserve">
-    <value>btn_SNReport</value>
-  </data>
-  <data name="&gt;&gt;btn_SNReport.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_SNReport.Parent" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_SNReport.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btn_RFQReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="btn_RFQReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 149</value>
-  </data>
-  <data name="btn_RFQReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 140</value>
-  </data>
-  <data name="btn_RFQReport.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="btn_RFQReport.Text" xml:space="preserve">
-    <value>Generate Request for Quotation Report</value>
-  </data>
-  <data name="btn_RFQReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;btn_RFQReport.Name" xml:space="preserve">
-    <value>btn_RFQReport</value>
-  </data>
-  <data name="&gt;&gt;btn_RFQReport.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_RFQReport.Parent" xml:space="preserve">
-    <value>CSWeeklyReportsPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_RFQReport.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="CSResponsesPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_ViewTERes" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateFSRes" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_ViewRGARes" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="CSManageCustomerOrdersPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1077,92 +735,14 @@
   <data name="CSManageCustomerOrdersPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;btn_CreateCOE.Name" xml:space="preserve">
-    <value>btn_CreateCOE</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateCOE.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateCOE.Parent" xml:space="preserve">
-    <value>CSManageCustomerOrdersPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateCOE.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewCOS.Name" xml:space="preserve">
-    <value>btn_ViewCOS</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewCOS.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewCOS.Parent" xml:space="preserve">
-    <value>CSManageCustomerOrdersPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewCOS.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateCPO.Name" xml:space="preserve">
-    <value>btn_CreateCPO</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateCPO.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateCPO.Parent" xml:space="preserve">
-    <value>CSManageCustomerOrdersPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateCPO.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateWO.Name" xml:space="preserve">
-    <value>btn_CreateWO</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateWO.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateWO.Parent" xml:space="preserve">
-    <value>CSManageCustomerOrdersPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateWO.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="CSManageCustomerOrdersPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 109</value>
-  </data>
-  <data name="CSManageCustomerOrdersPanel.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="CSManageCustomerOrdersPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>867, 440</value>
-  </data>
-  <data name="CSManageCustomerOrdersPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="CSManageCustomerOrdersPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;CSManageCustomerOrdersPanel.Name" xml:space="preserve">
-    <value>CSManageCustomerOrdersPanel</value>
-  </data>
-  <data name="&gt;&gt;CSManageCustomerOrdersPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CSManageCustomerOrdersPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CSManageCustomerOrdersPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="CSManageCustomerOrdersPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_CreateCOE" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_ViewCOS" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateCPO" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateWO" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="btn_CreateCOE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateCOE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 223</value>
+    <value>219, 221</value>
   </data>
   <data name="btn_CreateCOE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 104</value>
+    <value>210, 103</value>
   </data>
   <data name="btn_CreateCOE.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1189,10 +769,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_ViewCOS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 113</value>
+    <value>435, 112</value>
   </data>
   <data name="btn_ViewCOS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 104</value>
+    <value>210, 103</value>
   </data>
   <data name="btn_ViewCOS.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1219,10 +799,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateCPO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 113</value>
+    <value>219, 112</value>
   </data>
   <data name="btn_CreateCPO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 104</value>
+    <value>210, 103</value>
   </data>
   <data name="btn_CreateCPO.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1249,10 +829,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateWO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 223</value>
+    <value>435, 221</value>
   </data>
   <data name="btn_CreateWO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 104</value>
+    <value>210, 103</value>
   </data>
   <data name="btn_CreateWO.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1275,74 +855,50 @@
   <data name="&gt;&gt;btn_CreateWO.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="CSManageCustomerOrdersPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 437</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CSManageCustomerOrdersPanel.Name" xml:space="preserve">
+    <value>CSManageCustomerOrdersPanel</value>
+  </data>
+  <data name="&gt;&gt;CSManageCustomerOrdersPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSManageCustomerOrdersPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSManageCustomerOrdersPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CSManageCustomerOrdersPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_CreateCOE" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_ViewCOS" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateCPO" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateWO" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="CSManageScrapPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="CSManageScrapPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;btn_ViewSC.Name" xml:space="preserve">
-    <value>btn_ViewSC</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewSC.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewSC.Parent" xml:space="preserve">
-    <value>CSManageScrapPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_ViewSC.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateSN.Name" xml:space="preserve">
-    <value>btn_CreateSN</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateSN.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateSN.Parent" xml:space="preserve">
-    <value>CSManageScrapPanel</value>
-  </data>
-  <data name="&gt;&gt;btn_CreateSN.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="CSManageScrapPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 109</value>
-  </data>
-  <data name="CSManageScrapPanel.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="CSManageScrapPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>867, 437</value>
-  </data>
-  <data name="CSManageScrapPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="CSManageScrapPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;CSManageScrapPanel.Name" xml:space="preserve">
-    <value>CSManageScrapPanel</value>
-  </data>
-  <data name="&gt;&gt;CSManageScrapPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CSManageScrapPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CSManageScrapPanel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="CSManageScrapPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_ViewSC" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateSN" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="btn_ViewSC.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_ViewSC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 221</value>
+    <value>292, 223</value>
   </data>
   <data name="btn_ViewSC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 103</value>
+    <value>283, 104</value>
   </data>
   <data name="btn_ViewSC.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1369,10 +925,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateSN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 112</value>
+    <value>292, 113</value>
   </data>
   <data name="btn_CreateSN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 103</value>
+    <value>283, 104</value>
   </data>
   <data name="btn_CreateSN.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1395,6 +951,36 @@
   <data name="&gt;&gt;btn_CreateSN.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="CSManageScrapPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 109</value>
+  </data>
+  <data name="CSManageScrapPanel.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="CSManageScrapPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>867, 440</value>
+  </data>
+  <data name="CSManageScrapPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="CSManageScrapPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CSManageScrapPanel.Name" xml:space="preserve">
+    <value>CSManageScrapPanel</value>
+  </data>
+  <data name="&gt;&gt;CSManageScrapPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSManageScrapPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSManageScrapPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="CSManageScrapPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btn_ViewSC" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btn_CreateSN" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="CSManageQuotation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -1405,10 +991,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateRTQ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 221</value>
+    <value>292, 223</value>
   </data>
   <data name="btn_CreateRTQ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 103</value>
+    <value>283, 104</value>
   </data>
   <data name="btn_CreateRTQ.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1435,10 +1021,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateQO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 112</value>
+    <value>292, 113</value>
   </data>
   <data name="btn_CreateQO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 103</value>
+    <value>283, 104</value>
   </data>
   <data name="btn_CreateQO.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1468,7 +1054,7 @@
     <value>4</value>
   </data>
   <data name="CSManageQuotation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>867, 437</value>
+    <value>867, 440</value>
   </data>
   <data name="CSManageQuotation.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>

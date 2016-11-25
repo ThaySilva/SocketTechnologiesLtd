@@ -117,24 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="metroTextBox1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="metroTextBox2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>151, 17</value>
+  </metadata>
+  <metadata name="metroTextBox3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>285, 17</value>
+  </metadata>
+  <metadata name="metroTextBox4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>419, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="metroPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAnVJREFUOE9j+P//PyM6NjY2Zg0NDTX29vYWBOGIiAhzDw8PdmxqUQwAKY6Li6sP
-        Dw+PTU5OPhsTE9MKxL2pqamXY2NjayMjI4OBWBVZD9gAoG3MUVFRnkCbUhMSEhqBBmiCXAFTBGKDxBIT
-        E1uBFiz38/PjBemBG+Di4sIPtGEh0BBjmCZcOCwsTB9kCNCASBCfAeg30fi4uL3Tcywjj1WpSp+u0pA8
-        WaOsfbZJVfNss4I8HDcpG68slOEEaQK6VBtoWSXIZQw2NjaCieEBmQ87FQ9eaVXOvdaqln2nXbH9bpti
-        440WpfLH3Ypnb7YolT7pkj98vEkT7n+gAanR0dHVDMBA2h0Z5K16q11pMkwS5j8PDxX2+x0Km0HsB+1y
-        U081a8vC1AQFBckDvRPNAGTETkxUEX3UpXj2eqvSVBB+0KG4/XKLYnAuHgNAzgeG236G+Pj4wxYWFpy9
-        IRZg/4HwnU7VyMu1ku74DADpAUbpdAagM9KjwwJNLzUqeh+rUdQ9DcR3O5QrrzbK+heGyHA+6FDYDdLw
-        sEN27tlGDcuj1Zry5xrVTGtTXT1DQkK8Gfz9/XXTEmPm3m5TrL7brpwNwvc7FCvPNSqazilV573VplAf
-        GsrAfKtVsfB2m3LlrTaV8nvAQG5I89wK9EIsAyhRAEMzH2QazHmEMDDgg4Eud2dgYGAGJyRQWgAmjvVA
-        P0UDDYKHBToG5QdgigwHptblQHXqIDF4XlBRUWEHJtXZQIPmA+MYpE4TFJ2wZAwUCwVqXAnE05GTOUpm
-        AtkOStZAl5QCFR4H8UFehGasZF9fX3F0F6IYAMMgm5GzL4gNS1yo+D8jAO1V+4SlEqvzAAAAAElFTkSu
-        QmCC
-</value>
-  </data>
   <data name="metroPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -152,4 +147,16 @@
         QmCC
 </value>
   </data>
+  <metadata name="metroTextBox8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>553, 17</value>
+  </metadata>
+  <metadata name="metroTextBox7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>687, 17</value>
+  </metadata>
+  <metadata name="metroTextBox6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>821, 17</value>
+  </metadata>
+  <metadata name="metroTextBox5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>955, 17</value>
+  </metadata>
 </root>

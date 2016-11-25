@@ -84,6 +84,7 @@
             this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
             // metroTile3
             // 

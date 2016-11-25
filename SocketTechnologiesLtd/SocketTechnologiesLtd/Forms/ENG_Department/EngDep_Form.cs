@@ -16,13 +16,27 @@ namespace SocketTechnologiesLtd
         {
             InitializeComponent();
             this.ControlBox = false;
-            this.Bounds = Screen.PrimaryScreen.Bounds;
-            this.TopMost = true;
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_AddCustomProduct_Click(object sender, EventArgs e)
+        {
+            AddCustomProduct acp = new AddCustomProduct();
+            acp.MdiParent = this.MdiParent;
+            acp.Dock = DockStyle.Fill;
+            acp.Show();
+        }
+
+        private void btn_ViewTE_Click(object sender, EventArgs e)
+        {
+            ViewTechnicalEnquiries vte = new ViewTechnicalEnquiries();
+            vte.MdiParent = this.MdiParent;
+            vte.Dock = DockStyle.Fill;
+            vte.Show();
         }
     }
 }

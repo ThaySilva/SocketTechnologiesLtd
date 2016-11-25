@@ -17,10 +17,22 @@ namespace SocketTechnologiesLtd
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnBackAddCust_Click(object sender, EventArgs e)
         {
-            //ViewCustomer Back = new ViewCustomer();
-            //Back.Show();
+            Close();
+            ViewCustomerDetails VCD = new ViewCustomerDetails();
+            VCD.Show();
+            
+        }
+
+        private void btnSaveAddCust_Click(object sender, EventArgs e)
+        {
+            //if (Model.addNewUser(textBoxName.Text, textBoxPassword.Text, listBoxUserType.SelectedItem.ToString()))
+            //{
+            //    MessageBox.Show("User created");
+            //    textBoxName.Text = "";
+            //    textBoxPassword.Text = "";
+            //}
         }
     }
 }

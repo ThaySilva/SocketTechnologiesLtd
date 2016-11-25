@@ -35,6 +35,7 @@
             this.btn_CreateEARes = new MetroFramework.Controls.MetroTile();
             this.btn_CreateRGARes = new MetroFramework.Controls.MetroTile();
             this.btn_ManViewReports = new MetroFramework.Controls.MetroTile();
+            this.btn_SPARes = new MetroFramework.Controls.MetroTile();
             this.ManWeeklyReportsPanel = new System.Windows.Forms.TableLayoutPanel();
             this.btn_ViewProdReports = new MetroFramework.Controls.MetroTile();
             this.btn_StoReports = new MetroFramework.Controls.MetroTile();
@@ -42,7 +43,6 @@
             this.btn_PurReports = new MetroFramework.Controls.MetroTile();
             this.btn_AccReports = new MetroFramework.Controls.MetroTile();
             this.btn_Exit = new MetroFramework.Controls.MetroButton();
-            this.btn_SPARes = new MetroFramework.Controls.MetroTile();
             this.ManHomeScreen.SuspendLayout();
             this.ManWeeklyReportsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -136,6 +136,7 @@
             this.btn_CreateRGARes.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_CreateRGARes.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_CreateRGARes.UseTileImage = true;
+            this.btn_CreateRGARes.Click += new System.EventHandler(this.btn_CreateRGARes_Click);
             // 
             // btn_ManViewReports
             // 
@@ -155,6 +156,25 @@
             this.btn_ManViewReports.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_ManViewReports.UseTileImage = true;
             this.btn_ManViewReports.Click += new System.EventHandler(this.btn_ManViewReports_Click);
+            // 
+            // btn_SPARes
+            // 
+            this.btn_SPARes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_SPARes.Location = new System.Drawing.Point(315, 163);
+            this.btn_SPARes.Name = "btn_SPARes";
+            this.btn_SPARes.Size = new System.Drawing.Size(306, 154);
+            this.btn_SPARes.Style = MetroFramework.MetroColorStyle.Orange;
+            this.btn_SPARes.TabIndex = 12;
+            this.btn_SPARes.Text = "Issue Supplier Payment Authorisation Response";
+            this.btn_SPARes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_SPARes.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_SPARes.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SPARes.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btn_SPARes.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_SPARes.UseTileImage = true;
+            this.btn_SPARes.Click += new System.EventHandler(this.btn_SPARes_Click);
             // 
             // ManWeeklyReportsPanel
             // 
@@ -281,25 +301,6 @@
             this.btn_Exit.Text = "Exit";
             this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
-            // 
-            // btn_SPARes
-            // 
-            this.btn_SPARes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_SPARes.Location = new System.Drawing.Point(315, 163);
-            this.btn_SPARes.Name = "btn_SPARes";
-            this.btn_SPARes.Size = new System.Drawing.Size(306, 154);
-            this.btn_SPARes.Style = MetroFramework.MetroColorStyle.Orange;
-            this.btn_SPARes.TabIndex = 12;
-            this.btn_SPARes.Text = "Issue Supplier Payment Authorisation Response";
-            this.btn_SPARes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_SPARes.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_SPARes.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SPARes.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btn_SPARes.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btn_SPARes.UseTileImage = true;
-            this.btn_SPARes.Click += new System.EventHandler(this.btn_SPARes_Click);
             // 
             // ManDep_Form
             // 

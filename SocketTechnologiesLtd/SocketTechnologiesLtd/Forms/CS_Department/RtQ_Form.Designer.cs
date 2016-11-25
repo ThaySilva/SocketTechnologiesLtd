@@ -32,7 +32,7 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btn_Cancel = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
-            this.txt_RFQPartId = new MetroFramework.Controls.MetroTextBox();
+            this.txt_custAdd = new MetroFramework.Controls.MetroTextBox();
             this.txt_CustomerName = new MetroFramework.Controls.MetroTextBox();
             this.txt_RtQId = new MetroFramework.Controls.MetroTextBox();
             this.txt_RfQId = new MetroFramework.Controls.MetroTextBox();
@@ -42,14 +42,14 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lst_customItems = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroTextBox8 = new MetroFramework.Controls.MetroTextBox();
+            this.txt_rtqTxt = new MetroFramework.Controls.MetroTextBox();
             this.btn_Exit = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lst_customItems)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -58,7 +58,7 @@
             this.metroPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.metroPanel1.Controls.Add(this.btn_Cancel);
             this.metroPanel1.Controls.Add(this.btn_Create);
-            this.metroPanel1.Controls.Add(this.txt_RFQPartId);
+            this.metroPanel1.Controls.Add(this.txt_custAdd);
             this.metroPanel1.Controls.Add(this.txt_CustomerName);
             this.metroPanel1.Controls.Add(this.txt_RtQId);
             this.metroPanel1.Controls.Add(this.txt_RfQId);
@@ -68,8 +68,8 @@
             this.metroPanel1.Controls.Add(this.metroLabel3);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.dataGridView1);
-            this.metroPanel1.Controls.Add(this.metroTextBox8);
+            this.metroPanel1.Controls.Add(this.lst_customItems);
+            this.metroPanel1.Controls.Add(this.txt_rtqTxt);
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -96,6 +96,7 @@
             this.btn_Cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Cancel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Cancel.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Create
             // 
@@ -109,18 +110,19 @@
             this.btn_Create.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Create.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Create.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
-            // txt_RFQPartId
+            // txt_custAdd
             // 
-            this.txt_RFQPartId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_RFQPartId.Enabled = false;
-            this.txt_RFQPartId.Location = new System.Drawing.Point(772, 103);
-            this.txt_RFQPartId.Multiline = true;
-            this.txt_RFQPartId.Name = "txt_RFQPartId";
-            this.txt_RFQPartId.ReadOnly = true;
-            this.txt_RFQPartId.Size = new System.Drawing.Size(245, 120);
-            this.txt_RFQPartId.TabIndex = 36;
-            this.txt_RFQPartId.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_custAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_custAdd.Enabled = false;
+            this.txt_custAdd.Location = new System.Drawing.Point(772, 103);
+            this.txt_custAdd.Multiline = true;
+            this.txt_custAdd.Name = "txt_custAdd";
+            this.txt_custAdd.ReadOnly = true;
+            this.txt_custAdd.Size = new System.Drawing.Size(245, 120);
+            this.txt_custAdd.TabIndex = 36;
+            this.txt_custAdd.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // txt_CustomerName
             // 
@@ -172,7 +174,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(27, 327);
+            this.metroLabel5.Location = new System.Drawing.Point(27, 359);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(202, 25);
             this.metroLabel5.TabIndex = 31;
@@ -231,19 +233,21 @@
             this.metroLabel2.Text = "Refusal to Quote ID:";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // dataGridView1
+            // lst_customItems
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GrayText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lst_customItems.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lst_customItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.lst_customItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.lst_customItems.BackgroundColor = System.Drawing.SystemColors.GrayText;
+            this.lst_customItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lst_customItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(215, 175);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(319, 48);
-            this.dataGridView1.TabIndex = 26;
+            this.lst_customItems.Location = new System.Drawing.Point(215, 175);
+            this.lst_customItems.Name = "lst_customItems";
+            this.lst_customItems.Size = new System.Drawing.Size(278, 167);
+            this.lst_customItems.TabIndex = 26;
             // 
             // Column1
             // 
@@ -256,25 +260,27 @@
             // 
             this.Column2.HeaderText = "Custom P/N";
             this.Column2.Name = "Column2";
+            this.Column2.Width = 90;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Quantity";
             this.Column3.Name = "Column3";
+            this.Column3.Width = 71;
             // 
-            // metroTextBox8
+            // txt_rtqTxt
             // 
-            this.metroTextBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox8.Enabled = false;
-            this.metroTextBox8.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.metroTextBox8.Location = new System.Drawing.Point(27, 365);
-            this.metroTextBox8.Multiline = true;
-            this.metroTextBox8.Name = "metroTextBox8";
-            this.metroTextBox8.ReadOnly = true;
-            this.metroTextBox8.Size = new System.Drawing.Size(990, 104);
-            this.metroTextBox8.TabIndex = 24;
-            this.metroTextBox8.Text = resources.GetString("metroTextBox8.Text");
-            this.metroTextBox8.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_rtqTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_rtqTxt.Enabled = false;
+            this.txt_rtqTxt.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txt_rtqTxt.Location = new System.Drawing.Point(27, 400);
+            this.txt_rtqTxt.Multiline = true;
+            this.txt_rtqTxt.Name = "txt_rtqTxt";
+            this.txt_rtqTxt.ReadOnly = true;
+            this.txt_rtqTxt.Size = new System.Drawing.Size(990, 104);
+            this.txt_rtqTxt.TabIndex = 24;
+            this.txt_rtqTxt.Text = resources.GetString("txt_rtqTxt.Text");
+            this.txt_rtqTxt.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // btn_Exit
             // 
@@ -303,7 +309,7 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lst_customItems)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -311,16 +317,16 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox8;
+        private MetroFramework.Controls.MetroTextBox txt_rtqTxt;
         private MetroFramework.Controls.MetroButton btn_Exit;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView lst_customItems;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox txt_RFQPartId;
+        private MetroFramework.Controls.MetroTextBox txt_custAdd;
         private MetroFramework.Controls.MetroTextBox txt_CustomerName;
         private MetroFramework.Controls.MetroTextBox txt_RtQId;
         private MetroFramework.Controls.MetroTextBox txt_RfQId;

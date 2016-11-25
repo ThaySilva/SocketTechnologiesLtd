@@ -35,6 +35,7 @@
             this.btn_ViewFGTN = new MetroFramework.Controls.MetroTile();
             this.btn_ManageInvoices = new MetroFramework.Controls.MetroTile();
             this.btn_LogCustomerPayment = new MetroFramework.Controls.MetroTile();
+            this.btn_CreatePackingSlip = new MetroFramework.Controls.MetroTile();
             this.AccManageInvoicesPanel = new System.Windows.Forms.TableLayoutPanel();
             this.btn_IssueCustomerInvoice = new MetroFramework.Controls.MetroTile();
             this.btn_ViewSupplierInvoice = new MetroFramework.Controls.MetroTile();
@@ -46,7 +47,6 @@
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.btn_CreatePackingSlip = new MetroFramework.Controls.MetroTile();
             this.ACCHomePanel.SuspendLayout();
             this.AccManageInvoicesPanel.SuspendLayout();
             this.AccWeeklyReportsPanel.SuspendLayout();
@@ -151,13 +151,33 @@
             this.btn_LogCustomerPayment.Size = new System.Drawing.Size(308, 162);
             this.btn_LogCustomerPayment.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_LogCustomerPayment.TabIndex = 9;
-            this.btn_LogCustomerPayment.Text = "Log Customer Payment";
+            this.btn_LogCustomerPayment.Text = "Create Supplier Payment Authorisation Request";
             this.btn_LogCustomerPayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_LogCustomerPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_LogCustomerPayment.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_LogCustomerPayment.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_LogCustomerPayment.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_LogCustomerPayment.UseTileImage = true;
+            this.btn_LogCustomerPayment.Click += new System.EventHandler(this.btn_LogCustomerPayment_Click);
+            // 
+            // btn_CreatePackingSlip
+            // 
+            this.btn_CreatePackingSlip.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_CreatePackingSlip.Location = new System.Drawing.Point(317, 171);
+            this.btn_CreatePackingSlip.Name = "btn_CreatePackingSlip";
+            this.btn_CreatePackingSlip.Size = new System.Drawing.Size(308, 162);
+            this.btn_CreatePackingSlip.Style = MetroFramework.MetroColorStyle.Orange;
+            this.btn_CreatePackingSlip.TabIndex = 12;
+            this.btn_CreatePackingSlip.Text = "Create Packing Slip";
+            this.btn_CreatePackingSlip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_CreatePackingSlip.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_CreatePackingSlip.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_CreatePackingSlip.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btn_CreatePackingSlip.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_CreatePackingSlip.UseTileImage = true;
+            this.btn_CreatePackingSlip.Click += new System.EventHandler(this.btn_CreatePackingSlip_Click);
             // 
             // AccManageInvoicesPanel
             // 
@@ -210,13 +230,14 @@
             this.btn_ViewSupplierInvoice.Size = new System.Drawing.Size(306, 119);
             this.btn_ViewSupplierInvoice.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_ViewSupplierInvoice.TabIndex = 10;
-            this.btn_ViewSupplierInvoice.Text = "View Supplier Invoice";
+            this.btn_ViewSupplierInvoice.Text = "Log Supplier Invoice";
             this.btn_ViewSupplierInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_ViewSupplierInvoice.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_ViewSupplierInvoice.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ViewSupplierInvoice.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_ViewSupplierInvoice.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_ViewSupplierInvoice.UseTileImage = true;
+            this.btn_ViewSupplierInvoice.Click += new System.EventHandler(this.btn_ViewSupplierInvoice_Click);
             // 
             // btn_Exit
             // 
@@ -362,25 +383,6 @@
             this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.metroTile6.UseTileImage = true;
-            // 
-            // btn_CreatePackingSlip
-            // 
-            this.btn_CreatePackingSlip.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_CreatePackingSlip.Location = new System.Drawing.Point(317, 171);
-            this.btn_CreatePackingSlip.Name = "btn_CreatePackingSlip";
-            this.btn_CreatePackingSlip.Size = new System.Drawing.Size(308, 162);
-            this.btn_CreatePackingSlip.Style = MetroFramework.MetroColorStyle.Orange;
-            this.btn_CreatePackingSlip.TabIndex = 12;
-            this.btn_CreatePackingSlip.Text = "Create Packing Slip";
-            this.btn_CreatePackingSlip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_CreatePackingSlip.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_CreatePackingSlip.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CreatePackingSlip.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btn_CreatePackingSlip.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btn_CreatePackingSlip.UseTileImage = true;
-            this.btn_CreatePackingSlip.Click += new System.EventHandler(this.btn_CreatePackingSlip_Click);
             // 
             // AccDep_Form
             // 

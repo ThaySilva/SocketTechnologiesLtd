@@ -16,8 +16,6 @@ namespace SocketTechnologiesLtd
         {
             InitializeComponent();
             this.ControlBox = false;
-            this.Bounds = Screen.PrimaryScreen.Bounds;
-            this.TopMost = true;
             this.btn_Exit.Hide();
         }
 
@@ -43,6 +41,8 @@ namespace SocketTechnologiesLtd
         private void btn_CreateFGTN_Click(object sender, EventArgs e)
         {
             FGTN_Form fgtn = new FGTN_Form();
+            fgtn.MdiParent = this.MdiParent;
+            fgtn.Dock = DockStyle.Fill;
             fgtn.Show();
         }
     }

@@ -16,8 +16,6 @@ namespace SocketTechnologiesLtd
         {
             InitializeComponent();
             this.ControlBox = false;
-            this.Bounds = Screen.PrimaryScreen.Bounds;
-            this.TopMost = true;
             this.btn_Exit.Hide();
         }
 
@@ -52,7 +50,17 @@ namespace SocketTechnologiesLtd
         private void btn_CreateRFQO_Click(object sender, EventArgs e)
         {
             RfQO_Form rfqo = new RfQO_Form();
+            rfqo.MdiParent = this.MdiParent;
+            rfqo.Dock = DockStyle.Fill;
             rfqo.Show();
+        }
+
+        private void btn_CreateEAR_Click(object sender, EventArgs e)
+        {
+            EARequest ear = new EARequest();
+            ear.MdiParent = this.MdiParent;
+            ear.Dock = DockStyle.Fill;
+            ear.Show();
         }
     }
 }

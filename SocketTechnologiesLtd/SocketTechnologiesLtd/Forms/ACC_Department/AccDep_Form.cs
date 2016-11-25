@@ -16,8 +16,6 @@ namespace SocketTechnologiesLtd
         {
             InitializeComponent();
             this.ControlBox = false;
-            this.Bounds = Screen.PrimaryScreen.Bounds;
-            this.TopMost = true;
             this.btn_Exit.Hide();
         }
 
@@ -51,13 +49,33 @@ namespace SocketTechnologiesLtd
         private void btn_IssueCustomerInvoice_Click(object sender, EventArgs e)
         {
             InvoiceOut_Form io = new InvoiceOut_Form();
+            io.MdiParent = this.MdiParent;
+            io.Dock = DockStyle.Fill;
             io.Show();
         }
 
         private void btn_CreatePackingSlip_Click(object sender, EventArgs e)
         {
             PS_Form ps = new PS_Form();
+            ps.MdiParent = this.MdiParent;
+            ps.Dock = DockStyle.Fill;
             ps.Show();
+        }
+
+        private void btn_ViewSupplierInvoice_Click(object sender, EventArgs e)
+        {
+            LogInvoiceIn lii = new LogInvoiceIn();
+            lii.MdiParent = this.MdiParent;
+            lii.Dock = DockStyle.Fill;
+            lii.Show();
+        }
+
+        private void btn_LogCustomerPayment_Click(object sender, EventArgs e)
+        {
+            SPA_Request spa = new SPA_Request();
+            spa.MdiParent = this.MdiParent;
+            spa.Dock = DockStyle.Fill;
+            spa.Show();
         }
     }
 }

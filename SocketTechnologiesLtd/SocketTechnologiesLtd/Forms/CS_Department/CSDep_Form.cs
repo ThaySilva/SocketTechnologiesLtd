@@ -16,8 +16,6 @@ namespace SocketTechnologiesLtd
         {
             InitializeComponent();
             this.ControlBox = false;
-            this.Bounds = Screen.PrimaryScreen.Bounds;
-            this.TopMost = true;
             this.btn_CSExit.Hide();
         }
 
@@ -42,9 +40,8 @@ namespace SocketTechnologiesLtd
 
         private void btn_CSWeeklyReports_Click(object sender, EventArgs e)
         {
-            this.btn_Logout.Hide();
-            this.btn_CSExit.Show();
-            this.CSWeeklyReportsPanel.Show();
+            CS_WeeklyReport csWeeklyReport = new CS_WeeklyReport();
+            csWeeklyReport.Show();
         }
 
         private void btn_CSManagaCustomerOrder_Click(object sender, EventArgs e)
@@ -72,7 +69,6 @@ namespace SocketTechnologiesLtd
         {
             this.CSRequestsPanel.Hide();
             this.CSResponsesPanel.Hide();
-            this.CSWeeklyReportsPanel.Hide();
             this.CSManageCustomerOrdersPanel.Hide();
             this.CSManageScrapPanel.Hide();
             this.CSManageQuotation.Hide();
@@ -84,25 +80,68 @@ namespace SocketTechnologiesLtd
         private void btn_CreateRfQ_Click(object sender, EventArgs e)
         {
             RfQ_Form rfq = new RfQ_Form();
+            rfq.MdiParent = this.MdiParent;
+            rfq.Dock = DockStyle.Fill;
             rfq.Show();
         }
 
         private void btn_CreateQO_Click(object sender, EventArgs e)
         {
             QO_Form qo = new QO_Form();
+            qo.MdiParent = this.MdiParent;
+            qo.Dock = DockStyle.Fill;
             qo.Show();
         }
 
         private void btn_CreateTE_Click(object sender, EventArgs e)
         {
             TE_Form te = new TE_Form();
+            te.MdiParent = this.MdiParent;
+            te.Dock = DockStyle.Fill;
             te.Show();
         }
 
         private void btn_CreateRTQ_Click(object sender, EventArgs e)
         {
             RtQ_Form rtq = new RtQ_Form();
+            rtq.MdiParent = this.MdiParent;
+            rtq.Dock = DockStyle.Fill;
             rtq.Show();
         }
+
+        private void btn_CreateCOE_Click(object sender, EventArgs e)
+        {
+            COE_Form coe = new COE_Form();
+            coe.MdiParent = this.MdiParent;
+            coe.Dock = DockStyle.Fill;
+            coe.Show();
+        }
+
+        private void btn_CreateCCN_Click(object sender, EventArgs e)
+        {
+            CusCreditNote cn = new CusCreditNote();
+            cn.MdiParent = this.MdiParent;
+            cn.Dock = DockStyle.Fill;
+            cn.Show();
+        }
+
+        private void btn_CreateFSR_Click(object sender, EventArgs e)
+        {
+            FSRequest_Form fsr = new FSRequest_Form();
+            fsr.MdiParent = this.MdiParent;
+            fsr.Dock = DockStyle.Fill;
+            fsr.Show();
+        }
+
+        private void btn_CreateSN_Click(object sender, EventArgs e)
+        {
+
+            createScrapNote sN = new createScrapNote();
+            sN.MdiParent = this.MdiParent;
+            sN.Dock = DockStyle.Fill;
+            sN.Show();
+
+        }
+
     }
 }

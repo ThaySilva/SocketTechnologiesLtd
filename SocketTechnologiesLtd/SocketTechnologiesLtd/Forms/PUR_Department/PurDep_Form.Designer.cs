@@ -158,6 +158,7 @@
             this.btn_CreateEAR.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_CreateEAR.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_CreateEAR.UseTileImage = true;
+            this.btn_CreateEAR.Click += new System.EventHandler(this.btn_CreateEAR_Click);
             // 
             // btn_PurWeeklyReport
             // 
@@ -203,14 +204,14 @@
             this.PurWeeklyReportsPanel.Controls.Add(this.btn_RGReport, 1, 1);
             this.PurWeeklyReportsPanel.Controls.Add(this.btn_POIReport, 2, 1);
             this.PurWeeklyReportsPanel.Controls.Add(this.btn_EARIReports, 1, 2);
-            this.PurWeeklyReportsPanel.Location = new System.Drawing.Point(23, 64);
+            this.PurWeeklyReportsPanel.Location = new System.Drawing.Point(23, 67);
             this.PurWeeklyReportsPanel.Name = "PurWeeklyReportsPanel";
             this.PurWeeklyReportsPanel.RowCount = 3;
             this.PurWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.PurWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.PurWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.PurWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.PurWeeklyReportsPanel.Size = new System.Drawing.Size(936, 498);
+            this.PurWeeklyReportsPanel.Size = new System.Drawing.Size(936, 495);
             this.PurWeeklyReportsPanel.TabIndex = 23;
             this.PurWeeklyReportsPanel.Visible = false;
             // 
@@ -221,7 +222,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_RFQOReport.Location = new System.Drawing.Point(315, 3);
             this.btn_RFQOReport.Name = "btn_RFQOReport";
-            this.btn_RFQOReport.Size = new System.Drawing.Size(306, 160);
+            this.btn_RFQOReport.Size = new System.Drawing.Size(306, 159);
             this.btn_RFQOReport.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_RFQOReport.TabIndex = 11;
             this.btn_RFQOReport.Text = "Generate Request for Quotation Out Report";
@@ -237,9 +238,9 @@
             this.btn_PORReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_PORReport.Location = new System.Drawing.Point(3, 169);
+            this.btn_PORReport.Location = new System.Drawing.Point(3, 168);
             this.btn_PORReport.Name = "btn_PORReport";
-            this.btn_PORReport.Size = new System.Drawing.Size(306, 160);
+            this.btn_PORReport.Size = new System.Drawing.Size(306, 159);
             this.btn_PORReport.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_PORReport.TabIndex = 10;
             this.btn_PORReport.Text = "Generate Purchase Order Requests Report";
@@ -255,9 +256,9 @@
             this.btn_RGReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_RGReport.Location = new System.Drawing.Point(315, 169);
+            this.btn_RGReport.Location = new System.Drawing.Point(315, 168);
             this.btn_RGReport.Name = "btn_RGReport";
-            this.btn_RGReport.Size = new System.Drawing.Size(306, 160);
+            this.btn_RGReport.Size = new System.Drawing.Size(306, 159);
             this.btn_RGReport.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_RGReport.TabIndex = 12;
             this.btn_RGReport.Text = "Generate Returned Goods Report";
@@ -273,9 +274,9 @@
             this.btn_POIReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_POIReport.Location = new System.Drawing.Point(627, 169);
+            this.btn_POIReport.Location = new System.Drawing.Point(627, 168);
             this.btn_POIReport.Name = "btn_POIReport";
-            this.btn_POIReport.Size = new System.Drawing.Size(306, 160);
+            this.btn_POIReport.Size = new System.Drawing.Size(306, 159);
             this.btn_POIReport.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_POIReport.TabIndex = 4;
             this.btn_POIReport.Text = "Generate Purchase Orders Issued Report";
@@ -291,9 +292,9 @@
             this.btn_EARIReports.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_EARIReports.Location = new System.Drawing.Point(315, 335);
+            this.btn_EARIReports.Location = new System.Drawing.Point(315, 333);
             this.btn_EARIReports.Name = "btn_EARIReports";
-            this.btn_EARIReports.Size = new System.Drawing.Size(306, 160);
+            this.btn_EARIReports.Size = new System.Drawing.Size(306, 159);
             this.btn_EARIReports.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_EARIReports.TabIndex = 9;
             this.btn_EARIReports.Text = "Generate EAR Issued Report";
@@ -352,14 +353,14 @@
             this.ManageQuotationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.ManageQuotationPanel.Controls.Add(this.btn_CreateRFQO, 1, 1);
             this.ManageQuotationPanel.Controls.Add(this.btn_LogQuotationIn, 1, 2);
-            this.ManageQuotationPanel.Location = new System.Drawing.Point(23, 64);
+            this.ManageQuotationPanel.Location = new System.Drawing.Point(23, 63);
             this.ManageQuotationPanel.Name = "ManageQuotationPanel";
             this.ManageQuotationPanel.RowCount = 4;
             this.ManageQuotationPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ManageQuotationPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ManageQuotationPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ManageQuotationPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ManageQuotationPanel.Size = new System.Drawing.Size(936, 498);
+            this.ManageQuotationPanel.Size = new System.Drawing.Size(936, 499);
             this.ManageQuotationPanel.TabIndex = 24;
             this.ManageQuotationPanel.Visible = false;
             // 

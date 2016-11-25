@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Container.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Container.Designer.cs">
+      <DependentUpon>Container.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ACC_Department\AccDep_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +82,23 @@
     <Compile Include="Forms\ACC_Department\InvoiceOut_Form.designer.cs">
       <DependentUpon>InvoiceOut_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ACC_Department\LogInvoiceIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ACC_Department\LogInvoiceIn.Designer.cs">
+      <DependentUpon>LogInvoiceIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ACC_Department\PS_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ACC_Department\PS_Form.Designer.cs">
       <DependentUpon>PS_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ACC_Department\SPA_Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ACC_Department\SPA_Request.Designer.cs">
+      <DependentUpon>SPA_Request.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CS_Department\AddCustomer.cs">
       <SubType>Form</SubType>
@@ -111,6 +129,12 @@
     </Compile>
     <Compile Include="Forms\CS_Department\CSDep_Form.designer.cs">
       <DependentUpon>CSDep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CS_Department\CS_WeeklyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\CS_WeeklyReport.Designer.cs">
+      <DependentUpon>CS_WeeklyReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CS_Department\CusCreditNote.cs">
       <SubType>Form</SubType>
@@ -178,11 +202,29 @@
     <Compile Include="Forms\CS_Department\ViewTechnicalEnquiries.designer.cs">
       <DependentUpon>ViewTechnicalEnquiries.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ENG_Department\AddCustomProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ENG_Department\AddCustomProduct.Designer.cs">
+      <DependentUpon>AddCustomProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ENG_Department\EngDep_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ENG_Department\EngDep_Form.designer.cs">
       <DependentUpon>EngDep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ENG_Department\IssueTEResponse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ENG_Department\IssueTEResponse.Designer.cs">
+      <DependentUpon>IssueTEResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ENG_Department\ViewTechnicalEnquiries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ENG_Department\ViewTechnicalEnquiries.Designer.cs">
+      <DependentUpon>ViewTechnicalEnquiries.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MAN_Department\ExceptinAuthorisationResponse.cs">
       <SubType>Form</SubType>
@@ -196,11 +238,23 @@
     <Compile Include="Forms\MAN_Department\ManDep_Form.designer.cs">
       <DependentUpon>ManDep_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MAN_Department\MaterialReviewBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\MaterialReviewBoard.Designer.cs">
+      <DependentUpon>MaterialReviewBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MAN_Department\MRBReport_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MAN_Department\MRBReport_Form.designer.cs">
       <DependentUpon>MRBReport_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\RGA_Response.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MAN_Department\RGA_Response.Designer.cs">
+      <DependentUpon>RGA_Response.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MAN_Department\SPARes_Form.cs">
       <SubType>Form</SubType>
@@ -255,6 +309,12 @@
     </Compile>
     <Compile Include="Forms\PROD_Department\ViewProductionRequirementsMaterialsPlan.designer.cs">
       <DependentUpon>ViewProductionRequirementsMaterialsPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\EARequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PUR_Department\EARequest.Designer.cs">
+      <DependentUpon>EARequest.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PUR_Department\ForwardRejectGoodNote.cs">
       <SubType>Form</SubType>
@@ -315,6 +375,12 @@
     </Compile>
     <Compile Include="Forms\STO_Department\Delivery_Out.designer.cs">
       <DependentUpon>Delivery_Out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\STO_Department\DiscrepancyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\STO_Department\DiscrepancyForm.Designer.cs">
+      <DependentUpon>DiscrepancyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\STO_Department\GRN_Form.cs">
       <SubType>Form</SubType>
@@ -378,6 +444,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Container.resx">
+      <DependentUpon>Container.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ACC_Department\AccDep_Form.resx">
       <DependentUpon>AccDep_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,8 +456,14 @@
     <EmbeddedResource Include="Forms\ACC_Department\InvoiceOut_Form.resx">
       <DependentUpon>InvoiceOut_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ACC_Department\LogInvoiceIn.resx">
+      <DependentUpon>LogInvoiceIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ACC_Department\PS_Form.resx">
       <DependentUpon>PS_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ACC_Department\SPA_Request.resx">
+      <DependentUpon>SPA_Request.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CS_Department\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
@@ -404,6 +479,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CS_Department\CSDep_Form.resx">
       <DependentUpon>CSDep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\CS_WeeklyReport.resx">
+      <DependentUpon>CS_WeeklyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CS_Department\CusCreditNote.resx">
       <DependentUpon>CusCreditNote.cs</DependentUpon>
@@ -438,8 +516,17 @@
     <EmbeddedResource Include="Forms\CS_Department\ViewTechnicalEnquiries.resx">
       <DependentUpon>ViewTechnicalEnquiries.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ENG_Department\AddCustomProduct.resx">
+      <DependentUpon>AddCustomProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ENG_Department\EngDep_Form.resx">
       <DependentUpon>EngDep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ENG_Department\IssueTEResponse.resx">
+      <DependentUpon>IssueTEResponse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ENG_Department\ViewTechnicalEnquiries.resx">
+      <DependentUpon>ViewTechnicalEnquiries.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MAN_Department\ExceptinAuthorisationResponse.resx">
       <DependentUpon>ExceptinAuthorisationResponse.cs</DependentUpon>
@@ -447,8 +534,14 @@
     <EmbeddedResource Include="Forms\MAN_Department\ManDep_Form.resx">
       <DependentUpon>ManDep_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MAN_Department\MaterialReviewBoard.resx">
+      <DependentUpon>MaterialReviewBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MAN_Department\MRBReport_Form.resx">
       <DependentUpon>MRBReport_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MAN_Department\RGA_Response.resx">
+      <DependentUpon>RGA_Response.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MAN_Department\SPARes_Form.resx">
       <DependentUpon>SPARes_Form.cs</DependentUpon>
@@ -476,6 +569,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PROD_Department\ViewProductionRequirementsMaterialsPlan.resx">
       <DependentUpon>ViewProductionRequirementsMaterialsPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PUR_Department\EARequest.resx">
+      <DependentUpon>EARequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PUR_Department\ForwardRejectGoodNote.resx">
       <DependentUpon>ForwardRejectGoodNote.cs</DependentUpon>
@@ -506,6 +602,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\STO_Department\Delivery_Out.resx">
       <DependentUpon>Delivery_Out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\STO_Department\DiscrepancyForm.resx">
+      <DependentUpon>DiscrepancyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\STO_Department\GRN_Form.resx">
       <DependentUpon>GRN_Form.cs</DependentUpon>
@@ -561,23 +660,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MetroFramework.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\BusinessEntities\BusinessEntities\BusinessEntities.csproj">
-      <Project>{421deb4e-3592-46d0-91dd-738a57f297ec}</Project>
-      <Name>BusinessEntities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\BusinessLayer\BusinessLayer\BusinessLayer.csproj">
-      <Project>{bbe8ae8e-71e4-460b-884a-b8e62ffcb43e}</Project>
-      <Name>BusinessLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\DataAccessLayer\DataAccessLayer\DataAccessLayer.csproj">
-      <Project>{83b2f92a-874e-4a5b-ad60-5c0c584cd939}</Project>
-      <Name>DataAccessLayer</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <COMReference Include="AcroPDFLib">
       <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
       <VersionMajor>1</VersionMajor>
@@ -595,6 +677,23 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{bbe8ae8e-71e4-460b-884a-b8e62ffcb43e}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{83b2f92a-874e-4a5b-ad60-5c0c584cd939}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DocumentWriter\DocumentWriter.csproj">
+      <Project>{01165222-9325-447a-a324-e9fe26b491a7}</Project>
+      <Name>DocumentWriter</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

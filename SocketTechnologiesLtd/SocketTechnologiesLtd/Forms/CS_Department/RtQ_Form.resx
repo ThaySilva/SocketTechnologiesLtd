@@ -144,7 +144,7 @@
   <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="metroTextBox8.Text" xml:space="preserve">
+  <data name="txt_rtqTxt.Text" xml:space="preserve">
     <value>As per your recent request for quotation, I regret to inform you that, on the advice of our technical staff in engineering, we will be unable to fulfill your request for the following parts that you require, for the foreseable future.</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

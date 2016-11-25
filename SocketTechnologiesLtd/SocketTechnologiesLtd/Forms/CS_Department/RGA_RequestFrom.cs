@@ -16,5 +16,10 @@ namespace SocketTechnologiesLtd
         {
             InitializeComponent();
         }
+
+        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

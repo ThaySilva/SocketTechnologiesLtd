@@ -85,6 +85,7 @@
             this.btn_AddCustomProduct.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_AddCustomProduct.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_AddCustomProduct.UseTileImage = true;
+            this.btn_AddCustomProduct.Click += new System.EventHandler(this.btn_AddCustomProduct_Click);
             // 
             // btn_ViewTE
             // 
@@ -103,6 +104,7 @@
             this.btn_ViewTE.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_ViewTE.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_ViewTE.UseTileImage = true;
+            this.btn_ViewTE.Click += new System.EventHandler(this.btn_ViewTE_Click);
             // 
             // EngDep_Form
             // 

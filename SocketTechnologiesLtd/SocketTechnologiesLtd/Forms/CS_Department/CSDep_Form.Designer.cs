@@ -49,12 +49,6 @@
             this.btn_ViewTERes = new MetroFramework.Controls.MetroTile();
             this.btn_CreateFSRes = new MetroFramework.Controls.MetroTile();
             this.btn_ViewRGARes = new MetroFramework.Controls.MetroTile();
-            this.CSWeeklyReportsPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_OEReport = new MetroFramework.Controls.MetroTile();
-            this.btn_FSRReport = new MetroFramework.Controls.MetroTile();
-            this.btn_ORReport = new MetroFramework.Controls.MetroTile();
-            this.btn_SNReport = new MetroFramework.Controls.MetroTile();
-            this.btn_RFQReport = new MetroFramework.Controls.MetroTile();
             this.CSManageCustomerOrdersPanel = new System.Windows.Forms.TableLayoutPanel();
             this.btn_CreateCOE = new MetroFramework.Controls.MetroTile();
             this.btn_ViewCOS = new MetroFramework.Controls.MetroTile();
@@ -69,7 +63,6 @@
             this.CSHomeScreenPanel.SuspendLayout();
             this.CSRequestsPanel.SuspendLayout();
             this.CSResponsesPanel.SuspendLayout();
-            this.CSWeeklyReportsPanel.SuspendLayout();
             this.CSManageCustomerOrdersPanel.SuspendLayout();
             this.CSManageScrapPanel.SuspendLayout();
             this.CSManageQuotation.SuspendLayout();
@@ -127,6 +120,7 @@
             this.btn_CreateCCN.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_CreateCCN.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_CreateCCN.UseTileImage = true;
+            this.btn_CreateCCN.Click += new System.EventHandler(this.btn_CreateCCN_Click);
             // 
             // btn_CSResponses
             // 
@@ -232,6 +226,7 @@
             this.btn_CreateFSR.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_CreateFSR.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_CreateFSR.UseTileImage = true;
+            this.btn_CreateFSR.Click += new System.EventHandler(this.btn_CreateFSR_Click);
             // 
             // btn_CreateRGAR
             // 
@@ -292,71 +287,6 @@
             this.btn_ViewRGARes.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_ViewRGARes.UseTileImage = true;
             // 
-            // CSWeeklyReportsPanel
-            // 
-            resources.ApplyResources(this.CSWeeklyReportsPanel, "CSWeeklyReportsPanel");
-            this.CSWeeklyReportsPanel.Controls.Add(this.btn_OEReport, 0, 1);
-            this.CSWeeklyReportsPanel.Controls.Add(this.btn_FSRReport, 1, 0);
-            this.CSWeeklyReportsPanel.Controls.Add(this.btn_ORReport, 1, 2);
-            this.CSWeeklyReportsPanel.Controls.Add(this.btn_SNReport, 2, 1);
-            this.CSWeeklyReportsPanel.Controls.Add(this.btn_RFQReport, 1, 1);
-            this.CSWeeklyReportsPanel.Name = "CSWeeklyReportsPanel";
-            // 
-            // btn_OEReport
-            // 
-            resources.ApplyResources(this.btn_OEReport, "btn_OEReport");
-            this.btn_OEReport.Name = "btn_OEReport";
-            this.btn_OEReport.Style = MetroFramework.MetroColorStyle.Orange;
-            this.btn_OEReport.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_OEReport.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_OEReport.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btn_OEReport.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btn_OEReport.UseTileImage = true;
-            // 
-            // btn_FSRReport
-            // 
-            resources.ApplyResources(this.btn_FSRReport, "btn_FSRReport");
-            this.btn_FSRReport.Name = "btn_FSRReport";
-            this.btn_FSRReport.Style = MetroFramework.MetroColorStyle.Orange;
-            this.btn_FSRReport.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_FSRReport.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_FSRReport.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btn_FSRReport.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btn_FSRReport.UseTileImage = true;
-            // 
-            // btn_ORReport
-            // 
-            resources.ApplyResources(this.btn_ORReport, "btn_ORReport");
-            this.btn_ORReport.Name = "btn_ORReport";
-            this.btn_ORReport.Style = MetroFramework.MetroColorStyle.Orange;
-            this.btn_ORReport.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_ORReport.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ORReport.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btn_ORReport.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btn_ORReport.UseTileImage = true;
-            // 
-            // btn_SNReport
-            // 
-            resources.ApplyResources(this.btn_SNReport, "btn_SNReport");
-            this.btn_SNReport.Name = "btn_SNReport";
-            this.btn_SNReport.Style = MetroFramework.MetroColorStyle.Orange;
-            this.btn_SNReport.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_SNReport.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SNReport.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btn_SNReport.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btn_SNReport.UseTileImage = true;
-            // 
-            // btn_RFQReport
-            // 
-            resources.ApplyResources(this.btn_RFQReport, "btn_RFQReport");
-            this.btn_RFQReport.Name = "btn_RFQReport";
-            this.btn_RFQReport.Style = MetroFramework.MetroColorStyle.Orange;
-            this.btn_RFQReport.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_RFQReport.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RFQReport.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btn_RFQReport.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btn_RFQReport.UseTileImage = true;
-            // 
             // CSManageCustomerOrdersPanel
             // 
             resources.ApplyResources(this.CSManageCustomerOrdersPanel, "CSManageCustomerOrdersPanel");
@@ -376,6 +306,7 @@
             this.btn_CreateCOE.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_CreateCOE.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_CreateCOE.UseTileImage = true;
+            this.btn_CreateCOE.Click += new System.EventHandler(this.btn_CreateCOE_Click);
             // 
             // btn_ViewCOS
             // 
@@ -438,6 +369,7 @@
             this.btn_CreateSN.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_CreateSN.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_CreateSN.UseTileImage = true;
+            this.btn_CreateSN.Click += new System.EventHandler(this.btn_CreateSN_Click);
             // 
             // CSManageQuotation
             // 
@@ -477,7 +409,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.CSManageQuotation);
             this.Controls.Add(this.CSManageCustomerOrdersPanel);
-            this.Controls.Add(this.CSWeeklyReportsPanel);
             this.Controls.Add(this.CSResponsesPanel);
             this.Controls.Add(this.btn_CSExit);
             this.Controls.Add(this.CSManageScrapPanel);
@@ -494,7 +425,6 @@
             this.CSHomeScreenPanel.ResumeLayout(false);
             this.CSRequestsPanel.ResumeLayout(false);
             this.CSResponsesPanel.ResumeLayout(false);
-            this.CSWeeklyReportsPanel.ResumeLayout(false);
             this.CSManageCustomerOrdersPanel.ResumeLayout(false);
             this.CSManageScrapPanel.ResumeLayout(false);
             this.CSManageQuotation.ResumeLayout(false);
@@ -522,12 +452,6 @@
         private MetroFramework.Controls.MetroTile btn_ViewTERes;
         private MetroFramework.Controls.MetroTile btn_CreateFSRes;
         private MetroFramework.Controls.MetroTile btn_ViewRGARes;
-        private System.Windows.Forms.TableLayoutPanel CSWeeklyReportsPanel;
-        private MetroFramework.Controls.MetroTile btn_OEReport;
-        private MetroFramework.Controls.MetroTile btn_FSRReport;
-        private MetroFramework.Controls.MetroTile btn_ORReport;
-        private MetroFramework.Controls.MetroTile btn_SNReport;
-        private MetroFramework.Controls.MetroTile btn_RFQReport;
         private System.Windows.Forms.TableLayoutPanel CSManageCustomerOrdersPanel;
         private MetroFramework.Controls.MetroTile btn_ViewCOS;
         private MetroFramework.Controls.MetroTile btn_CreateCPO;
