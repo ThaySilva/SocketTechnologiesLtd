@@ -58,7 +58,7 @@
     <Compile Include="Classes\Employee.cs" />
     <Compile Include="Classes\Material.cs" />
     <Compile Include="Classes\Order.cs" />
-    <Compile Include="Classes\OrderItem.cs" />
+    <Compile Include="Classes\LineItem.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ProductMaterial.cs" />
     <Compile Include="Classes\User.cs" />
@@ -73,7 +73,7 @@
     <Compile Include="Interfaces\IEmployee.cs" />
     <Compile Include="Interfaces\IMaterial.cs" />
     <Compile Include="Interfaces\IOrder.cs" />
-    <Compile Include="Interfaces\IOrderItem.cs" />
+    <Compile Include="Interfaces\ILineItem.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
     <Compile Include="Interfaces\IProductMaterial.cs" />
     <Compile Include="Interfaces\IUser.cs" />

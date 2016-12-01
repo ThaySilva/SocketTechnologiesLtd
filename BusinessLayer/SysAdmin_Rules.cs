@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer;
@@ -21,7 +22,7 @@ namespace BusinessLayer
 
         public static void AddEmployee(int employeeID, string firstName, string lastName, string phoneNum, int deptId, int userId)
         {
-            _data.AddRow("Employee", new string[] { employeeID.ToString(), firstName, lastName, phoneNum, deptId.ToString(), userId.ToString() });
+            _data.AddRow("Employee",new string[] { "empFirstName", "empLastName", "empPhoneNum", "department_ID", "User_user_ID" }, new string[] { firstName, lastName, phoneNum, deptId.ToString(), userId.ToString() });
             model.FillEmployeeList();
         }
 
@@ -37,6 +38,26 @@ namespace BusinessLayer
             emp.PhoneNumber = phoneNum;
             emp.DepartmentID = deptId;
         }
+
+        public static void DeleteEmployee(int employeeID)
+        {
+            var emp = model.EmployeeList.First(e => e.EmployeeID == employeeID);
+            var user = model.UserList.First(u => u.UserID == emp.UserID);
+
+            if (MessageBox.Show("An user is associated with the selected employee, by deleting this employee the user account will also be deleted.\nAre you sure you want to continue?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                throw new Exception("Aborting Delete Employee!");
+            }
+            else
+            {
+                _data.RemoveCriteria();
+                _data.SetCriteria("employee_ID", employeeID.ToString());
+                _data.DeleteRowByKey("Employee");
+                model.EmployeeList.Remove(emp);
+                int userID = user.UserID;
+                DeleteUser(userID);
+            }
+        }
         #endregion
 
         #region Users Functions
@@ -48,7 +69,7 @@ namespace BusinessLayer
 
         public static void AddUser(int userId, string username, string password)
         {
-            _data.AddRow("Users", new string[] { userId.ToString(), username, password});
+            _data.AddRow("Users", new string[] {"userName", "password" }, new string[] { username, password});
             model.FillUserList();
         }
 
@@ -61,6 +82,15 @@ namespace BusinessLayer
             var user = model.UserList.First(u => u.UserID == userId);
             user.Username = username;
             user.Password = password;
+        }
+
+        private static void DeleteUser(int userID)
+        {
+            var user = model.UserList.First(u => u.UserID == userID);
+            _data.RemoveCriteria();
+            _data.SetCriteria("user_ID", userID.ToString());
+            _data.DeleteRowByKey("Users");
+            model.UserList.Remove(user);
         }
         #endregion
     }

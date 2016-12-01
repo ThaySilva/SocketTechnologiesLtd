@@ -58,7 +58,7 @@ namespace DataAccessLayer
         {
             con = new SqlConnection();
             //con.ConnectionString = "Data Source=sql3.student.litdom.lit.ie\\Team5;Initial Catalog=stldb1;Integrated Security=True";    //on college machine
-            con.ConnectionString = "Data Source=mssql3.gear.host;Initial Catalog=stldb1;User ID=stldb1;Password=alpha2omega!";      //outside connection
+            con.ConnectionString = "Data Source=mssql3.gear.host;Initial Catalog=stldb1;User ID=stldb1;Password=alpha2omega!";        //outside connection
             try
             {
                 con.Open();
@@ -164,137 +164,49 @@ namespace DataAccessLayer
         #endregion
 
         #region Add Data to Table
-        public void AddRow(string table, string[] row)
+        public void AddRow(string table, string[] columns, string[] values)
         {
-            sql = "SELECT * FROM " + table;
+            sql = "INSERT INTO " + table + " ("; 
+
+            for(int i = 0; i < columns.Length; i++)
+            {
+                sql += columns[i] + ", ";
+            }
+
+            sql = sql.Substring(0, sql.Length - 2);
+
+            sql += ") VALUES (";
+
+            for(int i = 0; i < values.Length; i++)
+            {
+                sql += "'" + values[i] + "', ";
+            }
+
+            sql = sql.Substring(0, sql.Length - 2);
+            sql += ")";
+
+            MessageBox.Show(sql);
             da = new SqlDataAdapter(sql, con);
             ds = new DataSet();
-            da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-
-            cb = new SqlCommandBuilder(da);
+            ds.Locale = CultureInfo.InvariantCulture;
 
             da.Fill(ds, table);
-
-            DataRow dRow = ds.Tables[table].NewRow();
-
-            for(int i = 0; i < row.Length; i++)
-            {
-                if (row[i] != null)
-                    dRow[i] = row[i];
-            }
-
-            ds.Tables[table].Rows.Add(dRow);
-            da.Update(ds, table);
-        }
-
-        public void AddRow(string table, string[] columns, object[] row)
-        {
-            string colString = "(";
-            foreach (string col in columns)
-                colString += col + ", ";
-
-            string valString = "(";
-
-            int paramsNum = 1;
-
-            for(paramsNum = 1; paramsNum <= row.Length; paramsNum++)
-            {
-                valString += "@value" + paramsNum + ", ";
-            }
-
-            // remove last comma;
-            colString = colString.Substring(0, colString.Length - 2);
-            valString = valString.Substring(0, valString.Length - 2);
-
-            colString += ")";
-            valString += ")";
-
-            int i = 0;
-
-            SqlCommand cmd = new SqlCommand("INSET INTO " + db + "." + table + " " + colString + " VALUES " + valString, con);
-
-            foreach(object value in row)
-            {
-
-                if (value is DateTime)
-                {
-                    DateTime date = (DateTime)value;
-                    cmd.Parameters.AddWithValue("@value" + (i + 1), date);
-                }
-                else if(value is Boolean)
-                {
-                    Boolean boolVal = (Boolean)value;
-                    cmd.Parameters.AddWithValue("@value" + (i + 1), boolVal);
-                
-                }
-                else if(value is String)
-                {
-                    String str = (String)value;
-                    cmd.Parameters.AddWithValue("@value" + (i + 1), str);
-                }
-                else if(value is Int32)
-                {
-                    Int32 intVal = (Int32)value;
-                    cmd.Parameters.AddWithValue("@value" + (i + 1), intVal);
-                }
-                else if(value == null)
-                {
-                    cmd.Parameters.AddWithValue("@value" + (i + 1), "");
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@value" + (i + 1), value);
-                }
-
-                ++i;
-            }
-
-            cmd.ExecuteNonQuery();
-
+        
         }
         #endregion
 
         #region Delete Data from Table
-        public void DeleteRow(string table, string column, string criteria)
+    
+        public void DeleteRowByKey(string table)
         {
-            sql = "SELECT * FROM " + table;
+            sql = "DELETE FROM " + table;
+            sql += _criteria;
+
             da = new SqlDataAdapter(sql, con);
             ds = new DataSet();
-            da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-
-            cb = new SqlCommandBuilder(da);
+            ds.Locale = CultureInfo.InvariantCulture;
 
             da.Fill(ds, table);
-
-            DataRow[] foundRows = ds.Tables[table].Select(column + " Like '" + criteria + "'");
-            foreach(DataRow dRow in foundRows)
-            {
-                dRow.Delete();
-            }
-
-            da.Update(ds, table);
-        }
-
-        public void DeleteRowByKey(string table, string key)
-        {
-            sql = "SELECT * FROM " + table;
-            da = new SqlDataAdapter(sql, con);
-            ds = new DataSet();
-            da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-
-            cb = new SqlCommandBuilder(da);
-
-            da.Fill(ds, table);
-
-            DataRow findRow = ds.Tables[table].Rows.Find(key);
-            
-            if(findRow != null)
-            {
-                findRow.Delete();
-            }
-
-            da.Update(ds, table);
-
         }
         #endregion
 
@@ -337,29 +249,6 @@ namespace DataAccessLayer
         #endregion
 
         #region Update Data in Table
-        //public void UpdateRowsByKey(string table, string key, string[] columns, string[] values)
-        //{
-        //    sql = "SELECT * FROM " + table;
-
-        //    da = new SqlDataAdapter(sql, con);
-        //    ds = new DataSet();
-
-        //    da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-
-        //    cb = new SqlCommandBuilder(da);
-        //    da.Fill(ds, table);
-
-        //    DataRow findRow = ds.Tables[table].Rows.Find(key);
-
-        //    for(int i = 0; i < columns.Length; ++i)
-        //    {
-        //        int colIndex = ds.Tables[table].Columns.IndexOf(columns[i]);
-        //        findRow[colIndex] = values[i];
-        //    }
-
-        //    da.Update(ds, table);
-        //}
-
         public void UpdateRowsByKey(string table, string[] columns, string[] values)
         {
             sql = "UPDATE " + table + " SET ";
@@ -371,8 +260,6 @@ namespace DataAccessLayer
 
             sql = sql.Substring(0, sql.Length - 1);
             sql += _criteria;
-
-            MessageBox.Show(sql);
 
             da = new SqlDataAdapter(sql, con);
             ds = new DataSet();

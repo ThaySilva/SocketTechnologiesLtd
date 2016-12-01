@@ -247,14 +247,14 @@
             this.cBox_dept.FormattingEnabled = true;
             this.cBox_dept.ItemHeight = 23;
             this.cBox_dept.Items.AddRange(new object[] {
+            "Customer Services",
             "Accounts",
-            "Customer Service",
+            "Management",
             "Production",
-            "Engineering",
-            "Stores",
             "Purchasing",
+            "Stores",
             "System Admin",
-            "Management"});
+            "Engineering"});
             this.cBox_dept.Location = new System.Drawing.Point(225, 275);
             this.cBox_dept.Name = "cBox_dept";
             this.cBox_dept.Size = new System.Drawing.Size(194, 29);

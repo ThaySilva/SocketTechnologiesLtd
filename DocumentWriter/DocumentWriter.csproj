@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrAFiSeReRe.cs" />
     <Compile Include="fsrRequest.cs" />
     <Compile Include="IdIncrement.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

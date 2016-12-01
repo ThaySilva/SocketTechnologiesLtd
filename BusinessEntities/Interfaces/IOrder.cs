@@ -13,7 +13,7 @@ namespace BusinessEntities
         string CustomerID { get; set; }
         DateTime DateCreated { get; set; }
         DateTime DateCompleted { get; set; }
-        List<IOrderItem> LineItemsList { get; }
+        List<ILineItem> LineItemsList { get; }
         double GetPriceTotal();
         void AddLineItem(IProduct product, int qty);
 

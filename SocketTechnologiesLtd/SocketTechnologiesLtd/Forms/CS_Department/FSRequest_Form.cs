@@ -49,5 +49,10 @@ namespace SocketTechnologiesLtd
         {
             this.Close();
         }
+
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

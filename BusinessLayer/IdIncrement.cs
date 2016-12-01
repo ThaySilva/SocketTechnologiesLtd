@@ -22,7 +22,7 @@ namespace BusinessLayer
         #region UserID
         public void setUserId()
         {
-            userId = user[user.Count() - 1].UserID + 1;
+            userId = user[user.Count - 1].UserID + 1;
         }
         public int getUserId()
         {

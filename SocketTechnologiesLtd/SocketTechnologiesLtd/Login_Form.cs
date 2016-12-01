@@ -26,8 +26,6 @@ namespace SocketTechnologiesLtd
             Login_Rules.FillModel();
         }
 
-        #endregion
-
         private void btn_Login_Click(object sender, EventArgs e)
         {
             string depId = Login_Rules.ProcessLogin(txtBox_username.Text, txtBox_Password.Text);
@@ -112,6 +110,13 @@ namespace SocketTechnologiesLtd
             clearFields();
         }
 
+        private void link_ForgotPass_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("WELL,\nYOU'RE FIRED!");
+        }
+        #endregion
+
+        #region Extra Functions
         private void clearFields()
         {
             txtBox_username.Text = null;
@@ -123,5 +128,6 @@ namespace SocketTechnologiesLtd
         {
             this.Show();
         }
+        #endregion
     }
 }

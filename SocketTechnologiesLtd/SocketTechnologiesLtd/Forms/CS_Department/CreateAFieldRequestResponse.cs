@@ -61,5 +61,10 @@ namespace SocketTechnologiesLtd
         {
             this.Close();
         }
+
+        private void metroLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

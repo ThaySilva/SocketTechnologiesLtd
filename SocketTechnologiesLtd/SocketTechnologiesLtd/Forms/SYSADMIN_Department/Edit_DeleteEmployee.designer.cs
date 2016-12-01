@@ -34,7 +34,7 @@
             this.btn_delete = new MetroFramework.Controls.MetroTile();
             this.btn_edit = new MetroFramework.Controls.MetroTile();
             this.btn_Search = new MetroFramework.Controls.MetroTile();
-            this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
+            this.txt_search = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.cBox_dept = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
@@ -60,7 +60,7 @@
             this.metroPanel1.Controls.Add(this.btn_delete);
             this.metroPanel1.Controls.Add(this.btn_edit);
             this.metroPanel1.Controls.Add(this.btn_Search);
-            this.metroPanel1.Controls.Add(this.metroTextBox6);
+            this.metroPanel1.Controls.Add(this.txt_search);
             this.metroPanel1.Controls.Add(this.metroLabel7);
             this.metroPanel1.Controls.Add(this.cBox_dept);
             this.metroPanel1.Controls.Add(this.metroLabel6);
@@ -80,7 +80,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 60);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(857, 417);
+            this.metroPanel1.Size = new System.Drawing.Size(973, 540);
             this.metroPanel1.TabIndex = 4;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.VerticalScrollbarBarColor = true;
@@ -94,7 +94,7 @@
             this.dataGrid_Employee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGrid_Employee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dataGrid_Employee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Employee.Location = new System.Drawing.Point(76, 129);
+            this.dataGrid_Employee.Location = new System.Drawing.Point(134, 191);
             this.dataGrid_Employee.MultiSelect = false;
             this.dataGrid_Employee.Name = "dataGrid_Employee";
             this.dataGrid_Employee.ReadOnly = true;
@@ -105,8 +105,8 @@
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_cancel.Location = new System.Drawing.Point(707, 345);
+            this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cancel.Location = new System.Drawing.Point(822, 468);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(121, 47);
             this.btn_cancel.Style = MetroFramework.MetroColorStyle.Orange;
@@ -115,11 +115,12 @@
             this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_cancel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_cancel.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_delete
             // 
-            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_delete.Location = new System.Drawing.Point(570, 345);
+            this.btn_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_delete.Location = new System.Drawing.Point(686, 468);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(121, 47);
             this.btn_delete.Style = MetroFramework.MetroColorStyle.Orange;
@@ -128,11 +129,12 @@
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_delete.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_delete.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_edit
             // 
-            this.btn_edit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_edit.Location = new System.Drawing.Point(431, 345);
+            this.btn_edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_edit.Location = new System.Drawing.Point(547, 468);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(121, 47);
             this.btn_edit.Style = MetroFramework.MetroColorStyle.Orange;
@@ -146,7 +148,7 @@
             // btn_Search
             // 
             this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Search.Location = new System.Drawing.Point(147, 54);
+            this.btn_Search.Location = new System.Drawing.Point(205, 116);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(194, 32);
             this.btn_Search.Style = MetroFramework.MetroColorStyle.Orange;
@@ -155,15 +157,17 @@
             this.btn_Search.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Search.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Search.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
-            // metroTextBox6
+            // txt_search
             // 
-            this.metroTextBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox6.Location = new System.Drawing.Point(147, 17);
-            this.metroTextBox6.Name = "metroTextBox6";
-            this.metroTextBox6.Size = new System.Drawing.Size(194, 27);
-            this.metroTextBox6.TabIndex = 61;
-            this.metroTextBox6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_search.Location = new System.Drawing.Point(205, 79);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(194, 27);
+            this.txt_search.TabIndex = 61;
+            this.txt_search.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_search.Click += new System.EventHandler(this.txt_search_Click);
             // 
             // metroLabel7
             // 
@@ -171,7 +175,7 @@
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(26, 19);
+            this.metroLabel7.Location = new System.Drawing.Point(84, 81);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(124, 25);
             this.metroLabel7.TabIndex = 60;
@@ -192,7 +196,7 @@
             "Purchasing",
             "System Admin",
             "Management"});
-            this.cBox_dept.Location = new System.Drawing.Point(593, 294);
+            this.cBox_dept.Location = new System.Drawing.Point(651, 425);
             this.cBox_dept.Name = "cBox_dept";
             this.cBox_dept.Size = new System.Drawing.Size(194, 29);
             this.cBox_dept.TabIndex = 59;
@@ -203,7 +207,7 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(406, 298);
+            this.metroLabel6.Location = new System.Drawing.Point(464, 429);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(120, 25);
             this.metroLabel6.TabIndex = 58;
@@ -213,7 +217,7 @@
             // txt_phoneNum
             // 
             this.txt_phoneNum.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_phoneNum.Location = new System.Drawing.Point(593, 245);
+            this.txt_phoneNum.Location = new System.Drawing.Point(651, 353);
             this.txt_phoneNum.Name = "txt_phoneNum";
             this.txt_phoneNum.Size = new System.Drawing.Size(194, 27);
             this.txt_phoneNum.TabIndex = 57;
@@ -222,7 +226,7 @@
             // txt_lastName
             // 
             this.txt_lastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_lastName.Location = new System.Drawing.Point(593, 189);
+            this.txt_lastName.Location = new System.Drawing.Point(651, 287);
             this.txt_lastName.Name = "txt_lastName";
             this.txt_lastName.Size = new System.Drawing.Size(194, 27);
             this.txt_lastName.TabIndex = 56;
@@ -231,7 +235,7 @@
             // txt_firstName
             // 
             this.txt_firstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_firstName.Location = new System.Drawing.Point(593, 129);
+            this.txt_firstName.Location = new System.Drawing.Point(651, 220);
             this.txt_firstName.Name = "txt_firstName";
             this.txt_firstName.Size = new System.Drawing.Size(194, 27);
             this.txt_firstName.TabIndex = 55;
@@ -240,7 +244,7 @@
             // txt_password
             // 
             this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_password.Location = new System.Drawing.Point(593, 73);
+            this.txt_password.Location = new System.Drawing.Point(651, 148);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(194, 27);
             this.txt_password.TabIndex = 54;
@@ -249,7 +253,7 @@
             // txt_username
             // 
             this.txt_username.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_username.Location = new System.Drawing.Point(593, 17);
+            this.txt_username.Location = new System.Drawing.Point(651, 79);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(194, 27);
             this.txt_username.TabIndex = 53;
@@ -261,7 +265,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(406, 247);
+            this.metroLabel5.Location = new System.Drawing.Point(464, 353);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(146, 25);
             this.metroLabel5.TabIndex = 52;
@@ -274,7 +278,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(406, 189);
+            this.metroLabel4.Location = new System.Drawing.Point(464, 287);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(106, 25);
             this.metroLabel4.TabIndex = 51;
@@ -287,7 +291,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(406, 131);
+            this.metroLabel2.Location = new System.Drawing.Point(464, 220);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(108, 25);
             this.metroLabel2.TabIndex = 50;
@@ -300,7 +304,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(406, 75);
+            this.metroLabel1.Location = new System.Drawing.Point(464, 148);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(97, 25);
             this.metroLabel1.TabIndex = 49;
@@ -313,7 +317,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(406, 21);
+            this.metroLabel3.Location = new System.Drawing.Point(464, 79);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(102, 25);
             this.metroLabel3.TabIndex = 48;
@@ -323,7 +327,7 @@
             // btn_Exit
             // 
             this.btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Exit.Location = new System.Drawing.Point(782, 20);
+            this.btn_Exit.Location = new System.Drawing.Point(898, 20);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(92, 34);
             this.btn_Exit.TabIndex = 45;
@@ -335,7 +339,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 497);
+            this.ClientSize = new System.Drawing.Size(1013, 620);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.metroPanel1);
             this.Name = "Edit_DeleteEmployee";
@@ -365,7 +369,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroComboBox cBox_dept;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroTextBox metroTextBox6;
+        private MetroFramework.Controls.MetroTextBox txt_search;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroButton btn_Exit;
         private MetroFramework.Controls.MetroTile btn_edit;

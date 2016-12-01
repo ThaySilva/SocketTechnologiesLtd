@@ -25,6 +25,7 @@ namespace SocketTechnologiesLtd
 
         int empId = 0;
 
+        #region Constructors
         public Edit_DeleteEmployee(IModel _Model)
         {
             InitializeComponent();
@@ -39,22 +40,36 @@ namespace SocketTechnologiesLtd
             populateListView();
         }
 
-        private void btn_Exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void SelectmetroTile1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
         private void dataGrid_Employee_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             empId = Convert.ToInt32(dataGrid_Employee.Rows[e.RowIndex].Cells["EmployeeID:"].Value);
 
             fillFields(empId);
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txt_search.Text);
+            populateListView(id);
+        }
+
+
+        private void txt_search_Click(object sender, EventArgs e)
+        {
+            populateListView();
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            if(empId != 0)
+            {
+                if (MessageBox.Show("Are you sure you want to delete the employee " + txt_firstName.Text +  " ?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    SysAdmin_Rules.DeleteEmployee(empId);
+                    MessageBox.Show("The employee " + txt_firstName.Text + " was successfully deleted!");
+                    this.Close();
+                }
+            }
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
@@ -85,6 +100,19 @@ namespace SocketTechnologiesLtd
                 }
             }
         }
+        #endregion
+
+        #region Descructors
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
 
         #region Extra Functions
         private void populateListView()
@@ -107,6 +135,35 @@ namespace SocketTechnologiesLtd
                 row["EmployeeName:"] = e.FirstName;
 
                 Employee.Rows.Add(row);
+            }
+
+            dataGrid_Employee.DataSource = Employee;
+
+        }
+
+        private void populateListView(int eId)
+        {
+            DataTable Employee = new DataTable("Employee");
+
+            DataColumn c0 = new DataColumn("EmployeeID:");
+            DataColumn c1 = new DataColumn("EmployeeName:");
+
+            Employee.Columns.Add(c0);
+            Employee.Columns.Add(c1);
+
+            DataRow row;
+
+            foreach (Employee e in employee)
+            {
+                if (e.EmployeeID == eId)
+                {
+                    row = Employee.NewRow();
+
+                    row["EmployeeID:"] = e.EmployeeID.ToString();
+                    row["EmployeeName:"] = e.FirstName;
+
+                    Employee.Rows.Add(row);
+                }
             }
 
             dataGrid_Employee.DataSource = Employee;

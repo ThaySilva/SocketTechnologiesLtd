@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.btn_Cancel = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
@@ -41,8 +43,6 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.btn_Exit = new MetroFramework.Controls.MetroButton();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,28 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroTextBox2
+            // 
+            this.metroTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroTextBox2.Location = new System.Drawing.Point(312, 230);
+            this.metroTextBox2.Name = "metroTextBox2";
+            this.metroTextBox2.Size = new System.Drawing.Size(194, 27);
+            this.metroTextBox2.TabIndex = 46;
+            this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel7.Location = new System.Drawing.Point(48, 232);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(77, 25);
+            this.metroLabel7.TabIndex = 45;
+            this.metroLabel7.Text = "CPO ID:";
+            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // btn_Cancel
             // 
@@ -128,6 +150,7 @@
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(194, 29);
             this.metroComboBox1.TabIndex = 41;
+            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
             // metroTextBox4
             // 
@@ -219,28 +242,6 @@
             this.btn_Exit.Text = "Exit";
             this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(48, 232);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(77, 25);
-            this.metroLabel7.TabIndex = 45;
-            this.metroLabel7.Text = "CPO ID:";
-            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroTextBox2
-            // 
-            this.metroTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox2.Location = new System.Drawing.Point(312, 230);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(194, 27);
-            this.metroTextBox2.TabIndex = 46;
-            this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // FSRequest_Form
             // 

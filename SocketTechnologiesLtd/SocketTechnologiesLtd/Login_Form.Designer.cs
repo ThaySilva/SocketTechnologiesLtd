@@ -112,6 +112,7 @@
             this.link_ForgotPass.TabIndex = 4;
             this.link_ForgotPass.Text = "Forgot Password?";
             this.link_ForgotPass.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.link_ForgotPass.Click += new System.EventHandler(this.link_ForgotPass_Click);
             // 
             // btn_Login
             // 

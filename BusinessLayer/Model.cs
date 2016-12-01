@@ -100,28 +100,5 @@ namespace BusinessLayer
         }
         #endregion
 
-        //public Boolean addNewUser(string a, string b, string c, string d)
-        //{
-
-        //        IUser theUser = UserFactory.GetUser(a, b, c, d);   // Using a Factory to create the user entity object. ie seperating object creation from business logic
-        //        UserList.Add(theUser);                             // Add a reference to the newly created object to the Models UserList
-        //        DataLayer.addNewUserToDB(theUser); //Gets the DataLayer to add the new user to the DB. 
-        //        return true;
-
-        //    //catch (System.Exception excep)
-        //    //{
-        //    //    return false;
-        //    //}
-        //}
-
-
-        //public bool deleteUser(IUser user)
-        //{
-
-        //    DataLayer.deleteUserFromDB(user);
-        //    UserList.Remove(user); //remove object from collection
-        //    return true;
-
-        //}
     }
 }

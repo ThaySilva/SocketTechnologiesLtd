@@ -26,8 +26,8 @@ namespace SocketTechnologiesLtd
         {
             InitializeComponent();
             this.ControlBox = false;
-            //this.Bounds = Screen.PrimaryScreen.Bounds;
-            //this.TopMost = true;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+            this.TopMost = true;
             model = _Model;
 
             txt_userId.Text = id.getUserId().ToString();
@@ -106,7 +106,6 @@ namespace SocketTechnologiesLtd
                     deptId = 8;
                     break;
                 default:
-                    deptId = 0;
                     break;
             }
 

@@ -15,12 +15,12 @@ namespace BusinessEntities
         private string customerID;
         private DateTime dateCreated;
         private DateTime dateCompleted;
-        private List<IOrderItem> LineItemsList;
+        private List<ILineItem> LineItemsList;
         private List<IProductMaterial> MaterialList;
         #endregion
 
-       
 
+        #region Instance Constructors
         public Order(string orderID, string customerID, DateTime dateCreated, DateTime dateCompleted)
         {
             this.OrderID = orderID;
@@ -40,11 +40,11 @@ namespace BusinessEntities
         {
             return new string[] { orderID, customerID, dateCreated.ToString(), dateCompleted.ToString(), this.GetPriceTotal().ToString() };
         }
-
+        
         public double GetPriceTotal()
         {
             double total = 0;
-            foreach(IOrderItem item in LineItemsList)
+            foreach(ILineItem item in LineItemsList)
             {
                 total += item.GetLinePrice();
 
@@ -55,10 +55,12 @@ namespace BusinessEntities
         public void AddLineItem(IProduct product, int qty)
         {
             // need to figure out what list to use
-        //    MaterialList.Add(new OrderItem(product, qty));
+        //    MaterialList.Add(new LineItem(product, qty));
         }
-        #region Instance Properties
+        #endregion
 
+
+        #region Instance Properties
         public string OrderID
         {
             get { return orderID; }
@@ -83,7 +85,7 @@ namespace BusinessEntities
             set { dateCompleted = value; }
         }
 
-        List<IOrderItem> IOrder.LineItemsList
+        List<ILineItem> IOrder.LineItemsList
         {
             get
             {
@@ -91,7 +93,7 @@ namespace BusinessEntities
             }
         }
 
-        //public List<IOrderItem> LineItemsList
+        //public List<ILineItem> LineItemsList
         //{
         //    get { return LineItemsList; }
         //}

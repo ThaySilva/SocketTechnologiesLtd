@@ -15,19 +15,13 @@ namespace DataAccessLayer
         List<string[]> GetTableData(string table);
         List<string[]> GetTableData(string table, string[] columns);
         List<string[]> GetTableData(string table, string table2, string[] columns);
-        void AddRow(string table, string[] row);
-        void AddRow(string table, string[] columns, object[] row);
-        void DeleteRow(string table, string column, string criteria);
-        void DeleteRowByKey(string tble, string key);
+        void AddRow(string table, string[] columns, string[] values);
+        void DeleteRowByKey(string table);
         void SetJoin(string thisTable, string joinedTable, string thisTableColumn, string joinedTableColumn);
         void SetCriteria(string column, string criteria);
         void RemoveCriteria();
         void RemoveJoins();
         string GetMax(string table, string column);
         void UpdateRowsByKey(string table, string[] columns, string[] values);
-
-
-
-        //void addNewUserToDB(BusinessEntities.IUser theUser);
     }
 }
