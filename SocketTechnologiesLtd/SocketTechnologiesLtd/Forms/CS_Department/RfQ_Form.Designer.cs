@@ -37,9 +37,7 @@
             this.txt_RFQPartId = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.PartID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PartDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lstView_standard = new System.Windows.Forms.DataGridView();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btn_Cancel = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
@@ -61,7 +59,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lstView_standard)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Exit
@@ -91,7 +89,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.txt_RFQPartId);
             this.splitContainer1.Panel1.Controls.Add(this.metroLabel3);
             this.splitContainer1.Panel1.Controls.Add(this.metroLabel2);
-            this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel1.Controls.Add(this.lstView_standard);
             this.splitContainer1.Panel1.Controls.Add(this.metroLabel1);
             // 
             // splitContainer1.Panel2
@@ -186,34 +184,21 @@
             this.metroLabel2.Text = "Part ID:";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // dataGridView1
+            // lstView_standard
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PartID,
-            this.PartDescription});
-            this.dataGridView1.Location = new System.Drawing.Point(17, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(397, 56);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // PartID
-            // 
-            this.PartID.HeaderText = "Part ID";
-            this.PartID.Name = "PartID";
-            this.PartID.ReadOnly = true;
-            this.PartID.Width = 170;
-            // 
-            // PartDescription
-            // 
-            this.PartDescription.HeaderText = "Part Description";
-            this.PartDescription.Name = "PartDescription";
-            this.PartDescription.ReadOnly = true;
-            this.PartDescription.Width = 170;
+            this.lstView_standard.AllowUserToAddRows = false;
+            this.lstView_standard.AllowUserToDeleteRows = false;
+            this.lstView_standard.AllowUserToResizeColumns = false;
+            this.lstView_standard.AllowUserToResizeRows = false;
+            this.lstView_standard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lstView_standard.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.lstView_standard.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.lstView_standard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lstView_standard.Location = new System.Drawing.Point(48, 56);
+            this.lstView_standard.Name = "lstView_standard";
+            this.lstView_standard.ReadOnly = true;
+            this.lstView_standard.Size = new System.Drawing.Size(318, 130);
+            this.lstView_standard.TabIndex = 1;
             // 
             // metroLabel1
             // 
@@ -221,7 +206,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(17, 28);
+            this.metroLabel1.Location = new System.Drawing.Point(17, 18);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(141, 25);
             this.metroLabel1.TabIndex = 0;
@@ -406,7 +391,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(51, 28);
+            this.metroLabel4.Location = new System.Drawing.Point(51, 18);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(128, 25);
             this.metroLabel4.TabIndex = 1;
@@ -434,7 +419,7 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lstView_standard)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -445,7 +430,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView lstView_standard;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox txt_CustomSpecs;
         private MetroFramework.Controls.MetroLabel metroLabel7;
@@ -456,8 +441,6 @@
         private MetroFramework.Controls.MetroTextBox txt_RFQPartId;
         private MetroFramework.Controls.MetroTextBox txt_RFQCustomQty;
         private MetroFramework.Controls.MetroTextBox txt_RFQCustomPartId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PartID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PartDescription;
         private MetroFramework.Controls.MetroTextBox txt_RFQCustomDelivery;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroTextBox txt_RFQQDate;

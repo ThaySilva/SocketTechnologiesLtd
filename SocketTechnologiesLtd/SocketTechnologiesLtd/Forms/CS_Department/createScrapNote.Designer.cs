@@ -30,19 +30,20 @@
         {
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.Scrap_Note_Txt = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.cus_Address_tf = new MetroFramework.Controls.MetroTextBox();
             this.cus_Name_tf = new MetroFramework.Controls.MetroTextBox();
             this.RGAR_tf = new MetroFramework.Controls.MetroTextBox();
             this.c_and_e_addresstf = new MetroFramework.Controls.MetroTextBox();
-            this.scrap_no_tf = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.sn_tf = new MetroFramework.Controls.MetroTextBox();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,19 +62,20 @@
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.Black;
+            this.metroPanel1.Controls.Add(this.sn_tf);
+            this.metroPanel1.Controls.Add(this.metroLabel7);
+            this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.Scrap_Note_Txt);
             this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.Controls.Add(this.cus_Address_tf);
             this.metroPanel1.Controls.Add(this.cus_Name_tf);
             this.metroPanel1.Controls.Add(this.RGAR_tf);
             this.metroPanel1.Controls.Add(this.c_and_e_addresstf);
-            this.metroPanel1.Controls.Add(this.scrap_no_tf);
             this.metroPanel1.Controls.Add(this.metroLabel6);
             this.metroPanel1.Controls.Add(this.metroLabel5);
             this.metroPanel1.Controls.Add(this.metroLabel4);
             this.metroPanel1.Controls.Add(this.metroLabel3);
             this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
@@ -86,6 +88,18 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.Location = new System.Drawing.Point(48, 53);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(516, 25);
+            this.metroLabel1.TabIndex = 27;
+            this.metroLabel1.Text = "Please fill in details. On Submit a Scrap Note No. will be created.";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Scrap_Note_Txt
             // 
@@ -144,14 +158,6 @@
             this.c_and_e_addresstf.TabIndex = 20;
             this.c_and_e_addresstf.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // scrap_no_tf
-            // 
-            this.scrap_no_tf.Location = new System.Drawing.Point(390, 88);
-            this.scrap_no_tf.Name = "scrap_no_tf";
-            this.scrap_no_tf.Size = new System.Drawing.Size(135, 23);
-            this.scrap_no_tf.TabIndex = 19;
-            this.scrap_no_tf.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
@@ -202,15 +208,23 @@
             this.metroLabel2.Text = "C and E Address";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroLabel1
+            // metroLabel7
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(155, 88);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(104, 19);
-            this.metroLabel1.TabIndex = 13;
-            this.metroLabel1.Text = "Scrap Note No. ";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(153, 96);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(97, 19);
+            this.metroLabel7.TabIndex = 28;
+            this.metroLabel7.Text = "Scrap Note No";
+            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // sn_tf
+            // 
+            this.sn_tf.Location = new System.Drawing.Point(390, 92);
+            this.sn_tf.Name = "sn_tf";
+            this.sn_tf.Size = new System.Drawing.Size(135, 23);
+            this.sn_tf.TabIndex = 29;
+            this.sn_tf.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // createScrapNote
             // 
@@ -240,13 +254,14 @@
         private MetroFramework.Controls.MetroTextBox cus_Name_tf;
         private MetroFramework.Controls.MetroTextBox RGAR_tf;
         private MetroFramework.Controls.MetroTextBox c_and_e_addresstf;
-        private MetroFramework.Controls.MetroTextBox scrap_no_tf;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox Scrap_Note_Txt;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTextBox sn_tf;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
     }
 }

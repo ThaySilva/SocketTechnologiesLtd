@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer;
 using BusinessEntities;
+using BusinessLayer;
 
 namespace BusinessLayer
 {
@@ -19,6 +20,7 @@ namespace BusinessLayer
         private IDataLayer dataLayer;
         private IUser currentUser;
         private List<IUser> userList;
+        private List<IEmployee> employeeList;
         #endregion
 
         #region Instance Properties
@@ -38,6 +40,11 @@ namespace BusinessLayer
         {
             get { return userList; }
         }
+
+        public List<IEmployee> EmployeeList
+        {
+            get { return employeeList; }
+        }
         #endregion
 
         #region Constructors and Destructors
@@ -54,60 +61,67 @@ namespace BusinessLayer
         private Model(IDataLayer DataLayer)
         {
             userList = new List<IUser>();
+            employeeList = new List<IEmployee>();
             dataLayer = DataLayer;
-            userList = dataLayer.getAllUsers();
         }
 
         ~Model()
         {
             tearDown();
         }
-        #endregion
-
-        public Boolean login(String username, String password)
-        {
-            IUser matchUser = userList.FirstOrDefault(user => user.Username == username && user.Password == password);
-            if (matchUser == null)
-                return false;
-            else
-            {
-                CurrentUser = matchUser;
-                return true;
-            }
-        }
-
-        public string userDepartment()
-        {
-            return currentUser.DeptID;
-        }
-
+        
         public void tearDown()
         {
             DataLayer.CloseConnection();
         }
-       
-        //public Boolean addNewUser()
+        #endregion
+
+        #region Fill Lists
+        public void FillEmployeeList()
+        {
+            employeeList = new List<IEmployee>();
+            List<string[]> employeeData = DataLayer.GetTableData("employee");
+
+            foreach (String[] row in employeeData)
+            {
+                EmployeeList.Add(EmployeeFactory.GetEmployee(new string[] { row[0], row[1], row[2], row[3], row[4], row[5] }));
+            }
+        }
+
+        public void FillUserList()
+        {
+            userList = new List<IUser>();
+            List<string[]> userData = DataLayer.GetTableData("users");
+
+            foreach(String[] row in userData)
+            {
+                userList.Add(UserFactory.GetUser(new string[] { row[0], row[1], row[2]}));
+            }
+        }
+        #endregion
+
+        //public Boolean addNewUser(string a, string b, string c, string d)
         //{
-        //    try
-        //    {
-        //        int maxId = 0;
-        //        // need some code to avoid dulicate usernames
-        //        // maybe add some logic (busiess rules) about password policy
-        //        //      IUser user = new User(name, password, userType); // Construct a User Object
-        //        foreach (User user in UserList)
-        //        {
-        //            if (user.UserID > maxId)
-        //                maxId = user.UserID;
-        //        }
-        //        IUser theUser = UserFactory.GetUser(name, password, userType, maxId + 1);   // Using a Factory to create the user entity object. ie seperating object creation from business logic
+
+        //        IUser theUser = UserFactory.GetUser(a, b, c, d);   // Using a Factory to create the user entity object. ie seperating object creation from business logic
         //        UserList.Add(theUser);                             // Add a reference to the newly created object to the Models UserList
         //        DataLayer.addNewUserToDB(theUser); //Gets the DataLayer to add the new user to the DB. 
         //        return true;
-        //    }
-        //    catch (System.Exception excep)
-        //    {
-        //        return false;
-        //    }
+
+        //    //catch (System.Exception excep)
+        //    //{
+        //    //    return false;
+        //    //}
+        //}
+
+
+        //public bool deleteUser(IUser user)
+        //{
+
+        //    DataLayer.deleteUserFromDB(user);
+        //    UserList.Remove(user); //remove object from collection
+        //    return true;
+
         //}
     }
 }

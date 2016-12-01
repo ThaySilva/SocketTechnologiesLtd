@@ -222,7 +222,7 @@
             this.btnSaveAddCust.TabIndex = 2;
             this.btnSaveAddCust.Text = "SAVE";
             this.btnSaveAddCust.UseVisualStyleBackColor = true;
-            this.btnSaveAddCust.Click += new System.EventHandler(this.btnSaveAddCust_Click);
+            //this.btnSaveAddCust.Click += new System.EventHandler(this.btnSaveAddCust_Click);
             // 
             // btnBackAddCust
             // 

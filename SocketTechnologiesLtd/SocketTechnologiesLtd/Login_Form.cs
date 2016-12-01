@@ -22,17 +22,23 @@ namespace SocketTechnologiesLtd
         {
             InitializeComponent();
             Model = _Model;
+
+            Login_Rules.FillModel();
         }
 
         #endregion
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            bool validUser = Model.login(txtBox_username.Text, txtBox_username.Text);
-            if(validUser)
+            string depId = Login_Rules.ProcessLogin(txtBox_username.Text, txtBox_Password.Text);
+            if(depId == null)
             {
-                switch(Model.userDepartment())
-                {
+                MessageBox.Show("Ivalid Login Details!");
+            }
+            else
+            { 
+                switch(depId)
+                { 
                     case "1":
                         AccDep_Form acc = new AccDep_Form();
                         acc.FormClosing += backToLogin;
@@ -82,29 +88,35 @@ namespace SocketTechnologiesLtd
                         sto.Show();
                         break;
                     case "7":
-                        SysAdmin_Form sysAdmin = new SysAdmin_Form();
+                        SysAdmin_Form sysAdmin = new SysAdmin_Form(Model);
                         sysAdmin.FormClosing += backToLogin;
                         sysAdmin.MdiParent = this.MdiParent;
                         sysAdmin.Dock = DockStyle.Fill;
                         this.Hide();
                         sysAdmin.Show();
                         break;
+                    case "8":
+                        EngDep_Form eng = new EngDep_Form();
+                        eng.FormClosing += backToLogin;
+                        eng.MdiParent = this.MdiParent;
+                        eng.Dock = DockStyle.Fill;
+                        this.Hide();
+                        eng.Show();
+                        break;
                     default:
                         MessageBox.Show("This user is not assigned to a department!");
                         break;
                 }
+            }
 
-                txtBox_username.Text = "";
-                txtBox_Password.Text = "";
-                txtBox_username.Select();
-            }
-            else
-            {
-                MessageBox.Show("Ivalid Login Details!");
-                txtBox_username.Text = "";
-                txtBox_Password.Text = "";
-                txtBox_username.Select();
-            }
+            clearFields();
+        }
+
+        private void clearFields()
+        {
+            txtBox_username.Text = null;
+            txtBox_Password.Text = null;
+            txtBox_username.Select();
         }
 
         private void backToLogin(object sender, FormClosingEventArgs e)

@@ -412,23 +412,11 @@
     <Compile Include="Forms\SYSADMIN_Department\AddNewEmployee.designer.cs">
       <DependentUpon>AddNewEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SYSADMIN_Department\ConfirmAddNewEmployee.cs">
+    <Compile Include="Forms\SYSADMIN_Department\Edit_DeleteEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SYSADMIN_Department\ConfirmAddNewEmployee.designer.cs">
-      <DependentUpon>ConfirmAddNewEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SYSADMIN_Department\Select2Employee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\SYSADMIN_Department\Select2Employee.designer.cs">
-      <DependentUpon>Select2Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SYSADMIN_Department\SelectEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\SYSADMIN_Department\SelectEmployee.designer.cs">
-      <DependentUpon>SelectEmployee.cs</DependentUpon>
+    <Compile Include="Forms\SYSADMIN_Department\Edit_DeleteEmployee.designer.cs">
+      <DependentUpon>Edit_DeleteEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SYSADMIN_Department\SystAdmin_Form.cs">
       <SubType>Form</SubType>
@@ -621,14 +609,8 @@
     <EmbeddedResource Include="Forms\SYSADMIN_Department\AddNewEmployee.resx">
       <DependentUpon>AddNewEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SYSADMIN_Department\ConfirmAddNewEmployee.resx">
-      <DependentUpon>ConfirmAddNewEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SYSADMIN_Department\Select2Employee.resx">
-      <DependentUpon>Select2Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SYSADMIN_Department\SelectEmployee.resx">
-      <DependentUpon>SelectEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SYSADMIN_Department\Edit_DeleteEmployee.resx">
+      <DependentUpon>Edit_DeleteEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SYSADMIN_Department\SystAdmin_Form.resx">
       <DependentUpon>SystAdmin_Form.cs</DependentUpon>
@@ -682,6 +664,10 @@
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BusinessEntities\BusinessEntities.csproj">
+      <Project>{421deb4e-3592-46d0-91dd-738a57f297ec}</Project>
+      <Name>BusinessEntities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\BusinessLayer\BusinessLayer.csproj">
       <Project>{bbe8ae8e-71e4-460b-884a-b8e62ffcb43e}</Project>
       <Name>BusinessLayer</Name>
@@ -694,6 +680,10 @@
       <Project>{01165222-9325-447a-a324-e9fe26b491a7}</Project>
       <Name>DocumentWriter</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\CustomerServices\Refusal to Quote Reports\" />
+    <Folder Include="Reports\CustomerServices\Scrap Notes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

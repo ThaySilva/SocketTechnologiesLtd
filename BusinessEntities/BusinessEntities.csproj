@@ -35,8 +35,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MetroFramework.Design.dll</HintPath>
+      <HintPath>..\..\SocketTechnologiesLtd\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\..\SocketTechnologiesLtd\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
@@ -55,13 +55,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Classes\Material.cs" />
+    <Compile Include="Classes\Order.cs" />
+    <Compile Include="Classes\OrderItem.cs" />
+    <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\ProductMaterial.cs" />
+    <Compile Include="Classes\User.cs" />
     <Compile Include="Factories\CustomerFactory.cs" />
+    <Compile Include="Factories\EmployeeFactory.cs" />
+    <Compile Include="Factories\MaterialFactory.cs" />
+    <Compile Include="Factories\OrderFactory.cs" />
+    <Compile Include="Factories\ProductFactory.cs" />
+    <Compile Include="Factories\UserFactory.cs" />
     <Compile Include="Interfaces\IBusinessEntity.cs" />
     <Compile Include="Interfaces\ICustomer.cs" />
-    <Compile Include="IUser.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Interfaces\IEmployee.cs" />
+    <Compile Include="Interfaces\IMaterial.cs" />
+    <Compile Include="Interfaces\IOrder.cs" />
+    <Compile Include="Interfaces\IOrderItem.cs" />
+    <Compile Include="Interfaces\IProduct.cs" />
+    <Compile Include="Interfaces\IProductMaterial.cs" />
+    <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

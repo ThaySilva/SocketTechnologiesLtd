@@ -39,6 +39,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(696, 413);
             this.DisplayHeader = false;
+            this.Movable = false;
             this.Name = "Container";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;

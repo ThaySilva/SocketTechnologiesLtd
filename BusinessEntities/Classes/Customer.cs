@@ -3,162 +3,84 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BusinessEntities.Interfaces;
-namespace BusinessEntities.Classes
+using BusinessEntities;
+
+namespace BusinessEntities
 {
     public class Customer : ICustomer
     {
-        #region Fields
+        #region Instance Properties
 
-        String _id;
-        String _name;
-        String _contactName;
-        String _contactSurname;
-        String _address1;
-        String _address2;
-        String _address3;
-        String _phone;
-        String _email;
+        private int customer_ID;
+        private String custFirstName;
+        private String custLastName;
+        private String custCompanyName;
+        private String custPhoneNum;
+        private String custAddress;
 
         #endregion
 
-        #region Properties
-        public string Id
+        #region Instance Properties
+        public int Customer_ID
         {
-            get
-            {
-                return _id;
-            }
-
-            set
-            {
-                _id = value;
-            }
+            get { return customer_ID; }
+            set { customer_ID = value; }
         }
 
-        public string Name
+        public String CustFirstName
         {
-            get
-            {
-                return _name;
-            }
-
-            set
-            {
-                _name = value;
-            }
+            get { return custFirstName; }
+            set { custFirstName = value; }
         }
 
-        public string ContactName
+        public String CustLastName
         {
-            get
-            {
-                return _contactName;
-            }
-
-            set
-            {
-                _contactName = value;
-            }
+            get { return custLastName; }
+            set { custLastName = value; }
         }
 
-        public string ContactSurname
+        public String CustCompanyName
         {
-            get
-            {
-                return _contactSurname;
-            }
-
-            set
-            {
-                _contactSurname = value;
-            }
+            get { return custCompanyName; }
+            set { custCompanyName = value; }
         }
 
-        public string Email
+        public String CustPhoneNum
         {
-            get
-            {
-                return _email;
-            }
-
-            set
-            {
-                _email = value;
-            }
+            get { return custPhoneNum; }
+            set { custPhoneNum = value; }
         }
 
-        public string Address1
+        public String CustAddress
         {
-            get
-            {
-                return _address1;
-            }
-
-            set
-            {
-                _address1 = value;
-            }
+            get { return custAddress; }
+            set { custAddress = value; }
         }
 
-        public string Address2
-        {
-            get
-            {
-                return _address2;
-            }
 
-            set
-            {
-                _address2 = value;
-            }
+
+        #endregion
+
+        #region Constructors
+        public Customer()
+        {
+            throw new System.NotFiniteNumberException();
         }
 
-        public string Address3
+        public Customer(int id, String firstName, String lastName, String companyName, String phoneNum, String Address)
         {
-            get
-            {
-                return _address3;
-            }
+            Customer_ID = id;
+            CustFirstName = firstName;
+            CustLastName = lastName;
+            CustCompanyName = companyName;
+            CustPhoneNum = phoneNum;
+            CustAddress = Address;
 
-            set
-            {
-                _address3 = value;
-            }
-        }
-
-        public string Phone
-        {
-            get
-            {
-                return _phone;
-            }
-
-            set
-            {
-                _phone = value;
-            }
         }
 
         #endregion
 
-        public Customer(String id, String name, String contactName, String contactSurname, String add1, String add2, String add3, String phone, String email)
-        {
-            _id = id;
-            _name = name;
-            _contactName = contactName;
-            _contactSurname = contactSurname;
-            _address1 = add1;
-            _address2 = add2;
-            _address3 = add3;
-            _email = email;
-            _phone = phone;
 
-        }
 
-        public string[] ToStringArray()
-        {
-            return new String[] { _id, _name, _contactName, _contactSurname, _address1, _address2, _address3, _phone, _email };
-        }
     }
 }

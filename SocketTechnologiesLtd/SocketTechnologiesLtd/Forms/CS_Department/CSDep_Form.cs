@@ -49,6 +49,7 @@ namespace SocketTechnologiesLtd
             this.btn_Logout.Hide();
             this.btn_CSExit.Show();
             this.CSManageCustomerOrdersPanel.Show();
+            
         }
 
         private void btn_CSManageScrapNote_Click(object sender, EventArgs e)

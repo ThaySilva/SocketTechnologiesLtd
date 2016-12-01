@@ -63,7 +63,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 60);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(582, 329);
+            this.metroPanel1.Size = new System.Drawing.Size(970, 551);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.VerticalScrollbarBarColor = true;
@@ -74,7 +74,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(166, -181);
+            this.pictureBox2.Location = new System.Drawing.Point(360, -70);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(310, 277);
             this.pictureBox2.TabIndex = 1;
@@ -84,7 +84,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(510, 251);
+            this.pictureBox1.Location = new System.Drawing.Point(898, 473);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 78);
             this.pictureBox1.TabIndex = 5;
@@ -95,7 +95,7 @@
             this.metroLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(404, 287);
+            this.metroLabel1.Location = new System.Drawing.Point(792, 509);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(100, 25);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Orange;
@@ -106,7 +106,7 @@
             // link_ForgotPass
             // 
             this.link_ForgotPass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.link_ForgotPass.Location = new System.Drawing.Point(258, 273);
+            this.link_ForgotPass.Location = new System.Drawing.Point(452, 384);
             this.link_ForgotPass.Name = "link_ForgotPass";
             this.link_ForgotPass.Size = new System.Drawing.Size(131, 30);
             this.link_ForgotPass.TabIndex = 4;
@@ -116,7 +116,7 @@
             // btn_Login
             // 
             this.btn_Login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Login.Location = new System.Drawing.Point(286, 244);
+            this.btn_Login.Location = new System.Drawing.Point(480, 355);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 23);
             this.btn_Login.TabIndex = 3;
@@ -128,7 +128,7 @@
             // 
             this.txtBox_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBox_Password.CustomBackground = true;
-            this.txtBox_Password.Location = new System.Drawing.Point(239, 200);
+            this.txtBox_Password.Location = new System.Drawing.Point(433, 311);
             this.txtBox_Password.Name = "txtBox_Password";
             this.txtBox_Password.PasswordChar = '*';
             this.txtBox_Password.Size = new System.Drawing.Size(178, 24);
@@ -138,7 +138,7 @@
             // lbl_Password
             // 
             this.lbl_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_Password.Location = new System.Drawing.Point(131, 200);
+            this.lbl_Password.Location = new System.Drawing.Point(325, 311);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(66, 19);
             this.lbl_Password.TabIndex = 0;
@@ -149,7 +149,7 @@
             // 
             this.txtBox_username.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBox_username.CustomBackground = true;
-            this.txtBox_username.Location = new System.Drawing.Point(239, 140);
+            this.txtBox_username.Location = new System.Drawing.Point(433, 251);
             this.txtBox_username.Name = "txtBox_username";
             this.txtBox_username.Size = new System.Drawing.Size(178, 24);
             this.txtBox_username.TabIndex = 1;
@@ -158,7 +158,7 @@
             // lbl_Username
             // 
             this.lbl_Username.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_Username.Location = new System.Drawing.Point(131, 140);
+            this.lbl_Username.Location = new System.Drawing.Point(325, 251);
             this.lbl_Username.Name = "lbl_Username";
             this.lbl_Username.Size = new System.Drawing.Size(71, 19);
             this.lbl_Username.TabIndex = 0;
@@ -169,12 +169,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 409);
+            this.ClientSize = new System.Drawing.Size(1010, 631);
             this.Controls.Add(this.metroPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Movable = false;
             this.Name = "Login_Form";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;

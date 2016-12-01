@@ -28,337 +28,370 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.FirstNamemetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.FNmetroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.DepartmentmetroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.SurnamemetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.DateOfBirthmetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.AddressmetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.EmailmetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.PhoneNumbermetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.PositionHiredmetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.DepartmentmetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.SalarymetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.UsernamemetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.PasswordmetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.SNmetroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.DOBmetroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.AddrmetroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.EmailmetroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.PhonemetroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.PositionHiredmetroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.SalarymetroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.UsernamemetroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.EMNUMGENERATORmetroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.AddmetroTile1 = new MetroFramework.Controls.MetroTile();
-            this.CancelmetroTile1 = new MetroFramework.Controls.MetroTile();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.txt_employeeId = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.txt_password2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.txt_userId = new MetroFramework.Controls.MetroTextBox();
+            this.btn_Cancel = new MetroFramework.Controls.MetroTile();
+            this.btn_Create = new MetroFramework.Controls.MetroTile();
+            this.txt_phoneNum = new MetroFramework.Controls.MetroTextBox();
+            this.txt_lastName = new MetroFramework.Controls.MetroTextBox();
+            this.txt_firstName = new MetroFramework.Controls.MetroTextBox();
+            this.txt_password = new MetroFramework.Controls.MetroTextBox();
+            this.txt_username = new MetroFramework.Controls.MetroTextBox();
+            this.cBox_dept = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.btn_Exit = new MetroFramework.Controls.MetroButton();
+            this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // FirstNamemetroLabel1
+            // metroPanel1
             // 
-            this.FirstNamemetroLabel1.AutoSize = true;
-            this.FirstNamemetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.FirstNamemetroLabel1.Location = new System.Drawing.Point(44, 100);
-            this.FirstNamemetroLabel1.Name = "FirstNamemetroLabel1";
-            this.FirstNamemetroLabel1.Size = new System.Drawing.Size(75, 19);
-            this.FirstNamemetroLabel1.TabIndex = 0;
-            this.FirstNamemetroLabel1.Text = "First Name";
-            this.FirstNamemetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel1.Controls.Add(this.txt_employeeId);
+            this.metroPanel1.Controls.Add(this.metroLabel9);
+            this.metroPanel1.Controls.Add(this.txt_password2);
+            this.metroPanel1.Controls.Add(this.metroLabel8);
+            this.metroPanel1.Controls.Add(this.metroLabel7);
+            this.metroPanel1.Controls.Add(this.txt_userId);
+            this.metroPanel1.Controls.Add(this.btn_Cancel);
+            this.metroPanel1.Controls.Add(this.btn_Create);
+            this.metroPanel1.Controls.Add(this.txt_phoneNum);
+            this.metroPanel1.Controls.Add(this.txt_lastName);
+            this.metroPanel1.Controls.Add(this.txt_firstName);
+            this.metroPanel1.Controls.Add(this.txt_password);
+            this.metroPanel1.Controls.Add(this.txt_username);
+            this.metroPanel1.Controls.Add(this.cBox_dept);
+            this.metroPanel1.Controls.Add(this.metroLabel6);
+            this.metroPanel1.Controls.Add(this.metroLabel5);
+            this.metroPanel1.Controls.Add(this.metroLabel4);
+            this.metroPanel1.Controls.Add(this.metroLabel2);
+            this.metroPanel1.Controls.Add(this.metroLabel1);
+            this.metroPanel1.Controls.Add(this.metroLabel3);
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(20, 60);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(857, 420);
+            this.metroPanel1.TabIndex = 0;
+            this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // FNmetroTextBox1
+            // txt_employeeId
             // 
-            this.FNmetroTextBox1.Location = new System.Drawing.Point(152, 96);
-            this.FNmetroTextBox1.Name = "FNmetroTextBox1";
-            this.FNmetroTextBox1.Size = new System.Drawing.Size(166, 23);
-            this.FNmetroTextBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.FNmetroTextBox1.TabIndex = 1;
+            this.txt_employeeId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_employeeId.Enabled = false;
+            this.txt_employeeId.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txt_employeeId.Location = new System.Drawing.Point(634, 56);
+            this.txt_employeeId.Name = "txt_employeeId";
+            this.txt_employeeId.ReadOnly = true;
+            this.txt_employeeId.Size = new System.Drawing.Size(194, 27);
+            this.txt_employeeId.TabIndex = 55;
+            this.txt_employeeId.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // DepartmentmetroComboBox1
+            // metroLabel9
             // 
-            this.DepartmentmetroComboBox1.AccessibleName = "hgj";
-            this.DepartmentmetroComboBox1.FormattingEnabled = true;
-            this.DepartmentmetroComboBox1.ItemHeight = 23;
-            this.DepartmentmetroComboBox1.Location = new System.Drawing.Point(458, 125);
-            this.DepartmentmetroComboBox1.Name = "DepartmentmetroComboBox1";
-            this.DepartmentmetroComboBox1.Size = new System.Drawing.Size(166, 29);
-            this.DepartmentmetroComboBox1.TabIndex = 2;
+            this.metroLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel9.Location = new System.Drawing.Point(482, 56);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(124, 25);
+            this.metroLabel9.TabIndex = 54;
+            this.metroLabel9.Text = "Employee ID:";
+            this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // SurnamemetroLabel1
+            // txt_password2
             // 
-            this.SurnamemetroLabel1.AutoSize = true;
-            this.SurnamemetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.SurnamemetroLabel1.Location = new System.Drawing.Point(44, 129);
-            this.SurnamemetroLabel1.Name = "SurnamemetroLabel1";
-            this.SurnamemetroLabel1.Size = new System.Drawing.Size(63, 19);
-            this.SurnamemetroLabel1.TabIndex = 4;
-            this.SurnamemetroLabel1.Text = "Surname";
-            this.SurnamemetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_password2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_password2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txt_password2.Location = new System.Drawing.Point(225, 218);
+            this.txt_password2.Name = "txt_password2";
+            this.txt_password2.PasswordChar = '*';
+            this.txt_password2.Size = new System.Drawing.Size(194, 27);
+            this.txt_password2.TabIndex = 53;
+            this.txt_password2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // DateOfBirthmetroLabel1
+            // metroLabel8
             // 
-            this.DateOfBirthmetroLabel1.AutoSize = true;
-            this.DateOfBirthmetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.DateOfBirthmetroLabel1.Location = new System.Drawing.Point(44, 154);
-            this.DateOfBirthmetroLabel1.Name = "DateOfBirthmetroLabel1";
-            this.DateOfBirthmetroLabel1.Size = new System.Drawing.Size(90, 19);
-            this.DateOfBirthmetroLabel1.TabIndex = 5;
-            this.DateOfBirthmetroLabel1.Text = "Date Of Birth";
-            this.DateOfBirthmetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel8.Location = new System.Drawing.Point(40, 218);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(176, 25);
+            this.metroLabel8.TabIndex = 52;
+            this.metroLabel8.Text = "Re-Enter Password:";
+            this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // AddressmetroLabel1
+            // metroLabel7
             // 
-            this.AddressmetroLabel1.AutoSize = true;
-            this.AddressmetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.AddressmetroLabel1.Location = new System.Drawing.Point(44, 187);
-            this.AddressmetroLabel1.Name = "AddressmetroLabel1";
-            this.AddressmetroLabel1.Size = new System.Drawing.Size(58, 19);
-            this.AddressmetroLabel1.TabIndex = 6;
-            this.AddressmetroLabel1.Text = "Address";
-            this.AddressmetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel7.Location = new System.Drawing.Point(40, 56);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(79, 25);
+            this.metroLabel7.TabIndex = 51;
+            this.metroLabel7.Text = "User ID:";
+            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // EmailmetroLabel1
+            // txt_userId
             // 
-            this.EmailmetroLabel1.AutoSize = true;
-            this.EmailmetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.EmailmetroLabel1.Location = new System.Drawing.Point(44, 216);
-            this.EmailmetroLabel1.Name = "EmailmetroLabel1";
-            this.EmailmetroLabel1.Size = new System.Drawing.Size(41, 19);
-            this.EmailmetroLabel1.TabIndex = 7;
-            this.EmailmetroLabel1.Text = "Email";
-            this.EmailmetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_userId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_userId.Enabled = false;
+            this.txt_userId.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txt_userId.Location = new System.Drawing.Point(225, 56);
+            this.txt_userId.Name = "txt_userId";
+            this.txt_userId.ReadOnly = true;
+            this.txt_userId.Size = new System.Drawing.Size(194, 27);
+            this.txt_userId.TabIndex = 50;
+            this.txt_userId.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // PhoneNumbermetroLabel1
+            // btn_Cancel
             // 
-            this.PhoneNumbermetroLabel1.AutoSize = true;
-            this.PhoneNumbermetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.PhoneNumbermetroLabel1.Location = new System.Drawing.Point(44, 245);
-            this.PhoneNumbermetroLabel1.Name = "PhoneNumbermetroLabel1";
-            this.PhoneNumbermetroLabel1.Size = new System.Drawing.Size(102, 19);
-            this.PhoneNumbermetroLabel1.TabIndex = 8;
-            this.PhoneNumbermetroLabel1.Text = "Phone Number";
-            this.PhoneNumbermetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cancel.Location = new System.Drawing.Point(706, 349);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(122, 46);
+            this.btn_Cancel.Style = MetroFramework.MetroColorStyle.Orange;
+            this.btn_Cancel.TabIndex = 49;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Cancel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_Cancel.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
-            // PositionHiredmetroLabel1
+            // btn_Create
             // 
-            this.PositionHiredmetroLabel1.AutoSize = true;
-            this.PositionHiredmetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.PositionHiredmetroLabel1.Location = new System.Drawing.Point(347, 100);
-            this.PositionHiredmetroLabel1.Name = "PositionHiredmetroLabel1";
-            this.PositionHiredmetroLabel1.Size = new System.Drawing.Size(94, 19);
-            this.PositionHiredmetroLabel1.TabIndex = 9;
-            this.PositionHiredmetroLabel1.Text = "Position Hired";
-            this.PositionHiredmetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_Create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Create.Location = new System.Drawing.Point(542, 349);
+            this.btn_Create.Name = "btn_Create";
+            this.btn_Create.Size = new System.Drawing.Size(122, 46);
+            this.btn_Create.Style = MetroFramework.MetroColorStyle.Orange;
+            this.btn_Create.TabIndex = 48;
+            this.btn_Create.Text = "Create ";
+            this.btn_Create.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Create.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_Create.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
-            // DepartmentmetroLabel1
+            // txt_phoneNum
             // 
-            this.DepartmentmetroLabel1.AutoSize = true;
-            this.DepartmentmetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.DepartmentmetroLabel1.Location = new System.Drawing.Point(347, 135);
-            this.DepartmentmetroLabel1.Name = "DepartmentmetroLabel1";
-            this.DepartmentmetroLabel1.Size = new System.Drawing.Size(83, 19);
-            this.DepartmentmetroLabel1.TabIndex = 10;
-            this.DepartmentmetroLabel1.Text = "Department";
-            this.DepartmentmetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_phoneNum.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_phoneNum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txt_phoneNum.Location = new System.Drawing.Point(634, 218);
+            this.txt_phoneNum.Name = "txt_phoneNum";
+            this.txt_phoneNum.Size = new System.Drawing.Size(194, 27);
+            this.txt_phoneNum.TabIndex = 47;
+            this.txt_phoneNum.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // SalarymetroLabel1
+            // txt_lastName
             // 
-            this.SalarymetroLabel1.AutoSize = true;
-            this.SalarymetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.SalarymetroLabel1.Location = new System.Drawing.Point(347, 164);
-            this.SalarymetroLabel1.Name = "SalarymetroLabel1";
-            this.SalarymetroLabel1.Size = new System.Drawing.Size(45, 19);
-            this.SalarymetroLabel1.TabIndex = 11;
-            this.SalarymetroLabel1.Text = "Salary";
-            this.SalarymetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_lastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_lastName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txt_lastName.Location = new System.Drawing.Point(634, 164);
+            this.txt_lastName.Name = "txt_lastName";
+            this.txt_lastName.Size = new System.Drawing.Size(194, 27);
+            this.txt_lastName.TabIndex = 46;
+            this.txt_lastName.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // UsernamemetroLabel1
+            // txt_firstName
             // 
-            this.UsernamemetroLabel1.AutoSize = true;
-            this.UsernamemetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.UsernamemetroLabel1.Location = new System.Drawing.Point(347, 228);
-            this.UsernamemetroLabel1.Name = "UsernamemetroLabel1";
-            this.UsernamemetroLabel1.Size = new System.Drawing.Size(71, 19);
-            this.UsernamemetroLabel1.TabIndex = 12;
-            this.UsernamemetroLabel1.Text = "Username";
-            this.UsernamemetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_firstName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_firstName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txt_firstName.Location = new System.Drawing.Point(634, 108);
+            this.txt_firstName.Name = "txt_firstName";
+            this.txt_firstName.Size = new System.Drawing.Size(194, 27);
+            this.txt_firstName.TabIndex = 45;
+            this.txt_firstName.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // PasswordmetroLabel1
+            // txt_password
             // 
-            this.PasswordmetroLabel1.AutoSize = true;
-            this.PasswordmetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.PasswordmetroLabel1.Location = new System.Drawing.Point(347, 193);
-            this.PasswordmetroLabel1.Name = "PasswordmetroLabel1";
-            this.PasswordmetroLabel1.Size = new System.Drawing.Size(67, 19);
-            this.PasswordmetroLabel1.TabIndex = 13;
-            this.PasswordmetroLabel1.Text = "Password";
-            this.PasswordmetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_password.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txt_password.Location = new System.Drawing.Point(225, 164);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
+            this.txt_password.Size = new System.Drawing.Size(194, 27);
+            this.txt_password.TabIndex = 44;
+            this.txt_password.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // SNmetroTextBox1
+            // txt_username
             // 
-            this.SNmetroTextBox1.Location = new System.Drawing.Point(152, 125);
-            this.SNmetroTextBox1.Name = "SNmetroTextBox1";
-            this.SNmetroTextBox1.Size = new System.Drawing.Size(166, 23);
-            this.SNmetroTextBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.SNmetroTextBox1.TabIndex = 14;
+            this.txt_username.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_username.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txt_username.Location = new System.Drawing.Point(225, 108);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(194, 27);
+            this.txt_username.TabIndex = 43;
+            this.txt_username.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // DOBmetroTextBox1
+            // cBox_dept
             // 
-            this.DOBmetroTextBox1.Location = new System.Drawing.Point(152, 154);
-            this.DOBmetroTextBox1.Name = "DOBmetroTextBox1";
-            this.DOBmetroTextBox1.Size = new System.Drawing.Size(166, 23);
-            this.DOBmetroTextBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.DOBmetroTextBox1.TabIndex = 15;
+            this.cBox_dept.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cBox_dept.FormattingEnabled = true;
+            this.cBox_dept.ItemHeight = 23;
+            this.cBox_dept.Items.AddRange(new object[] {
+            "Accounts",
+            "Customer Service",
+            "Production",
+            "Engineering",
+            "Stores",
+            "Purchasing",
+            "System Admin",
+            "Management"});
+            this.cBox_dept.Location = new System.Drawing.Point(225, 275);
+            this.cBox_dept.Name = "cBox_dept";
+            this.cBox_dept.Size = new System.Drawing.Size(194, 29);
+            this.cBox_dept.Style = MetroFramework.MetroColorStyle.Orange;
+            this.cBox_dept.TabIndex = 42;
+            this.cBox_dept.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // AddrmetroTextBox1
+            // metroLabel6
             // 
-            this.AddrmetroTextBox1.Location = new System.Drawing.Point(152, 183);
-            this.AddrmetroTextBox1.Name = "AddrmetroTextBox1";
-            this.AddrmetroTextBox1.Size = new System.Drawing.Size(166, 23);
-            this.AddrmetroTextBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.AddrmetroTextBox1.TabIndex = 16;
+            this.metroLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.Location = new System.Drawing.Point(40, 275);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(120, 25);
+            this.metroLabel6.TabIndex = 40;
+            this.metroLabel6.Text = "Department:";
+            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // EmailmetroTextBox1
+            // metroLabel5
             // 
-            this.EmailmetroTextBox1.Location = new System.Drawing.Point(152, 212);
-            this.EmailmetroTextBox1.Name = "EmailmetroTextBox1";
-            this.EmailmetroTextBox1.Size = new System.Drawing.Size(166, 23);
-            this.EmailmetroTextBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.EmailmetroTextBox1.TabIndex = 17;
+            this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.Location = new System.Drawing.Point(482, 218);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(146, 25);
+            this.metroLabel5.TabIndex = 39;
+            this.metroLabel5.Text = "Phone Number:";
+            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // PhonemetroTextBox1
+            // metroLabel4
             // 
-            this.PhonemetroTextBox1.Location = new System.Drawing.Point(152, 241);
-            this.PhonemetroTextBox1.Name = "PhonemetroTextBox1";
-            this.PhonemetroTextBox1.Size = new System.Drawing.Size(166, 23);
-            this.PhonemetroTextBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.PhonemetroTextBox1.TabIndex = 18;
+            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel4.Location = new System.Drawing.Point(482, 164);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(106, 25);
+            this.metroLabel4.TabIndex = 38;
+            this.metroLabel4.Text = "Last Name:";
+            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // PositionHiredmetroTextBox1
+            // metroLabel2
             // 
-            this.PositionHiredmetroTextBox1.Location = new System.Drawing.Point(458, 96);
-            this.PositionHiredmetroTextBox1.Name = "PositionHiredmetroTextBox1";
-            this.PositionHiredmetroTextBox1.Size = new System.Drawing.Size(166, 23);
-            this.PositionHiredmetroTextBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.PositionHiredmetroTextBox1.TabIndex = 19;
+            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(482, 108);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(108, 25);
+            this.metroLabel2.TabIndex = 37;
+            this.metroLabel2.Text = "First Name:";
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // SalarymetroTextBox1
+            // metroLabel1
             // 
-            this.SalarymetroTextBox1.Location = new System.Drawing.Point(458, 160);
-            this.SalarymetroTextBox1.Name = "SalarymetroTextBox1";
-            this.SalarymetroTextBox1.Size = new System.Drawing.Size(166, 23);
-            this.SalarymetroTextBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.SalarymetroTextBox1.TabIndex = 20;
+            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(40, 164);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(97, 25);
+            this.metroLabel1.TabIndex = 36;
+            this.metroLabel1.Text = "Password:";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // UsernamemetroTextBox1
+            // metroLabel3
             // 
-            this.UsernamemetroTextBox1.Location = new System.Drawing.Point(458, 189);
-            this.UsernamemetroTextBox1.Name = "UsernamemetroTextBox1";
-            this.UsernamemetroTextBox1.Size = new System.Drawing.Size(166, 23);
-            this.UsernamemetroTextBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.UsernamemetroTextBox1.TabIndex = 22;
+            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel3.Location = new System.Drawing.Point(40, 108);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(102, 25);
+            this.metroLabel3.TabIndex = 35;
+            this.metroLabel3.Text = "Username:";
+            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // EMNUMGENERATORmetroLabel1
+            // btn_Exit
             // 
-            this.EMNUMGENERATORmetroLabel1.AutoSize = true;
-            this.EMNUMGENERATORmetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.EMNUMGENERATORmetroLabel1.Location = new System.Drawing.Point(458, 228);
-            this.EMNUMGENERATORmetroLabel1.Name = "EMNUMGENERATORmetroLabel1";
-            this.EMNUMGENERATORmetroLabel1.Size = new System.Drawing.Size(49, 19);
-            this.EMNUMGENERATORmetroLabel1.TabIndex = 23;
-            this.EMNUMGENERATORmetroLabel1.Text = "95865";
-            this.EMNUMGENERATORmetroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // AddmetroTile1
-            // 
-            this.AddmetroTile1.Location = new System.Drawing.Point(404, 275);
-            this.AddmetroTile1.Name = "AddmetroTile1";
-            this.AddmetroTile1.Size = new System.Drawing.Size(103, 57);
-            this.AddmetroTile1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.AddmetroTile1.TabIndex = 24;
-            this.AddmetroTile1.Text = "Add";
-            this.AddmetroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AddmetroTile1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.AddmetroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.AddmetroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            // 
-            // CancelmetroTile1
-            // 
-            this.CancelmetroTile1.Location = new System.Drawing.Point(521, 275);
-            this.CancelmetroTile1.Name = "CancelmetroTile1";
-            this.CancelmetroTile1.Size = new System.Drawing.Size(103, 57);
-            this.CancelmetroTile1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.CancelmetroTile1.TabIndex = 25;
-            this.CancelmetroTile1.Text = "Cancel";
-            this.CancelmetroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.CancelmetroTile1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.CancelmetroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.CancelmetroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Exit.Location = new System.Drawing.Point(782, 20);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(92, 34);
+            this.btn_Exit.TabIndex = 44;
+            this.btn_Exit.Text = "Exit";
+            this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // AddNewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 417);
-            this.Controls.Add(this.CancelmetroTile1);
-            this.Controls.Add(this.AddmetroTile1);
-            this.Controls.Add(this.EMNUMGENERATORmetroLabel1);
-            this.Controls.Add(this.UsernamemetroTextBox1);
-            this.Controls.Add(this.SalarymetroTextBox1);
-            this.Controls.Add(this.PositionHiredmetroTextBox1);
-            this.Controls.Add(this.PhonemetroTextBox1);
-            this.Controls.Add(this.EmailmetroTextBox1);
-            this.Controls.Add(this.AddrmetroTextBox1);
-            this.Controls.Add(this.DOBmetroTextBox1);
-            this.Controls.Add(this.SNmetroTextBox1);
-            this.Controls.Add(this.PasswordmetroLabel1);
-            this.Controls.Add(this.UsernamemetroLabel1);
-            this.Controls.Add(this.SalarymetroLabel1);
-            this.Controls.Add(this.DepartmentmetroLabel1);
-            this.Controls.Add(this.PositionHiredmetroLabel1);
-            this.Controls.Add(this.PhoneNumbermetroLabel1);
-            this.Controls.Add(this.EmailmetroLabel1);
-            this.Controls.Add(this.AddressmetroLabel1);
-            this.Controls.Add(this.DateOfBirthmetroLabel1);
-            this.Controls.Add(this.SurnamemetroLabel1);
-            this.Controls.Add(this.DepartmentmetroComboBox1);
-            this.Controls.Add(this.FNmetroTextBox1);
-            this.Controls.Add(this.FirstNamemetroLabel1);
+            this.ClientSize = new System.Drawing.Size(897, 500);
+            this.Controls.Add(this.btn_Exit);
+            this.Controls.Add(this.metroPanel1);
             this.Name = "AddNewEmployee";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Add New Employee";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.Load += new System.EventHandler(this.AddNewEmployee_Load);
+            this.metroPanel1.ResumeLayout(false);
+            this.metroPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroLabel FirstNamemetroLabel1;
-        private MetroFramework.Controls.MetroTextBox FNmetroTextBox1;
-        private MetroFramework.Controls.MetroComboBox DepartmentmetroComboBox1;
-        private MetroFramework.Controls.MetroLabel SurnamemetroLabel1;
-        private MetroFramework.Controls.MetroLabel DateOfBirthmetroLabel1;
-        private MetroFramework.Controls.MetroLabel AddressmetroLabel1;
-        private MetroFramework.Controls.MetroLabel EmailmetroLabel1;
-        private MetroFramework.Controls.MetroLabel PhoneNumbermetroLabel1;
-        private MetroFramework.Controls.MetroLabel PositionHiredmetroLabel1;
-        private MetroFramework.Controls.MetroLabel DepartmentmetroLabel1;
-        private MetroFramework.Controls.MetroLabel SalarymetroLabel1;
-        private MetroFramework.Controls.MetroLabel UsernamemetroLabel1;
-        private MetroFramework.Controls.MetroLabel PasswordmetroLabel1;
-        private MetroFramework.Controls.MetroTextBox SNmetroTextBox1;
-        private MetroFramework.Controls.MetroTextBox DOBmetroTextBox1;
-        private MetroFramework.Controls.MetroTextBox AddrmetroTextBox1;
-        private MetroFramework.Controls.MetroTextBox EmailmetroTextBox1;
-        private MetroFramework.Controls.MetroTextBox PhonemetroTextBox1;
-        private MetroFramework.Controls.MetroTextBox PositionHiredmetroTextBox1;
-        private MetroFramework.Controls.MetroTextBox SalarymetroTextBox1;
-        private MetroFramework.Controls.MetroTextBox UsernamemetroTextBox1;
-        private MetroFramework.Controls.MetroLabel EMNUMGENERATORmetroLabel1;
-        private MetroFramework.Controls.MetroTile AddmetroTile1;
-        private MetroFramework.Controls.MetroTile CancelmetroTile1;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroComboBox cBox_dept;
+        private MetroFramework.Controls.MetroTextBox txt_password;
+        private MetroFramework.Controls.MetroTextBox txt_username;
+        private MetroFramework.Controls.MetroTextBox txt_phoneNum;
+        private MetroFramework.Controls.MetroTextBox txt_lastName;
+        private MetroFramework.Controls.MetroTextBox txt_firstName;
+        private MetroFramework.Controls.MetroTile btn_Cancel;
+        private MetroFramework.Controls.MetroTile btn_Create;
+        private MetroFramework.Controls.MetroButton btn_Exit;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroTextBox txt_userId;
+        private MetroFramework.Controls.MetroTextBox txt_employeeId;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroTextBox txt_password2;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
     }
 }

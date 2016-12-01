@@ -89,6 +89,7 @@
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(199, 23);
             this.metroTextBox1.TabIndex = 4;
+            this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBox2
             // 
@@ -96,6 +97,7 @@
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.Size = new System.Drawing.Size(199, 23);
             this.metroTextBox2.TabIndex = 5;
+            this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBox3
             // 
@@ -103,6 +105,7 @@
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.Size = new System.Drawing.Size(199, 23);
             this.metroTextBox3.TabIndex = 6;
+            this.metroTextBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBox4
             // 
@@ -110,6 +113,7 @@
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.Size = new System.Drawing.Size(199, 23);
             this.metroTextBox4.TabIndex = 7;
+            this.metroTextBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBox5
             // 
@@ -118,6 +122,7 @@
             this.metroTextBox5.Name = "metroTextBox5";
             this.metroTextBox5.Size = new System.Drawing.Size(449, 324);
             this.metroTextBox5.TabIndex = 8;
+            this.metroTextBox5.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTile1
             // 
@@ -130,6 +135,7 @@
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // metroTile2
             // 
@@ -142,6 +148,7 @@
             this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
             // metroTile3
             // 
@@ -154,6 +161,7 @@
             this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // CreateAFieldRequestResponse
             // 

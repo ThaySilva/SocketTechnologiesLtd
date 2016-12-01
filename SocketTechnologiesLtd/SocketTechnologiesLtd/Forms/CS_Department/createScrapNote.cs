@@ -17,7 +17,7 @@ namespace SocketTechnologiesLtd
 
         private string C_E_address;
         private string RGAR_num;
-        private string scrapNo;
+        private string scrap_no; 
         private string cus_Name;
         private string cus_Address;
         private string txt;
@@ -34,11 +34,12 @@ namespace SocketTechnologiesLtd
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
 
-            scrapNo = id.Id.ToString();
+            
 
-            scrap_no_tf.Text = scrapNo;
-            c_and_e_addresstf.Text = "Customs and Excise, Long Mile Road, Dublin 12";
-            RGAR_tf.Text = "9799";
+            
+            c_and_e_addresstf.Text = "Customs and Excise,\nLong Mile Road,\nDublin 12.\n\n";
+            RGAR_tf.Text = "";
+            sn_tf.Text = "";
 
         }
 
@@ -58,14 +59,17 @@ namespace SocketTechnologiesLtd
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            scrap_no = sn_tf.Text;
             cus_Name = cus_Name_tf.Text;
             cus_Address = cus_Address_tf.Text;
             C_E_address = c_and_e_addresstf.Text;
             txt = Scrap_Note_Txt.Text;
             RGAR_num = RGAR_tf.Text;
-            //RtQ scrapNote = new RtQ(scrapNo, cus_Name, cus_Address, RGAR_num, txt);
-            MessageBox.Show("Scrap Note Successfully Created!");
+            scrapNote scrapNote = new scrapNote(scrap_no, cus_Name, cus_Address, C_E_address, RGAR_num, txt);
+            
             this.Close();
         }
+
+
     }
 }
