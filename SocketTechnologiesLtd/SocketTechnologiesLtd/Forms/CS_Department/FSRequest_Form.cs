@@ -25,7 +25,7 @@ namespace SocketTechnologiesLtd
 
             fsrID = id.Id.ToString();
 
-            metroTextBox4.Text = fsrID;
+            fsrID_tb.Text = fsrID;
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
@@ -35,14 +35,38 @@ namespace SocketTechnologiesLtd
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
-            string custID = txt_custID.Text;
-            string text = metroTextBox1.Text;
-            string cpoID = metroTextBox2.Text;
-            string comboType = metroComboBox1.Text;
+            string custID = custID_tb.Text;
+            string text = text_tb.Text;
+            string cpoID = cpoID_tb.Text;
+            string comboType = type_cb.Text;
 
             fsrRequest fsr = new fsrRequest(fsrID, custID, cpoID, text, comboType);
             MessageBox.Show("Field Service Request successfully created!");
             this.Close();
+
+            switch(comboType)
+            {
+                case "Technical Enquiry":
+                    TE_Form te = new TE_Form();
+                    te.txt_TEtext.Text = text;
+                    te.MdiParent = this.MdiParent;
+                    te.Dock = DockStyle.Fill;
+                    te.Show();
+                    break;
+                case "Customer Order Enquiry":
+                    COE_Form coe = new COE_Form();
+                    coe.MdiParent = this.MdiParent;
+                    coe.Dock = DockStyle.Fill;
+                    coe.Show();
+                    break;
+                case "Returned Goods":
+                    RGA_RequestFrom rga = new RGA_RequestFrom();
+                    rga.MdiParent = this.MdiParent;
+                    rga.Dock = DockStyle.Fill;
+                    rga.Show();
+                    break;
+            
+            }
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
@@ -50,9 +74,6 @@ namespace SocketTechnologiesLtd
             this.Close();
         }
 
-        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

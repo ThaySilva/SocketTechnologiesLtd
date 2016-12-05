@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CusCreditNote));
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btn_Cancel = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.date_labal = new MetroFramework.Controls.MetroLabel();
+            this.ccnID_label = new MetroFramework.Controls.MetroLabel();
+            this.ccnID_tb = new MetroFramework.Controls.MetroTextBox();
+            this.date_tb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lineitems_DGV = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,28 +45,18 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.total_label = new MetroFramework.Controls.MetroLabel();
+            this.total_tb = new MetroFramework.Controls.MetroTextBox();
+            this.ciID_label = new MetroFramework.Controls.MetroLabel();
+            this.CIid_tb = new MetroFramework.Controls.MetroTextBox();
+            this.cpoID_tb = new MetroFramework.Controls.MetroTextBox();
+            this.custID_tb = new MetroFramework.Controls.MetroTextBox();
+            this.cpoID_label = new MetroFramework.Controls.MetroLabel();
+            this.custID_label = new MetroFramework.Controls.MetroLabel();
+            this.btn_Exit = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lineitems_DGV)).BeginInit();
             this.SuspendLayout();
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton2.Location = new System.Drawing.Point(745, 20);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(92, 34);
-            this.metroButton2.TabIndex = 12;
-            this.metroButton2.Text = "Log Out";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroPanel1
             // 
@@ -75,20 +64,20 @@
             this.metroPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.metroPanel1.Controls.Add(this.btn_Cancel);
             this.metroPanel1.Controls.Add(this.btn_Create);
-            this.metroPanel1.Controls.Add(this.metroLabel7);
-            this.metroPanel1.Controls.Add(this.metroLabel6);
-            this.metroPanel1.Controls.Add(this.metroTextBox6);
-            this.metroPanel1.Controls.Add(this.metroTextBox3);
+            this.metroPanel1.Controls.Add(this.date_labal);
+            this.metroPanel1.Controls.Add(this.ccnID_label);
+            this.metroPanel1.Controls.Add(this.ccnID_tb);
+            this.metroPanel1.Controls.Add(this.date_tb);
             this.metroPanel1.Controls.Add(this.metroLabel5);
-            this.metroPanel1.Controls.Add(this.dataGridView1);
-            this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.metroTextBox2);
-            this.metroPanel1.Controls.Add(this.metroLabel1);
-            this.metroPanel1.Controls.Add(this.metroTextBox1);
-            this.metroPanel1.Controls.Add(this.metroTextBox5);
-            this.metroPanel1.Controls.Add(this.metroTextBox4);
-            this.metroPanel1.Controls.Add(this.metroLabel4);
-            this.metroPanel1.Controls.Add(this.metroLabel3);
+            this.metroPanel1.Controls.Add(this.lineitems_DGV);
+            this.metroPanel1.Controls.Add(this.total_label);
+            this.metroPanel1.Controls.Add(this.total_tb);
+            this.metroPanel1.Controls.Add(this.ciID_label);
+            this.metroPanel1.Controls.Add(this.CIid_tb);
+            this.metroPanel1.Controls.Add(this.cpoID_tb);
+            this.metroPanel1.Controls.Add(this.custID_tb);
+            this.metroPanel1.Controls.Add(this.cpoID_label);
+            this.metroPanel1.Controls.Add(this.custID_label);
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -115,6 +104,7 @@
             this.btn_Cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Cancel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Cancel.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Create
             // 
@@ -129,47 +119,47 @@
             this.btn_Create.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Create.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             // 
-            // metroLabel7
+            // date_labal
             // 
-            this.metroLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(377, 65);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(100, 23);
-            this.metroLabel7.TabIndex = 29;
-            this.metroLabel7.Text = "Date:";
-            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.date_labal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.date_labal.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.date_labal.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.date_labal.Location = new System.Drawing.Point(377, 65);
+            this.date_labal.Name = "date_labal";
+            this.date_labal.Size = new System.Drawing.Size(100, 23);
+            this.date_labal.TabIndex = 29;
+            this.date_labal.Text = "Date:";
+            this.date_labal.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroLabel6
+            // ccnID_label
             // 
-            this.metroLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(51, 65);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(100, 23);
-            this.metroLabel6.TabIndex = 28;
-            this.metroLabel6.Text = "CCN ID:";
-            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.ccnID_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ccnID_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.ccnID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.ccnID_label.Location = new System.Drawing.Point(51, 65);
+            this.ccnID_label.Name = "ccnID_label";
+            this.ccnID_label.Size = new System.Drawing.Size(100, 23);
+            this.ccnID_label.TabIndex = 28;
+            this.ccnID_label.Text = "CCN ID:";
+            this.ccnID_label.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox6
+            // ccnID_tb
             // 
-            this.metroTextBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox6.Location = new System.Drawing.Point(189, 65);
-            this.metroTextBox6.Name = "metroTextBox6";
-            this.metroTextBox6.Size = new System.Drawing.Size(150, 30);
-            this.metroTextBox6.TabIndex = 27;
-            this.metroTextBox6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.ccnID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ccnID_tb.Location = new System.Drawing.Point(189, 65);
+            this.ccnID_tb.Name = "ccnID_tb";
+            this.ccnID_tb.Size = new System.Drawing.Size(150, 30);
+            this.ccnID_tb.TabIndex = 27;
+            this.ccnID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox3
+            // date_tb
             // 
-            this.metroTextBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox3.Location = new System.Drawing.Point(574, 65);
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.Size = new System.Drawing.Size(150, 30);
-            this.metroTextBox3.TabIndex = 26;
-            this.metroTextBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.date_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.date_tb.Location = new System.Drawing.Point(574, 65);
+            this.date_tb.Name = "date_tb";
+            this.date_tb.Size = new System.Drawing.Size(150, 30);
+            this.date_tb.TabIndex = 26;
+            this.date_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel5
             // 
@@ -182,11 +172,12 @@
             this.metroLabel5.Text = "Line Items:";
             this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // dataGridView1
+            // lineitems_DGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GrayText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lineitems_DGV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lineitems_DGV.BackgroundColor = System.Drawing.SystemColors.GrayText;
+            this.lineitems_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lineitems_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -194,10 +185,10 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(47, 229);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(715, 58);
-            this.dataGridView1.TabIndex = 24;
+            this.lineitems_DGV.Location = new System.Drawing.Point(47, 229);
+            this.lineitems_DGV.Name = "lineitems_DGV";
+            this.lineitems_DGV.Size = new System.Drawing.Size(712, 58);
+            this.lineitems_DGV.TabIndex = 24;
             // 
             // Column1
             // 
@@ -236,125 +227,134 @@
             this.Column7.HeaderText = "Total Line Price";
             this.Column7.Name = "Column7";
             // 
-            // metroLabel2
+            // total_label
             // 
-            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(377, 137);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(155, 30);
-            this.metroLabel2.TabIndex = 23;
-            this.metroLabel2.Text = "Total Value:";
-            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.total_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.total_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.total_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.total_label.Location = new System.Drawing.Point(377, 137);
+            this.total_label.Name = "total_label";
+            this.total_label.Size = new System.Drawing.Size(155, 30);
+            this.total_label.TabIndex = 23;
+            this.total_label.Text = "Total Value:";
+            this.total_label.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox2
+            // total_tb
             // 
-            this.metroTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox2.Location = new System.Drawing.Point(574, 137);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(150, 30);
-            this.metroTextBox2.TabIndex = 22;
-            this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.total_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.total_tb.Location = new System.Drawing.Point(574, 137);
+            this.total_tb.Name = "total_tb";
+            this.total_tb.Size = new System.Drawing.Size(150, 30);
+            this.total_tb.TabIndex = 22;
+            this.total_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroLabel1
+            // ciID_label
             // 
-            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(377, 101);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(191, 30);
-            this.metroLabel1.TabIndex = 21;
-            this.metroLabel1.Text = "Customer Invoice ID:";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.ciID_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ciID_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.ciID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.ciID_label.Location = new System.Drawing.Point(377, 101);
+            this.ciID_label.Name = "ciID_label";
+            this.ciID_label.Size = new System.Drawing.Size(191, 30);
+            this.ciID_label.TabIndex = 21;
+            this.ciID_label.Text = "Customer Invoice ID:";
+            this.ciID_label.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox1
+            // CIid_tb
             // 
-            this.metroTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox1.Location = new System.Drawing.Point(574, 101);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(150, 30);
-            this.metroTextBox1.TabIndex = 20;
-            this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.CIid_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CIid_tb.Location = new System.Drawing.Point(574, 101);
+            this.CIid_tb.Name = "CIid_tb";
+            this.CIid_tb.Size = new System.Drawing.Size(150, 30);
+            this.CIid_tb.TabIndex = 20;
+            this.CIid_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox5
+            // cpoID_tb
             // 
-            this.metroTextBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox5.Location = new System.Drawing.Point(189, 137);
-            this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.Size = new System.Drawing.Size(150, 30);
-            this.metroTextBox5.TabIndex = 19;
-            this.metroTextBox5.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cpoID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cpoID_tb.Location = new System.Drawing.Point(189, 137);
+            this.cpoID_tb.Name = "cpoID_tb";
+            this.cpoID_tb.Size = new System.Drawing.Size(150, 30);
+            this.cpoID_tb.TabIndex = 19;
+            this.cpoID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox4
+            // custID_tb
             // 
-            this.metroTextBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox4.Location = new System.Drawing.Point(189, 101);
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.Size = new System.Drawing.Size(150, 30);
-            this.metroTextBox4.TabIndex = 18;
-            this.metroTextBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.custID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.custID_tb.Location = new System.Drawing.Point(189, 101);
+            this.custID_tb.Name = "custID_tb";
+            this.custID_tb.Size = new System.Drawing.Size(150, 30);
+            this.custID_tb.TabIndex = 18;
+            this.custID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroLabel4
+            // cpoID_label
             // 
-            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(51, 137);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(136, 30);
-            this.metroLabel4.TabIndex = 17;
-            this.metroLabel4.Text = "CPO ID:";
-            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cpoID_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cpoID_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.cpoID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.cpoID_label.Location = new System.Drawing.Point(51, 137);
+            this.cpoID_label.Name = "cpoID_label";
+            this.cpoID_label.Size = new System.Drawing.Size(136, 30);
+            this.cpoID_label.TabIndex = 17;
+            this.cpoID_label.Text = "CPO ID:";
+            this.cpoID_label.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroLabel3
+            // custID_label
             // 
-            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(51, 101);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(145, 23);
-            this.metroLabel3.TabIndex = 16;
-            this.metroLabel3.Text = "Customer ID:";
-            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.custID_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.custID_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.custID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.custID_label.Location = new System.Drawing.Point(51, 101);
+            this.custID_label.Name = "custID_label";
+            this.custID_label.Size = new System.Drawing.Size(145, 23);
+            this.custID_label.TabIndex = 16;
+            this.custID_label.Text = "Customer ID:";
+            this.custID_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Exit.Location = new System.Drawing.Point(742, 20);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(92, 34);
+            this.btn_Exit.TabIndex = 60;
+            this.btn_Exit.Text = "Exit";
+            this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // CusCreditNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 479);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.metroPanel1);
             this.Name = "CusCreditNote";
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Create Customer Credit Note";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lineitems_DGV)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox5;
-        private MetroFramework.Controls.MetroTextBox metroTextBox4;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroLabel ciID_label;
+        private MetroFramework.Controls.MetroTextBox CIid_tb;
+        private MetroFramework.Controls.MetroTextBox cpoID_tb;
+        private MetroFramework.Controls.MetroTextBox custID_tb;
+        private MetroFramework.Controls.MetroLabel cpoID_label;
+        private MetroFramework.Controls.MetroLabel custID_label;
+        private MetroFramework.Controls.MetroLabel total_label;
+        private MetroFramework.Controls.MetroTextBox total_tb;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroTextBox metroTextBox6;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private System.Windows.Forms.DataGridView lineitems_DGV;
+        private MetroFramework.Controls.MetroLabel date_labal;
+        private MetroFramework.Controls.MetroLabel ccnID_label;
+        private MetroFramework.Controls.MetroTextBox ccnID_tb;
+        private MetroFramework.Controls.MetroTextBox date_tb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -364,5 +364,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private MetroFramework.Controls.MetroTile btn_Cancel;
         private MetroFramework.Controls.MetroTile btn_Create;
+        private MetroFramework.Controls.MetroButton btn_Exit;
     }
 }

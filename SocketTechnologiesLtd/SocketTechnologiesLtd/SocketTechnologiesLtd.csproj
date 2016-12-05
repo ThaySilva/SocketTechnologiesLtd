@@ -682,6 +682,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Reports\CustomerServices\FSR Requests\" />
     <Folder Include="Reports\CustomerServices\Refusal to Quote Reports\" />
     <Folder Include="Reports\CustomerServices\Scrap Notes\" />
   </ItemGroup>

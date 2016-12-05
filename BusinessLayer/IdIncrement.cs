@@ -15,14 +15,16 @@ namespace BusinessLayer
 
         private int userId;
         private int employeeId;
+        private int customerId;
 
         List<IUser> user = model.UserList;
         List<IEmployee> emp = model.EmployeeList;
+        List<ICustomer> cust = model.CustomerList;
 
         #region UserID
         public void setUserId()
         {
-            userId = user[user.Count - 1].UserID + 1;
+            userId = user[user.Count - 1].UserID;
         }
         public int getUserId()
         {
@@ -34,13 +36,26 @@ namespace BusinessLayer
         #region EmployeeID
         public void setEmpId()
         {
-            employeeId = emp[emp.Count() - 1].EmployeeID + 1;
+            employeeId = emp[emp.Count() - 1].EmployeeID;
         }
 
         public int getEmpId()
         {
             setEmpId();
             return employeeId;
+        }
+        #endregion
+
+        #region CustomerID
+        public void setCustId()
+        {
+            customerId = cust[cust.Count() - 1].Customer_ID + 1;
+        }
+
+        public int getCustId()
+        {
+            setCustId();
+            return customerId;
         }
         #endregion
     }

@@ -7,16 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
+using BusinessEntities;
+using DataAccessLayer;
 
 namespace SocketTechnologiesLtd
 {
     public partial class CSDep_Form : MetroFramework.Forms.MetroForm
     {
-        public CSDep_Form()
+
+        private IModel model;
+        public CSDep_Form(IModel _Model)
         {
             InitializeComponent();
             this.ControlBox = false;
-            this.btn_CSExit.Hide();
+            model = _Model;
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)
@@ -144,5 +149,22 @@ namespace SocketTechnologiesLtd
 
         }
 
+       
+
+        private void btn_CreateCPO_Click_1(object sender, EventArgs e)
+        {
+            Cust_Purchase_Order cpr = new Cust_Purchase_Order(model);
+            cpr.MdiParent = this.MdiParent;
+            cpr.Dock = DockStyle.Fill;
+            cpr.Show();
+        }
+
+        private void btn_ViewRGARes_Click(object sender, EventArgs e)
+        {
+            RGA_RequestFrom rga = new RGA_RequestFrom();
+            rga.MdiParent = this.MdiParent;
+            rga.Dock = DockStyle.Fill;
+            rga.Show();
+        }
     }
 }

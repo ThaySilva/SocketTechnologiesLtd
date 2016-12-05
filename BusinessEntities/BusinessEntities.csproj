@@ -62,12 +62,10 @@
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ProductMaterial.cs" />
     <Compile Include="Classes\User.cs" />
-    <Compile Include="Factories\CustomerFactory.cs" />
-    <Compile Include="Factories\EmployeeFactory.cs" />
+    <Compile Include="Factories\GenericFactory.cs" />
     <Compile Include="Factories\MaterialFactory.cs" />
     <Compile Include="Factories\OrderFactory.cs" />
     <Compile Include="Factories\ProductFactory.cs" />
-    <Compile Include="Factories\UserFactory.cs" />
     <Compile Include="Interfaces\IBusinessEntity.cs" />
     <Compile Include="Interfaces\ICustomer.cs" />
     <Compile Include="Interfaces\IEmployee.cs" />

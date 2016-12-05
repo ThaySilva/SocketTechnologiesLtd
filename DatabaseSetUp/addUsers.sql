@@ -1,4 +1,4 @@
-USE [stldb]
+USE [stldb1]
 GO
 
 INSERT INTO [dbo].[Users]

@@ -67,17 +67,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrAFiSeReRe.cs" />
-    <Compile Include="fsrRequest.cs" />
+    <Compile Include="CS_Documents\CrAFiSeReRe.cs" />
+    <Compile Include="CS_Documents\fsrRequest.cs" />
     <Compile Include="IdIncrement.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="RtQ.cs" />
+    <Compile Include="CS_Documents\RtQ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="scrapNote.cs" />
+    <Compile Include="CS_Documents\scrapNote.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -89,6 +89,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ACC_Documents\" />
+    <Folder Include="ENG_Documents\" />
+    <Folder Include="MAN_Documents\" />
+    <Folder Include="PROD_Documents\" />
+    <Folder Include="PUR_Documents\" />
+    <Folder Include="STO_Documents\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

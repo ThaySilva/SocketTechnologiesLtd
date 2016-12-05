@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "..\Busines
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntities", "..\BusinessEntities\BusinessEntities.csproj", "{421DEB4E-3592-46D0-91DD-738A57F297EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestBuisnessRules", "UnitTestBuisnessRules\UnitTestBuisnessRules.csproj", "{EBFF68D7-19C8-4A18-9C95-038130E29A41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{421DEB4E-3592-46D0-91DD-738A57F297EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{421DEB4E-3592-46D0-91DD-738A57F297EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{421DEB4E-3592-46D0-91DD-738A57F297EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBFF68D7-19C8-4A18-9C95-038130E29A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFF68D7-19C8-4A18-9C95-038130E29A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFF68D7-19C8-4A18-9C95-038130E29A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFF68D7-19C8-4A18-9C95-038130E29A41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

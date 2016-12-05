@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RGA_RequestFrom));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.btn_Cancel = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
+            this.cpoID_tb = new MetroFramework.Controls.MetroTextBox();
+            this.text_label = new MetroFramework.Controls.MetroLabel();
+            this.custID_tb = new MetroFramework.Controls.MetroTextBox();
+            this.cpoID_label = new MetroFramework.Controls.MetroLabel();
+            this.custName_tb = new MetroFramework.Controls.MetroTextBox();
+            this.custID_label = new MetroFramework.Controls.MetroLabel();
+            this.rgaID_tb = new MetroFramework.Controls.MetroTextBox();
+            this.custName_label = new MetroFramework.Controls.MetroLabel();
+            this.txt_tb = new MetroFramework.Controls.MetroTextBox();
+            this.rgaID_label = new MetroFramework.Controls.MetroLabel();
+            this.btn_Exit = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,16 +52,16 @@
             this.metroPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.metroPanel1.Controls.Add(this.btn_Cancel);
             this.metroPanel1.Controls.Add(this.btn_Create);
-            this.metroPanel1.Controls.Add(this.metroTextBox5);
-            this.metroPanel1.Controls.Add(this.metroLabel6);
-            this.metroPanel1.Controls.Add(this.metroTextBox4);
-            this.metroPanel1.Controls.Add(this.metroLabel4);
-            this.metroPanel1.Controls.Add(this.metroTextBox3);
-            this.metroPanel1.Controls.Add(this.metroLabel3);
-            this.metroPanel1.Controls.Add(this.metroTextBox2);
-            this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.metroTextBox1);
-            this.metroPanel1.Controls.Add(this.metroLabel1);
+            this.metroPanel1.Controls.Add(this.cpoID_tb);
+            this.metroPanel1.Controls.Add(this.text_label);
+            this.metroPanel1.Controls.Add(this.custID_tb);
+            this.metroPanel1.Controls.Add(this.cpoID_label);
+            this.metroPanel1.Controls.Add(this.custName_tb);
+            this.metroPanel1.Controls.Add(this.custID_label);
+            this.metroPanel1.Controls.Add(this.rgaID_tb);
+            this.metroPanel1.Controls.Add(this.custName_label);
+            this.metroPanel1.Controls.Add(this.txt_tb);
+            this.metroPanel1.Controls.Add(this.rgaID_label);
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -77,125 +77,6 @@
             this.metroPanel1.VerticalScrollbarSize = 10;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
-            // metroTextBox5
-            // 
-            this.metroTextBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox5.Location = new System.Drawing.Point(192, 179);
-            this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.Size = new System.Drawing.Size(150, 30);
-            this.metroTextBox5.TabIndex = 15;
-            this.metroTextBox5.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(427, 70);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(66, 31);
-            this.metroLabel6.TabIndex = 13;
-            this.metroLabel6.Text = "Text:";
-            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroTextBox4
-            // 
-            this.metroTextBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox4.Location = new System.Drawing.Point(192, 143);
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.Size = new System.Drawing.Size(150, 30);
-            this.metroTextBox4.TabIndex = 9;
-            this.metroTextBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(31, 179);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(136, 30);
-            this.metroLabel4.TabIndex = 8;
-            this.metroLabel4.Text = "CPO ID:";
-            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroTextBox3
-            // 
-            this.metroTextBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox3.Location = new System.Drawing.Point(192, 107);
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.ReadOnly = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(150, 30);
-            this.metroTextBox3.TabIndex = 7;
-            this.metroTextBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(31, 143);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(136, 23);
-            this.metroLabel3.TabIndex = 6;
-            this.metroLabel3.Text = "Customer ID:";
-            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroTextBox2
-            // 
-            this.metroTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox2.Location = new System.Drawing.Point(192, 70);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(150, 31);
-            this.metroTextBox2.TabIndex = 5;
-            this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(31, 107);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(155, 23);
-            this.metroLabel2.TabIndex = 4;
-            this.metroLabel2.Text = "Customer Name:";
-            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroTextBox1
-            // 
-            this.metroTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTextBox1.Location = new System.Drawing.Point(514, 70);
-            this.metroTextBox1.Multiline = true;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(164, 139);
-            this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.Text = "The customer above is requesting an STL returned goods authorisation correspondin" +
-    "g to the customer purchase order number (above) due to damaged goods received.";
-            this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(31, 70);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(170, 41);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "RGA Request ID:";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton2.Location = new System.Drawing.Point(673, 20);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(92, 34);
-            this.metroButton2.TabIndex = 8;
-            this.metroButton2.Text = "Log Out";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // btn_Cancel
             // 
             this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -208,6 +89,7 @@
             this.btn_Cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Cancel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Cancel.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Create
             // 
@@ -222,12 +104,136 @@
             this.btn_Create.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Create.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             // 
+            // cpoID_tb
+            // 
+            this.cpoID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cpoID_tb.Location = new System.Drawing.Point(192, 179);
+            this.cpoID_tb.Name = "cpoID_tb";
+            this.cpoID_tb.ReadOnly = true;
+            this.cpoID_tb.Size = new System.Drawing.Size(150, 30);
+            this.cpoID_tb.TabIndex = 15;
+            this.cpoID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // text_label
+            // 
+            this.text_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.text_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.text_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.text_label.Location = new System.Drawing.Point(427, 70);
+            this.text_label.Name = "text_label";
+            this.text_label.Size = new System.Drawing.Size(66, 31);
+            this.text_label.TabIndex = 13;
+            this.text_label.Text = "Text:";
+            this.text_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // custID_tb
+            // 
+            this.custID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.custID_tb.Location = new System.Drawing.Point(192, 143);
+            this.custID_tb.Name = "custID_tb";
+            this.custID_tb.ReadOnly = true;
+            this.custID_tb.Size = new System.Drawing.Size(150, 30);
+            this.custID_tb.TabIndex = 9;
+            this.custID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // cpoID_label
+            // 
+            this.cpoID_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cpoID_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.cpoID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.cpoID_label.Location = new System.Drawing.Point(31, 179);
+            this.cpoID_label.Name = "cpoID_label";
+            this.cpoID_label.Size = new System.Drawing.Size(136, 30);
+            this.cpoID_label.TabIndex = 8;
+            this.cpoID_label.Text = "CPO ID:";
+            this.cpoID_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // custName_tb
+            // 
+            this.custName_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.custName_tb.Location = new System.Drawing.Point(192, 107);
+            this.custName_tb.Name = "custName_tb";
+            this.custName_tb.Size = new System.Drawing.Size(150, 30);
+            this.custName_tb.TabIndex = 7;
+            this.custName_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // custID_label
+            // 
+            this.custID_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.custID_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.custID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.custID_label.Location = new System.Drawing.Point(31, 143);
+            this.custID_label.Name = "custID_label";
+            this.custID_label.Size = new System.Drawing.Size(136, 23);
+            this.custID_label.TabIndex = 6;
+            this.custID_label.Text = "Customer ID:";
+            this.custID_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // rgaID_tb
+            // 
+            this.rgaID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rgaID_tb.Location = new System.Drawing.Point(192, 70);
+            this.rgaID_tb.Name = "rgaID_tb";
+            this.rgaID_tb.ReadOnly = true;
+            this.rgaID_tb.Size = new System.Drawing.Size(150, 31);
+            this.rgaID_tb.TabIndex = 5;
+            this.rgaID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // custName_label
+            // 
+            this.custName_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.custName_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.custName_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.custName_label.Location = new System.Drawing.Point(31, 107);
+            this.custName_label.Name = "custName_label";
+            this.custName_label.Size = new System.Drawing.Size(155, 23);
+            this.custName_label.TabIndex = 4;
+            this.custName_label.Text = "Customer Name:";
+            this.custName_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txt_tb
+            // 
+            this.txt_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_tb.Enabled = false;
+            this.txt_tb.Location = new System.Drawing.Point(514, 70);
+            this.txt_tb.Multiline = true;
+            this.txt_tb.Name = "txt_tb";
+            this.txt_tb.ReadOnly = true;
+            this.txt_tb.Size = new System.Drawing.Size(164, 139);
+            this.txt_tb.TabIndex = 3;
+            this.txt_tb.Text = "The customer above is requesting an STL returned goods authorisation correspondin" +
+    "g to the customer purchase order number (above) due to damaged goods received.";
+            this.txt_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // rgaID_label
+            // 
+            this.rgaID_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rgaID_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.rgaID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.rgaID_label.Location = new System.Drawing.Point(31, 70);
+            this.rgaID_label.Name = "rgaID_label";
+            this.rgaID_label.Size = new System.Drawing.Size(170, 41);
+            this.rgaID_label.TabIndex = 2;
+            this.rgaID_label.Text = "RGA Request ID:";
+            this.rgaID_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Exit.Location = new System.Drawing.Point(676, 20);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(92, 34);
+            this.btn_Exit.TabIndex = 8;
+            this.btn_Exit.Text = "Exit";
+            this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
             // RGA_RequestFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 433);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.metroPanel1);
             this.Name = "RGA_RequestFrom";
             this.Style = MetroFramework.MetroColorStyle.Orange;
@@ -241,18 +247,18 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroTextBox metroTextBox4;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox5;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroLabel text_label;
+        private MetroFramework.Controls.MetroTextBox custID_tb;
+        private MetroFramework.Controls.MetroLabel cpoID_label;
+        private MetroFramework.Controls.MetroTextBox custName_tb;
+        private MetroFramework.Controls.MetroLabel custID_label;
+        private MetroFramework.Controls.MetroTextBox rgaID_tb;
+        private MetroFramework.Controls.MetroLabel custName_label;
+        private MetroFramework.Controls.MetroTextBox txt_tb;
+        private MetroFramework.Controls.MetroLabel rgaID_label;
+        private MetroFramework.Controls.MetroTextBox cpoID_tb;
         private MetroFramework.Controls.MetroTile btn_Cancel;
         private MetroFramework.Controls.MetroTile btn_Create;
+        private MetroFramework.Controls.MetroButton btn_Exit;
     }
 }

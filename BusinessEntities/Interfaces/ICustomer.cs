@@ -14,7 +14,7 @@ namespace BusinessEntities
         string CustLastName { get; set; }
         string CustCompanyName { get; set; }
         string CustPhoneNum { get; set; }
-        string CustAddress { get; set; }
+        string[] CustAddress { get; set; }
 
     }
 }

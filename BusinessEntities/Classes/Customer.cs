@@ -16,7 +16,7 @@ namespace BusinessEntities
         private String custLastName;
         private String custCompanyName;
         private String custPhoneNum;
-        private String custAddress;
+        private String[] custAddress;
 
         #endregion
 
@@ -51,7 +51,7 @@ namespace BusinessEntities
             set { custPhoneNum = value; }
         }
 
-        public String CustAddress
+        public String[] CustAddress
         {
             get { return custAddress; }
             set { custAddress = value; }
@@ -67,7 +67,7 @@ namespace BusinessEntities
             throw new System.NotFiniteNumberException();
         }
 
-        public Customer(int id, String firstName, String lastName, String companyName, String phoneNum, String Address)
+        public Customer(int id, String firstName, String lastName, String companyName, String phoneNum, String[] Address)
         {
             Customer_ID = id;
             CustFirstName = firstName;
@@ -79,8 +79,6 @@ namespace BusinessEntities
         }
 
         #endregion
-
-
 
     }
 }

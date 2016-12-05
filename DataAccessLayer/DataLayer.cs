@@ -185,7 +185,6 @@ namespace DataAccessLayer
             sql = sql.Substring(0, sql.Length - 2);
             sql += ")";
 
-            MessageBox.Show(sql);
             da = new SqlDataAdapter(sql, con);
             ds = new DataSet();
             ds.Locale = CultureInfo.InvariantCulture;

@@ -11,20 +11,9 @@ namespace BusinessEntities
     {
         private static IOrder order = null;
 
-        public static Order GetOrder(String[] orderData, DateTime dateCreated, DateTime dateCompleted)
+      public static Order GetOrder(String[] orderData)
         {
-            return new Order(orderData[0], orderData[1], dateCreated, dateCompleted);
-        }
-
-        public static Order GetOrder(string orderID, string custID, DateTime dateCreated)
-        {
-            return new Order(orderID, custID, dateCreated);
-        }
-
-        public static Order GetOrder(string orderId, string customerID, DateTime dateCreated, DateTime dateCompleted)
-        {
-            return new Order(orderId, customerID, dateCreated, dateCompleted);
-
+            return new BusinessEntities.Order(orderData[0], orderData[1], Convert.ToDateTime(orderData[2]), Convert.ToDateTime(orderData[3]));
         }
 
         public static void SetOrder(IOrder aOrder)

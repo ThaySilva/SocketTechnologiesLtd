@@ -46,7 +46,7 @@ namespace SocketTechnologiesLtd
                         acc.Show();
                         break;
                     case "2":
-                        CSDep_Form cs = new CSDep_Form();
+                        CSDep_Form cs = new CSDep_Form(Model);
                         cs.FormClosing += backToLogin;
                         cs.MdiParent = this.MdiParent;
                         cs.Dock = DockStyle.Fill;

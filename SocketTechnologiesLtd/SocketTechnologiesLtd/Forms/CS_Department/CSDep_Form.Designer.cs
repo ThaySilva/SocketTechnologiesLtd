@@ -286,6 +286,7 @@
             this.btn_ViewRGARes.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_ViewRGARes.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_ViewRGARes.UseTileImage = true;
+            this.btn_ViewRGARes.Click += new System.EventHandler(this.btn_ViewRGARes_Click);
             // 
             // CSManageCustomerOrdersPanel
             // 
@@ -329,6 +330,7 @@
             this.btn_CreateCPO.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_CreateCPO.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_CreateCPO.UseTileImage = true;
+            this.btn_CreateCPO.Click += new System.EventHandler(this.btn_CreateCPO_Click_1);
             // 
             // btn_CreateWO
             // 

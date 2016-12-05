@@ -348,7 +348,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroTextBox txt_TEId;
         private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroTextBox txt_TEtext;
         private MetroFramework.Controls.MetroTextBox txt_RfQLogNo;
         private MetroFramework.Controls.MetroTextBox txt_CustomPartId;
         private MetroFramework.Controls.MetroTextBox txt_CustomerAdd;
@@ -357,5 +356,6 @@
         private MetroFramework.Controls.MetroTextBox txt_RfQId;
         private MetroFramework.Controls.MetroTile btn_Create;
         private MetroFramework.Controls.MetroTile btn_Cancel;
+        public MetroFramework.Controls.MetroTextBox txt_TEtext;
     }
 }

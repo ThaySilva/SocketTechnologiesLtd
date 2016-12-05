@@ -7,12 +7,13 @@ using BusinessEntities;
 
 namespace BusinessEntities
 {
-    //public static class ProductFactory
-    //{
-    //    public static Product GetProduct(string id, string name, string descr, double price)
-    //    {
-    //        return new Product(id, name, descr, price);
-    //    }
+    public static class ProductFactory
+    {
+        private static IProduct product = null;
+        public static Product GetProduct(String[] userData)
+        {
+            return new Product(userData[0], userData[1], userData[2], Convert.ToInt32(userData[3]));
+        }
 
-    //}
+    }
 }

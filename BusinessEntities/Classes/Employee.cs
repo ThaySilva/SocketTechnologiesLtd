@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    public class Employee : BusinessEntities.IEmployee
+    public class Employee : IEmployee
     {
         #region Instance Properties
         private int employeeId;
