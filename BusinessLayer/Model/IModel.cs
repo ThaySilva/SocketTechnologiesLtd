@@ -18,6 +18,8 @@ namespace BusinessLayer
         void FillEmployeeList();
         void FillUserList();
         void FillCustomerList();
+        void FillMaterialsList();
+        void FillProductList();
 
         BusinessEntities.IUser CurrentUser { get; set; }
         //BusinessEntities.Interfaces.ICustomer CurrentCustomer { get; set; }

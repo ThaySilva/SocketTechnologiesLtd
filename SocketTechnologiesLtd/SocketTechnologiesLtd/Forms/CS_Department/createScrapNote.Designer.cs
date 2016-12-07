@@ -30,6 +30,8 @@
         {
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.sn_tf = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.Scrap_Note_Txt = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -42,8 +44,6 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.sn_tf = new MetroFramework.Controls.MetroTextBox();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,25 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            // 
+            // sn_tf
+            // 
+            this.sn_tf.Location = new System.Drawing.Point(390, 92);
+            this.sn_tf.Name = "sn_tf";
+            this.sn_tf.Size = new System.Drawing.Size(135, 23);
+            this.sn_tf.TabIndex = 29;
+            this.sn_tf.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(153, 96);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(97, 19);
+            this.metroLabel7.TabIndex = 28;
+            this.metroLabel7.Text = "Scrap Note No";
+            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel1
             // 
@@ -208,24 +227,6 @@
             this.metroLabel2.Text = "C and E Address";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(153, 96);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(97, 19);
-            this.metroLabel7.TabIndex = 28;
-            this.metroLabel7.Text = "Scrap Note No";
-            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // sn_tf
-            // 
-            this.sn_tf.Location = new System.Drawing.Point(390, 92);
-            this.sn_tf.Name = "sn_tf";
-            this.sn_tf.Size = new System.Drawing.Size(135, 23);
-            this.sn_tf.TabIndex = 29;
-            this.sn_tf.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // createScrapNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +239,7 @@
             this.Text = "Create Scrap Note";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.createScrapNote_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.ResumeLayout(false);

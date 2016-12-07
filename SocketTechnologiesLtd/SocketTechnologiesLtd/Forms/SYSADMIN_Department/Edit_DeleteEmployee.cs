@@ -18,12 +18,12 @@ namespace SocketTechnologiesLtd
     {
         #region Instance Attributes
         private IModel model;
-        #endregion
 
         List<IEmployee> employee;
         List<IUser> user;
 
         int empId = 0;
+        #endregion
 
         #region Constructors
         public Edit_DeleteEmployee(IModel _Model)

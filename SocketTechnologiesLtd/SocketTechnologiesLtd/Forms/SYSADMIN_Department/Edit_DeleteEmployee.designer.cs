@@ -93,6 +93,7 @@
             this.dataGrid_Employee.AllowUserToDeleteRows = false;
             this.dataGrid_Employee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGrid_Employee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dataGrid_Employee.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid_Employee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid_Employee.Location = new System.Drawing.Point(134, 191);
             this.dataGrid_Employee.MultiSelect = false;

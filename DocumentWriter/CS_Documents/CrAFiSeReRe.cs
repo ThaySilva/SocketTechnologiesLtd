@@ -11,7 +11,7 @@ using iTextSharp.text.pdf;
 
 namespace DocumentWriter
 {
-    class CrAFiSeReRe
+    public class CrAFiSeReRe
     {
         private DateTime dateTime = DateTime.UtcNow.Date;
 
@@ -20,9 +20,9 @@ namespace DocumentWriter
             throw new System.NotImplementedException();
         }
 
-        public CrAFiSeReRe(string FSRRNum, string CustPurcOrdNum, string FSRLogNum, string CustName, string CustAddr, string text, DataGridView dataGrid)
+        public CrAFiSeReRe( string CustPurcOrdNum, string FSRLogNum, string CustName, string CustAddr, string text, string text1, string text2)
         {
-            FileStream fs = new FileStream("..\\..\\Reports\\CustomerServices\\Field service request response\\CrAFiSeReRe" + FSRRNum + ".pdf", FileMode.Create, FileAccess.Write, FileShare.None);
+            FileStream fs = new FileStream("..\\..\\Reports\\CustomerServices\\Field service request response\\CrAFiSeReRe"  + ".pdf", FileMode.Create, FileAccess.Write, FileShare.None);
             Document doc = new Document(PageSize.A4, 36, 36, 10, 10);
             PdfWriter writer = PdfWriter.GetInstance(doc, fs);
             doc.Open();
@@ -44,7 +44,7 @@ namespace DocumentWriter
             CrAFiSeReRe.Alignment = Element.ALIGN_CENTER;
             doc.Add(CrAFiSeReRe);
 
-            Paragraph CrAFiSeReReNo = new Paragraph("No. " + FSRRNum);
+            Paragraph CrAFiSeReReNo = new Paragraph("No. " );
             CrAFiSeReReNo.Alignment = Element.ALIGN_CENTER;
             doc.Add(CrAFiSeReReNo);
 
@@ -88,17 +88,17 @@ namespace DocumentWriter
             items.AddCell(header1);
             items.AddCell(header2);
             items.AddCell(header3);
-            foreach (DataGridViewRow row in dataGrid.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    try
-                    {
-                        items.AddCell(cell.Value.ToString());
-                    }
-                    catch { }
-                }
-            }
+            //foreach (DataGridViewRow row in dataGrid.Rows)
+            //{
+            //    foreach (DataGridViewCell cell in row.Cells)
+            //    {
+            //        try
+            //        {
+            //            items.AddCell(cell.Value.ToString());
+            //        }
+            //        catch { }
+            //    }
+            //}
             doc.Add(items);
 
             doc.Add(Chunk.NEWLINE);

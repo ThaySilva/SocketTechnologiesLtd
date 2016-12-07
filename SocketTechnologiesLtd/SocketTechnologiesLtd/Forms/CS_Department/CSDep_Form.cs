@@ -15,18 +15,16 @@ namespace SocketTechnologiesLtd
 {
     public partial class CSDep_Form : MetroFramework.Forms.MetroForm
     {
-
+        #region Instance Attributes
         private IModel model;
+        #endregion
+
+        #region Constructors
         public CSDep_Form(IModel _Model)
         {
             InitializeComponent();
             this.ControlBox = false;
             model = _Model;
-        }
-
-        private void btn_Logout_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btn_CSRequests_Click(object sender, EventArgs e)
@@ -71,21 +69,9 @@ namespace SocketTechnologiesLtd
             this.CSManageQuotation.Show();
         }
 
-        private void btn_CSExit_Click(object sender, EventArgs e)
-        {
-            this.CSRequestsPanel.Hide();
-            this.CSResponsesPanel.Hide();
-            this.CSManageCustomerOrdersPanel.Hide();
-            this.CSManageScrapPanel.Hide();
-            this.CSManageQuotation.Hide();
-            this.CSHomeScreenPanel.Show();
-            this.btn_CSExit.Hide();
-            this.btn_Logout.Show();
-        }
-
         private void btn_CreateRfQ_Click(object sender, EventArgs e)
         {
-            RfQ_Form rfq = new RfQ_Form();
+            RfQ_Form rfq = new RfQ_Form(model);
             rfq.MdiParent = this.MdiParent;
             rfq.Dock = DockStyle.Fill;
             rfq.Show();
@@ -149,8 +135,6 @@ namespace SocketTechnologiesLtd
 
         }
 
-       
-
         private void btn_CreateCPO_Click_1(object sender, EventArgs e)
         {
             Cust_Purchase_Order cpr = new Cust_Purchase_Order(model);
@@ -166,5 +150,25 @@ namespace SocketTechnologiesLtd
             rga.Dock = DockStyle.Fill;
             rga.Show();
         }
+        #endregion
+
+        #region Destructors
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_CSExit_Click(object sender, EventArgs e)
+        {
+            this.CSRequestsPanel.Hide();
+            this.CSResponsesPanel.Hide();
+            this.CSManageCustomerOrdersPanel.Hide();
+            this.CSManageScrapPanel.Hide();
+            this.CSManageQuotation.Hide();
+            this.CSHomeScreenPanel.Show();
+            this.btn_CSExit.Hide();
+            this.btn_Logout.Show();
+        }
+        #endregion
     }
 }

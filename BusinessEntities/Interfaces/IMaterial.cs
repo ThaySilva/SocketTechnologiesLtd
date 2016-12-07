@@ -9,7 +9,7 @@ namespace BusinessEntities
 {
     public interface IMaterial 
     {
-        string MatId { get; set; }
+        int MatId { get; set; }
         string MatName { get; set; }
         string MatDescription { get; set; }
     }

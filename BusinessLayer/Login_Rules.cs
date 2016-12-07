@@ -16,6 +16,9 @@ namespace BusinessLayer
         {
             model.FillEmployeeList();
             model.FillUserList();
+            model.FillCustomerList();
+            model.FillMaterialsList();
+            model.FillProductList();
         }
 
         public static string ProcessLogin(string username, string password)

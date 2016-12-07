@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
@@ -44,32 +40,14 @@
             this.CustomerNamemetroTextBox6 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.CustomerAddressmetroTextBox6 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(38, 101);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(244, 19);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Field Service Request Response ID Num:";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(38, 131);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(39, 19);
-            this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "Date:";
-            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(38, 161);
+            this.metroLabel3.Location = new System.Drawing.Point(38, 101);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(198, 19);
             this.metroLabel3.TabIndex = 2;
@@ -79,33 +57,17 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(38, 190);
+            this.metroLabel4.Location = new System.Drawing.Point(41, 131);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(195, 19);
             this.metroLabel4.TabIndex = 3;
             this.metroLabel4.Text = "Field Service Request Log Num:";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel4.Click += new System.EventHandler(this.metroLabel4_Click);
-            // 
-            // metroTextBox1
-            // 
-            this.metroTextBox1.Location = new System.Drawing.Point(288, 97);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(199, 23);
-            this.metroTextBox1.TabIndex = 4;
-            this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroTextBox2
-            // 
-            this.metroTextBox2.Location = new System.Drawing.Point(288, 127);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(199, 23);
-            this.metroTextBox2.TabIndex = 5;
-            this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            metroLabel4.Click += new System.EventHandler(this.metroLabel4_Click);
             // 
             // metroTextBox3
             // 
-            this.metroTextBox3.Location = new System.Drawing.Point(288, 157);
+            this.metroTextBox3.Location = new System.Drawing.Point(242, 97);
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.Size = new System.Drawing.Size(199, 23);
             this.metroTextBox3.TabIndex = 6;
@@ -113,7 +75,7 @@
             // 
             // metroTextBox4
             // 
-            this.metroTextBox4.Location = new System.Drawing.Point(288, 186);
+            this.metroTextBox4.Location = new System.Drawing.Point(242, 131);
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.Size = new System.Drawing.Size(199, 23);
             this.metroTextBox4.TabIndex = 7;
@@ -121,16 +83,16 @@
             // 
             // metroTextBox5
             // 
-            this.metroTextBox5.Location = new System.Drawing.Point(51, 233);
+            this.metroTextBox5.Location = new System.Drawing.Point(51, 330);
             this.metroTextBox5.Multiline = true;
             this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.Size = new System.Drawing.Size(718, 324);
+            this.metroTextBox5.Size = new System.Drawing.Size(718, 148);
             this.metroTextBox5.TabIndex = 8;
             this.metroTextBox5.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTile1
             // 
-            this.metroTile1.Location = new System.Drawing.Point(775, 234);
+            this.metroTile1.Location = new System.Drawing.Point(775, 416);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(95, 42);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Orange;
@@ -143,7 +105,7 @@
             // 
             // metroTile2
             // 
-            this.metroTile2.Location = new System.Drawing.Point(775, 282);
+            this.metroTile2.Location = new System.Drawing.Point(775, 464);
             this.metroTile2.Name = "metroTile2";
             this.metroTile2.Size = new System.Drawing.Size(95, 42);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Orange;
@@ -156,7 +118,7 @@
             // 
             // metroTile3
             // 
-            this.metroTile3.Location = new System.Drawing.Point(775, 330);
+            this.metroTile3.Location = new System.Drawing.Point(775, 512);
             this.metroTile3.Name = "metroTile3";
             this.metroTile3.Size = new System.Drawing.Size(95, 42);
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Orange;
@@ -205,11 +167,34 @@
             this.CustomerAddressmetroTextBox6.TabIndex = 15;
             this.CustomerAddressmetroTextBox6.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // metroTextBox6
+            // 
+            this.metroTextBox6.Location = new System.Drawing.Point(51, 251);
+            this.metroTextBox6.Multiline = true;
+            this.metroTextBox6.Name = "metroTextBox6";
+            this.metroTextBox6.Size = new System.Drawing.Size(718, 73);
+            this.metroTextBox6.TabIndex = 16;
+            this.metroTextBox6.Text = "In Response to your recent request";
+            this.metroTextBox6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroTextBox7
+            // 
+            this.metroTextBox7.Location = new System.Drawing.Point(51, 484);
+            this.metroTextBox7.Multiline = true;
+            this.metroTextBox7.Name = "metroTextBox7";
+            this.metroTextBox7.Size = new System.Drawing.Size(718, 70);
+            this.metroTextBox7.TabIndex = 17;
+            this.metroTextBox7.Text = "If you have any futher querries, please do not hesitate to contact the Customer S" +
+    "ervice Department. ";
+            this.metroTextBox7.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // CreateAFieldRequestResponse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 590);
+            this.Controls.Add(this.metroTextBox7);
+            this.Controls.Add(this.metroTextBox6);
             this.Controls.Add(this.CustomerAddressmetroTextBox6);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.CustomerNamemetroTextBox6);
@@ -220,12 +205,8 @@
             this.Controls.Add(this.metroTextBox5);
             this.Controls.Add(this.metroTextBox4);
             this.Controls.Add(this.metroTextBox3);
-            this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
             this.Name = "CreateAFieldRequestResponse";
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Create A Field Service Request Response";
@@ -237,13 +218,8 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
         private MetroFramework.Controls.MetroTextBox metroTextBox5;
@@ -254,5 +230,7 @@
         private MetroFramework.Controls.MetroTextBox CustomerNamemetroTextBox6;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroTextBox CustomerAddressmetroTextBox6;
+        private MetroFramework.Controls.MetroTextBox metroTextBox6;
+        private MetroFramework.Controls.MetroTextBox metroTextBox7;
     }
 }

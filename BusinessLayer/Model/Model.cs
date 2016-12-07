@@ -22,8 +22,9 @@ namespace BusinessLayer
         private List<IUser> userList;
         private List<IEmployee> employeeList;
         private List<ICustomer> customerList;
-        private List<IOrder> orderList;
+        private List<IMaterial> materialsList;
         private List<IProduct> productList;
+        private List<IOrder> orderList;
         #endregion
 
         #region Instance Properties
@@ -39,11 +40,6 @@ namespace BusinessLayer
             set { currentUser = value; }
         }
 
-        public List<IProduct> ProductList
-        {
-            get { return productList; }
-        }
-
         public List<IUser> UserList
         {
             get { return userList; }
@@ -57,6 +53,16 @@ namespace BusinessLayer
         public List<ICustomer> CustomerList
         {
             get { return customerList; }
+        }
+
+        public List<IMaterial> MaterialsList
+        {
+            get { return materialsList; }
+        }
+
+        public List<IProduct> ProductList
+        {
+            get { return productList; }
         }
 
         public List<IOrder> OrderList
@@ -82,8 +88,9 @@ namespace BusinessLayer
             userList = new List<IUser>();
             employeeList = new List<IEmployee>();
             customerList = new List<ICustomer>();
-            orderList = new List<IOrder>();
+            materialsList = new List<IMaterial>();
             productList = new List<IProduct>();
+            orderList = new List<IOrder>();
             dataLayer = DataLayer;
         }
 
@@ -143,6 +150,47 @@ namespace BusinessLayer
             }
         }
 
+        public void FillMaterialsList()
+        {
+            materialsList = new List<IMaterial>();
+            List<string[]> materialsData = DataLayer.GetTableData("RawMaterials");
+
+            foreach(String[] row in materialsData)
+            {
+                Guid uid = Guid.NewGuid();
+                GenericFactory<IMaterial>.Register(uid, () => new Material(Convert.ToInt16(row[0]), row[1], row[2]));
+                IMaterial material = GenericFactory<IMaterial>.Create(uid);
+                MaterialsList.Add(material);
+            }
+        }
+
+        public void FillProductList()
+        {
+            productList = new List<IProduct>();
+            int i = 0;
+            List<string[]> productData = DataLayer.GetTableData("STLProduct");
+
+            foreach (String[] row in productData)
+            {
+                Guid uid = Guid.NewGuid();
+                DataLayer.RemoveCriteria();
+                DataLayer.SetCriteria("RawMaterial_ID", "Materials_RawMaterial_ID");
+                DataLayer.SetCriteria("Materials_STLProduct_ID", row[0]);
+                List<string[]> rawMaterials = DataLayer.GetTableData("STLProducts_Materials", "RawMaterials", new string[] { "materialName", "Quantity" });
+                string[,] materials = new string[rawMaterials.Count,2];
+                foreach (String[] mat in rawMaterials)
+                {
+                    materials[i,0] = mat[0];
+                    materials[i,1] = mat[1];
+                    i++;
+                }
+                GenericFactory<IProduct>.Register(uid, () => new Product(Convert.ToInt16(row[0]), row[1], row[2], Convert.ToDouble(row[3]), materials));
+                IProduct product = GenericFactory<IProduct>.Create(uid);
+                ProductList.Add(product);
+                i = 0;
+            }
+        }
+
         public void FillOrderList()
         {
             orderList = new List<IOrder>();
@@ -150,17 +198,7 @@ namespace BusinessLayer
 
             foreach (String[] row in orderData)
             {
-                orderList.Add(OrderFactory.GetOrder(new string[] { row[0], row[1], row[2], row[3] }));
-            }
-        }
-        public void FillProductList()
-        {
-            productList = new List<IProduct>();
-            List<string[]> productData = DataLayer.GetTableData("STLProduct");
-
-            foreach (String[] row in productData)
-            {
-                productList.Add(ProductFactory.GetProduct(new string[] { row[0], row[1], row[2], row[3] }));
+                //orderList.Add(OrderFactory.GetOrder(new string[] { row[0], row[1], row[2], row[3] }));
             }
         }
         #endregion

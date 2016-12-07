@@ -11,33 +11,31 @@ namespace BusinessEntities
     {
 
         #region Instance Properties
+        private int lineID;
         private IProduct product;
         private int quantity;
         private double linePrice;
+        private double vat;
+        private double lineTotal;
         #endregion
 
         #region Instance Properties
+        public int LineID
+        {
+            get { return lineID; }
+            set { lineID = value; }
+        }
+
         public IProduct LineItemProduct
         {
             get { return product; }
             set { product = value; }
         }
-        public int LineItemQuantity
+
+        public int Quantity
         {
             get { return quantity; }
             set { quantity = value; }
-        }
-        #endregion
-
-        #region Constructor
-        public LineItem()
-        {
-            throw new System.NotImplementedException();
-        }
-        public LineItem(IProduct product, int quantity, double linePrice)
-        {
-            this.LineItemProduct = product;
-            this.LineItemQuantity = quantity;
         }
 
         public double GetLinePrice()
@@ -45,9 +43,30 @@ namespace BusinessEntities
             return linePrice = quantity * product.ProductPrice;
         }
 
-        public string[] ToStringArray()
+        public double VAT
         {
-            return new string[] { product.ProductId.ToString(), quantity.ToString(), this.GetLinePrice().ToString() };
+            get { return vat; }
+            set { vat = value; }
+        }
+
+        public double GetLineTotal()
+        {
+            return lineTotal = linePrice + vat;
+        }
+
+        #endregion
+
+        #region Constructor
+        public LineItem()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public LineItem(IProduct _product, int _quantity, double _linePrice, double _vat, double _lineTotal)
+        {
+            this.product = _product;
+            this.quantity = _quantity;
+            this.vat = _vat;
         }
         #endregion
     }

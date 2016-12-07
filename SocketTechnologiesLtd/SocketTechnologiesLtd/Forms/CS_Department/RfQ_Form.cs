@@ -7,58 +7,181 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
+using BusinessEntities;
 
 namespace SocketTechnologiesLtd
 {
     public partial class RfQ_Form : MetroFramework.Forms.MetroForm
     {
-        public RfQ_Form()
+        #region Instance Attributes
+        private IModel model;
+        List<ICustomer> customers;
+        List<IProduct> products;
+        #endregion
+
+        #region Constructors
+        public RfQ_Form(IModel _Model)
         {
             InitializeComponent();
             this.ControlBox = false;
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
+            model = _Model;
 
-            populate_view();
+            customers = model.CustomerList;
+            products = model.ProductList;
 
-            int index = lstView_standard.CurrentCell.RowIndex;
+            populateListViews();
         }
 
+
+        private void btn_searchCust_Click(object sender, EventArgs e)
+        {
+            int id;
+            bool result = int.TryParse(txt_custId.Text, out id);
+            if (result)
+                populateCustView(id);
+            else
+                MessageBox.Show("You need to enter a number on the Id field!");
+        }
+
+        private void txt_custId_Click(object sender, EventArgs e)
+        {
+            populateListViews();
+        }
+
+        private void btn_selectCust_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_searchPart_Click(object sender, EventArgs e)
+        {
+            int id;
+            bool result = int.TryParse(txt_partId.Text, out id);
+            if (result)
+                populatePartView(id);
+            else
+                MessageBox.Show("You need to enter a number on the Id field!");
+        }
+
+        private void txt_partId_Click(object sender, EventArgs e)
+        {
+            populateListViews();
+        }
+        #endregion
+
+        #region Destructors
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
 
-        private void populate_view()
+        #region Extra Functions
+        private void populateListViews()
         {
-            DataTable items = new DataTable("Items");
+            DataTable Customers = new DataTable("Customers");
 
-            DataColumn c0 = new DataColumn("STL P/N");
-            DataColumn c1 = new DataColumn("Name");
+            DataColumn c0 = new DataColumn("CustomerID:");
+            DataColumn c1 = new DataColumn("CustomerName:");
 
-            items.Columns.Add(c0);
-            items.Columns.Add(c1);
+            Customers.Columns.Add(c0);
+            Customers.Columns.Add(c1);
 
-            DataRow row, row1, row2;
+            DataRow cRow;
 
-            row = items.NewRow();
-            row["STL P/N"] = "STL0001";
-            row["Name"] = "Terminal Carriers (6000 Series)";
+            foreach(Customer cust in customers)
+            {
+                cRow = Customers.NewRow();
 
-            row1 = items.NewRow();
-            row1["STL P/N"] = "STL0002";
-            row1["Name"] = "Burn-in-boards";
+                cRow["CustomerID:"] = cust.Customer_ID.ToString();
+                cRow["CustomerName:"] = cust.CustCompanyName.ToString();
 
-            row2 = items.NewRow();
-            row2["STL P/N"] = "STL0003";
-            row2["Name"] = "Terminal Carriers (3000 Series)";
+                Customers.Rows.Add(cRow);
+            }
 
-            items.Rows.Add(row);
-            items.Rows.Add(row1);
-            items.Rows.Add(row2);
+            gridView_cust.DataSource = Customers;
 
-            lstView_standard.DataSource = items;
-            
+            DataTable Products = new DataTable("Products");
+
+            DataColumn p0 = new DataColumn("STL P/N:");
+            DataColumn p1 = new DataColumn("PartName:");
+
+            Products.Columns.Add(p0);
+            Products.Columns.Add(p1);
+
+            DataRow pRow;
+
+            foreach(Product prod in products)
+            {
+                pRow = Products.NewRow();
+
+                pRow["STL P/N:"] = prod.ProductId.ToString();
+                pRow["PartName:"] = prod.ProductName.ToString();
+
+                Products.Rows.Add(pRow);
+            }
+
+            gridView_parts.DataSource = Products;
         }
+
+        private void populateCustView(int custId)
+        {
+            DataTable Customers = new DataTable("Customers");
+
+            DataColumn c0 = new DataColumn("CustomerID:");
+            DataColumn c1 = new DataColumn("CustomerName:");
+
+            Customers.Columns.Add(c0);
+            Customers.Columns.Add(c1);
+
+            DataRow cRow;
+
+            foreach (Customer cust in customers)
+            {
+                if (cust.Customer_ID == custId)
+                {
+                    cRow = Customers.NewRow();
+
+                    cRow["CustomerID:"] = cust.Customer_ID.ToString();
+                    cRow["CustomerName:"] = cust.CustCompanyName.ToString();
+
+                    Customers.Rows.Add(cRow);
+                }
+            }
+
+            gridView_cust.DataSource = Customers;
+        }
+
+        private void populatePartView(int partId)
+        {
+            DataTable Products = new DataTable("Products");
+
+            DataColumn p0 = new DataColumn("STL P/N:");
+            DataColumn p1 = new DataColumn("PartName:");
+
+            Products.Columns.Add(p0);
+            Products.Columns.Add(p1);
+
+            DataRow pRow;
+
+            foreach (Product prod in products)
+            {
+                if (prod.ProductId == partId)
+                {
+                    pRow = Products.NewRow();
+
+                    pRow["STL P/N:"] = prod.ProductId.ToString();
+                    pRow["PartName:"] = prod.ProductName.ToString();
+
+                    Products.Rows.Add(pRow);
+                }
+            }
+
+            gridView_parts.DataSource = Products;
+        }
+        #endregion
     }
 }

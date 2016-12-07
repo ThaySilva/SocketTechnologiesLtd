@@ -12,17 +12,15 @@ namespace BusinessEntities
     {
 
         #region Instance Properties
-        private string productId;
+        private int productId;
         private string productName;
         private string productDescription;
         private double productPrice;
-
-      //  private List<IProductMaterial> MaterialList;
+        private string[,] productMaterials;
         #endregion
 
         #region Instance Properties
-
-        public string ProductId
+        public int ProductId
         {
             get { return productId; }
             set { productId = value; }
@@ -42,8 +40,11 @@ namespace BusinessEntities
             get { return productPrice; }
             set { productPrice = value; }
         }
-
-        //private List<IProductMaterial> MaterialList;
+        public string[,] ProductMaterials
+        {
+            get { return productMaterials; }
+            set { productMaterials = value; }
+        }
         #endregion
 
         #region Constructor
@@ -51,23 +52,14 @@ namespace BusinessEntities
         {
             throw new System.NotImplementedException();
         }
-        public Product(string productId, string productName, string productDescription, double productPrice)
+        public Product(int prodId, string prodName, string prodDescription, double prodPrice, string[,] prodMaterials)
         {
-            this.ProductId = productId;
-            this.ProductDescription = productName;
-            this.ProductDescription = productDescription;
-            this.ProductPrice = productPrice;
-        }
-
-        public string[] ToStringArray()
-        {
-            return new String[] { productId, productName, productDescription, productPrice.ToString() };
+            this.productId = prodId;
+            this.productName = prodName;
+            this.productDescription = prodDescription;
+            this.productPrice = prodPrice;
+            this.productMaterials = prodMaterials;
         }
         #endregion
-
-        //public void AddProductMaterial(IMaterial material, int quantity)
-        //{
-        //    MaterialList.Add(new ProductMaterial(material, quantity));
-        //}
     }
 }

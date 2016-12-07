@@ -9,16 +9,16 @@ namespace BusinessEntities
 {
     public class OrderFactory
     {
-        private static IOrder order = null;
+      //  private static IOrder order = null;
 
-      public static Order GetOrder(String[] orderData)
-        {
-            return new BusinessEntities.Order(orderData[0], orderData[1], Convert.ToDateTime(orderData[2]), Convert.ToDateTime(orderData[3]));
-        }
+      //public static Order GetOrder(String[] orderData)
+      //  {
+      //      return new BusinessEntities.Order(orderData[0], orderData[1], Convert.ToDateTime(orderData[2]), Convert.ToDateTime(orderData[3]));
+      //  }
 
-        public static void SetOrder(IOrder aOrder)
-        {
-            order = aOrder;
-        }
+      //  public static void SetOrder(IOrder aOrder)
+      //  {
+      //      order = aOrder;
+      //  }
     }
 }

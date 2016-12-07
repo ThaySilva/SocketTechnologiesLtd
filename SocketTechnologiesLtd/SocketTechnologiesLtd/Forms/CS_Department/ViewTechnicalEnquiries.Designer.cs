@@ -167,6 +167,7 @@
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(148, 23);
             this.metroTextBox1.TabIndex = 10;
+            this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // metroTextBox2
@@ -175,6 +176,7 @@
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.Size = new System.Drawing.Size(148, 23);
             this.metroTextBox2.TabIndex = 11;
+            this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBox3
             // 
@@ -182,6 +184,7 @@
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.Size = new System.Drawing.Size(148, 23);
             this.metroTextBox3.TabIndex = 12;
+            this.metroTextBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBox4
             // 
@@ -189,6 +192,7 @@
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.Size = new System.Drawing.Size(148, 23);
             this.metroTextBox4.TabIndex = 13;
+            this.metroTextBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBox5
             // 
@@ -196,6 +200,7 @@
             this.metroTextBox5.Name = "metroTextBox5";
             this.metroTextBox5.Size = new System.Drawing.Size(148, 23);
             this.metroTextBox5.TabIndex = 14;
+            this.metroTextBox5.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBox6
             // 
@@ -204,6 +209,7 @@
             this.metroTextBox6.Name = "metroTextBox6";
             this.metroTextBox6.Size = new System.Drawing.Size(148, 51);
             this.metroTextBox6.TabIndex = 15;
+            this.metroTextBox6.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBox7
             // 
@@ -211,6 +217,7 @@
             this.metroTextBox7.Name = "metroTextBox7";
             this.metroTextBox7.Size = new System.Drawing.Size(148, 23);
             this.metroTextBox7.TabIndex = 16;
+            this.metroTextBox7.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBox8
             // 
@@ -218,6 +225,7 @@
             this.metroTextBox8.Name = "metroTextBox8";
             this.metroTextBox8.Size = new System.Drawing.Size(148, 23);
             this.metroTextBox8.TabIndex = 17;
+            this.metroTextBox8.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroPanel1
             // 
@@ -228,6 +236,7 @@
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(545, 295);
             this.metroPanel1.TabIndex = 18;
+            this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;

@@ -10,27 +10,13 @@ namespace BusinessEntities
     public class Material : IMaterial
     {
         #region Instance Properties
-        private string id;
+        private int id;
         private string name;
         private string description;
         #endregion
 
-        #region Instance Constructor
-        public Material(string id, string name, string description)
-        {
-            this.MatId = id;
-            this.MatName = name;
-            this.MatDescription = description;
-        }
-
-        public string[] ToString()
-        {
-            return new String[] { MatId, MatName, MatDescription };
-        }
-        #endregion
-
         #region Instance Properties
-        public string MatId
+        public int MatId
         {
             get { return id; }
             set { id = value; }
@@ -45,6 +31,20 @@ namespace BusinessEntities
         {
             get { return description; }
             set { description = value; }
+        }
+        #endregion
+
+        #region Instance Constructor
+        public Material()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Material(int id, string name, string description)
+        {
+            this.MatId = id;
+            this.MatName = name;
+            this.MatDescription = description;
         }
         #endregion
     }

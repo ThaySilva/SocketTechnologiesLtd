@@ -9,9 +9,12 @@ namespace BusinessEntities
 {
     public interface ILineItem 
     {
-        IProduct LineItemProduct { get; }
-        int LineItemQuantity { get; set; }
+        int LineID { get; set; }
+        IProduct LineItemProduct { get; set; }
+        int Quantity { get; set; }
         double GetLinePrice();
+        double VAT { get; set; }
+        double GetLineTotal();
 
     }
 }

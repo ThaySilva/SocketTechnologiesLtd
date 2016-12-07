@@ -64,7 +64,7 @@ namespace BusinessEntities
         #region Constructors
         public Customer()
         {
-            throw new System.NotFiniteNumberException();
+            throw new System.NotImplementedException();
         }
 
         public Customer(int id, String firstName, String lastName, String companyName, String phoneNum, String[] Address)

@@ -70,6 +70,14 @@ namespace SocketTechnologiesLtd
             this.Close();
         }
 
+        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void createScrapNote_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

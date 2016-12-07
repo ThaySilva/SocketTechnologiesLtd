@@ -202,6 +202,12 @@
     <Compile Include="Forms\CS_Department\ViewTechnicalEnquiries.designer.cs">
       <DependentUpon>ViewTechnicalEnquiries.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CS_Department\ViewTecnicalEnquiriesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CS_Department\ViewTecnicalEnquiriesList.Designer.cs">
+      <DependentUpon>ViewTecnicalEnquiriesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ENG_Department\AddCustomProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -503,6 +509,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CS_Department\ViewTechnicalEnquiries.resx">
       <DependentUpon>ViewTechnicalEnquiries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CS_Department\ViewTecnicalEnquiriesList.resx">
+      <DependentUpon>ViewTecnicalEnquiriesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ENG_Department\AddCustomProduct.resx">
       <DependentUpon>AddCustomProduct.cs</DependentUpon>

@@ -9,13 +9,10 @@ namespace BusinessEntities
 {
     public interface IOrder 
     {
-       string OrderID { get; set; }
-        string CustomerID { get; set; }
-        DateTime DateCreated { get; set; }
-        DateTime DateCompleted { get; set; }
-        List<ILineItem> LineItemsList { get; }
-        double GetPriceTotal();
-        void AddLineItem(IProduct product, int qty);
-
+        int OrderID { get; set; }
+        int ClientID { get; set; }
+        int PartNumber { get; set; }
+        int Quantity { get; set; }
+        DateTime DateRequired { get; set; }
     }
 }
