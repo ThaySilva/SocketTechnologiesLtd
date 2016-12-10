@@ -238,6 +238,7 @@
             this.btn_CreateRGAR.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_CreateRGAR.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_CreateRGAR.UseTileImage = true;
+            this.btn_CreateRGAR.Click += new System.EventHandler(this.btn_CreateRGAR_Click);
             // 
             // btn_CSExit
             // 

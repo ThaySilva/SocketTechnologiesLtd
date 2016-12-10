@@ -68,7 +68,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 60);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(748, 353);
+            this.metroPanel1.Size = new System.Drawing.Size(842, 438);
             this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroPanel1.TabIndex = 7;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -80,7 +80,7 @@
             // btn_Cancel
             // 
             this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cancel.Location = new System.Drawing.Point(567, 288);
+            this.btn_Cancel.Location = new System.Drawing.Point(661, 373);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(152, 46);
             this.btn_Cancel.Style = MetroFramework.MetroColorStyle.Orange;
@@ -94,7 +94,7 @@
             // btn_Create
             // 
             this.btn_Create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Create.Location = new System.Drawing.Point(385, 288);
+            this.btn_Create.Location = new System.Drawing.Point(479, 373);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(152, 46);
             this.btn_Create.Style = MetroFramework.MetroColorStyle.Orange;
@@ -103,11 +103,12 @@
             this.btn_Create.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Create.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Create.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
             // cpoID_tb
             // 
             this.cpoID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cpoID_tb.Location = new System.Drawing.Point(192, 179);
+            this.cpoID_tb.Location = new System.Drawing.Point(239, 280);
             this.cpoID_tb.Name = "cpoID_tb";
             this.cpoID_tb.ReadOnly = true;
             this.cpoID_tb.Size = new System.Drawing.Size(150, 30);
@@ -119,7 +120,7 @@
             this.text_label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.text_label.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.text_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.text_label.Location = new System.Drawing.Point(427, 70);
+            this.text_label.Location = new System.Drawing.Point(463, 77);
             this.text_label.Name = "text_label";
             this.text_label.Size = new System.Drawing.Size(66, 31);
             this.text_label.TabIndex = 13;
@@ -129,7 +130,7 @@
             // custID_tb
             // 
             this.custID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.custID_tb.Location = new System.Drawing.Point(192, 143);
+            this.custID_tb.Location = new System.Drawing.Point(239, 211);
             this.custID_tb.Name = "custID_tb";
             this.custID_tb.ReadOnly = true;
             this.custID_tb.Size = new System.Drawing.Size(150, 30);
@@ -141,7 +142,7 @@
             this.cpoID_label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cpoID_label.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.cpoID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.cpoID_label.Location = new System.Drawing.Point(31, 179);
+            this.cpoID_label.Location = new System.Drawing.Point(63, 280);
             this.cpoID_label.Name = "cpoID_label";
             this.cpoID_label.Size = new System.Drawing.Size(136, 30);
             this.cpoID_label.TabIndex = 8;
@@ -151,7 +152,7 @@
             // custName_tb
             // 
             this.custName_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.custName_tb.Location = new System.Drawing.Point(192, 107);
+            this.custName_tb.Location = new System.Drawing.Point(239, 145);
             this.custName_tb.Name = "custName_tb";
             this.custName_tb.Size = new System.Drawing.Size(150, 30);
             this.custName_tb.TabIndex = 7;
@@ -162,7 +163,7 @@
             this.custID_label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.custID_label.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.custID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.custID_label.Location = new System.Drawing.Point(31, 143);
+            this.custID_label.Location = new System.Drawing.Point(63, 211);
             this.custID_label.Name = "custID_label";
             this.custID_label.Size = new System.Drawing.Size(136, 23);
             this.custID_label.TabIndex = 6;
@@ -172,7 +173,7 @@
             // rgaID_tb
             // 
             this.rgaID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rgaID_tb.Location = new System.Drawing.Point(192, 70);
+            this.rgaID_tb.Location = new System.Drawing.Point(239, 77);
             this.rgaID_tb.Name = "rgaID_tb";
             this.rgaID_tb.ReadOnly = true;
             this.rgaID_tb.Size = new System.Drawing.Size(150, 31);
@@ -184,7 +185,7 @@
             this.custName_label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.custName_label.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.custName_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.custName_label.Location = new System.Drawing.Point(31, 107);
+            this.custName_label.Location = new System.Drawing.Point(63, 145);
             this.custName_label.Name = "custName_label";
             this.custName_label.Size = new System.Drawing.Size(155, 23);
             this.custName_label.TabIndex = 4;
@@ -195,11 +196,12 @@
             // 
             this.txt_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_tb.Enabled = false;
-            this.txt_tb.Location = new System.Drawing.Point(514, 70);
+            this.txt_tb.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txt_tb.Location = new System.Drawing.Point(544, 77);
             this.txt_tb.Multiline = true;
             this.txt_tb.Name = "txt_tb";
             this.txt_tb.ReadOnly = true;
-            this.txt_tb.Size = new System.Drawing.Size(164, 139);
+            this.txt_tb.Size = new System.Drawing.Size(269, 132);
             this.txt_tb.TabIndex = 3;
             this.txt_tb.Text = "The customer above is requesting an STL returned goods authorisation correspondin" +
     "g to the customer purchase order number (above) due to damaged goods received.";
@@ -210,7 +212,7 @@
             this.rgaID_label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rgaID_label.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.rgaID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.rgaID_label.Location = new System.Drawing.Point(31, 70);
+            this.rgaID_label.Location = new System.Drawing.Point(63, 77);
             this.rgaID_label.Name = "rgaID_label";
             this.rgaID_label.Size = new System.Drawing.Size(170, 41);
             this.rgaID_label.TabIndex = 2;
@@ -220,7 +222,7 @@
             // btn_Exit
             // 
             this.btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Exit.Location = new System.Drawing.Point(676, 20);
+            this.btn_Exit.Location = new System.Drawing.Point(770, 20);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(92, 34);
             this.btn_Exit.TabIndex = 8;
@@ -232,7 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 433);
+            this.ClientSize = new System.Drawing.Size(882, 518);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.metroPanel1);
             this.Name = "RGA_RequestFrom";

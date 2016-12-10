@@ -44,11 +44,20 @@ namespace SocketTechnologiesLtd
                 populateCustView(id);
             else
                 MessageBox.Show("You need to enter a number on the Id field!");
+
+            clearCustFields();
         }
 
         private void txt_custId_Click(object sender, EventArgs e)
         {
             populateListViews();
+            clearCustFields();
+        }
+
+        private void gridView_cust_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int custId = Convert.ToInt16(gridView_cust.Rows[e.RowIndex].Cells["CustomerID:"].Value);
+            fillFields(custId);
         }
 
         private void btn_selectCust_Click(object sender, EventArgs e)
@@ -63,12 +72,19 @@ namespace SocketTechnologiesLtd
             if (result)
                 populatePartView(id);
             else
-                MessageBox.Show("You need to enter a number on the Id field!");
+                MessageBox.Show("You need to enter a number on the Id field!"); 
         }
 
         private void txt_partId_Click(object sender, EventArgs e)
         {
             populateListViews();
+            txt_partId.Text = null;
+        }
+
+        private void gridView_parts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int partId = Convert.ToInt16(gridView_parts.Rows[e.RowIndex].Cells["STL P/N:"].Value);
+            txt_partId.Text = partId.ToString();
         }
         #endregion
 
@@ -181,6 +197,26 @@ namespace SocketTechnologiesLtd
             }
 
             gridView_parts.DataSource = Products;
+        }
+
+        private void fillFields(int custId)
+        {
+            foreach(Customer cust in customers)
+            {
+                if(cust.Customer_ID == custId)
+                {
+                    txt_custId.Text = cust.Customer_ID.ToString();
+                    txt_custName.Text = cust.CustCompanyName;
+                    txt_custAdd.Text = cust.CustAddress[0] + ",\r\n" + cust.CustAddress[1] + ",\r\n" + cust.CustAddress[2];
+                }
+            }
+        }
+
+        private void clearCustFields()
+        {
+            txt_custId.Text = null;
+            txt_custName.Text = null;
+            txt_custAdd.Text = null;
         }
         #endregion
     }

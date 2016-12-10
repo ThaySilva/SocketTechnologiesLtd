@@ -49,8 +49,14 @@ namespace SocketTechnologiesLtd
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txt_search.Text);
-            populateListView(id);
+            int id;
+            bool result = int.TryParse(txt_search.Text, out id);
+            if (result)
+                populateListView(id);
+            else
+                MessageBox.Show("You need to enter a number on the Id field!");
+
+            txt_search.Text = null;
         }
 
 

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
 using DataAccessLayer;
+using DocumentWriter;
 
 namespace SocketTechnologiesLtd
 {
@@ -16,6 +17,8 @@ namespace SocketTechnologiesLtd
         [STAThread]
         static void Main()
         {
+            GoogleDrive.getService();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             IDataLayer _DataLayer = DataLayer.GetInstance();

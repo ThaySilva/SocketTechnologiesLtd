@@ -35,7 +35,6 @@
             this.btn_searchCust = new MetroFramework.Controls.MetroTile();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.txt_custAdd = new MetroFramework.Controls.MetroTextBox();
             this.txt_custName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.txt_custId = new MetroFramework.Controls.MetroTextBox();
@@ -65,6 +64,7 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.txt_custAdd = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -189,21 +189,12 @@
             this.metroLabel13.Text = "Customer Address:";
             this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // txt_custAdd
-            // 
-            this.txt_custAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_custAdd.Location = new System.Drawing.Point(365, 254);
-            this.txt_custAdd.Multiline = true;
-            this.txt_custAdd.Name = "txt_custAdd";
-            this.txt_custAdd.Size = new System.Drawing.Size(246, 61);
-            this.txt_custAdd.TabIndex = 19;
-            this.txt_custAdd.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // txt_custName
             // 
             this.txt_custName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_custName.Location = new System.Drawing.Point(365, 184);
             this.txt_custName.Name = "txt_custName";
+            this.txt_custName.ReadOnly = true;
             this.txt_custName.Size = new System.Drawing.Size(246, 27);
             this.txt_custName.TabIndex = 18;
             this.txt_custName.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -249,6 +240,7 @@
             this.gridView_cust.ReadOnly = true;
             this.gridView_cust.Size = new System.Drawing.Size(307, 232);
             this.gridView_cust.TabIndex = 13;
+            this.gridView_cust.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_cust_CellClick);
             // 
             // metroLabel11
             // 
@@ -353,6 +345,7 @@
             this.gridView_parts.ReadOnly = true;
             this.gridView_parts.Size = new System.Drawing.Size(307, 234);
             this.gridView_parts.TabIndex = 1;
+            this.gridView_parts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_parts_CellClick);
             // 
             // metroLabel1
             // 
@@ -552,6 +545,17 @@
             this.metroLabel4.Text = "Custom Items";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // txt_custAdd
+            // 
+            this.txt_custAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_custAdd.Location = new System.Drawing.Point(365, 254);
+            this.txt_custAdd.Multiline = true;
+            this.txt_custAdd.Name = "txt_custAdd";
+            this.txt_custAdd.ReadOnly = true;
+            this.txt_custAdd.Size = new System.Drawing.Size(246, 61);
+            this.txt_custAdd.TabIndex = 19;
+            this.txt_custAdd.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // RfQ_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,7 +613,6 @@
         private MetroFramework.Controls.MetroTile btn_RFQAddCustom;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroTextBox txt_custAdd;
         private MetroFramework.Controls.MetroTextBox txt_custName;
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private MetroFramework.Controls.MetroTextBox txt_custId;
@@ -617,5 +620,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroTile btn_searchCust;
         private MetroFramework.Controls.MetroTile btn_selectCust;
+        private MetroFramework.Controls.MetroTextBox txt_custAdd;
     }
 }

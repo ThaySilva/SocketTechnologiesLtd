@@ -145,6 +145,11 @@ namespace SocketTechnologiesLtd
 
         private void btn_ViewRGARes_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btn_CreateRGAR_Click(object sender, EventArgs e)
+        {
             RGA_RequestFrom rga = new RGA_RequestFrom();
             rga.MdiParent = this.MdiParent;
             rga.Dock = DockStyle.Fill;
