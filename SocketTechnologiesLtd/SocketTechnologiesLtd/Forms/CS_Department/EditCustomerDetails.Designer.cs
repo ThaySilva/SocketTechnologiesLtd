@@ -35,13 +35,11 @@
             this.tbAddress1EditCus = new System.Windows.Forms.TextBox();
             this.tbFNameEditCus = new System.Windows.Forms.TextBox();
             this.tbLNameEditCus = new System.Windows.Forms.TextBox();
-            this.tbEmailEditCus = new System.Windows.Forms.TextBox();
             this.tbAddress3EditCus = new System.Windows.Forms.TextBox();
             this.tbPhoneEditCus = new System.Windows.Forms.TextBox();
             this.tbCompanyNameEditCus = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -76,13 +74,11 @@
             this.groupBox1.Controls.Add(this.tbAddress1EditCus);
             this.groupBox1.Controls.Add(this.tbFNameEditCus);
             this.groupBox1.Controls.Add(this.tbLNameEditCus);
-            this.groupBox1.Controls.Add(this.tbEmailEditCus);
             this.groupBox1.Controls.Add(this.tbAddress3EditCus);
             this.groupBox1.Controls.Add(this.tbPhoneEditCus);
             this.groupBox1.Controls.Add(this.tbCompanyNameEditCus);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -124,13 +120,6 @@
             this.tbLNameEditCus.Size = new System.Drawing.Size(165, 20);
             this.tbLNameEditCus.TabIndex = 12;
             // 
-            // tbEmailEditCus
-            // 
-            this.tbEmailEditCus.Location = new System.Drawing.Point(151, 262);
-            this.tbEmailEditCus.Name = "tbEmailEditCus";
-            this.tbEmailEditCus.Size = new System.Drawing.Size(165, 20);
-            this.tbEmailEditCus.TabIndex = 11;
-            // 
             // tbAddress3EditCus
             // 
             this.tbAddress3EditCus.Location = new System.Drawing.Point(151, 195);
@@ -169,15 +158,6 @@
             this.label7.Size = new System.Drawing.Size(81, 13);
             this.label7.TabIndex = 6;
             this.label7.Text = "Phone Number:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 262);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Email:";
             // 
             // label5
             // 
@@ -273,13 +253,11 @@
         private System.Windows.Forms.TextBox tbAddress1EditCus;
         private System.Windows.Forms.TextBox tbFNameEditCus;
         private System.Windows.Forms.TextBox tbLNameEditCus;
-        private System.Windows.Forms.TextBox tbEmailEditCus;
         private System.Windows.Forms.TextBox tbAddress3EditCus;
         private System.Windows.Forms.TextBox tbPhoneEditCus;
         private System.Windows.Forms.TextBox tbCompanyNameEditCus;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

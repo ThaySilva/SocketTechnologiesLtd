@@ -22,22 +22,21 @@ namespace SocketTechnologiesLtd
         #endregion
 
         #region Constructors
-        public ViewCustomerDetails()
+        public ViewCustomerDetails(IModel _Model)
         {
             
             InitializeComponent();
             this.ControlBox = false;
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
-
             customers = model.CustomerList;
-
+            model = _Model;
             populateCustView();
         }
-        
+
         private void ViewCustomerDetails_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'stldb1DataSet.Customer' table. You can move, or remove it, as needed.
+            //TODO: This line of code loads data into the 'stldb1DataSet.Customer' table.You can move, or remove it, as needed.
             this.customerTableAdapter.Fill(this.stldb1DataSet.Customer);
 
         }
@@ -54,12 +53,12 @@ namespace SocketTechnologiesLtd
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            AddCustomer ac = new AddCustomer(model);
+            AddCustomer ac = new AddCustomer();
         }
 
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
-
+            EditCustomerDetails ec = new EditCustomerDetails();
         }
 
         private void btnDeleteCustomer_Click(object sender, EventArgs e)
@@ -115,14 +114,14 @@ namespace SocketTechnologiesLtd
                 
                     cRow = Customers.NewRow();
 
-                    cRow["CustomerID:"] = cust.customer_ID.ToString();
-                    cRow["First Name:"] = cust.custFirstName.ToString();
-                    cRow["Last Name:"] = cust.custLastName.ToString();
-                    cRow["Company Name:"] = cust.custCompanyName.ToString();
-                    cRow["Phone:"] = cust.custPhoneNum.ToString();
-                    cRow["Address 1:"] = cust.custAddress.ToString();
-                    cRow["Address 2:"] = cust.custAddLine2.ToString();
-                    cRow["County:"] = cust.custCounty.ToString();
+                    //cRow["CustomerID:"] = cust.customer_ID.ToString();
+                    //cRow["First Name:"] = cust.custFirstName.ToString();
+                    //cRow["Last Name:"] = cust.custLastName.ToString();
+                    //cRow["Company Name:"] = cust.custCompanyName.ToString();
+                    //cRow["Phone:"] = cust.custPhoneNum.ToString();
+                    //cRow["Address 1:"] = cust.custAddress.ToString();
+                    //cRow["Address 2:"] = cust.custAddLine2.ToString();
+                    //cRow["County:"] = cust.custCounty.ToString();
 
                     Customers.Rows.Add(cRow);
                 

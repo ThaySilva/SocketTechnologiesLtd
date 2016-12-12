@@ -22,20 +22,20 @@ namespace SocketTechnologiesLtd
         #endregion
 
         #region Constructors
-        public AddCustomer(IModel _Model)
+        public AddCustomer()
         {
             InitializeComponent();
             this.ControlBox = false;
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
-            model = _Model;
+            
             tbCustomer_ID.Text = id.getCustId().ToString();
            
         }
         private void btnBackAddCust_Click(object sender, EventArgs e)
         {
             Close();
-            ViewCustomerDetails VCD = new ViewCustomerDetails();
+            ViewCustomerDetails VCD = new ViewCustomerDetails(model);
             VCD.Show();
             
         }
@@ -50,24 +50,24 @@ namespace SocketTechnologiesLtd
             
             if (validateFields())
             {
-                ICustomer duplicateCustomer = model.CustomerList.FirstOrDefault(cust => cust.custCompanyName == tbCompanyNameAddCust.Text.Trim());
+                //ICustomer duplicateCustomer = model.CustomerList.FirstOrDefault(cust => cust.custCompanyName == tbCompanyNameAddCust.Text.Trim());
 
-                if (duplicateCustomer == null)
-                {
-                    try
-                    {
-                        CustServices_Rules.AddCustomer(Convert.ToInt32(tbCustomer_ID.Text), tbCompanyNameAddCust.Text,tbFirstNameAddCust.Text, tbLastNameAddCust.Text, tbPhoneAddCust.Text, tbAddress1AddCust.Text, tbAddress2AddCust.Text, tbAddress3AddCust.Text);
+            //   if (duplicateCustomer == null)
+            //    {
+            //        try
+            //        {
+            //            //CustServices_Rules.AddCustomer(Convert.ToInt32(tbCustomer_ID.Text), tbCompanyNameAddCust.Text,tbFirstNameAddCust.Text, tbLastNameAddCust.Text, tbPhoneAddCust.Text, tbAddress1AddCust.Text, tbAddress2AddCust.Text, tbAddress3AddCust.Text);
                         
-                        MessageBox.Show("The customer " + tbCompanyNameAddCust.Text + " was successfully created!");
-                        this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-                else
-                    MessageBox.Show("The customer " + tbCompanyNameAddCust.Text + " already exists please try another company name!");
+            //            MessageBox.Show("The customer " + tbCompanyNameAddCust.Text + " was successfully created!");
+            //            this.Close();
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message);
+            //        }
+            //    }
+            //    else
+            //        MessageBox.Show("The customer " + tbCompanyNameAddCust.Text + " already exists please try another company name!");
             }
         }
         #endregion

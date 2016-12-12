@@ -13,6 +13,7 @@ namespace BusinessEntities
         private int id;
         private string name;
         private string description;
+        private int qty;
         #endregion
 
         #region Instance Properties
@@ -32,6 +33,12 @@ namespace BusinessEntities
             get { return description; }
             set { description = value; }
         }
+        public int MatQuantity
+        {
+            get { return qty; }
+            set { qty = value; }
+
+        }
         #endregion
 
         #region Instance Constructor
@@ -45,6 +52,14 @@ namespace BusinessEntities
             this.MatId = id;
             this.MatName = name;
             this.MatDescription = description;
+        }
+        public Material(int id, string name, string description, int qty)
+        {
+            this.MatId = id;
+            this.MatName = name;
+            this.MatDescription = description;
+            this.MatQuantity = qty;
+
         }
         #endregion
     }

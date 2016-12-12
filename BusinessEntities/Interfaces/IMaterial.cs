@@ -12,5 +12,6 @@ namespace BusinessEntities
         int MatId { get; set; }
         string MatName { get; set; }
         string MatDescription { get; set; }
+        int MatQuantity { get; set; }
     }
 }

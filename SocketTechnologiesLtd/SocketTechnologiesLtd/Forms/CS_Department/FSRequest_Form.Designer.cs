@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.cpoID_tb = new MetroFramework.Controls.MetroTextBox();
+            this.searchID_tile = new MetroFramework.Controls.MetroTile();
+            this.custID_tb = new MetroFramework.Controls.MetroTextBox();
             this.cpoID_label = new MetroFramework.Controls.MetroLabel();
             this.btn_Cancel = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
@@ -37,20 +38,19 @@
             this.type_cb = new MetroFramework.Controls.MetroComboBox();
             this.fsrID_tb = new MetroFramework.Controls.MetroTextBox();
             this.text_tb = new MetroFramework.Controls.MetroTextBox();
-            this.custID_tb = new MetroFramework.Controls.MetroTextBox();
+            this.WorkOrderID_tb = new MetroFramework.Controls.MetroTextBox();
             this.type_label = new MetroFramework.Controls.MetroLabel();
             this.custID_label = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.fsrID_label = new MetroFramework.Controls.MetroLabel();
             this.btn_Exit = new MetroFramework.Controls.MetroButton();
-            this.searchID_tile = new MetroFramework.Controls.MetroTile();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel1
             // 
             this.metroPanel1.Controls.Add(this.searchID_tile);
-            this.metroPanel1.Controls.Add(this.cpoID_tb);
+            this.metroPanel1.Controls.Add(this.custID_tb);
             this.metroPanel1.Controls.Add(this.cpoID_label);
             this.metroPanel1.Controls.Add(this.btn_Cancel);
             this.metroPanel1.Controls.Add(this.btn_Create);
@@ -58,7 +58,7 @@
             this.metroPanel1.Controls.Add(this.type_cb);
             this.metroPanel1.Controls.Add(this.fsrID_tb);
             this.metroPanel1.Controls.Add(this.text_tb);
-            this.metroPanel1.Controls.Add(this.custID_tb);
+            this.metroPanel1.Controls.Add(this.WorkOrderID_tb);
             this.metroPanel1.Controls.Add(this.type_label);
             this.metroPanel1.Controls.Add(this.custID_label);
             this.metroPanel1.Controls.Add(this.metroLabel1);
@@ -76,15 +76,28 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // cpoID_tb
+            // searchID_tile
             // 
-            this.cpoID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cpoID_tb.Location = new System.Drawing.Point(404, 286);
-            this.cpoID_tb.Name = "cpoID_tb";
-            this.cpoID_tb.ReadOnly = true;
-            this.cpoID_tb.Size = new System.Drawing.Size(194, 27);
-            this.cpoID_tb.TabIndex = 46;
-            this.cpoID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.searchID_tile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.searchID_tile.Location = new System.Drawing.Point(639, 111);
+            this.searchID_tile.Name = "searchID_tile";
+            this.searchID_tile.Size = new System.Drawing.Size(81, 27);
+            this.searchID_tile.Style = MetroFramework.MetroColorStyle.Orange;
+            this.searchID_tile.TabIndex = 58;
+            this.searchID_tile.Text = "Search ID";
+            this.searchID_tile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.searchID_tile.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.searchID_tile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            // 
+            // custID_tb
+            // 
+            this.custID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.custID_tb.Location = new System.Drawing.Point(404, 286);
+            this.custID_tb.Name = "custID_tb";
+            this.custID_tb.ReadOnly = true;
+            this.custID_tb.Size = new System.Drawing.Size(194, 27);
+            this.custID_tb.TabIndex = 46;
+            this.custID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // cpoID_label
             // 
@@ -94,9 +107,9 @@
             this.cpoID_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.cpoID_label.Location = new System.Drawing.Point(90, 111);
             this.cpoID_label.Name = "cpoID_label";
-            this.cpoID_label.Size = new System.Drawing.Size(258, 25);
+            this.cpoID_label.Size = new System.Drawing.Size(141, 25);
             this.cpoID_label.TabIndex = 45;
-            this.cpoID_label.Text = "Customer Purchase Order ID:";
+            this.cpoID_label.Text = "Work Order ID:";
             this.cpoID_label.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // btn_Cancel
@@ -159,6 +172,7 @@
             this.fsrID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fsrID_tb.Location = new System.Drawing.Point(404, 201);
             this.fsrID_tb.Name = "fsrID_tb";
+            this.fsrID_tb.ReadOnly = true;
             this.fsrID_tb.Size = new System.Drawing.Size(194, 27);
             this.fsrID_tb.TabIndex = 40;
             this.fsrID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -173,15 +187,14 @@
             this.text_tb.TabIndex = 37;
             this.text_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // custID_tb
+            // WorkOrderID_tb
             // 
-            this.custID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.custID_tb.Location = new System.Drawing.Point(404, 111);
-            this.custID_tb.Name = "custID_tb";
-            this.custID_tb.ReadOnly = true;
-            this.custID_tb.Size = new System.Drawing.Size(194, 27);
-            this.custID_tb.TabIndex = 36;
-            this.custID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.WorkOrderID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.WorkOrderID_tb.Location = new System.Drawing.Point(404, 111);
+            this.WorkOrderID_tb.Name = "WorkOrderID_tb";
+            this.WorkOrderID_tb.Size = new System.Drawing.Size(194, 27);
+            this.WorkOrderID_tb.TabIndex = 36;
+            this.WorkOrderID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // type_label
             // 
@@ -246,19 +259,6 @@
             this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
-            // searchID_tile
-            // 
-            this.searchID_tile.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.searchID_tile.Location = new System.Drawing.Point(639, 111);
-            this.searchID_tile.Name = "searchID_tile";
-            this.searchID_tile.Size = new System.Drawing.Size(81, 27);
-            this.searchID_tile.Style = MetroFramework.MetroColorStyle.Orange;
-            this.searchID_tile.TabIndex = 58;
-            this.searchID_tile.Text = "Search ID";
-            this.searchID_tile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.searchID_tile.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.searchID_tile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            // 
             // FSRequest_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,11 +287,11 @@
         private MetroFramework.Controls.MetroComboBox type_cb;
         private MetroFramework.Controls.MetroTextBox fsrID_tb;
         private MetroFramework.Controls.MetroTextBox text_tb;
-        private MetroFramework.Controls.MetroTextBox custID_tb;
+        private MetroFramework.Controls.MetroTextBox WorkOrderID_tb;
         private MetroFramework.Controls.MetroButton btn_Exit;
         private MetroFramework.Controls.MetroTile btn_Cancel;
         private MetroFramework.Controls.MetroTile btn_Create;
-        private MetroFramework.Controls.MetroTextBox cpoID_tb;
+        private MetroFramework.Controls.MetroTextBox custID_tb;
         private MetroFramework.Controls.MetroLabel cpoID_label;
         private MetroFramework.Controls.MetroTile searchID_tile;
     }

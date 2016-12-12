@@ -158,7 +158,7 @@ namespace SocketTechnologiesLtd
 
         private void btn_CSManageCustomers_Click(object sender, EventArgs e)
         {
-            ViewCustomerDetails vcd = new ViewCustomerDetails();
+            ViewCustomerDetails vcd = new ViewCustomerDetails(model);
             vcd.MdiParent = this.MdiParent;
             vcd.Dock = DockStyle.Fill;
             vcd.Show();

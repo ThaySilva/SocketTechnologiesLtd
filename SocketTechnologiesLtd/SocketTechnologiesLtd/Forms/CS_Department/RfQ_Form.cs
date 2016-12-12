@@ -112,8 +112,8 @@ namespace SocketTechnologiesLtd
             {
                 cRow = Customers.NewRow();
 
-                cRow["CustomerID:"] = cust.customer_ID.ToString();
-                cRow["CustomerName:"] = cust.custCompanyName.ToString();
+                cRow["CustomerID:"] = cust.Customer_ID.ToString();
+                cRow["CustomerName:"] = cust.CustCompanyName.ToString();
 
                 Customers.Rows.Add(cRow);
             }
@@ -157,12 +157,12 @@ namespace SocketTechnologiesLtd
 
             foreach (Customer cust in customers)
             {
-                if (cust.customer_ID == custId)
+                if (cust.Customer_ID == custId)
                 {
                     cRow = Customers.NewRow();
 
-                    cRow["CustomerID:"] = cust.customer_ID.ToString();
-                    cRow["CustomerName:"] = cust.custCompanyName.ToString();
+                    cRow["CustomerID:"] = cust.Customer_ID.ToString();
+                    cRow["CustomerName:"] = cust.CustCompanyName.ToString();
 
                     Customers.Rows.Add(cRow);
                 }
@@ -203,11 +203,11 @@ namespace SocketTechnologiesLtd
         {
             foreach(Customer cust in customers)
             {
-                if(cust.customer_ID == custId)
+                if(cust.Customer_ID == custId)
                 {
-                    txt_custId.Text = cust.customer_ID.ToString();
-                    txt_custName.Text = cust.custCompanyName;
-                    txt_custAdd.Text = cust.custAddress + ",\r\n" + cust.custAddLine2 + ",\r\n" + cust.custCounty;
+                    txt_custId.Text = cust.Customer_ID.ToString();
+                    txt_custName.Text = cust.CustCompanyName;
+                    //txt_custAdd.Text = cust.custAddress + ",\r\n" + cust.custAddLine2 + ",\r\n" + cust.custCounty;
                 }
             }
         }

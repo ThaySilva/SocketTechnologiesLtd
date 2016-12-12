@@ -17,12 +17,12 @@ namespace SocketTechnologiesLtd
     {
 
         IdIncrement PON = new IdIncrement();
-        //IdIncrement  = new IdIncrement();
         IdIncrement LineNo = new IdIncrement();
 
+        #region Instance Attributes
         private IModel model;
-
-        List<IProduct> product;
+        #endregion
+        
 
         public Cust_Purchase_Order(IModel _Model)
         {
@@ -32,7 +32,9 @@ namespace SocketTechnologiesLtd
             this.TopMost = true;
             model = _Model;
 
-            product = model.ProductList;
+            //cust_purc_no_box.Text = PON.getPON().ToString();
+            //line_no_box.Text = LineNo.g
+
         }
 
         private void Cust_Purchase_Order_Load(object sender, EventArgs e)
@@ -98,31 +100,36 @@ namespace SocketTechnologiesLtd
                 this.Show();
             }
         }
-        private void populateCombo(int prodName)
-        {
-            DataTable Product = new DataTable("STLProduct");
+        //private void populateCombo(int prodName)
+        //{
+        //    DataTable Product = new DataTable("STLProduct");
 
-            DataColumn c0 = new DataColumn("productName:");
+        //    DataColumn c0 = new DataColumn("productName:");
             
 
-            Product.Columns.Add(c0);
+        //    Product.Columns.Add(c0);
             
 
-            DataRow row;
+        //    DataRow row;
 
-            foreach (Product p in product)
-            {
-                    row = Product.NewRow();
+        //    foreach (Product p in product)
+        //    {
+        //            row = Product.NewRow();
 
-                row["productName:"] = p.ProductName;
+        //        row["productName:"] = p.ProductName;
                     
 
-                Product.Rows.Add(row);
+        //        Product.Rows.Add(row);
                
-            }
+        //    }
 
-            product_ComboBox.DataSource = Product;
+        //    product_ComboBox.DataSource = Product;
 
+        //}
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            AddCustomer ac = new AddCustomer();
         }
     }
 }

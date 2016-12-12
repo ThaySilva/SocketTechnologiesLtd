@@ -115,8 +115,11 @@
     <Compile Include="Interfaces\IOrder.cs" />
     <Compile Include="Interfaces\ILineItem.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
+    <Compile Include="Interfaces\IPurchaseOrderOut.cs" />
     <Compile Include="Interfaces\IUser.cs" />
+    <Compile Include="Interfaces\ITechnicalEnquiry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TechnicalEnquiry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -101,5 +101,9 @@ namespace BusinessLayer
             model.UserList.Remove(user);
         }
         #endregion
+
+        #region CustomerOrders Functions
+
+        #endregion
     }
 }

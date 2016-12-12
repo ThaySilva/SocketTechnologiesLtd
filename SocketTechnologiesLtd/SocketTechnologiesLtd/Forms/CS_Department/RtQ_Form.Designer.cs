@@ -35,7 +35,6 @@
             this.txt_custAdd = new MetroFramework.Controls.MetroTextBox();
             this.txt_CustomerName = new MetroFramework.Controls.MetroTextBox();
             this.txt_RtQId = new MetroFramework.Controls.MetroTextBox();
-            this.txt_RfQId = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -48,6 +47,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_rtqTxt = new MetroFramework.Controls.MetroTextBox();
             this.btn_Exit = new MetroFramework.Controls.MetroButton();
+            this.comboBox_rfq = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lst_customItems)).BeginInit();
             this.SuspendLayout();
@@ -56,12 +56,12 @@
             // 
             this.metroPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroPanel1.BackgroundImage")));
             this.metroPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.metroPanel1.Controls.Add(this.comboBox_rfq);
             this.metroPanel1.Controls.Add(this.btn_Cancel);
             this.metroPanel1.Controls.Add(this.btn_Create);
             this.metroPanel1.Controls.Add(this.txt_custAdd);
             this.metroPanel1.Controls.Add(this.txt_CustomerName);
             this.metroPanel1.Controls.Add(this.txt_RtQId);
-            this.metroPanel1.Controls.Add(this.txt_RfQId);
             this.metroPanel1.Controls.Add(this.metroLabel6);
             this.metroPanel1.Controls.Add(this.metroLabel5);
             this.metroPanel1.Controls.Add(this.metroLabel4);
@@ -145,15 +145,6 @@
             this.txt_RtQId.Size = new System.Drawing.Size(245, 27);
             this.txt_RtQId.TabIndex = 34;
             this.txt_RtQId.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txt_RfQId
-            // 
-            this.txt_RfQId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_RfQId.Location = new System.Drawing.Point(287, 43);
-            this.txt_RfQId.Name = "txt_RfQId";
-            this.txt_RfQId.Size = new System.Drawing.Size(247, 27);
-            this.txt_RfQId.TabIndex = 33;
-            this.txt_RfQId.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel6
             // 
@@ -293,6 +284,16 @@
             this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
+            // comboBox_rfq
+            // 
+            this.comboBox_rfq.FormattingEnabled = true;
+            this.comboBox_rfq.ItemHeight = 23;
+            this.comboBox_rfq.Location = new System.Drawing.Point(287, 43);
+            this.comboBox_rfq.Name = "comboBox_rfq";
+            this.comboBox_rfq.Size = new System.Drawing.Size(247, 29);
+            this.comboBox_rfq.TabIndex = 39;
+            this.comboBox_rfq.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // RtQ_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,11 +330,11 @@
         private MetroFramework.Controls.MetroTextBox txt_custAdd;
         private MetroFramework.Controls.MetroTextBox txt_CustomerName;
         private MetroFramework.Controls.MetroTextBox txt_RtQId;
-        private MetroFramework.Controls.MetroTextBox txt_RfQId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private MetroFramework.Controls.MetroTile btn_Create;
         private MetroFramework.Controls.MetroTile btn_Cancel;
+        private MetroFramework.Controls.MetroComboBox comboBox_rfq;
     }
 }

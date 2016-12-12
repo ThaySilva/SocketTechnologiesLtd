@@ -463,7 +463,7 @@
     <value>295, 3</value>
   </data>
   <data name="btn_CreateRfQ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 27</value>
+    <value>286, 152</value>
   </data>
   <data name="btn_CreateRfQ.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -490,10 +490,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateFSR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 36</value>
+    <value>295, 161</value>
   </data>
   <data name="btn_CreateFSR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 27</value>
+    <value>286, 152</value>
   </data>
   <data name="btn_CreateFSR.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -520,10 +520,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateRGAR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 69</value>
+    <value>295, 319</value>
   </data>
   <data name="btn_CreateRGAR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 29</value>
+    <value>286, 154</value>
   </data>
   <data name="btn_CreateRGAR.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -547,13 +547,13 @@
     <value>2</value>
   </data>
   <data name="CSRequestsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 439</value>
+    <value>48, 64</value>
   </data>
   <data name="CSRequestsPanel.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="CSRequestsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>876, 101</value>
+    <value>876, 476</value>
   </data>
   <data name="CSRequestsPanel.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -616,7 +616,7 @@
     <value>295, 3</value>
   </data>
   <data name="btn_ViewTERes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 12</value>
+    <value>286, 153</value>
   </data>
   <data name="btn_ViewTERes.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -643,10 +643,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateFSRes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 21</value>
+    <value>295, 162</value>
   </data>
   <data name="btn_CreateFSRes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 12</value>
+    <value>286, 153</value>
   </data>
   <data name="btn_CreateFSRes.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -673,10 +673,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_ViewRGARes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 39</value>
+    <value>295, 321</value>
   </data>
   <data name="btn_ViewRGARes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 13</value>
+    <value>286, 153</value>
   </data>
   <data name="btn_ViewRGARes.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -700,13 +700,13 @@
     <value>2</value>
   </data>
   <data name="CSResponsesPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 485</value>
+    <value>48, 63</value>
   </data>
   <data name="CSResponsesPanel.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="CSResponsesPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>876, 55</value>
+    <value>876, 477</value>
   </data>
   <data name="CSResponsesPanel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -739,10 +739,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateCOE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 61</value>
+    <value>222, 241</value>
   </data>
   <data name="btn_CreateCOE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 23</value>
+    <value>220, 113</value>
   </data>
   <data name="btn_CreateCOE.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -769,10 +769,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_ViewCOS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 32</value>
+    <value>448, 122</value>
   </data>
   <data name="btn_ViewCOS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 23</value>
+    <value>204, 113</value>
   </data>
   <data name="btn_ViewCOS.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -799,10 +799,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateCPO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 32</value>
+    <value>222, 122</value>
   </data>
   <data name="btn_CreateCPO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 23</value>
+    <value>220, 113</value>
   </data>
   <data name="btn_CreateCPO.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -829,10 +829,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateWO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 61</value>
+    <value>448, 241</value>
   </data>
   <data name="btn_CreateWO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 23</value>
+    <value>204, 113</value>
   </data>
   <data name="btn_CreateWO.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -856,13 +856,13 @@
     <value>3</value>
   </data>
   <data name="CSManageCustomerOrdersPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 424</value>
+    <value>48, 63</value>
   </data>
   <data name="CSManageCustomerOrdersPanel.RowCount" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="CSManageCustomerOrdersPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>876, 116</value>
+    <value>876, 477</value>
   </data>
   <data name="CSManageCustomerOrdersPanel.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -895,10 +895,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_ViewSC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 63</value>
+    <value>295, 239</value>
   </data>
   <data name="btn_ViewSC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 24</value>
+    <value>286, 112</value>
   </data>
   <data name="btn_ViewSC.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -925,10 +925,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateSN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 33</value>
+    <value>295, 121</value>
   </data>
   <data name="btn_CreateSN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 24</value>
+    <value>286, 112</value>
   </data>
   <data name="btn_CreateSN.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -952,13 +952,13 @@
     <value>1</value>
   </data>
   <data name="CSManageScrapPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 415</value>
+    <value>48, 63</value>
   </data>
   <data name="CSManageScrapPanel.RowCount" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="CSManageScrapPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>876, 122</value>
+    <value>876, 473</value>
   </data>
   <data name="CSManageScrapPanel.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -991,10 +991,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateRTQ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 61</value>
+    <value>295, 241</value>
   </data>
   <data name="btn_CreateRTQ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 23</value>
+    <value>286, 113</value>
   </data>
   <data name="btn_CreateRTQ.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1021,10 +1021,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="btn_CreateQO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 32</value>
+    <value>295, 122</value>
   </data>
   <data name="btn_CreateQO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 23</value>
+    <value>286, 113</value>
   </data>
   <data name="btn_CreateQO.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1048,13 +1048,13 @@
     <value>1</value>
   </data>
   <data name="CSManageQuotation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 424</value>
+    <value>48, 63</value>
   </data>
   <data name="CSManageQuotation.RowCount" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="CSManageQuotation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>876, 116</value>
+    <value>876, 477</value>
   </data>
   <data name="CSManageQuotation.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>

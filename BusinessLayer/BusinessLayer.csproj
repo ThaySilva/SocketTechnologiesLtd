@@ -96,6 +96,7 @@
   <ItemGroup>
     <Compile Include="Common_Rules.cs" />
     <Compile Include="Departments_Rules\CustServices_Rules.cs" />
+    <Compile Include="Departments_Rules\Stores_Rules.cs" />
     <Compile Include="GoogleDrive.cs" />
     <Compile Include="IdIncrement.cs" />
     <Compile Include="Model\IModel.cs" />

@@ -26,6 +26,8 @@ namespace BusinessLayer
         private List<IProduct> productList;
         private List<IOrder> orderList;
         private List<IDocument> documentList;
+        private List<ILineItem> lineItemList;
+        private List<ITechnicalEnquiry> technicalEnquiryList;
         #endregion
 
         #region Instance Properties
@@ -35,6 +37,10 @@ namespace BusinessLayer
             set { dataLayer = value; }
         }
 
+        public ITechnicalEnquiry TechnicalEnquiryList
+        {
+            get { return TechnicalEnquiryList; }
+        }
         public IUser CurrentUser
         {
             get { return currentUser; }
@@ -76,6 +82,10 @@ namespace BusinessLayer
             get { return documentList; }
         }
 
+        public List<ILineItem> LineItemList
+        {
+            get { return lineItemList; }
+        }
         #endregion
 
         #region Constructors and Destructors
@@ -98,6 +108,8 @@ namespace BusinessLayer
             productList = new List<IProduct>();
             orderList = new List<IOrder>();
             documentList = new List<IDocument>();
+            lineItemList = new List<ILineItem>();
+            technicalEnquiryList = new List<ITechnicalEnquiry>();
             dataLayer = DataLayer;
         }
 
@@ -146,7 +158,7 @@ namespace BusinessLayer
             foreach(String[] row in custData)
             {
                 Guid uid = Guid.NewGuid();
-                GenericFactory<ICustomer>.Register(uid, () => new Customer(Convert.ToInt16(row[0]), row[1], row[2], row[3], row[4], row[5], row[6], row[7]));
+                GenericFactory<ICustomer>.Register(uid, () => new Customer(Convert.ToInt16(row[0]), row[1], row[2], row[3], row[4], new string[] { row[5], row[6], row[7] }));
                 ICustomer customer = GenericFactory<ICustomer>.Create(uid);
                 CustomerList.Add(customer);
             }
@@ -159,9 +171,9 @@ namespace BusinessLayer
             foreach(String[] row in materialsData)
             {
                 Guid uid = Guid.NewGuid();
-                GenericFactory<IMaterial>.Register(uid, () => new Material(Convert.ToInt16(row[0]), row[1], row[2]));
+                GenericFactory<IMaterial>.Register(uid, () => new Material(Convert.ToInt16(row[0]), row[1], row[2], Convert.ToInt16(row[3])));
                 IMaterial material = GenericFactory<IMaterial>.Create(uid);
-                MaterialsList.Add(material);
+                materialsList.Add(material);
             }
         }
 
@@ -174,7 +186,7 @@ namespace BusinessLayer
             {
                 Guid uid = Guid.NewGuid();
                 DataLayer.RemoveCriteria();
-                DataLayer.SetCriteria("RawMaterial_ID", "RawMaterial_ID");
+                DataLayer.SetCriteria("RawMaterial_ID", "RawMaterial_RawMaterial_ID");
                 DataLayer.SetCriteria("STLProduct_STLProduct_ID", row[0]);
                 List<string[]> rawMaterials = DataLayer.GetTableData("STLProduct_has_RawMaterial", "RawMaterial", new string[] { "materialName", "Quantity" });
                 string[,] materials = new string[rawMaterials.Count,2];
@@ -208,11 +220,28 @@ namespace BusinessLayer
             foreach (String[] row in documentData)
             {
                 Guid uid = Guid.NewGuid();
-                GenericFactory<IDocument>.Register(uid, () => new Document(Convert.ToInt16(row[0]), row[1], DateTime.ParseExact(row[2], "dd/MM/YYYY", null)));
+                GenericFactory<IDocument>.Register(uid, () => new Document(Convert.ToInt16(row[0]), row[1], DateTime.ParseExact(row[2], "dd/MM/yyyy", null)));
                 IDocument doc = GenericFactory<IDocument>.Create(uid);
                 DocumentList.Add(doc);
             }
         }
+
+        public void FillLineItemList()
+        {
+            List<string[]> lineItemData = DataLayer.GetTableData("STL_LineItem");
+
+            foreach (String[] row in lineItemData)
+            {
+                Guid uid = Guid.NewGuid();
+              //  GenericFactory<ILineItem>.Register(uid, () => new LineItem(Convert.ToInt16(row[0]), row[1], row[2], row[3], row[4]));
+                ILineItem lineItem = GenericFactory<ILineItem>.Create(uid);
+                LineItemList.Add(lineItem);
+            }
+
+
+        }
+
+
         #endregion
 
     }

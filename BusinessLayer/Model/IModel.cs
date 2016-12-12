@@ -15,11 +15,18 @@ namespace BusinessLayer
         List<ICustomer> CustomerList { get; }
         List<IProduct> ProductList { get; }
         List<IOrder> OrderList { get; }
+        List<IDocument> DocumentList { get; }
+        List<ILineItem> LineItemList { get; }
+        List<IMaterial> MaterialsList { get; }
         void FillEmployeeList();
         void FillUserList();
         void FillCustomerList();
         void FillMaterialsList();
         void FillProductList();
+        void FillDocumentList(string table);
+        void FillLineItemList();
+
+
 
         BusinessEntities.IUser CurrentUser { get; set; }
         //BusinessEntities.Interfaces.ICustomer CurrentCustomer { get; set; }

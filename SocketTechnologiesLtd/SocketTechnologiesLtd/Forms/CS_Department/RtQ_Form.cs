@@ -18,6 +18,7 @@ namespace SocketTechnologiesLtd
         #region Instance Attributes
         private IModel model;
         List<ICustomer> customers;
+        List<IDocument> documents;
         #endregion
 
         public RtQ_Form(IModel _Model)
@@ -27,6 +28,11 @@ namespace SocketTechnologiesLtd
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
             model = _Model;
+
+            model.FillDocumentList("RequestForQuotation_Report");
+            documents = model.DocumentList;
+            customers = model.CustomerList;
+            fillComboBox();
 
             //rtqId = "2";
 
@@ -59,6 +65,20 @@ namespace SocketTechnologiesLtd
         {
             this.Close();
         }
+
+        #region Extra Functions
+        public void fillComboBox()
+        {
+            int i = 0;
+            string[] docsItem = new string[documents.Count];
+            foreach(Document doc in documents)
+            {
+                docsItem[i] = doc.DocumentID.ToString();
+                i++;
+            }
+            comboBox_rfq.Items.AddRange(docsItem);
+        }
+        #endregion
 
     }
 }
