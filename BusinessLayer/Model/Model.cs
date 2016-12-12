@@ -25,6 +25,7 @@ namespace BusinessLayer
         private List<IMaterial> materialsList;
         private List<IProduct> productList;
         private List<IOrder> orderList;
+        private List<IDocument> documentList;
         #endregion
 
         #region Instance Properties
@@ -70,6 +71,11 @@ namespace BusinessLayer
             get { return orderList; }
         }
 
+        public List<IDocument> DocumentList
+        {
+            get { return documentList; }
+        }
+
         #endregion
 
         #region Constructors and Destructors
@@ -91,10 +97,9 @@ namespace BusinessLayer
             materialsList = new List<IMaterial>();
             productList = new List<IProduct>();
             orderList = new List<IOrder>();
+            documentList = new List<IDocument>();
             dataLayer = DataLayer;
         }
-
-       
 
         ~Model()
         {
@@ -110,7 +115,6 @@ namespace BusinessLayer
          #region Fill Lists
         public void FillEmployeeList()
         {
-            employeeList = new List<IEmployee>();
             List<string[]> employeeData = DataLayer.GetTableData("employee");
 
             foreach (String[] row in employeeData)
@@ -124,7 +128,6 @@ namespace BusinessLayer
 
         public void FillUserList()
         {
-            userList = new List<IUser>();
             List<string[]> userData = DataLayer.GetTableData("users");
 
             foreach(String[] row in userData)
@@ -138,13 +141,12 @@ namespace BusinessLayer
 
         public void FillCustomerList()
         {
-            customerList = new List<ICustomer>();
             List<string[]> custData = DataLayer.GetTableData("Customer");
 
             foreach(String[] row in custData)
             {
                 Guid uid = Guid.NewGuid();
-                GenericFactory<ICustomer>.Register(uid, () => new Customer(Convert.ToInt16(row[0]), row[1], row[2], row[3], row[4], new string[] { row[5], row[6], row[7] }));
+                GenericFactory<ICustomer>.Register(uid, () => new Customer(Convert.ToInt16(row[0]), row[1], row[2], row[3], row[4], row[5], row[6], row[7]));
                 ICustomer customer = GenericFactory<ICustomer>.Create(uid);
                 CustomerList.Add(customer);
             }
@@ -152,8 +154,7 @@ namespace BusinessLayer
 
         public void FillMaterialsList()
         {
-            materialsList = new List<IMaterial>();
-            List<string[]> materialsData = DataLayer.GetTableData("RawMaterials");
+            List<string[]> materialsData = DataLayer.GetTableData("RawMaterial");
 
             foreach(String[] row in materialsData)
             {
@@ -166,7 +167,6 @@ namespace BusinessLayer
 
         public void FillProductList()
         {
-            productList = new List<IProduct>();
             int i = 0;
             List<string[]> productData = DataLayer.GetTableData("STLProduct");
 
@@ -174,9 +174,9 @@ namespace BusinessLayer
             {
                 Guid uid = Guid.NewGuid();
                 DataLayer.RemoveCriteria();
-                DataLayer.SetCriteria("RawMaterial_ID", "Materials_RawMaterial_ID");
-                DataLayer.SetCriteria("Materials_STLProduct_ID", row[0]);
-                List<string[]> rawMaterials = DataLayer.GetTableData("STLProducts_Materials", "RawMaterials", new string[] { "materialName", "Quantity" });
+                DataLayer.SetCriteria("RawMaterial_ID", "RawMaterial_ID");
+                DataLayer.SetCriteria("STLProduct_STLProduct_ID", row[0]);
+                List<string[]> rawMaterials = DataLayer.GetTableData("STLProduct_has_RawMaterial", "RawMaterial", new string[] { "materialName", "Quantity" });
                 string[,] materials = new string[rawMaterials.Count,2];
                 foreach (String[] mat in rawMaterials)
                 {
@@ -193,12 +193,24 @@ namespace BusinessLayer
 
         public void FillOrderList()
         {
-            orderList = new List<IOrder>();
             List<string[]> orderData = DataLayer.GetTableData("orders");
 
             foreach (String[] row in orderData)
             {
                 //orderList.Add(OrderFactory.GetOrder(new string[] { row[0], row[1], row[2], row[3] }));
+            }
+        }
+
+        public void FillDocumentList(string table)
+        {
+            List<string[]> documentData = DataLayer.GetTableData(table);
+
+            foreach (String[] row in documentData)
+            {
+                Guid uid = Guid.NewGuid();
+                GenericFactory<IDocument>.Register(uid, () => new Document(Convert.ToInt16(row[0]), row[1], DateTime.ParseExact(row[2], "dd/MM/YYYY", null)));
+                IDocument doc = GenericFactory<IDocument>.Create(uid);
+                DocumentList.Add(doc);
             }
         }
         #endregion

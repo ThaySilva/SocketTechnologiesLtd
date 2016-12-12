@@ -11,50 +11,60 @@ namespace BusinessEntities
     {
         #region Instance Properties
 
-        private int customer_ID;
-        private String custFirstName;
-        private String custLastName;
-        private String custCompanyName;
-        private String custPhoneNum;
-        private String[] custAddress;
-
+        private int Customer_ID;
+        private String CustFirstName;
+        private String CustLastName;
+        private String CustCompanyName;
+        private String CustPhoneNum;
+        private String CustAddress;
+        private String CustAddLine2;
+        private String CustCounty;
         #endregion
 
         #region Instance Properties
-        public int Customer_ID
+        public int customer_ID
         {
             get { return customer_ID; }
-            set { customer_ID = value; }
+            set { Customer_ID = value; }
         }
 
-        public String CustFirstName
+        public String custFirstName
         {
             get { return custFirstName; }
             set { custFirstName = value; }
         }
 
-        public String CustLastName
+        public String custLastName
         {
             get { return custLastName; }
             set { custLastName = value; }
         }
 
-        public String CustCompanyName
+        public String custCompanyName
         {
             get { return custCompanyName; }
             set { custCompanyName = value; }
         }
 
-        public String CustPhoneNum
+        public String custPhoneNum
         {
             get { return custPhoneNum; }
             set { custPhoneNum = value; }
         }
-
-        public String[] CustAddress
+        public String custAddress
         {
             get { return custAddress; }
             set { custAddress = value; }
+        }
+        public String custAddLine2
+        {
+            get { return custAddLine2; }
+            set { custAddLine2 = value; }
+        }
+        public String custCounty
+        {
+            get { return custCounty; }
+            set { custCounty = value; }
         }
 
 
@@ -67,7 +77,7 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public Customer(int id, String firstName, String lastName, String companyName, String phoneNum, String[] Address)
+        public Customer(int id, String firstName, String lastName, String companyName, String phoneNum, String Address, String Address2, String Address3)
         {
             Customer_ID = id;
             CustFirstName = firstName;
@@ -75,6 +85,8 @@ namespace BusinessEntities
             CustCompanyName = companyName;
             CustPhoneNum = phoneNum;
             CustAddress = Address;
+            CustAddLine2 = Address2;
+            CustCounty = Address3;
 
         }
 

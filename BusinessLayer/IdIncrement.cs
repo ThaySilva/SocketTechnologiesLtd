@@ -49,13 +49,21 @@ namespace BusinessLayer
         #region CustomerID
         public void setCustId()
         {
-            customerId = cust[cust.Count() - 1].Customer_ID + 1;
+            customerId = cust[cust.Count() - 1].customer_ID + 1;
         }
 
         public int getCustId()
         {
             setCustId();
             return customerId;
+        }
+        #endregion
+
+        #region Generic ReportID
+        public int getReportID(string table)
+        {
+            string id = _data.GetMax(table, "reportID");
+            return int.Parse(id) + 1;
         }
         #endregion
     }

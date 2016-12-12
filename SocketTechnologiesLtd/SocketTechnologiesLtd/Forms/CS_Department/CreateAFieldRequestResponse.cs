@@ -22,7 +22,7 @@ namespace SocketTechnologiesLtd
         private string Txt;  // empty
         private string Txt1; // In Response to your recent request
         private string Txt2; // If you have any futher querries, please do not hesitate to contact the Customer Service Department. 
-        IdIncrement id = new IdIncrement () ;
+        //IdIncrement id = new IdIncrement () ;
 
 
 

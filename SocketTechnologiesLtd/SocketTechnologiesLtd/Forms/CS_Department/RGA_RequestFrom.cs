@@ -13,7 +13,7 @@ namespace SocketTechnologiesLtd
 {
     public partial class RGA_RequestFrom : MetroFramework.Forms.MetroForm
     {
-        IdIncrement id = new IdIncrement();
+        //IdIncrement id = new IdIncrement();
         string rgaID;
 
         public RGA_RequestFrom()
@@ -23,7 +23,7 @@ namespace SocketTechnologiesLtd
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
 
-            rgaID = id.Id.ToString();
+            rgaID = "2";
 
             rgaID_tb.Text = rgaID;
         }

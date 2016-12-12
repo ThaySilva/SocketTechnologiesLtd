@@ -21,7 +21,7 @@ namespace SocketTechnologiesLtd
         private string cus_Name;
         private string cus_Address;
         private string txt;
-        IdIncrement id = new IdIncrement();
+        //IdIncrement id = new IdIncrement();
         
 
 

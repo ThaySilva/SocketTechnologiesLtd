@@ -9,6 +9,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
+using BusinessLayer;
 
 
 namespace DocumentWriter
@@ -28,17 +29,15 @@ namespace DocumentWriter
         {
             Document doc = new Document(PageSize.A4, 36, 36, 10, 10);
             byte[] pdfBytes;
-            string newfsr_No;
+            int Num;
 
             using (MemoryStream mem = new MemoryStream())
             {
                 using (PdfWriter writer = PdfWriter.GetInstance(doc, mem))
                 {
-                    int Num = Convert.ToInt32(fsrID);
+                    Num = Convert.ToInt32(fsrID);
 
                     doc.Open();
-            
-                    newfsr_No = Num.ToString();
 
                     Paragraph date = new Paragraph("Date: " + dateTime.ToString("dd/MM/yyyy"));
                     date.Alignment = Element.ALIGN_RIGHT;
@@ -57,7 +56,7 @@ namespace DocumentWriter
                     fsr.Alignment = Element.ALIGN_CENTER;
                     doc.Add(fsr);
 
-                    Paragraph fsr_id = new Paragraph("FSR ID:  " + newfsr_No);
+                    Paragraph fsr_id = new Paragraph("FSR ID:  " + Num);
                     fsr_id.Alignment = Element.ALIGN_CENTER;
                     doc.Add(fsr_id);
 
@@ -86,18 +85,27 @@ namespace DocumentWriter
                 }
                 pdfBytes = mem.ToArray();
             }
-                MessageBox.Show("FSR request Successfully Created!\n\nFSR Request ID: " + newfsr_No);
 
-                DriveService service = GoogleDrive.getService();
+            MessageBox.Show("FSR request Successfully Created!\n\nFSR Request ID: " + Num);
 
-                var fileId = GoogleDrive.UploadFile(service, "FSRrequest1.pdf", pdfBytes);
+            // Save the file to google drive
+            DriveService service = GoogleDrive.getService();
 
-                MessageBox.Show(fileId);
+            string FolderId = "0B_ob9qFmHlBcQ21NWEJDaHNZSWM";
+            string fileName = "FSRrequest" + Num + ".pdf";
+            //var fileId = GoogleDrive.UploadFile(service, fileName, pdfBytes, FolderId);
 
-            GoogleDrive.DownloadFile(service, fileId, @"C:\Users\Sinea\Documents\FSRrequest1.pdf");
-
-
+            // Added Successfully
+            //MessageBox.Show(fileId);
             
+            //Save the fileId to the database
+            //Common_Rules.AddDocument("FieldServiceRequest_Report", fileId, dateTime.ToShortDateString());
+
+            //Download the file from the database
+            //GoogleDrive.DownloadFile(service, fileId, @"C:\Users\Sinea\Documents\FSRrequest1.pdf");
+
+
+
         }
     }
 }

@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DocumentWriter;
+using BusinessLayer;
 
 namespace SocketTechnologiesLtd
 {
     public partial class FSRequest_Form : MetroFramework.Forms.MetroForm
     {
-        IdIncrement id = new IdIncrement();
         string fsrID;
-
+        IdIncrement id = new IdIncrement();
         public FSRequest_Form()
         {
             InitializeComponent();
@@ -23,9 +23,16 @@ namespace SocketTechnologiesLtd
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
 
-            fsrID = id.Id.ToString();
+            fsrID = id.getReportID("FieldServiceRequest_Report").ToString();
 
-            fsrID_tb.Text = fsrID;
+            if (fsrID != null)
+            {
+                fsrID_tb.Text = fsrID;
+            }
+            else
+            {
+                fsrID_tb.Text = "1";
+            }
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
@@ -74,6 +81,32 @@ namespace SocketTechnologiesLtd
             this.Close();
         }
 
-      
+        //private Boolean validateFields()
+        //{
+        //    if (txt_username.Text == "")
+        //        MessageBox.Show("Please enter a username!");
+        //    else if (txt_password.Text == "")
+        //        MessageBox.Show("Please enter a password!");
+        //    else if (txt_password2.Text == "")
+        //        MessageBox.Show("Please Re-Enter the password!");
+        //    else if (txt_firstName.Text == "")
+        //        MessageBox.Show("Please enter the employee's name!");
+        //    else if (txt_lastName.Text == "")
+        //        MessageBox.Show("Please enter the employee's last name!");
+        //    else if (txt_phoneNum.Text == "")
+        //        MessageBox.Show("Please enter the employee's phone number!");
+        //    else if (cBox_dept.SelectedIndex == -1)
+        //        MessageBox.Show("Please select a department!");
+        //    else
+        //    {
+        //        if (txt_password.Text != txt_password2.Text)
+        //            MessageBox.Show("The passwords doesn't match, try again!");
+        //        else
+        //            return true;
+        //    }
+
+        //    return false;
+        //}
+
     }
 }

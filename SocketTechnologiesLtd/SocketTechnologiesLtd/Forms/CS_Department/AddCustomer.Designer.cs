@@ -48,6 +48,8 @@
             this.btnClearAddCust = new System.Windows.Forms.Button();
             this.btnSaveAddCust = new System.Windows.Forms.Button();
             this.btnBackAddCust = new System.Windows.Forms.Button();
+            this.custIDlbl = new System.Windows.Forms.Label();
+            this.tbCustomer_ID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -222,7 +224,7 @@
             this.btnSaveAddCust.TabIndex = 2;
             this.btnSaveAddCust.Text = "SAVE";
             this.btnSaveAddCust.UseVisualStyleBackColor = true;
-            //this.btnSaveAddCust.Click += new System.EventHandler(this.btnSaveAddCust_Click);
+            
             // 
             // btnBackAddCust
             // 
@@ -234,11 +236,30 @@
             this.btnBackAddCust.UseVisualStyleBackColor = true;
             this.btnBackAddCust.Click += new System.EventHandler(this.btnBackAddCust_Click);
             // 
+            // custIDlbl
+            // 
+            this.custIDlbl.AutoSize = true;
+            this.custIDlbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.custIDlbl.Location = new System.Drawing.Point(8, 79);
+            this.custIDlbl.Name = "custIDlbl";
+            this.custIDlbl.Size = new System.Drawing.Size(68, 13);
+            this.custIDlbl.TabIndex = 4;
+            this.custIDlbl.Text = "Customer ID:";
+            // 
+            // tbCustomer_ID
+            // 
+            this.tbCustomer_ID.Location = new System.Drawing.Point(11, 95);
+            this.tbCustomer_ID.Name = "tbCustomer_ID";
+            this.tbCustomer_ID.Size = new System.Drawing.Size(165, 20);
+            this.tbCustomer_ID.TabIndex = 9;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 403);
+            this.Controls.Add(this.tbCustomer_ID);
+            this.Controls.Add(this.custIDlbl);
             this.Controls.Add(this.btnBackAddCust);
             this.Controls.Add(this.btnSaveAddCust);
             this.Controls.Add(this.btnClearAddCust);
@@ -247,9 +268,11 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "AddCustomer";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Load += new System.EventHandler(this.AddCustomer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -275,6 +298,7 @@
         private System.Windows.Forms.Button btnClearAddCust;
         private System.Windows.Forms.Button btnSaveAddCust;
         private System.Windows.Forms.Button btnBackAddCust;
-
+        private System.Windows.Forms.Label custIDlbl;
+        private System.Windows.Forms.TextBox tbCustomer_ID;
     }
 }

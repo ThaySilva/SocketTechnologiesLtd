@@ -109,6 +109,7 @@
             this.btn_CSManageCustomers.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_CSManageCustomers.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_CSManageCustomers.UseTileImage = true;
+            this.btn_CSManageCustomers.Click += new System.EventHandler(this.btn_CSManageCustomers_Click);
             // 
             // btn_CreateCCN
             // 

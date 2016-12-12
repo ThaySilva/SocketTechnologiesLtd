@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblEmailViewCust = new System.Windows.Forms.Label();
             this.gbCustomerDetails = new System.Windows.Forms.GroupBox();
             this.lblCustIDViewCust = new System.Windows.Forms.Label();
@@ -39,16 +40,27 @@
             this.lblCustFirstNameViewCust = new System.Windows.Forms.Label();
             this.lblCompNameViewCust = new System.Windows.Forms.Label();
             this.btnAddCustomerViewCust = new System.Windows.Forms.Button();
-            this.custLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.custFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.custID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnEditCustomerViewCust = new System.Windows.Forms.Button();
             this.btnDeleteCustomerViewCust = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tbCustomerSearch = new System.Windows.Forms.TextBox();
-            this.lvCustomerListViewCust = new System.Windows.Forms.ListView();
             this.btnBackViewCust = new System.Windows.Forms.Button();
+            this.customerGridView = new System.Windows.Forms.DataGridView();
+            this.stldb1DataSet = new SocketTechnologiesLtd.stldb1DataSet();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter = new SocketTechnologiesLtd.stldb1DataSetTableAdapters.CustomerTableAdapter();
+            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.custFirstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.custLastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.custCompanyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.custPhoneNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.custAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.custAddLine2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.custCountyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbCustomerDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stldb1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmailViewCust
@@ -179,22 +191,6 @@
             this.btnAddCustomerViewCust.UseVisualStyleBackColor = false;
             this.btnAddCustomerViewCust.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
-            // custLastName
-            // 
-            this.custLastName.Text = "Last Name";
-            this.custLastName.Width = 259;
-            // 
-            // custFirstName
-            // 
-            this.custFirstName.Text = "First Name";
-            this.custFirstName.Width = 164;
-            // 
-            // custID
-            // 
-            this.custID.Tag = "";
-            this.custID.Text = "Customer ID";
-            this.custID.Width = 182;
-            // 
             // btnEditCustomerViewCust
             // 
             this.btnEditCustomerViewCust.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -246,26 +242,6 @@
             this.tbCustomerSearch.Size = new System.Drawing.Size(231, 28);
             this.tbCustomerSearch.TabIndex = 79;
             // 
-            // lvCustomerListViewCust
-            // 
-            this.lvCustomerListViewCust.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lvCustomerListViewCust.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.custID,
-            this.custFirstName,
-            this.custLastName});
-            this.lvCustomerListViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvCustomerListViewCust.FullRowSelect = true;
-            this.lvCustomerListViewCust.GridLines = true;
-            this.lvCustomerListViewCust.LabelWrap = false;
-            this.lvCustomerListViewCust.Location = new System.Drawing.Point(24, 127);
-            this.lvCustomerListViewCust.Margin = new System.Windows.Forms.Padding(2);
-            this.lvCustomerListViewCust.Name = "lvCustomerListViewCust";
-            this.lvCustomerListViewCust.Size = new System.Drawing.Size(506, 509);
-            this.lvCustomerListViewCust.TabIndex = 85;
-            this.lvCustomerListViewCust.UseCompatibleStateImageBehavior = false;
-            this.lvCustomerListViewCust.View = System.Windows.Forms.View.Details;
-            this.lvCustomerListViewCust.SelectedIndexChanged += new System.EventHandler(this.lvCustomerList_SelectedIndexChanged);
-            // 
             // btnBackViewCust
             // 
             this.btnBackViewCust.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -279,16 +255,100 @@
             this.btnBackViewCust.Text = "BACK";
             this.btnBackViewCust.UseVisualStyleBackColor = false;
             // 
+            // customerGridView
+            // 
+            this.customerGridView.AutoGenerateColumns = false;
+            this.customerGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.customerGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customerGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.customerIDDataGridViewTextBoxColumn,
+            this.custFirstNameDataGridViewTextBoxColumn,
+            this.custLastNameDataGridViewTextBoxColumn,
+            this.custCompanyNameDataGridViewTextBoxColumn,
+            this.custPhoneNumDataGridViewTextBoxColumn,
+            this.custAddressDataGridViewTextBoxColumn,
+            this.custAddLine2DataGridViewTextBoxColumn,
+            this.custCountyDataGridViewTextBoxColumn});
+            this.customerGridView.DataSource = this.customerBindingSource;
+            this.customerGridView.GridColor = System.Drawing.SystemColors.Control;
+            this.customerGridView.Location = new System.Drawing.Point(23, 122);
+            this.customerGridView.Name = "customerGridView";
+            this.customerGridView.Size = new System.Drawing.Size(507, 507);
+            this.customerGridView.TabIndex = 89;
+            // 
+            // stldb1DataSet
+            // 
+            this.stldb1DataSet.DataSetName = "stldb1DataSet";
+            this.stldb1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.stldb1DataSet;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // customerIDDataGridViewTextBoxColumn
+            // 
+            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "customer_ID";
+            this.customerIDDataGridViewTextBoxColumn.HeaderText = "customer_ID";
+            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
+            this.customerIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // custFirstNameDataGridViewTextBoxColumn
+            // 
+            this.custFirstNameDataGridViewTextBoxColumn.DataPropertyName = "custFirstName";
+            this.custFirstNameDataGridViewTextBoxColumn.HeaderText = "custFirstName";
+            this.custFirstNameDataGridViewTextBoxColumn.Name = "custFirstNameDataGridViewTextBoxColumn";
+            // 
+            // custLastNameDataGridViewTextBoxColumn
+            // 
+            this.custLastNameDataGridViewTextBoxColumn.DataPropertyName = "custLastName";
+            this.custLastNameDataGridViewTextBoxColumn.HeaderText = "custLastName";
+            this.custLastNameDataGridViewTextBoxColumn.Name = "custLastNameDataGridViewTextBoxColumn";
+            // 
+            // custCompanyNameDataGridViewTextBoxColumn
+            // 
+            this.custCompanyNameDataGridViewTextBoxColumn.DataPropertyName = "custCompanyName";
+            this.custCompanyNameDataGridViewTextBoxColumn.HeaderText = "custCompanyName";
+            this.custCompanyNameDataGridViewTextBoxColumn.Name = "custCompanyNameDataGridViewTextBoxColumn";
+            // 
+            // custPhoneNumDataGridViewTextBoxColumn
+            // 
+            this.custPhoneNumDataGridViewTextBoxColumn.DataPropertyName = "custPhoneNum";
+            this.custPhoneNumDataGridViewTextBoxColumn.HeaderText = "custPhoneNum";
+            this.custPhoneNumDataGridViewTextBoxColumn.Name = "custPhoneNumDataGridViewTextBoxColumn";
+            // 
+            // custAddressDataGridViewTextBoxColumn
+            // 
+            this.custAddressDataGridViewTextBoxColumn.DataPropertyName = "custAddress";
+            this.custAddressDataGridViewTextBoxColumn.HeaderText = "custAddress";
+            this.custAddressDataGridViewTextBoxColumn.Name = "custAddressDataGridViewTextBoxColumn";
+            // 
+            // custAddLine2DataGridViewTextBoxColumn
+            // 
+            this.custAddLine2DataGridViewTextBoxColumn.DataPropertyName = "custAddLine2";
+            this.custAddLine2DataGridViewTextBoxColumn.HeaderText = "custAddLine2";
+            this.custAddLine2DataGridViewTextBoxColumn.Name = "custAddLine2DataGridViewTextBoxColumn";
+            // 
+            // custCountyDataGridViewTextBoxColumn
+            // 
+            this.custCountyDataGridViewTextBoxColumn.DataPropertyName = "custCounty";
+            this.custCountyDataGridViewTextBoxColumn.HeaderText = "custCounty";
+            this.custCountyDataGridViewTextBoxColumn.Name = "custCountyDataGridViewTextBoxColumn";
+            // 
             // ViewCustomerDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1112, 728);
+            this.Controls.Add(this.customerGridView);
             this.Controls.Add(this.btnBackViewCust);
             this.Controls.Add(this.gbCustomerDetails);
             this.Controls.Add(this.btnAddCustomerViewCust);
-            this.Controls.Add(this.lvCustomerListViewCust);
             this.Controls.Add(this.tbCustomerSearch);
             this.Controls.Add(this.btnEditCustomerViewCust);
             this.Controls.Add(this.label2);
@@ -300,6 +360,9 @@
             this.Load += new System.EventHandler(this.ViewCustomerDetails_Load);
             this.gbCustomerDetails.ResumeLayout(false);
             this.gbCustomerDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stldb1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,14 +380,22 @@
         private System.Windows.Forms.Label lblCustFirstNameViewCust;
         private System.Windows.Forms.Label lblCompNameViewCust;
         private System.Windows.Forms.Button btnAddCustomerViewCust;
-        private System.Windows.Forms.ColumnHeader custLastName;
-        private System.Windows.Forms.ColumnHeader custFirstName;
-        private System.Windows.Forms.ColumnHeader custID;
         private System.Windows.Forms.Button btnEditCustomerViewCust;
         private System.Windows.Forms.Button btnDeleteCustomerViewCust;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbCustomerSearch;
-        private System.Windows.Forms.ListView lvCustomerListViewCust;
         private System.Windows.Forms.Button btnBackViewCust;
+        private System.Windows.Forms.DataGridView customerGridView;
+        private stldb1DataSet stldb1DataSet;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private stldb1DataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn custFirstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn custLastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn custCompanyNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn custPhoneNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn custAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn custAddLine2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn custCountyDataGridViewTextBoxColumn;
     }
 }

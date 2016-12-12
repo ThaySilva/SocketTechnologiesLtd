@@ -95,7 +95,7 @@ namespace SocketTechnologiesLtd
 
         private void btn_CreateRTQ_Click(object sender, EventArgs e)
         {
-            RtQ_Form rtq = new RtQ_Form();
+            RtQ_Form rtq = new RtQ_Form(model);
             rtq.MdiParent = this.MdiParent;
             rtq.Dock = DockStyle.Fill;
             rtq.Show();
@@ -155,6 +155,15 @@ namespace SocketTechnologiesLtd
             rga.Dock = DockStyle.Fill;
             rga.Show();
         }
+
+        private void btn_CSManageCustomers_Click(object sender, EventArgs e)
+        {
+            ViewCustomerDetails vcd = new ViewCustomerDetails();
+            vcd.MdiParent = this.MdiParent;
+            vcd.Dock = DockStyle.Fill;
+            vcd.Show();
+
+        }
         #endregion
 
         #region Destructors
@@ -175,5 +184,7 @@ namespace SocketTechnologiesLtd
             this.btn_Logout.Show();
         }
         #endregion
+
+        
     }
 }

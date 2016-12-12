@@ -58,7 +58,7 @@ namespace DataAccessLayer
         {
             con = new SqlConnection();
             //con.ConnectionString = "Data Source=sql3.student.litdom.lit.ie\\Team5;Initial Catalog=stldb1;Integrated Security=True";    //on college machine
-            con.ConnectionString = "Data Source=mssql3.gear.host;Initial Catalog=stldb1;User ID=stldb1;Password=alpha2omega!";        //outside connection
+            con.ConnectionString = "Data Source=mssql4.gear.host;Initial Catalog=stldb2;User ID=stldb2;Password=alpha2omega!";        //outside connection
             try
             {
                 con.Open();
@@ -240,7 +240,7 @@ namespace DataAccessLayer
         public string GetMax(string table, string column)
         {
             ds = new DataSet();
-            sql = "SELECT MAX(" + column + ") FROM " + db + "." + table;
+            sql = "SELECT MAX(" + column + ") FROM " + table;
             da = new SqlDataAdapter(sql, con);
             da.Fill(ds, table);
             return ds.Tables[table].Rows[0].ItemArray[0].ToString();

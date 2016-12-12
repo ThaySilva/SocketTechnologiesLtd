@@ -7,6 +7,9 @@ using System.Windows.Forms;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using Google.Apis.Drive.v3;
+using Google.Apis.Services;
+using BusinessLayer;
 
 namespace DocumentWriter
 {
@@ -21,9 +24,13 @@ namespace DocumentWriter
 
         public RtQ(string id, string custName, string custAdd, string RfQId, string text, DataGridView dataGrid)
         {
-            FileStream fs = new FileStream("..\\..\\Reports\\CustomerServices\\Refusal to Quote Reports\\RtQ" + id+".pdf", FileMode.Create, FileAccess.Write, FileShare.None);
+            string name = "RtQ" + id + ".pdf";
+            string path = "..\\..\\Reports\\" + name;
+
             Document doc = new Document(PageSize.A4, 36, 36, 10, 10);
-            PdfWriter writer = PdfWriter.GetInstance(doc, fs);
+            FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None);
+            PdfWriter wr = PdfWriter.GetInstance(doc, fs);
+
             doc.Open();
 
             Paragraph date = new Paragraph(dateTime.ToString("dd/MM/yyyy"));
@@ -112,6 +119,14 @@ namespace DocumentWriter
             doc.Add(sig);
 
             doc.Close();
+
+            string FolderId = "0B_ob9qFmHlBcMHNVSDB3YXZ5YkE";
+
+            Common_Rules.setPdf("Refusal to Quote " + id, path);
+
+            Common_Rules.setUpload(name, path, FolderId);
+
+            Common_Rules.setDatabaseUpload("RefusalToQuote_Report", dateTime.ToShortDateString());       
         }
     }
 }
