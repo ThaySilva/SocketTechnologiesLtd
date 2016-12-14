@@ -166,7 +166,7 @@ namespace SocketTechnologiesLtd
 
         }
 
- private void btn_ViewTERes_Click(object sender, EventArgs e)
+        private void btn_ViewTERes_Click(object sender, EventArgs e)
         {
             ViewTecnicalEnquiriesResponse ter = new ViewTecnicalEnquiriesResponse(model);
             ter.MdiParent = this.MdiParent;

@@ -20,6 +20,7 @@ namespace SocketTechnologiesLtd
         private static IDataLayer _data = DataLayer.GetInstance();
         private static IModel model = Model.GetInstance(_data);
         List<IWorkOrder> workOrders;
+        List<ILotTraveller> lotTravellers;
 
         public COE_Form()
         {
@@ -31,6 +32,9 @@ namespace SocketTechnologiesLtd
             model.WorkOrderList.Clear();
             model.FillWorkOrderList();
             workOrders = model.WorkOrderList;
+            model.LotTravellerList.Clear();
+            model.FillLotTravellerList();
+            lotTravellers = model.LotTravellerList;
             fillComboBox();
         }
 
@@ -61,7 +65,23 @@ namespace SocketTechnologiesLtd
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
+            string lotTravellerID = CustServices_Rules.GetProductionStage(int.Parse(WorkOrderID));
+            string productionProcess = "";
 
+            foreach (LotTraveller lt in lotTravellers)
+            {
+                if (lotTravellerID == lt.LotTavellerID.ToString())
+                {
+                    productionProcess = lt.ProductionProcess;
+                }
+            }
+
+            CreateAFieldRequestResponse fsrr = new CreateAFieldRequestResponse();
+            fsrr.metroTextBox5.Text = productionProcess;
+            fsrr.MdiParent = this.MdiParent;
+            fsrr.Dock = DockStyle.Fill;
+            fsrr.Show();
+            this.Close();
         }
 
         private void fillComboBox()

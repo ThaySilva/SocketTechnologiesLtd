@@ -94,5 +94,10 @@ namespace SocketTechnologiesLtd
         {
 
         }
+
+        private void metroTile2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

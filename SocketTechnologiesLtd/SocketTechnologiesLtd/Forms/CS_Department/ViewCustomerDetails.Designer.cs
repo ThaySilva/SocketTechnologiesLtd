@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""}, -1, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.MenuText, null);
             this.lblEmailViewCust = new System.Windows.Forms.Label();
             this.gbCustomerDetails = new System.Windows.Forms.GroupBox();
             this.lblCustIDViewCust = new System.Windows.Forms.Label();
@@ -48,15 +58,30 @@
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stldb1DataSet = new SocketTechnologiesLtd.stldb1DataSet();
             this.customerTableAdapter = new SocketTechnologiesLtd.stldb1DataSetTableAdapters.CustomerTableAdapter();
-            this.lb_customers = new System.Windows.Forms.ListBox();
             this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.stldb2DataSet = new SocketTechnologiesLtd.stldb2DataSet();
             this.customerTableAdapter1 = new SocketTechnologiesLtd.stldb2DataSetTableAdapters.CustomerTableAdapter();
+            this.groupBoxViewCustomers = new System.Windows.Forms.GroupBox();
+            this.lv_customers = new System.Windows.Forms.ListView();
+            this.CustomerID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.companyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PhoneCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.address1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.address2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.address3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.customerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.stldb2DataSet1 = new SocketTechnologiesLtd.stldb2DataSet1();
+            this.customerTableAdapter2 = new SocketTechnologiesLtd.stldb2DataSet1TableAdapters.CustomerTableAdapter();
             this.gbCustomerDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stldb1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stldb2DataSet)).BeginInit();
+            this.groupBoxViewCustomers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stldb2DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmailViewCust
@@ -178,7 +203,8 @@
             this.btnAddCustomerViewCust.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddCustomerViewCust.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnAddCustomerViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCustomerViewCust.Location = new System.Drawing.Point(551, 187);
+            this.btnAddCustomerViewCust.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAddCustomerViewCust.Location = new System.Drawing.Point(550, 187);
             this.btnAddCustomerViewCust.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCustomerViewCust.Name = "btnAddCustomerViewCust";
             this.btnAddCustomerViewCust.Size = new System.Drawing.Size(172, 45);
@@ -192,7 +218,8 @@
             this.btnEditCustomerViewCust.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEditCustomerViewCust.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnEditCustomerViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditCustomerViewCust.Location = new System.Drawing.Point(551, 237);
+            this.btnEditCustomerViewCust.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnEditCustomerViewCust.Location = new System.Drawing.Point(550, 288);
             this.btnEditCustomerViewCust.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditCustomerViewCust.Name = "btnEditCustomerViewCust";
             this.btnEditCustomerViewCust.Size = new System.Drawing.Size(172, 45);
@@ -206,7 +233,8 @@
             this.btnDeleteCustomerViewCust.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDeleteCustomerViewCust.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnDeleteCustomerViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteCustomerViewCust.Location = new System.Drawing.Point(551, 288);
+            this.btnDeleteCustomerViewCust.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDeleteCustomerViewCust.Location = new System.Drawing.Point(550, 392);
             this.btnDeleteCustomerViewCust.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteCustomerViewCust.Name = "btnDeleteCustomerViewCust";
             this.btnDeleteCustomerViewCust.Size = new System.Drawing.Size(172, 45);
@@ -231,6 +259,7 @@
             // tbCustomerSearch
             // 
             this.tbCustomerSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbCustomerSearch.BackColor = System.Drawing.Color.DimGray;
             this.tbCustomerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCustomerSearch.Location = new System.Drawing.Point(299, 81);
             this.tbCustomerSearch.Margin = new System.Windows.Forms.Padding(2);
@@ -241,8 +270,9 @@
             // btnBackViewCust
             // 
             this.btnBackViewCust.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBackViewCust.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBackViewCust.BackColor = System.Drawing.Color.White;
             this.btnBackViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackViewCust.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBackViewCust.Location = new System.Drawing.Point(918, 661);
             this.btnBackViewCust.Margin = new System.Windows.Forms.Padding(2);
             this.btnBackViewCust.Name = "btnBackViewCust";
@@ -250,6 +280,7 @@
             this.btnBackViewCust.TabIndex = 88;
             this.btnBackViewCust.Text = "BACK";
             this.btnBackViewCust.UseVisualStyleBackColor = false;
+            this.btnBackViewCust.Click += new System.EventHandler(this.btnBackViewCust_Click);
             // 
             // customerBindingSource
             // 
@@ -265,21 +296,6 @@
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
             // 
-            // lb_customers
-            // 
-            this.lb_customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_customers.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.customerBindingSource1, "customer_ID", true));
-            this.lb_customers.DataSource = this.customerBindingSource1;
-            this.lb_customers.DisplayMember = "customer_ID";
-            this.lb_customers.FormattingEnabled = true;
-            this.lb_customers.Location = new System.Drawing.Point(23, 132);
-            this.lb_customers.Name = "lb_customers";
-            this.lb_customers.Size = new System.Drawing.Size(278, 511);
-            this.lb_customers.TabIndex = 90;
-            this.lb_customers.ValueMember = "customer_ID";
-            // 
             // customerBindingSource1
             // 
             this.customerBindingSource1.DataMember = "Customer";
@@ -294,20 +310,106 @@
             // 
             this.customerTableAdapter1.ClearBeforeFill = true;
             // 
+            // groupBoxViewCustomers
+            // 
+            this.groupBoxViewCustomers.Controls.Add(this.lv_customers);
+            this.groupBoxViewCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.groupBoxViewCustomers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBoxViewCustomers.Location = new System.Drawing.Point(23, 136);
+            this.groupBoxViewCustomers.Name = "groupBoxViewCustomers";
+            this.groupBoxViewCustomers.Size = new System.Drawing.Size(507, 515);
+            this.groupBoxViewCustomers.TabIndex = 91;
+            this.groupBoxViewCustomers.TabStop = false;
+            this.groupBoxViewCustomers.Text = "List of Customers";
+            // 
+            // lv_customers
+            // 
+            this.lv_customers.BackColor = System.Drawing.Color.DimGray;
+            this.lv_customers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lv_customers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.CustomerID,
+            this.FirstName,
+            this.LastName,
+            this.companyName,
+            this.PhoneCol,
+            this.address1,
+            this.address2,
+            this.address3});
+            this.lv_customers.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.customerBindingSource2, "customer_ID", true));
+            this.lv_customers.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lv_customers.FullRowSelect = true;
+            this.lv_customers.GridLines = true;
+            this.lv_customers.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.lv_customers.Location = new System.Drawing.Point(15, 39);
+            this.lv_customers.Name = "lv_customers";
+            this.lv_customers.Size = new System.Drawing.Size(474, 450);
+            this.lv_customers.TabIndex = 0;
+            this.lv_customers.UseCompatibleStateImageBehavior = false;
+            this.lv_customers.SelectedIndexChanged += new System.EventHandler(this.lv_customers_SelectedIndexChanged);
+            // 
+            // CustomerID
+            // 
+            this.CustomerID.Text = "ID";
+            // 
+            // FirstName
+            // 
+            this.FirstName.Text = "First Name";
+            // 
+            // LastName
+            // 
+            this.LastName.Text = "Last Name";
+            // 
+            // companyName
+            // 
+            this.companyName.Text = "Company Name";
+            // 
+            // PhoneCol
+            // 
+            this.PhoneCol.Text = "Phone";
+            // 
+            // address1
+            // 
+            this.address1.Text = "add1";
+            // 
+            // address2
+            // 
+            this.address2.Text = "add2";
+            // 
+            // address3
+            // 
+            this.address3.Text = "add3";
+            // 
+            // customerBindingSource2
+            // 
+            this.customerBindingSource2.DataMember = "Customer";
+            this.customerBindingSource2.DataSource = this.stldb2DataSet1;
+            // 
+            // stldb2DataSet1
+            // 
+            this.stldb2DataSet1.DataSetName = "stldb2DataSet1";
+            this.stldb2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerTableAdapter2
+            // 
+            this.customerTableAdapter2.ClearBeforeFill = true;
+            // 
             // ViewCustomerDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1112, 728);
-            this.Controls.Add(this.lb_customers);
+            this.Controls.Add(this.groupBoxViewCustomers);
             this.Controls.Add(this.btnBackViewCust);
             this.Controls.Add(this.gbCustomerDetails);
             this.Controls.Add(this.btnAddCustomerViewCust);
             this.Controls.Add(this.tbCustomerSearch);
+            this.Controls.Add(this.btnDeleteCustomerViewCust);
             this.Controls.Add(this.btnEditCustomerViewCust);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnDeleteCustomerViewCust);
+            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "ViewCustomerDetails";
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "View Customer Details";
@@ -319,6 +421,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.stldb1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stldb2DataSet)).EndInit();
+            this.groupBoxViewCustomers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stldb2DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,9 +449,21 @@
         private stldb1DataSet stldb1DataSet;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private stldb1DataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
-        private System.Windows.Forms.ListBox lb_customers;
         private stldb2DataSet stldb2DataSet;
         private System.Windows.Forms.BindingSource customerBindingSource1;
         private stldb2DataSetTableAdapters.CustomerTableAdapter customerTableAdapter1;
+        private System.Windows.Forms.GroupBox groupBoxViewCustomers;
+        private stldb2DataSet1 stldb2DataSet1;
+        private System.Windows.Forms.BindingSource customerBindingSource2;
+        private stldb2DataSet1TableAdapters.CustomerTableAdapter customerTableAdapter2;
+        private System.Windows.Forms.ListView lv_customers;
+        private System.Windows.Forms.ColumnHeader CustomerID;
+        private System.Windows.Forms.ColumnHeader FirstName;
+        private System.Windows.Forms.ColumnHeader LastName;
+        private System.Windows.Forms.ColumnHeader companyName;
+        private System.Windows.Forms.ColumnHeader PhoneCol;
+        private System.Windows.Forms.ColumnHeader address1;
+        private System.Windows.Forms.ColumnHeader address2;
+        private System.Windows.Forms.ColumnHeader address3;
     }
 }

@@ -30,13 +30,14 @@ namespace SocketTechnologiesLtd
             this.TopMost = true;
             model = _Model;
             customers = model.CustomerList;
-         //   model.FillDocumentList("RequestForQuotation_Report", "0");
-          //  documents = model.DocumentList;
+        
 
         }
 
         private void ViewCustomerDetails_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'stldb2DataSet1.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter2.Fill(this.stldb2DataSet1.Customer);
             // TODO: This line of code loads data into the 'stldb2DataSet.Customer' table. You can move, or remove it, as needed.
             this.customerTableAdapter1.Fill(this.stldb2DataSet.Customer);
             //TODO: This line of code loads data into the 'stldb1DataSet.Customer' table.You can move, or remove it, as needed.
@@ -60,37 +61,37 @@ namespace SocketTechnologiesLtd
             ac.MdiParent = this.MdiParent;
             ac.Dock = DockStyle.Fill;
             ac.Show();
-            ////if (validateFields())
-            ////{
-            //    ICustomer duplicateCustomer = model.CustomerList.FirstOrDefault(cust => cust.CustLastName == cusName.Text.Trim());
-
-            //    if (duplicateCustomer == null)
-            //    {
-            //    try
-            //    {
-            //        CustServices_Rules.AddCustomer(Convert.ToInt32(cusName.Text), "", "", "", "", new string[] {"", "", ""});
-
-            //            MessageBox.Show("The customer " + cusName.Text + " was successfully created!");
-            //            this.Close();
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            MessageBox.Show(ex.Message);
-            //        }
-            //    }
-            //    else
-            //        MessageBox.Show("The customer " + cusName.Text + " already exists please try another company name!");
-            //}
         }
 
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
-            EditCustomerDetails ec = new EditCustomerDetails();
+            
+            if (lv_customers.SelectedItems.Count != 0)
+            {
+                String id = lv_customers.SelectedItems[0].SubItems[0].Text;
+                if (id != null)
+                {
+                    EditCustomerDetails ec = new EditCustomerDetails(Convert.ToInt16(id));
+                    ec.MdiParent = this.MdiParent;
+                    ec.Dock = DockStyle.Fill;
+                    ec.Show();
+                }
+            }
         }
 
-        private void btnDeleteCustomer_Click(object sender, EventArgs e)
+private void btnDeleteCustomer_Click(object sender, EventArgs e)
         {
-
+        
+            if (lv_customers.SelectedItems.Count != 0)
+            {
+                String id = lv_customers.SelectedItems[0].SubItems[0].Text;
+                if (MessageBox.Show("Are you sure you want to delete the customer " + id +" ?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    CustServices_Rules.DeleteCustomer(Convert.ToInt16(id));
+                    MessageBox.Show("The customer " + id  +" was successfully deleted!");
+                    this.Close();
+                }
+            }
         }
 
         private void lvCustomerList_SelectedIndexChanged(object sender, EventArgs e)
@@ -155,6 +156,7 @@ namespace SocketTechnologiesLtd
             }
 
             //customerGridView.DataSource = Customers;
+           
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
@@ -168,6 +170,51 @@ namespace SocketTechnologiesLtd
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void SetCustomerDetails(string custId, string compName, string FirstName, string LastName, string phone, string Address1, string Address2, string Address3)
+        {
+            lblCustIDViewCust.Text = custId;
+            lblCompNameViewCust.Text = compName;
+            lblCustFirstNameViewCust.Text = FirstName;
+            lblCusSurnameViewCust.Text = LastName;
+            lblAddress1ViewCust.Text = Address1;
+            lblAddress2ViewCust.Text = Address2;
+            lblAddress3ViewCust.Text = Address3;
+            lblPhoneNoViewCust.Text = phone;
+        }
+        private void lv_customers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // check whether an item is selected
+            if (lv_customers.SelectedItems.Count != 0)
+            {
+                // Enable buttons
+               btnDeleteCustomerViewCust.Enabled = true;
+               btnEditCustomerViewCust.Enabled = true;
+
+                // get id of selected employee
+                string id = lv_customers.SelectedItems[0].SubItems[0].Text;
+
+                // get details of a customer that is associated with selected customer
+                 
+
+                // use these details to populate the textboxes
+                SetCustomerDetails(customers[0].ToString(), customers[1].ToString(), customers[2].ToString(), customers[3].ToString(), customers[4].ToString(), customers[5].ToString(), customers[6].ToString(), customers[7].ToString());
+            }
+            else
+            {
+                // if SelectedItems.Count is zero, reset labels
+                SetCustomerDetails("", "", "", "", "", "", "", "");
+
+                // disable buttons
+                btnDeleteCustomerViewCust.Enabled = false;
+                btnEditCustomerViewCust.Enabled = false;
+            }
+        }
+
+        private void btnBackViewCust_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     #endregion

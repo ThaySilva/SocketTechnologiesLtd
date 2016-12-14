@@ -44,15 +44,16 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txt_rtqTxt = new MetroFramework.Controls.MetroTextBox();
             this.btn_Exit = new MetroFramework.Controls.MetroButton();
-            this.txt_customItems = new MetroFramework.Controls.MetroTextBox();
+            this.lst_customItems = new System.Windows.Forms.DataGridView();
             this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lst_customItems)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel1
             // 
             this.metroPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroPanel1.BackgroundImage")));
             this.metroPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroPanel1.Controls.Add(this.txt_customItems);
+            this.metroPanel1.Controls.Add(this.lst_customItems);
             this.metroPanel1.Controls.Add(this.comboBox_rfq);
             this.metroPanel1.Controls.Add(this.btn_Cancel);
             this.metroPanel1.Controls.Add(this.btn_Create);
@@ -257,17 +258,16 @@
             this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
-            // txt_customItems
+            // lst_customItems
             // 
-            this.txt_customItems.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_customItems.Enabled = false;
-            this.txt_customItems.Location = new System.Drawing.Point(27, 214);
-            this.txt_customItems.Multiline = true;
-            this.txt_customItems.Name = "txt_customItems";
-            this.txt_customItems.ReadOnly = true;
-            this.txt_customItems.Size = new System.Drawing.Size(507, 120);
-            this.txt_customItems.TabIndex = 40;
-            this.txt_customItems.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lst_customItems.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lst_customItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.lst_customItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lst_customItems.Enabled = false;
+            this.lst_customItems.Location = new System.Drawing.Point(38, 203);
+            this.lst_customItems.Name = "lst_customItems";
+            this.lst_customItems.Size = new System.Drawing.Size(496, 150);
+            this.lst_customItems.TabIndex = 40;
             // 
             // RtQ_Form
             // 
@@ -285,6 +285,7 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lst_customItems)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,6 +307,6 @@
         private MetroFramework.Controls.MetroTile btn_Create;
         private MetroFramework.Controls.MetroTile btn_Cancel;
         private MetroFramework.Controls.MetroComboBox comboBox_rfq;
-        private MetroFramework.Controls.MetroTextBox txt_customItems;
+        private System.Windows.Forms.DataGridView lst_customItems;
     }
 }

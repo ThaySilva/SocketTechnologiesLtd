@@ -31,7 +31,7 @@ namespace SocketTechnologiesLtd
             model = _Model;
 
             txt_userId.Text = id.getUserId().ToString();
-             txt_employeeId.Text = id.getEmpId().ToString();
+            txt_employeeId.Text = id.getEmpId().ToString();
         }
 
         private void btn_Create_Click(object sender, EventArgs e)

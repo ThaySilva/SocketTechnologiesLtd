@@ -516,6 +516,7 @@
             // 
             this.txt_CustomSpecs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_CustomSpecs.Location = new System.Drawing.Point(78, 254);
+            this.txt_CustomSpecs.Multiline = true;
             this.txt_CustomSpecs.Name = "txt_CustomSpecs";
             this.txt_CustomSpecs.Size = new System.Drawing.Size(470, 61);
             this.txt_CustomSpecs.TabIndex = 8;

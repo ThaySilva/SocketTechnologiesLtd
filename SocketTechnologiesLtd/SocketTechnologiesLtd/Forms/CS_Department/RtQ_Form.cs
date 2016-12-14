@@ -21,6 +21,7 @@ namespace SocketTechnologiesLtd
         IdIncrement id = new IdIncrement();
         List<ICustomer> customers;
         List<IDocument> documents;
+        List<IProduct> customParts;
         string rtqId = "";
         string fileId = "";
         int rfqId;
@@ -42,6 +43,7 @@ namespace SocketTechnologiesLtd
             model.FillDocumentList("RequestForQuotation_Report", false);
             documents = model.DocumentList;
             customers = model.CustomerList;
+            customParts = model.CustomProductList;
             fillComboBox();
 
             rtqId = Convert.ToString(id.getReportID("RefusalToQuote_Report"));
@@ -68,7 +70,7 @@ namespace SocketTechnologiesLtd
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
-            RtQ rtq = new RtQ(rtqId, txt_CustomerName.Text, txt_custAdd.Text, rfqId.ToString(), txt_rtqTxt.Text, txt_customItems.Text, contact);
+            RtQ rtq = new RtQ(rtqId, txt_CustomerName.Text, txt_custAdd.Text, rfqId.ToString(), txt_rtqTxt.Text, lst_customItems, contact);
             string form = "";
             PDF_Preview viewer = new PDF_Preview(form);
             viewer.MdiParent = this.MdiParent;
@@ -132,33 +134,35 @@ namespace SocketTechnologiesLtd
             custAdd += pdfText.Split('\n')[4];
             txt_custAdd.Text = custAdd;
 
-            string text = "";
-            string custom = "";
-            for (int i = 0; i < pdfText.Length; i++)
+            DataTable Products = new DataTable("Products");
+
+            DataColumn p0 = new DataColumn("Custom Part Name:");
+            DataColumn p1 = new DataColumn("Specifications:");
+            DataColumn p2 = new DataColumn("Quantity:");
+
+            Products.Columns.Add(p0);
+            Products.Columns.Add(p1);
+            Products.Columns.Add(p2);
+
+            DataRow pRow;
+
+            foreach (Product custom in customParts)
             {
-                text = pdfText.Split('\n')[i];
-                if (text == "CUSTOM ITEMS")
-                {
-                    for (int j = i; j < pdfText.Length; j++)
-                    {
-                        text = pdfText.Split('\n')[j];
-                        if (text == "Custom Part Name Specifications Quantity")
-                        {
-                            j++;
-                            while (text != " ")
-                            {
-                                text = pdfText.Split('\n')[j];
-                                custom += pdfText.Split('\n')[j] + "\r\n";
-                                j++;
-                            }
-                            break;
-                        }
-                    }
-                    break;
+                pRow = Products.NewRow();
+
+                if (rfqId == custom.RFQ_ID)
+                {  
+                    pRow["Custom Part Name:"] = custom.ProductName;
+                    pRow["Specifications:"] = custom.ProductDescription;
+                    pRow["Quantity:"] = custom.Quantity.ToString();
+
+                    Products.Rows.Add(pRow);
                 }
             }
-            txt_customItems.Text = custom;
 
+            lst_customItems.DataSource = Products;
+
+            string text = "";
             for(int k = 0; k < pdfText.Length; k++)
             {
                 text = pdfText.Split('\n')[k];

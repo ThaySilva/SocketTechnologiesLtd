@@ -326,6 +326,12 @@
     <Compile Include="Forms\PROD_Department\Customer_Order_Status.designer.cs">
       <DependentUpon>Customer_Order_Status.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PROD_Department\Edit_DeleteProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PROD_Department\Edit_DeleteProduct.Designer.cs">
+      <DependentUpon>Edit_DeleteProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PROD_Department\FGTN_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -494,6 +500,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>stldb2DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="stldb2DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>stldb2DataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Container.resx">
       <DependentUpon>Container.cs</DependentUpon>
     </EmbeddedResource>
@@ -607,6 +618,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PROD_Department\Customer_Order_Status.resx">
       <DependentUpon>Customer_Order_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PROD_Department\Edit_DeleteProduct.resx">
+      <DependentUpon>Edit_DeleteProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PROD_Department\FGTN_Form.resx">
       <DependentUpon>FGTN_Form.cs</DependentUpon>
@@ -727,6 +741,17 @@
     </None>
     <None Include="stldb2DataSet.xss">
       <DependentUpon>stldb2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="stldb2DataSet1.xsc">
+      <DependentUpon>stldb2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="stldb2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>stldb2DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="stldb2DataSet1.xss">
+      <DependentUpon>stldb2DataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

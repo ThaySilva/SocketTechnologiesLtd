@@ -20,7 +20,7 @@ namespace DocumentWriter
             throw new System.NotImplementedException();
         }
 
-        public RtQ(string id, string custName, string custAdd, string RfQId, string text, string customItems, string contact)
+        public RtQ(string id, string custName, string custAdd, string RfQId, string text, DataGridView dataGrid, string contact)
         {
             string name = "RtQ" + id + ".pdf";
             string path = "..\\..\\Reports\\" + name;
@@ -101,17 +101,17 @@ namespace DocumentWriter
             items.AddCell(header1);
             items.AddCell(header2);
             items.AddCell(header3);
-            //foreach (DataGridViewRow row in dataGrid.Rows)
-            //{
-            //    foreach (DataGridViewCell cell in row.Cells)
-            //    {
-            //        try
-            //        {
-            //            items.AddCell(cell.Value.ToString());
-            //        }
-            //        catch { }
-            //    }
-            //}
+            foreach (DataGridViewRow row in dataGrid.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    try
+                    {
+                        items.AddCell(cell.Value.ToString());
+                    }
+                    catch { }
+                }
+            }
             doc.Add(items);
 
             doc.Add(Chunk.NEWLINE);

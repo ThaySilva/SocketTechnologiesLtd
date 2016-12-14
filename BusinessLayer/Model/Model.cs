@@ -25,11 +25,11 @@ namespace BusinessLayer
         private List<IMaterial> materialsList;
         private List<IProduct> productList;
         private List<IProduct> customProductList;
-        private List<IOrder> orderList;
         private List<IDocument> documentList;
         private List<ILineItem> lineItemList;
         private List<ITechnicalEnquiry> technicalEnquiryList;
         private List<IWorkOrder> workOrderList;
+        private List<ILotTraveller> lotTravellerList;
         #endregion
 
         #region Instance Properties
@@ -80,11 +80,6 @@ namespace BusinessLayer
             get { return customProductList; }
         }
 
-        public List<IOrder> OrderList
-        {
-            get { return orderList; }
-        }
-
         public List<IDocument> DocumentList
         {
             get { return documentList; }
@@ -98,6 +93,11 @@ namespace BusinessLayer
         public List<IWorkOrder> WorkOrderList
         {
             get { return workOrderList; }
+        }
+
+        public List<ILotTraveller> LotTravellerList
+        {
+            get { return lotTravellerList; }
         }
         #endregion
 
@@ -120,11 +120,11 @@ namespace BusinessLayer
             materialsList = new List<IMaterial>();
             productList = new List<IProduct>();
             customProductList = new List<IProduct>();
-            orderList = new List<IOrder>();
             documentList = new List<IDocument>();
             lineItemList = new List<ILineItem>();
             technicalEnquiryList = new List<ITechnicalEnquiry>();
             workOrderList = new List<IWorkOrder>();
+            lotTravellerList = new List<ILotTraveller>();
 
             dataLayer = DataLayer;
         }
@@ -226,19 +226,9 @@ namespace BusinessLayer
             foreach(String[] row in customProductData)
             {
                 Guid uid = Guid.NewGuid();
-                GenericFactory<IProduct>.Register(uid, () => new Product(Convert.ToInt16(row[0]), row[1], row[2], Convert.ToInt16(row[3])));
+                GenericFactory<IProduct>.Register(uid, () => new Product(Convert.ToInt16(row[0]), row[1], row[2], Convert.ToInt16(row[3]), Convert.ToInt16(row[4])));
                 IProduct customProduct = GenericFactory<IProduct>.Create(uid);
                 customProductList.Add(customProduct);
-            }
-        }
-
-        public void FillOrderList()
-        {
-            List<string[]> orderData = DataLayer.GetTableData("orders");
-
-            foreach (String[] row in orderData)
-            {
-                //orderList.Add(OrderFactory.GetOrder(new string[] { row[0], row[1], row[2], row[3] }));
             }
         }
 
@@ -281,8 +271,6 @@ namespace BusinessLayer
                 ILineItem lineItem = GenericFactory<ILineItem>.Create(uid);
                 LineItemList.Add(lineItem);
             }
-
-
         }
 
         public void FillWorkOrderList()
@@ -297,7 +285,6 @@ namespace BusinessLayer
                 DataLayer.SetCriteria("WorkOrder_WorkOrder_ID", row[0]);
                 List<string[]> workOrderData1 = DataLayer.GetTableData("WorkOrder_has_STLProduct", "WorkOrder", columns1);
 
-
                 foreach (String[] row1 in workOrderData1)
                 {
                     Guid uid = Guid.NewGuid();
@@ -305,14 +292,21 @@ namespace BusinessLayer
                     IWorkOrder workOrder = GenericFactory<IWorkOrder>.Create(uid);
                     workOrderList.Add(workOrder);
                 }
-
-
-
             }
-
         }
 
+        public void FillLotTravellerList()
+        {
+            List<string[]> lotTravellerData = DataLayer.GetTableData("LotTraveller");
 
+            foreach (String[] row in lotTravellerData)
+            {
+                Guid uid = Guid.NewGuid();
+                GenericFactory<ILotTraveller>.Register(uid, () => new LotTraveller(Convert.ToInt16(row[0]), row[1]));
+                ILotTraveller lotTraveller = GenericFactory<ILotTraveller>.Create(uid);
+                lotTravellerList.Add(lotTraveller);
+            }
+        }
         #endregion
 
     }

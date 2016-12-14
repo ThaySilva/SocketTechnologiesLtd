@@ -8,10 +8,10 @@ namespace BusinessEntities
 {
     public class IWorkOrder
     {
-        int WorkOrderID;
-        int CustomerID;
-        int STLProductID;
-        int Quantity;
-        DateTime DateRequired;
+        int WorkOrderID { get; set; }
+        int CustomerID { get; set; }
+        int STLProductID { get; set; }
+        int Quantity { get; set; }
+        DateTime DateRequired { get; set; }
     }
 }

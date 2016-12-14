@@ -33,6 +33,7 @@
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cust_Purchase_Order));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.quote_Ref_CBox = new MetroFramework.Controls.MetroComboBox();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
@@ -43,7 +44,10 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.product_ComboBox = new MetroFramework.Controls.MetroComboBox();
             this.ccancel_button = new MetroFramework.Controls.MetroButton();
@@ -62,11 +66,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.Return_button = new MetroFramework.Controls.MetroButton();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +102,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1301, 742);
             this.panel1.TabIndex = 0;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroButton2.Location = new System.Drawing.Point(423, 443);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(164, 34);
+            this.metroButton2.TabIndex = 58;
+            this.metroButton2.Text = "Remove From Order";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
             // 
             // quote_Ref_CBox
             // 
@@ -190,7 +200,6 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6,
@@ -216,10 +225,25 @@
             this.columnHeader2.Text = "Product";
             this.columnHeader2.Width = 187;
             // 
-            // columnHeader3
+            // columnHeader4
             // 
-            this.columnHeader3.Text = "Date Required";
-            this.columnHeader3.Width = 124;
+            this.columnHeader4.Text = "Quantity";
+            this.columnHeader4.Width = 61;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Line Price";
+            this.columnHeader5.Width = 92;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Vat";
+            this.columnHeader6.Width = 51;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Total Line Price";
+            this.columnHeader7.Width = 95;
             // 
             // metroButton1
             // 
@@ -416,37 +440,6 @@
             this.Return_button.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Return_button.Click += new System.EventHandler(this.metroButton2_Click);
             // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Quantity";
-            this.columnHeader4.Width = 61;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Line Price";
-            this.columnHeader5.Width = 92;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Vat";
-            this.columnHeader6.Width = 51;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Total Line Price";
-            this.columnHeader7.Width = 95;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroButton2.Location = new System.Drawing.Point(423, 443);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(164, 34);
-            this.metroButton2.TabIndex = 58;
-            this.metroButton2.Text = "Remove From Order";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
-            // 
             // Cust_Purchase_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,7 +469,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroComboBox product_ComboBox;
         private MetroFramework.Controls.MetroButton ccancel_button;

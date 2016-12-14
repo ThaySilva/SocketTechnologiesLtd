@@ -19,6 +19,7 @@ namespace BusinessEntities
         private double productVAT;
         private string[,] productMaterials;
         private int quantity;
+        private int rfqId;
         #endregion
 
         #region Instance Properties
@@ -63,6 +64,12 @@ namespace BusinessEntities
             get { return quantity; }
             set { quantity = value; }
         }
+
+        public int RFQ_ID
+        {
+            get { return rfqId; }
+            set { rfqId = value; }
+        }
         #endregion
 
         #region Constructor
@@ -71,12 +78,13 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public Product(int prodId, string prodName, string prodDescription, int prodQuantity)
+        public Product(int prodId, string prodName, string prodDescription, int prodQuantity, int rfq_id)
         {
             this.productId = prodId;
             this.productName = prodName;
             this.productDescription = prodDescription;
             this.quantity = prodQuantity;
+            this.rfqId = rfq_id;
         }
 
         public Product(int prodId, string prodName, string prodDescription, double prodPrice, double prodVAT, string[,] prodMaterials)

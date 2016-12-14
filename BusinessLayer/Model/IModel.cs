@@ -15,11 +15,11 @@ namespace BusinessLayer
         List<ICustomer> CustomerList { get; }
         List<IProduct> ProductList { get; }
         List<IProduct> CustomProductList { get; }
-        List<IOrder> OrderList { get; }
         List<IDocument> DocumentList { get; }
         List<ILineItem> LineItemList { get; }
         List<IMaterial> MaterialsList { get; }
         List<IWorkOrder> WorkOrderList { get; }
+        List<ILotTraveller> LotTravellerList { get; }
         void FillEmployeeList();
         void FillUserList();
         void FillCustomerList();
@@ -30,6 +30,7 @@ namespace BusinessLayer
         void FillDocumentList(string table, bool criteria);
         void FillLineItemList();
         void FillWorkOrderList();
+        void FillLotTravellerList();
 
 
 

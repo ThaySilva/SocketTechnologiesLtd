@@ -28,8 +28,8 @@ namespace SocketTechnologiesLtd
         List<ICustomer> customers;
         List<IProduct> products;
         List<IDocument> documents;
-        string cpoId = "";
-        string fileId = "";
+        //string cpoId = "";
+        //string fileId = "";
         int line_ID = 0;
         #endregion
 
@@ -48,8 +48,8 @@ namespace SocketTechnologiesLtd
             //quote_Ref_box.Text = quoteRef.getReportID("").ToString();
             products = model.ProductList;
             customers = model.CustomerList;
-            model.FillDocumentList("Quotation_Out");
-            model.FillDocumentList("CustomerPurchaseOrder_Report", false);
+             model.FillDocumentList("Quotation_Out_Report");
+          //  model.FillDocumentList("CustomerPurchaseOrder_Report", false);
 
             documents = model.DocumentList;
             fillCustomer_comboBox();
@@ -210,35 +210,33 @@ namespace SocketTechnologiesLtd
             {
                 if (prod.ProductName.Equals(product_ComboBox.SelectedItem.ToString().Trim()))
                 {
+                    LineItem Item = new LineItem(line_ID, prod, Convert.ToInt16(quantity_box.Text), Convert.ToDouble(line_price_box.Text), Convert.ToDouble(VAT_textBox.Text), Convert.ToDouble(line_total_box.Text));
                     lvi = new ListViewItem();
-                    lvi.Text = line_ID.ToString();
+                    lvi.Text = Item.LineID.ToString();
 
                     lvsi1 = new ListViewItem.ListViewSubItem();
-                    lvsi1.Text = prod.ProductName.ToString();
+                    lvsi1.Text = Item.LineItemProduct.ProductName.ToString();
                     lvi.SubItems.Add(lvsi1);
 
-                    lvsi2 = new ListViewItem.ListViewSubItem();
-                    lvsi2.Text = datePicker.Value.ToString("dd/MM/yyyy");
-                    lvi.SubItems.Add(lvsi2);
-
                     lvsi3 = new ListViewItem.ListViewSubItem();
-                    lvsi3.Text = int.Parse(quantity_box.Text).ToString();
+                    lvsi3.Text = Item.Quantity.ToString();
                     lvi.SubItems.Add(lvsi3);
 
                     lvsi4 = new ListViewItem.ListViewSubItem();
-                    lvsi4.Text = line_price_box.Text.ToString();
+                    lvsi4.Text = Item.GetLinePrice().ToString();
                     lvi.SubItems.Add(lvsi4);
 
                     lvsi5 = new ListViewItem.ListViewSubItem();
-                    lvsi5.Text = VAT_textBox.Text.ToString();
+                    lvsi5.Text = Item.VAT.ToString();
                     lvi.SubItems.Add(lvsi5);
 
                     lvsi6 = new ListViewItem.ListViewSubItem();
-                    lvsi6.Text = line_total_box.Text.ToString();
+                    lvsi6.Text = Item.GetLineTotal().ToString();
                     lvi.SubItems.Add(lvsi6);
 
                     listView1.Items.Add(lvi);
                 }
+
             }
             listView1.EndUpdate();
             listView1.Enabled = true;
@@ -251,8 +249,10 @@ namespace SocketTechnologiesLtd
         {
             if (listView1.SelectedItems.Count > 0)
             {
-                int selectedId = int.Parse(listView1.SelectedItems[0].SubItems[0].Text);
-                listView1.SelectedItems.Clear();
+                foreach (ListViewItem eachItem in listView1.SelectedItems)
+                {
+                    listView1.Items.Remove(eachItem);
+                }
             }
             else
             {
@@ -263,7 +263,7 @@ namespace SocketTechnologiesLtd
         private void create_order_button_Click(object sender, EventArgs e)
         {
 
-            Cust_Purchase_Order cusPurOrder = new Cust_Purchase_Order(model);
+            //CustomerPurchaseOrder cusPurOrder = new CustomerPurchaseOrder();
 
 
 

@@ -16,11 +16,13 @@ namespace BusinessLayer
         private int userId;
         private int employeeId;
         private int customerId;
+        private int productId;
         private int lineItemID;
 
         List<IUser> user = model.UserList;
         List<IEmployee> emp = model.EmployeeList;
         List<ICustomer> cust = model.CustomerList;
+        List<IProduct> prod = model.ProductList;
         List<ILineItem> lineItem = model.LineItemList;
 
         #region UserID
@@ -45,6 +47,38 @@ namespace BusinessLayer
         {
             setEmpId();
             return employeeId;
+        }
+        #endregion
+
+        #region ProductID
+        public int getProdId()
+        {
+            string id = _data.GetMax("STLProduct", "STLProduct_ID");
+
+            if (id != null && id != "")
+            {
+                int i = (int.Parse(id) + 1);
+                return i;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+
+        public int getCustomProdId()
+        {
+            string id = _data.GetMax("CustomProduct", "CustomProduct_ID");
+
+            if (id != null && id != "")
+            {
+                int i = (int.Parse(id) + 1);
+                return i;
+            }
+            else
+            {
+                return 1;
+            }
         }
         #endregion
 

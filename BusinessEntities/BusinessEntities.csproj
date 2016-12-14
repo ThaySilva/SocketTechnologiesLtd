@@ -98,6 +98,7 @@
     <Compile Include="Classes\CustomerPurchaseOrder.cs" />
     <Compile Include="Classes\Document.cs" />
     <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Classes\LotTraveller.cs" />
     <Compile Include="Classes\Material.cs" />
     <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\LineItem.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Interfaces\ICustomer.cs" />
     <Compile Include="Interfaces\IDocument.cs" />
     <Compile Include="Interfaces\IEmployee.cs" />
+    <Compile Include="Interfaces\ILotTraveller.cs" />
     <Compile Include="Interfaces\IMaterial.cs" />
     <Compile Include="Interfaces\IOrder.cs" />
     <Compile Include="Interfaces\ILineItem.cs" />

@@ -16,7 +16,7 @@ namespace BusinessLayer
         #region Customer Functions
         public static List<string[]> GetCustomer()
         {
-            var data = from cust in model.CustomerList select new String[] { cust.Customer_ID.ToString(), cust.CustFirstName, cust.CustLastName, cust.CustCompanyName, cust.CustAddress[0], cust.CustAddress[1], cust.CustAddress[2]};
+            var data = from cust in model.CustomerList select new String[] { cust.Customer_ID.ToString(), cust.CustFirstName, cust.CustLastName, cust.CustCompanyName, cust.CustAddress[0], cust.CustAddress[1], cust.CustAddress[2] };
             return data.ToList<String[]>();
         }
 
@@ -28,52 +28,78 @@ namespace BusinessLayer
             _data.AddRow("Customer", new string[] { "customer_ID", "custFirstName", "custLastName", "custCompanyName", "custPhoneNum", "custAddress" }, new string[] { customer_ID.ToString(), custFirstName, custLastName, custCompanyName, custPhoneNum });
             model.FillCustomerList();
         }
+        public static void EditCustomer(int customer_ID, string custFirstName, string custLastName, string custCompanyName, string custPhoneNum, string[] custAddress)
+        {
+            _data.RemoveCriteria();
+            _data.SetCriteria("customer_ID", customer_ID.ToString());
+            _data.UpdateRowsByKey("Customer", new string[] { "customer_ID", "custFirstName", "custLastName", "custCompanyName", "custPhoneNum", "custAddress" }, new string[] { customer_ID.ToString(), custFirstName, custLastName, custCompanyName, custPhoneNum });
 
-        //public static void EditCustomer(int customer_ID, string firstName, string lastName, string companyName, string phone, string add1, string add2, string county)
-        //{
-        //    _data.RemoveCriteria();
-        //    _data.SetCriteria("customer_ID", customer_ID.ToString() );
-        //    _data.UpdateRowsByKey("customer", new string[] { "custFirstName", "custLastName", "custCompanyName", "custPhoneNum", "custAddress", "custAddLine2", "custCounty" }, new string[] { customer_ID.ToString(), firstName, lastName, companyName, phone, add1, add2, county });
+            var cus = model.CustomerList.First();
+            cus.CustFirstName = custFirstName;
+            cus.CustLastName = custLastName;
+            cus.CustCompanyName = custCompanyName;
+            cus.CustPhoneNum = custPhoneNum;
+            cus.CustAddress = custAddress;
+        }
 
-        //    var cus = model.CustomerList.First();
-        //    cus.custFirstName = firstName;
-        //    cus.custLastName = lastName;
-        //    cus.custCompanyName = companyName;
-        //    cus.custPhoneNum = phone;
-        //    cus.custAddress = add1;
-        //    cus.custAddLine2 = add2;
-        //    cus.custCounty = county;
-        //}
-
-        //public static void DeleteCustomer(int customerID)
-        //{
-        //    var cust = model.CustomerList.First(c => c.customer_ID == customerID);
+        public static void DeleteCustomer(int customerID)
+        {
+            var cust = model.CustomerList.First(c => c.Customer_ID == customerID);
 
 
-        //    //if (MessageBox.Show("A Customer is associated with the selected employee, by deleting this employee the user account will also be deleted.\nAre you sure you want to continue?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.No)
-        //    //{
-        //    //    throw new Exception("Aborting Delete Customer!");
-        //    //}
-        //    //else
-        //    //{
-        //        _data.RemoveCriteria();
-        //        _data.SetCriteria("customer_ID", customerID.ToString());
-        //        _data.DeleteRowByKey("customer");
-        //        model.CustomerList.Remove(cust);
-        //        int custID = cust.customer_ID;
-        //        DeleteCustomer(customerID);
-        //    //}
-        //}
+
+            _data.RemoveCriteria();
+            _data.SetCriteria("customer_ID", customerID.ToString());
+            _data.DeleteRowByKey("Customer");
+            model.CustomerList.Remove(cust);
+            int custID = cust.Customer_ID;
+            DeleteCustomer(customerID);
+        }
         #endregion
 
-        #region Add Custom Product
-        public static void AddCustomProduct(int prodId, string productName, string productDescription, int quantity)
+        #region Custom Product Functions
+        public static void AddCustomProduct(int prodId, string productName, string productDescription, int quantity, int rfqId)
         {
             Guid uid = Guid.NewGuid();
-            GenericFactory<IProduct>.Register(uid, () => new Product(prodId, productName, productDescription, quantity));
+            GenericFactory<IProduct>.Register(uid, () => new Product(prodId, productName, productDescription, quantity, rfqId));
             IProduct prod = GenericFactory<IProduct>.Create(uid);
-            _data.AddRow("CustomProduct", new string[] { "CustomProduct_ID", "productName", "manufacturingInstructions", "quantity" }, new string[] { prodId.ToString(), productName, productDescription, quantity.ToString()});
+            _data.AddRow("CustomProduct", new string[] { "CustomProduct_ID", "productName", "manufacturingInstructions", "quantity", "Rfq_ID" }, new string[] { prodId.ToString(), productName, productDescription, quantity.ToString(), rfqId.ToString()});
             model.FillUserList();
+        }
+
+        public static void DeleteCustomProduct(string prodName)
+        {
+            var prod = model.CustomProductList.First(p => p.ProductName == prodName);
+            _data.RemoveCriteria();
+            _data.SetCriteria("CustomProduct_ID", prodName);
+            _data.DeleteRowByKey("CustomProduct");
+            model.CustomProductList.Remove(prod);
+        }
+        #endregion
+
+        #region Get Production Process from Lot Traveller
+        public static string GetProductionStage(int workOrderID)
+        {
+            _data.RemoveCriteria();
+            _data.SetCriteria("WorkOrder_WorkOrder_ID", workOrderID);
+            string[] columns1 = { "Lot_Lot_ID" };
+            List<string[]> workorderid = _data.GetTableData("WorkOrder_has_Lot", columns1);
+
+            foreach (String[] row1 in workorderid)
+            {
+                _data.RemoveCriteria();
+                _data.SetCriteria("Lot_ID", row1[0]);
+                string[] columns2 = { "LotTraveller_LotTraveller_ID" };
+                List<string[]> lottravellerid = _data.GetTableData("Lot", columns2);
+
+                foreach (String[] row2 in lottravellerid)
+                {
+                    return row2[0].ToString();
+                }
+            }
+
+            return "0";
+
         }
         #endregion
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities.Classes
 {
-    class CustomerPurchaseOrder : Order
+    class CustomerPurchaseOrder : Order 
     {
         #region Instance Properties
         protected int quotationNumber;

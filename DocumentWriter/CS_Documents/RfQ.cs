@@ -21,7 +21,7 @@ namespace DocumentWriter
             throw new System.NotImplementedException();
         }
 
-        public RfQ(string id, Customer customer, List<IProduct> standardParts, int[] standarQty, string[,] customParts, string[] requiredDates, string contact)
+        public RfQ(string id, Customer customer, List<IProduct> standardParts, int[] standarQty, List<IProduct> customParts, string[] requiredDates, string contact)
         {
             string name = "RfQ" + id + ".pdf";
             string path = "..\\..\\Reports\\" + name;
@@ -107,11 +107,11 @@ namespace DocumentWriter
             table2.AddCell("Custom Part Name");
             table2.AddCell("Specifications");
             table2.AddCell("Quantity");
-            for (int i = 0; i < 50; i++)
+            foreach(Product custom in customParts)
             {
-                table2.AddCell(customParts[i,0]);
-                table2.AddCell(customParts[i,1]);
-                table2.AddCell(customParts[i,2]);
+                table2.AddCell(custom.ProductName);
+                table2.AddCell(custom.ProductDescription);
+                table2.AddCell(custom.Quantity.ToString());
             }
             doc.Add(table2);
 

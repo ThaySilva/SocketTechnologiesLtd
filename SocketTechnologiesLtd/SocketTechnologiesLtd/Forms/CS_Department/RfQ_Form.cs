@@ -19,22 +19,22 @@ namespace SocketTechnologiesLtd
         private IModel model;
         List<ICustomer> customers;
         List<IProduct> products;
-        List<IProduct> customPart;
-        string rfqId = "";
+        List<IProduct> customProducts;
+        int rfqId;
         IdIncrement id = new IdIncrement();
         int custId;
         Customer customer;
         int partId;
         List<IProduct> part = new List<IProduct>();
+        List<IProduct> customPart = new List<IProduct>();
         int amount;
         int[] quantity = new int[50];
-        string[,] customParts = new string[50, 3];
         int customPartId;
         int customQty;
         string customPartName;
         string specs;
         string[] deliveryDates;
-        int i, j;
+        int i;
         string contact = "";
         #endregion
 
@@ -49,11 +49,11 @@ namespace SocketTechnologiesLtd
 
             customers = model.CustomerList;
             products = model.ProductList;
-            customPart = model.CustomProductList;
+            customProducts = model.CustomProductList;
             i = 0;
-            j = 0;
 
-            rfqId = Convert.ToString(id.getReportID("RequestForQuotation_Report"));
+            rfqId = id.getReportID("RequestForQuotation_Report");
+            customPartId = id.getCustomProdId();
 
             populateListViews();
         }
@@ -149,10 +149,9 @@ namespace SocketTechnologiesLtd
 
                     customPartName = txt_customPartName.Text;
                     specs = txt_CustomSpecs.Text;
-                    customParts[j, 0] = customPartName;
-                    customParts[j, 1] = specs;
-                    customParts[j, 2] = customQty.ToString();
-                    j++;
+                    CustServices_Rules.AddCustomProduct(customPartId, customPartName, specs, customQty, rfqId);
+                    customPart.Add(new Product(customPartId, customPartName, specs, customQty, rfqId));
+                    customPartId++;
                     clearCustomFields();
                 }
                 else
@@ -167,14 +166,15 @@ namespace SocketTechnologiesLtd
         {
             if (validateDates() != null)
             {
-                if (customer != null && part != null && customParts != null)
+                if (customer != null && part != null && customPart != null)
                 {
                     string form = "";
-                    RfQ rfq = new RfQ(rfqId, customer, part, quantity, customParts, deliveryDates, contact);
+                    RfQ rfq = new RfQ(rfqId.ToString(), customer, part, quantity, customPart, deliveryDates, contact);
                     PDF_Preview viewer = new PDF_Preview(form);
                     viewer.MdiParent = this.MdiParent;
                     viewer.Text = "Request for Quotation";
                     viewer.Show();
+                    customPart.Clear();
                     this.Close();
                 }
             }
@@ -186,11 +186,15 @@ namespace SocketTechnologiesLtd
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
+            customPart.Clear();
+            deleteCustomProduct();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+            customPart.Clear();
+            deleteCustomProduct();
         }
         #endregion
 
@@ -354,6 +358,17 @@ namespace SocketTechnologiesLtd
             }
             else
                 return null;
+        }
+
+        private void deleteCustomProduct()
+        {
+            foreach (Product custom in customPart)
+            {
+                if (rfqId == custom.RFQ_ID)
+                {
+                    CustServices_Rules.DeleteCustomProduct(custom.ProductName);
+                }
+            }
         }
         #endregion
     }

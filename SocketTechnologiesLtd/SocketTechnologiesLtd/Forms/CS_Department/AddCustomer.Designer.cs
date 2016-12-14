@@ -52,10 +52,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClearAddCust = new System.Windows.Forms.Button();
-            this.btnSaveAddCust = new System.Windows.Forms.Button();
             this.btnBackAddCust = new System.Windows.Forms.Button();
             this.custIDlbl = new System.Windows.Forms.Label();
             this.tbCustomer_ID = new System.Windows.Forms.TextBox();
+            this.btn_saveAddCus = new System.Windows.Forms.Button();
             this.groupBox_addCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -267,16 +267,6 @@
             this.btnClearAddCust.TabIndex = 1;
             this.btnClearAddCust.Text = "CLEAR";
             this.btnClearAddCust.UseVisualStyleBackColor = true;
-            this.btnClearAddCust.Click += new System.EventHandler(this.btnClearAddCust_Click);
-            // 
-            // btnSaveAddCust
-            // 
-            this.btnSaveAddCust.Location = new System.Drawing.Point(475, 514);
-            this.btnSaveAddCust.Name = "btnSaveAddCust";
-            this.btnSaveAddCust.Size = new System.Drawing.Size(138, 41);
-            this.btnSaveAddCust.TabIndex = 2;
-            this.btnSaveAddCust.Text = "SAVE";
-            this.btnSaveAddCust.UseVisualStyleBackColor = true;
             // 
             // btnBackAddCust
             // 
@@ -305,15 +295,25 @@
             this.tbCustomer_ID.Size = new System.Drawing.Size(165, 20);
             this.tbCustomer_ID.TabIndex = 9;
             // 
+            // btn_saveAddCus
+            // 
+            this.btn_saveAddCus.Location = new System.Drawing.Point(461, 514);
+            this.btn_saveAddCus.Name = "btn_saveAddCus";
+            this.btn_saveAddCus.Size = new System.Drawing.Size(138, 41);
+            this.btn_saveAddCus.TabIndex = 10;
+            this.btn_saveAddCus.Text = "SAVE";
+            this.btn_saveAddCus.UseVisualStyleBackColor = true;
+            this.btn_saveAddCus.Click += new System.EventHandler(this.btn_saveAddCus_Click);
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 728);
+            this.Controls.Add(this.btn_saveAddCus);
             this.Controls.Add(this.tbCustomer_ID);
             this.Controls.Add(this.custIDlbl);
             this.Controls.Add(this.btnBackAddCust);
-            this.Controls.Add(this.btnSaveAddCust);
             this.Controls.Add(this.btnClearAddCust);
             this.Controls.Add(this.groupBox_addCustomer);
             this.Name = "AddCustomer";
@@ -344,7 +344,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClearAddCust;
-        private System.Windows.Forms.Button btnSaveAddCust;
         private System.Windows.Forms.Button btnBackAddCust;
         private System.Windows.Forms.Label custIDlbl;
         private System.Windows.Forms.TextBox tbCustomer_ID;
@@ -358,5 +357,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_saveAddCus;
     }
 }

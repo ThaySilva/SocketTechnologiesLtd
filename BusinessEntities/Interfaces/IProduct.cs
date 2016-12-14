@@ -15,5 +15,6 @@ namespace BusinessEntities
         double ProductPrice { get; set; }
         double ProductVAT { get; set; }
         int Quantity { get; set; }
+        int RFQ_ID { get; set; }
     }
 }
