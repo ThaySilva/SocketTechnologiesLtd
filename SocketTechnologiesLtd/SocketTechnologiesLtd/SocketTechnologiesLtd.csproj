@@ -242,11 +242,11 @@
     <Compile Include="Forms\CS_Department\ViewTechnicalEnquiries.designer.cs">
       <DependentUpon>ViewTechnicalEnquiries.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CS_Department\ViewTecnicalEnquiriesList.cs">
+    <Compile Include="Forms\CS_Department\ViewTecnicalEnquiriesResponse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CS_Department\ViewTecnicalEnquiriesList.Designer.cs">
-      <DependentUpon>ViewTecnicalEnquiriesList.cs</DependentUpon>
+    <Compile Include="Forms\CS_Department\ViewTecnicalEnquiriesResponse.Designer.cs">
+      <DependentUpon>ViewTecnicalEnquiriesResponse.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ENG_Department\AddCustomProduct.cs">
       <SubType>Form</SubType>
@@ -489,6 +489,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>stldb1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="stldb2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>stldb2DataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Container.resx">
       <DependentUpon>Container.cs</DependentUpon>
     </EmbeddedResource>
@@ -561,8 +566,8 @@
     <EmbeddedResource Include="Forms\CS_Department\ViewTechnicalEnquiries.resx">
       <DependentUpon>ViewTechnicalEnquiries.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CS_Department\ViewTecnicalEnquiriesList.resx">
-      <DependentUpon>ViewTecnicalEnquiriesList.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CS_Department\ViewTecnicalEnquiriesResponse.resx">
+      <DependentUpon>ViewTecnicalEnquiriesResponse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ENG_Department\AddCustomProduct.resx">
       <DependentUpon>AddCustomProduct.cs</DependentUpon>
@@ -711,6 +716,17 @@
     </None>
     <None Include="stldb1DataSet.xss">
       <DependentUpon>stldb1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="stldb2DataSet.xsc">
+      <DependentUpon>stldb2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="stldb2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>stldb2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="stldb2DataSet.xss">
+      <DependentUpon>stldb2DataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

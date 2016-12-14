@@ -16,7 +16,9 @@ namespace BusinessEntities
         private string productName;
         private string productDescription;
         private double productPrice;
+        private double productVAT;
         private string[,] productMaterials;
+        private int quantity;
         #endregion
 
         #region Instance Properties
@@ -25,25 +27,41 @@ namespace BusinessEntities
             get { return productId; }
             set { productId = value; }
         }
+
         public string ProductName
         {
             get { return productName; }
             set { productName = value; }
         }
+
         public string ProductDescription
         {
             get { return productDescription; }
             set { productDescription = value; }
         }
+
         public double ProductPrice
         {
             get { return productPrice; }
             set { productPrice = value; }
         }
+
+        public double ProductVAT
+        {
+            get { return productVAT; }
+            set { productVAT = value; }
+        }
+
         public string[,] ProductMaterials
         {
             get { return productMaterials; }
             set { productMaterials = value; }
+        }
+
+        public int Quantity
+        {
+            get { return quantity; }
+            set { quantity = value; }
         }
         #endregion
 
@@ -52,13 +70,23 @@ namespace BusinessEntities
         {
             throw new System.NotImplementedException();
         }
-        public Product(int prodId, string prodName, string prodDescription, double prodPrice, string[,] prodMaterials)
+
+        public Product(int prodId, string prodName, string prodDescription, int prodQuantity)
+        {
+            this.productId = prodId;
+            this.productName = prodName;
+            this.productDescription = prodDescription;
+            this.quantity = prodQuantity;
+        }
+
+        public Product(int prodId, string prodName, string prodDescription, double prodPrice, double prodVAT, string[,] prodMaterials)
         {
             this.productId = prodId;
             this.productName = prodName;
             this.productDescription = prodDescription;
             this.productPrice = prodPrice;
             this.productMaterials = prodMaterials;
+            this.ProductVAT = prodVAT;
         }
         #endregion
     }

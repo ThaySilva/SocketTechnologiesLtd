@@ -11,5 +11,6 @@ namespace BusinessEntities
         int DocumentID { get; set; }
         string DocumentPath { get; set; }
         DateTime DateCreated { get; set; }
+        bool Response { get; set; }
     }
 }

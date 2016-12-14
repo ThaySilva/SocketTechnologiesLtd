@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BusinessLayer;
 using BusinessEntities;
 using DataAccessLayer;
+using SocketTechnologiesLtd.Forms.CS_Department;
 
 namespace SocketTechnologiesLtd
 {
@@ -119,7 +120,7 @@ namespace SocketTechnologiesLtd
 
         private void btn_CreateFSR_Click(object sender, EventArgs e)
         {
-            FSRequest_Form fsr = new FSRequest_Form();
+            FSRequest_Form fsr = new FSRequest_Form(model);
             fsr.MdiParent = this.MdiParent;
             fsr.Dock = DockStyle.Fill;
             fsr.Show();
@@ -150,7 +151,7 @@ namespace SocketTechnologiesLtd
 
         private void btn_CreateRGAR_Click(object sender, EventArgs e)
         {
-            RGA_RequestFrom rga = new RGA_RequestFrom();
+            RGA_RequestFrom rga = new RGA_RequestFrom(model);
             rga.MdiParent = this.MdiParent;
             rga.Dock = DockStyle.Fill;
             rga.Show();
@@ -164,6 +165,17 @@ namespace SocketTechnologiesLtd
             vcd.Show();
 
         }
+
+ private void btn_ViewTERes_Click(object sender, EventArgs e)
+        {
+            ViewTecnicalEnquiriesResponse ter = new ViewTecnicalEnquiriesResponse(model);
+            ter.MdiParent = this.MdiParent;
+            ter.Dock = DockStyle.Fill;
+            ter.Show();
+        }
+
+
+
         #endregion
 
         #region Destructors
@@ -183,8 +195,9 @@ namespace SocketTechnologiesLtd
             this.btn_CSExit.Hide();
             this.btn_Logout.Show();
         }
+
         #endregion
 
-        
+       
     }
 }

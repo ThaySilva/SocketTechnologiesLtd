@@ -24,10 +24,12 @@ namespace BusinessLayer
         private List<ICustomer> customerList;
         private List<IMaterial> materialsList;
         private List<IProduct> productList;
+        private List<IProduct> customProductList;
         private List<IOrder> orderList;
         private List<IDocument> documentList;
         private List<ILineItem> lineItemList;
         private List<ITechnicalEnquiry> technicalEnquiryList;
+        private List<IWorkOrder> workOrderList;
         #endregion
 
         #region Instance Properties
@@ -37,10 +39,11 @@ namespace BusinessLayer
             set { dataLayer = value; }
         }
 
-        public ITechnicalEnquiry TechnicalEnquiryList
+        public List<ITechnicalEnquiry> TechnicalEnquiryList
         {
             get { return TechnicalEnquiryList; }
         }
+
         public IUser CurrentUser
         {
             get { return currentUser; }
@@ -72,6 +75,11 @@ namespace BusinessLayer
             get { return productList; }
         }
 
+        public List<IProduct> CustomProductList
+        {
+            get { return customProductList; }
+        }
+
         public List<IOrder> OrderList
         {
             get { return orderList; }
@@ -85,6 +93,11 @@ namespace BusinessLayer
         public List<ILineItem> LineItemList
         {
             get { return lineItemList; }
+        }
+
+        public List<IWorkOrder> WorkOrderList
+        {
+            get { return workOrderList; }
         }
         #endregion
 
@@ -106,10 +119,13 @@ namespace BusinessLayer
             customerList = new List<ICustomer>();
             materialsList = new List<IMaterial>();
             productList = new List<IProduct>();
+            customProductList = new List<IProduct>();
             orderList = new List<IOrder>();
             documentList = new List<IDocument>();
             lineItemList = new List<ILineItem>();
             technicalEnquiryList = new List<ITechnicalEnquiry>();
+            workOrderList = new List<IWorkOrder>();
+
             dataLayer = DataLayer;
         }
 
@@ -196,10 +212,23 @@ namespace BusinessLayer
                     materials[i,1] = mat[1];
                     i++;
                 }
-                GenericFactory<IProduct>.Register(uid, () => new Product(Convert.ToInt16(row[0]), row[1], row[2], Convert.ToDouble(row[3]), materials));
+                GenericFactory<IProduct>.Register(uid, () => new Product(Convert.ToInt16(row[0]), row[1], row[2], Convert.ToDouble(row[3]), Convert.ToDouble(row[4]), materials));
                 IProduct product = GenericFactory<IProduct>.Create(uid);
                 ProductList.Add(product);
                 i = 0;
+            }
+        }
+
+        public void FillCustomProductList()
+        {
+            List<string[]> customProductData = DataLayer.GetTableData("CustomProduct");
+
+            foreach(String[] row in customProductData)
+            {
+                Guid uid = Guid.NewGuid();
+                GenericFactory<IProduct>.Register(uid, () => new Product(Convert.ToInt16(row[0]), row[1], row[2], Convert.ToInt16(row[3])));
+                IProduct customProduct = GenericFactory<IProduct>.Create(uid);
+                customProductList.Add(customProduct);
             }
         }
 
@@ -226,6 +255,21 @@ namespace BusinessLayer
             }
         }
 
+        public void FillDocumentList(string table, bool criteria)
+        {
+            DataLayer.RemoveCriteria();
+            DataLayer.SetCriteria("responded", criteria);
+            List<string[]> documentData = DataLayer.GetTableData(table);
+
+            foreach (String[] row in documentData)
+            {
+                Guid uid = Guid.NewGuid();
+                GenericFactory<IDocument>.Register(uid, () => new Document(Convert.ToInt16(row[0]), row[1], DateTime.ParseExact(row[2], "dd/MM/yyyy", null), Convert.ToBoolean(row[3])));
+                IDocument doc = GenericFactory<IDocument>.Create(uid);
+                DocumentList.Add(doc);
+            }
+        }
+
         public void FillLineItemList()
         {
             List<string[]> lineItemData = DataLayer.GetTableData("STL_LineItem");
@@ -238,6 +282,33 @@ namespace BusinessLayer
                 LineItemList.Add(lineItem);
             }
 
+
+        }
+
+        public void FillWorkOrderList()
+        {
+            string[] columns = { "WorkOrder_ID", "dateRequired", "Customer_customer_ID", "Quantity" };
+            List<string[]> workOrderData = DataLayer.GetTableData("WorkOrder", columns);
+
+            foreach (String[] row in workOrderData)
+            {
+                string[] columns1 = { "STLProduct_STLProduct_ID" };
+                DataLayer.RemoveCriteria();
+                DataLayer.SetCriteria("WorkOrder_WorkOrder_ID", row[0]);
+                List<string[]> workOrderData1 = DataLayer.GetTableData("WorkOrder_has_STLProduct", "WorkOrder", columns1);
+
+
+                foreach (String[] row1 in workOrderData1)
+                {
+                    Guid uid = Guid.NewGuid();
+                    GenericFactory<IWorkOrder>.Register(uid, () => new WorkOrder(Convert.ToInt16(row[0]), Convert.ToInt16(row[2]), Convert.ToInt16(row1[0]), Convert.ToInt16(row[3]), DateTime.ParseExact(row[1], "dd/MM/yyyy", null)));
+                    IWorkOrder workOrder = GenericFactory<IWorkOrder>.Create(uid);
+                    workOrderList.Add(workOrder);
+                }
+
+
+
+            }
 
         }
 

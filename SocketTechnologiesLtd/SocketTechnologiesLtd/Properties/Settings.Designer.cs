@@ -33,5 +33,16 @@ namespace SocketTechnologiesLtd.Properties {
                 return ((string)(this["stldb1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=mssql4.gear.host;Initial Catalog=stldb2;User ID=stldb2;Password=alpha" +
+            "2omega!")]
+        public string stldb2ConnectionString {
+            get {
+                return ((string)(this["stldb2ConnectionString"]));
+            }
+        }
     }
 }

@@ -35,6 +35,7 @@
             this.btn_searchCust = new MetroFramework.Controls.MetroTile();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.txt_custAdd = new MetroFramework.Controls.MetroTextBox();
             this.txt_custName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.txt_custId = new MetroFramework.Controls.MetroTextBox();
@@ -48,23 +49,22 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.gridView_parts = new System.Windows.Forms.DataGridView();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.txt_SDate = new MetroFramework.Controls.MetroTextBox();
+            this.txt_CDate = new MetroFramework.Controls.MetroTextBox();
+            this.dtPicker_qDate = new System.Windows.Forms.DateTimePicker();
+            this.txt_customPartName = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_PartName = new MetroFramework.Controls.MetroLabel();
             this.btn_Cancel = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
-            this.btn_RFQAddCustom = new MetroFramework.Controls.MetroTile();
-            this.txt_RFQStandardDelivery = new MetroFramework.Controls.MetroTextBox();
+            this.btn_AddCustom = new MetroFramework.Controls.MetroTile();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.txt_RFQCustomDelivery = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.txt_RFQQDate = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.txt_RFQCustomQty = new MetroFramework.Controls.MetroTextBox();
-            this.txt_RFQCustomPartId = new MetroFramework.Controls.MetroTextBox();
+            this.txt_CustomQty = new MetroFramework.Controls.MetroTextBox();
             this.txt_CustomSpecs = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.txt_custAdd = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -115,21 +115,21 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.txt_SDate);
+            this.splitContainer1.Panel2.Controls.Add(this.txt_CDate);
+            this.splitContainer1.Panel2.Controls.Add(this.dtPicker_qDate);
+            this.splitContainer1.Panel2.Controls.Add(this.txt_customPartName);
+            this.splitContainer1.Panel2.Controls.Add(this.lbl_PartName);
             this.splitContainer1.Panel2.Controls.Add(this.btn_Cancel);
             this.splitContainer1.Panel2.Controls.Add(this.btn_Create);
-            this.splitContainer1.Panel2.Controls.Add(this.btn_RFQAddCustom);
-            this.splitContainer1.Panel2.Controls.Add(this.txt_RFQStandardDelivery);
+            this.splitContainer1.Panel2.Controls.Add(this.btn_AddCustom);
             this.splitContainer1.Panel2.Controls.Add(this.metroLabel10);
-            this.splitContainer1.Panel2.Controls.Add(this.txt_RFQCustomDelivery);
             this.splitContainer1.Panel2.Controls.Add(this.metroLabel9);
-            this.splitContainer1.Panel2.Controls.Add(this.txt_RFQQDate);
             this.splitContainer1.Panel2.Controls.Add(this.metroLabel8);
-            this.splitContainer1.Panel2.Controls.Add(this.txt_RFQCustomQty);
-            this.splitContainer1.Panel2.Controls.Add(this.txt_RFQCustomPartId);
+            this.splitContainer1.Panel2.Controls.Add(this.txt_CustomQty);
             this.splitContainer1.Panel2.Controls.Add(this.txt_CustomSpecs);
             this.splitContainer1.Panel2.Controls.Add(this.metroLabel7);
             this.splitContainer1.Panel2.Controls.Add(this.metroLabel6);
-            this.splitContainer1.Panel2.Controls.Add(this.metroLabel5);
             this.splitContainer1.Panel2.Controls.Add(this.metroLabel4);
             this.splitContainer1.Size = new System.Drawing.Size(1352, 727);
             this.splitContainer1.SplitterDistance = 718;
@@ -189,9 +189,22 @@
             this.metroLabel13.Text = "Customer Address:";
             this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // txt_custAdd
+            // 
+            this.txt_custAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_custAdd.Enabled = false;
+            this.txt_custAdd.Location = new System.Drawing.Point(365, 254);
+            this.txt_custAdd.Multiline = true;
+            this.txt_custAdd.Name = "txt_custAdd";
+            this.txt_custAdd.ReadOnly = true;
+            this.txt_custAdd.Size = new System.Drawing.Size(246, 61);
+            this.txt_custAdd.TabIndex = 19;
+            this.txt_custAdd.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // txt_custName
             // 
             this.txt_custName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_custName.Enabled = false;
             this.txt_custName.Location = new System.Drawing.Point(365, 184);
             this.txt_custName.Name = "txt_custName";
             this.txt_custName.ReadOnly = true;
@@ -267,6 +280,7 @@
             this.btn_addSItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_addSItem.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_addSItem.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_addSItem.Click += new System.EventHandler(this.btn_addSItem_Click);
             // 
             // btn_searchPart
             // 
@@ -360,6 +374,54 @@
             this.metroLabel1.Text = "Standard Items";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // txt_SDate
+            // 
+            this.txt_SDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_SDate.Location = new System.Drawing.Point(348, 592);
+            this.txt_SDate.Name = "txt_SDate";
+            this.txt_SDate.Size = new System.Drawing.Size(200, 27);
+            this.txt_SDate.TabIndex = 26;
+            this.txt_SDate.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txt_CDate
+            // 
+            this.txt_CDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_CDate.Location = new System.Drawing.Point(348, 525);
+            this.txt_CDate.Name = "txt_CDate";
+            this.txt_CDate.Size = new System.Drawing.Size(200, 27);
+            this.txt_CDate.TabIndex = 25;
+            this.txt_CDate.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // dtPicker_qDate
+            // 
+            this.dtPicker_qDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtPicker_qDate.Location = new System.Drawing.Point(348, 462);
+            this.dtPicker_qDate.Name = "dtPicker_qDate";
+            this.dtPicker_qDate.Size = new System.Drawing.Size(200, 20);
+            this.dtPicker_qDate.TabIndex = 24;
+            // 
+            // txt_customPartName
+            // 
+            this.txt_customPartName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_customPartName.Location = new System.Drawing.Point(303, 77);
+            this.txt_customPartName.Name = "txt_customPartName";
+            this.txt_customPartName.Size = new System.Drawing.Size(245, 27);
+            this.txt_customPartName.TabIndex = 23;
+            this.txt_customPartName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lbl_PartName
+            // 
+            this.lbl_PartName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_PartName.AutoSize = true;
+            this.lbl_PartName.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_PartName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_PartName.Location = new System.Drawing.Point(78, 77);
+            this.lbl_PartName.Name = "lbl_PartName";
+            this.lbl_PartName.Size = new System.Drawing.Size(108, 25);
+            this.lbl_PartName.TabIndex = 22;
+            this.lbl_PartName.Text = "Part Name:";
+            this.lbl_PartName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // btn_Cancel
             // 
             this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -372,6 +434,7 @@
             this.btn_Cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Cancel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Cancel.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Create
             // 
@@ -385,28 +448,21 @@
             this.btn_Create.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Create.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Create.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
-            // btn_RFQAddCustom
+            // btn_AddCustom
             // 
-            this.btn_RFQAddCustom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_RFQAddCustom.Location = new System.Drawing.Point(415, 465);
-            this.btn_RFQAddCustom.Name = "btn_RFQAddCustom";
-            this.btn_RFQAddCustom.Size = new System.Drawing.Size(133, 41);
-            this.btn_RFQAddCustom.Style = MetroFramework.MetroColorStyle.Orange;
-            this.btn_RFQAddCustom.TabIndex = 20;
-            this.btn_RFQAddCustom.Text = "Add Custom Item";
-            this.btn_RFQAddCustom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_RFQAddCustom.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_RFQAddCustom.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            // 
-            // txt_RFQStandardDelivery
-            // 
-            this.txt_RFQStandardDelivery.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_RFQStandardDelivery.Location = new System.Drawing.Point(361, 590);
-            this.txt_RFQStandardDelivery.Name = "txt_RFQStandardDelivery";
-            this.txt_RFQStandardDelivery.Size = new System.Drawing.Size(187, 27);
-            this.txt_RFQStandardDelivery.TabIndex = 19;
-            this.txt_RFQStandardDelivery.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_AddCustom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_AddCustom.Location = new System.Drawing.Point(415, 361);
+            this.btn_AddCustom.Name = "btn_AddCustom";
+            this.btn_AddCustom.Size = new System.Drawing.Size(133, 41);
+            this.btn_AddCustom.Style = MetroFramework.MetroColorStyle.Orange;
+            this.btn_AddCustom.TabIndex = 20;
+            this.btn_AddCustom.Text = "Add Custom Item";
+            this.btn_AddCustom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_AddCustom.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_AddCustom.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_AddCustom.Click += new System.EventHandler(this.btn_AddCustom_Click);
             // 
             // metroLabel10
             // 
@@ -421,36 +477,18 @@
             this.metroLabel10.Text = "Standard Item Delivery Date:";
             this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // txt_RFQCustomDelivery
-            // 
-            this.txt_RFQCustomDelivery.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_RFQCustomDelivery.Location = new System.Drawing.Point(361, 557);
-            this.txt_RFQCustomDelivery.Name = "txt_RFQCustomDelivery";
-            this.txt_RFQCustomDelivery.Size = new System.Drawing.Size(187, 27);
-            this.txt_RFQCustomDelivery.TabIndex = 17;
-            this.txt_RFQCustomDelivery.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // metroLabel9
             // 
             this.metroLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(78, 557);
+            this.metroLabel9.Location = new System.Drawing.Point(78, 525);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(246, 25);
             this.metroLabel9.TabIndex = 16;
-            this.metroLabel9.Text = "Cutsom Item Delivery Date:";
+            this.metroLabel9.Text = "Custom Item Delivery Date:";
             this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txt_RFQQDate
-            // 
-            this.txt_RFQQDate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_RFQQDate.Location = new System.Drawing.Point(361, 524);
-            this.txt_RFQQDate.Name = "txt_RFQQDate";
-            this.txt_RFQQDate.Size = new System.Drawing.Size(187, 27);
-            this.txt_RFQQDate.TabIndex = 15;
-            this.txt_RFQQDate.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel8
             // 
@@ -458,38 +496,28 @@
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.Location = new System.Drawing.Point(78, 524);
+            this.metroLabel8.Location = new System.Drawing.Point(78, 462);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(231, 25);
             this.metroLabel8.TabIndex = 14;
             this.metroLabel8.Text = "Quotation Required Date:";
             this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // txt_RFQCustomQty
+            // txt_CustomQty
             // 
-            this.txt_RFQCustomQty.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_RFQCustomQty.Location = new System.Drawing.Point(303, 142);
-            this.txt_RFQCustomQty.Name = "txt_RFQCustomQty";
-            this.txt_RFQCustomQty.Size = new System.Drawing.Size(245, 27);
-            this.txt_RFQCustomQty.TabIndex = 13;
-            this.txt_RFQCustomQty.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txt_RFQCustomPartId
-            // 
-            this.txt_RFQCustomPartId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_RFQCustomPartId.Location = new System.Drawing.Point(303, 90);
-            this.txt_RFQCustomPartId.Name = "txt_RFQCustomPartId";
-            this.txt_RFQCustomPartId.Size = new System.Drawing.Size(245, 27);
-            this.txt_RFQCustomPartId.TabIndex = 12;
-            this.txt_RFQCustomPartId.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_CustomQty.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_CustomQty.Location = new System.Drawing.Point(303, 143);
+            this.txt_CustomQty.Name = "txt_CustomQty";
+            this.txt_CustomQty.Size = new System.Drawing.Size(245, 27);
+            this.txt_CustomQty.TabIndex = 13;
+            this.txt_CustomQty.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // txt_CustomSpecs
             // 
             this.txt_CustomSpecs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_CustomSpecs.Location = new System.Drawing.Point(78, 254);
-            this.txt_CustomSpecs.Multiline = true;
             this.txt_CustomSpecs.Name = "txt_CustomSpecs";
-            this.txt_CustomSpecs.Size = new System.Drawing.Size(470, 125);
+            this.txt_CustomSpecs.Size = new System.Drawing.Size(470, 61);
             this.txt_CustomSpecs.TabIndex = 8;
             this.txt_CustomSpecs.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -512,25 +540,12 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(78, 142);
+            this.metroLabel6.Location = new System.Drawing.Point(78, 143);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(92, 25);
             this.metroLabel6.TabIndex = 5;
             this.metroLabel6.Text = "Quantity:";
             this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(78, 90);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(77, 25);
-            this.metroLabel5.TabIndex = 3;
-            this.metroLabel5.Text = "Part ID:";
-            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel4
             // 
@@ -544,17 +559,6 @@
             this.metroLabel4.TabIndex = 1;
             this.metroLabel4.Text = "Custom Items";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txt_custAdd
-            // 
-            this.txt_custAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_custAdd.Location = new System.Drawing.Point(365, 254);
-            this.txt_custAdd.Multiline = true;
-            this.txt_custAdd.Name = "txt_custAdd";
-            this.txt_custAdd.ReadOnly = true;
-            this.txt_custAdd.Size = new System.Drawing.Size(246, 61);
-            this.txt_custAdd.TabIndex = 19;
-            this.txt_custAdd.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // RfQ_Form
             // 
@@ -594,23 +598,18 @@
         private MetroFramework.Controls.MetroTextBox txt_CustomSpecs;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroTextBox txt_quantity;
         private MetroFramework.Controls.MetroTextBox txt_partId;
-        private MetroFramework.Controls.MetroTextBox txt_RFQCustomQty;
-        private MetroFramework.Controls.MetroTextBox txt_RFQCustomPartId;
-        private MetroFramework.Controls.MetroTextBox txt_RFQCustomDelivery;
+        private MetroFramework.Controls.MetroTextBox txt_CustomQty;
         private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroTextBox txt_RFQQDate;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroTextBox txt_RFQStandardDelivery;
         private MetroFramework.Controls.MetroTile btn_addSItem;
         private MetroFramework.Controls.MetroTile btn_searchPart;
         private MetroFramework.Controls.MetroTile btn_Cancel;
         private MetroFramework.Controls.MetroTile btn_Create;
-        private MetroFramework.Controls.MetroTile btn_RFQAddCustom;
+        private MetroFramework.Controls.MetroTile btn_AddCustom;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel13;
         private MetroFramework.Controls.MetroTextBox txt_custName;
@@ -621,5 +620,10 @@
         private MetroFramework.Controls.MetroTile btn_searchCust;
         private MetroFramework.Controls.MetroTile btn_selectCust;
         private MetroFramework.Controls.MetroTextBox txt_custAdd;
+        private MetroFramework.Controls.MetroTextBox txt_customPartName;
+        private MetroFramework.Controls.MetroLabel lbl_PartName;
+        private System.Windows.Forms.DateTimePicker dtPicker_qDate;
+        private MetroFramework.Controls.MetroTextBox txt_SDate;
+        private MetroFramework.Controls.MetroTextBox txt_CDate;
     }
 }

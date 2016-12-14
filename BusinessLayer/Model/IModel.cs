@@ -14,17 +14,22 @@ namespace BusinessLayer
         List<IEmployee> EmployeeList { get; }
         List<ICustomer> CustomerList { get; }
         List<IProduct> ProductList { get; }
+        List<IProduct> CustomProductList { get; }
         List<IOrder> OrderList { get; }
         List<IDocument> DocumentList { get; }
         List<ILineItem> LineItemList { get; }
         List<IMaterial> MaterialsList { get; }
+        List<IWorkOrder> WorkOrderList { get; }
         void FillEmployeeList();
         void FillUserList();
         void FillCustomerList();
         void FillMaterialsList();
         void FillProductList();
+        void FillCustomProductList();
         void FillDocumentList(string table);
+        void FillDocumentList(string table, bool criteria);
         void FillLineItemList();
+        void FillWorkOrderList();
 
 
 

@@ -13,5 +13,7 @@ namespace BusinessEntities
         string ProductName { get; set; }
         string ProductDescription { get; set; }
         double ProductPrice { get; set; }
+        double ProductVAT { get; set; }
+        int Quantity { get; set; }
     }
 }

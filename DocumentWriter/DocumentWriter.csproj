@@ -109,7 +109,10 @@
   <ItemGroup>
     <Compile Include="CS_Documents\CrAFiSeReRe.cs" />
     <Compile Include="CS_Documents\fsrRequest.cs" />
+    <Compile Include="CS_Documents\RfQ.cs" />
     <Compile Include="CS_Documents\RGArequest.cs" />
+    <Compile Include="MAN_Documents\AuthorisationResponseReport.cs" />
+    <Compile Include="Pdf_Reader.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -133,20 +136,9 @@
   <ItemGroup>
     <Folder Include="ACC_Documents\" />
     <Folder Include="ENG_Documents\" />
-    <Folder Include="MAN_Documents\" />
     <Folder Include="PROD_Documents\" />
     <Folder Include="PUR_Documents\" />
     <Folder Include="STO_Documents\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
-      <Project>{bbe8ae8e-71e4-460b-884a-b8e62ffcb43e}</Project>
-      <Name>BusinessLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
-      <Project>{83b2f92a-874e-4a5b-ad60-5c0c584cd939}</Project>
-      <Name>DataAccessLayer</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">
@@ -166,6 +158,16 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj">
+      <Project>{421deb4e-3592-46d0-91dd-738a57f297ec}</Project>
+      <Name>BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{bbe8ae8e-71e4-460b-884a-b8e62ffcb43e}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

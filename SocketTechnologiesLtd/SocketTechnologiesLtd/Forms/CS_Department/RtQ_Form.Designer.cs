@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RtQ_Form));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.comboBox_rfq = new MetroFramework.Controls.MetroComboBox();
             this.btn_Cancel = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
             this.txt_custAdd = new MetroFramework.Controls.MetroTextBox();
@@ -41,21 +42,17 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.lst_customItems = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_rtqTxt = new MetroFramework.Controls.MetroTextBox();
             this.btn_Exit = new MetroFramework.Controls.MetroButton();
-            this.comboBox_rfq = new MetroFramework.Controls.MetroComboBox();
+            this.txt_customItems = new MetroFramework.Controls.MetroTextBox();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lst_customItems)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel1
             // 
             this.metroPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroPanel1.BackgroundImage")));
             this.metroPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.metroPanel1.Controls.Add(this.txt_customItems);
             this.metroPanel1.Controls.Add(this.comboBox_rfq);
             this.metroPanel1.Controls.Add(this.btn_Cancel);
             this.metroPanel1.Controls.Add(this.btn_Create);
@@ -68,7 +65,6 @@
             this.metroPanel1.Controls.Add(this.metroLabel3);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.lst_customItems);
             this.metroPanel1.Controls.Add(this.txt_rtqTxt);
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
@@ -83,6 +79,18 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // comboBox_rfq
+            // 
+            this.comboBox_rfq.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox_rfq.FormattingEnabled = true;
+            this.comboBox_rfq.ItemHeight = 23;
+            this.comboBox_rfq.Location = new System.Drawing.Point(287, 43);
+            this.comboBox_rfq.Name = "comboBox_rfq";
+            this.comboBox_rfq.Size = new System.Drawing.Size(247, 29);
+            this.comboBox_rfq.TabIndex = 39;
+            this.comboBox_rfq.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.comboBox_rfq.SelectedIndexChanged += new System.EventHandler(this.comboBox_rfq_SelectedIndexChanged);
             // 
             // btn_Cancel
             // 
@@ -224,41 +232,6 @@
             this.metroLabel2.Text = "Refusal to Quote ID:";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // lst_customItems
-            // 
-            this.lst_customItems.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lst_customItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.lst_customItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.lst_customItems.BackgroundColor = System.Drawing.SystemColors.GrayText;
-            this.lst_customItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lst_customItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.lst_customItems.Location = new System.Drawing.Point(215, 175);
-            this.lst_customItems.Name = "lst_customItems";
-            this.lst_customItems.Size = new System.Drawing.Size(278, 167);
-            this.lst_customItems.TabIndex = 26;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "Line No.";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 72;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Custom P/N";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 90;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Quantity";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 71;
-            // 
             // txt_rtqTxt
             // 
             this.txt_rtqTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -284,15 +257,17 @@
             this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
-            // comboBox_rfq
+            // txt_customItems
             // 
-            this.comboBox_rfq.FormattingEnabled = true;
-            this.comboBox_rfq.ItemHeight = 23;
-            this.comboBox_rfq.Location = new System.Drawing.Point(287, 43);
-            this.comboBox_rfq.Name = "comboBox_rfq";
-            this.comboBox_rfq.Size = new System.Drawing.Size(247, 29);
-            this.comboBox_rfq.TabIndex = 39;
-            this.comboBox_rfq.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txt_customItems.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_customItems.Enabled = false;
+            this.txt_customItems.Location = new System.Drawing.Point(27, 214);
+            this.txt_customItems.Multiline = true;
+            this.txt_customItems.Name = "txt_customItems";
+            this.txt_customItems.ReadOnly = true;
+            this.txt_customItems.Size = new System.Drawing.Size(507, 120);
+            this.txt_customItems.TabIndex = 40;
+            this.txt_customItems.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // RtQ_Form
             // 
@@ -310,7 +285,6 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lst_customItems)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,7 +294,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroTextBox txt_rtqTxt;
         private MetroFramework.Controls.MetroButton btn_Exit;
-        private System.Windows.Forms.DataGridView lst_customItems;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
@@ -330,11 +303,9 @@
         private MetroFramework.Controls.MetroTextBox txt_custAdd;
         private MetroFramework.Controls.MetroTextBox txt_CustomerName;
         private MetroFramework.Controls.MetroTextBox txt_RtQId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private MetroFramework.Controls.MetroTile btn_Create;
         private MetroFramework.Controls.MetroTile btn_Cancel;
         private MetroFramework.Controls.MetroComboBox comboBox_rfq;
+        private MetroFramework.Controls.MetroTextBox txt_customItems;
     }
 }

@@ -15,12 +15,13 @@ namespace BusinessLayer
         private static IModel model = Model.GetInstance(_data);
         private static string pdfName;
         private static string pdfPath;
-        private static DriveService service = new DriveService();
         private static string uploadName;
         private static string uploadPath;
         private static string _FolderId;
         private static string tableName;
         private static string reportDate;
+        private static string _fileId;
+        private static string _filePath;
 
 
         #region Document Functions
@@ -39,7 +40,6 @@ namespace BusinessLayer
         #region Set Upload Functions
         public static void setUpload(string name, string path, string FolderId)
         {
-            service = GoogleDrive.getService();
             uploadName = name;
             uploadPath = path;
             _FolderId = FolderId;
@@ -52,6 +52,12 @@ namespace BusinessLayer
             reportDate = date;
         }
 
+        public static void setDownload(string fileId, string filePath)
+        {
+            _fileId = fileId;
+            _filePath = filePath;
+        }
+
         public string getName() { return uploadName; }
 
         public string getPath() { return uploadPath; }
@@ -60,9 +66,17 @@ namespace BusinessLayer
 
         public string uploadFile()
         {
+            DriveService service = GoogleDrive.getService();
             var fileId = GoogleDrive.UploadFile(service, uploadName, uploadPath, _FolderId);
             AddDocument(tableName, fileId, reportDate);
             return uploadPath;
+        }
+
+        public static string downloadFile()
+        {
+            DriveService service = GoogleDrive.getService();
+            GoogleDrive.DownloadFile(service, _fileId, _filePath);
+            return _filePath;
         }
         #endregion
 

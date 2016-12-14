@@ -7,6 +7,7 @@ using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace DocumentWriter
 {
@@ -22,30 +23,17 @@ namespace DocumentWriter
 
         public RGArequest(string rgaID, string custName, string custID, string cpoID, string text)
         {
-            int Num = Convert.ToInt32(rgaID);
+            string fileName = "RGArequest" + rgaID + ".pdf";
+            string path = "..\\..\\Reports\\" + fileName;
 
-            string curfile = "..\\..\\Reports\\CustomerServices\\RGA Requests\\RGArequest" + rgaID + ".pdf";
+
             Document doc = new Document(PageSize.A4, 36, 36, 10, 10);
 
 
-            if (File.Exists(curfile) == true)
-            {
-                Num++;
-                FileStream fs = new FileStream("..\\..\\Reports\\CustomerServices\\RGA Requests\\RGArequest" + Num + ".pdf", FileMode.Create, FileAccess.Write, FileShare.None);
-                PdfWriter wr = PdfWriter.GetInstance(doc, fs);
-                doc.Open();
 
-            }
-            else
-            {
-                FileStream fs = new FileStream("..\\..\\Reports\\CustomerServices\\RGA Requests\\RGArequest" + rgaID + ".pdf", FileMode.Create, FileAccess.Write, FileShare.None);
-                PdfWriter wr = PdfWriter.GetInstance(doc, fs);
-                doc.Open();
-            }
-
-
-            string newrga_No;
-            newrga_No = Num.ToString();
+            FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None);
+            PdfWriter wr = PdfWriter.GetInstance(doc, fs);
+            doc.Open();
 
             Paragraph date = new Paragraph("Date: " + dateTime.ToString("dd/MM/yyyy"));
             date.Alignment = Element.ALIGN_RIGHT;
@@ -64,7 +52,7 @@ namespace DocumentWriter
             rga.Alignment = Element.ALIGN_CENTER;
             doc.Add(rga);
 
-            Paragraph rga_id = new Paragraph("RGA ID:  " + newrga_No);
+            Paragraph rga_id = new Paragraph("RGA ID:  " + rgaID);
             rga_id.Alignment = Element.ALIGN_CENTER;
             doc.Add(rga_id);
 
@@ -90,8 +78,15 @@ namespace DocumentWriter
             doc.Add(sig);
 
             doc.Close();
-            MessageBox.Show("RGA request Successfully Created!\n\nRGA Request ID: " + newrga_No);
+            MessageBox.Show("RGA request Successfully Created!\n\nRGA Request ID: " + rgaID);
 
+            string FolderId = "0B_ob9qFmHlBccjA1RmRBWGNnOG8";
+
+            Common_Rules.setPdf("Returned Goods Authorisation Request " + rgaID, path);
+
+            Common_Rules.setUpload(fileName, path, FolderId);
+
+            Common_Rules.setDatabaseUpload("RGArequest_Report", dateTime.ToShortDateString());
 
         }
     }

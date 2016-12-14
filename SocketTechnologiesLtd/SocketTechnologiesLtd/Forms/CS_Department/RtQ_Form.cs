@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DocumentWriter;
 using BusinessLayer;
 using BusinessEntities;
+using System.IO;
 
 namespace SocketTechnologiesLtd
 {
@@ -17,10 +18,19 @@ namespace SocketTechnologiesLtd
     {
         #region Instance Attributes
         private IModel model;
+        IdIncrement id = new IdIncrement();
         List<ICustomer> customers;
         List<IDocument> documents;
+        string rtqId = "";
+        string fileId = "";
+        int rfqId;
+        string custName = "";
+        string custAdd = "";
+        string contact = "";
+        string filePath = "";
         #endregion
 
+        #region Constructors
         public RtQ_Form(IModel _Model)
         {
             InitializeComponent();
@@ -29,42 +39,61 @@ namespace SocketTechnologiesLtd
             this.TopMost = true;
             model = _Model;
 
-            model.FillDocumentList("RequestForQuotation_Report");
+            model.FillDocumentList("RequestForQuotation_Report", false);
             documents = model.DocumentList;
             customers = model.CustomerList;
             fillComboBox();
 
-            //rtqId = "2";
-
-            //txt_RtQId.Text = rtqId;
-            txt_CustomerName.Text = "Cork Cyber Computing Ltd.";
-            txt_custAdd.Text = "Cork Business Park, \nModel Farm Road., \nCork.";
-            
+            rtqId = Convert.ToString(id.getReportID("RefusalToQuote_Report"));
+            txt_RtQId.Text = rtqId;
         }
 
-        private void btn_Exit_Click(object sender, EventArgs e)
+        private void comboBox_rfq_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Close();
+            string text;
+            rfqId = Convert.ToInt16(comboBox_rfq.SelectedItem);
+            fileId = getFileId(rfqId);
+            Common_Rules.setDownload(fileId, "..\\..\\Reports\\Rfq" + rfqId + ".pdf");
+            filePath = Common_Rules.downloadFile();
+            if(filePath != null)
+            {
+                Pdf_Reader reader = new Pdf_Reader();
+                text = reader.readPdf(filePath);
+
+                fillFields(text);
+            }
+            else
+                MessageBox.Show("There are no Request for quotations in need of attention.");
         }
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
-            //custName = txt_CustomerName.Text;
-            //custAdd = txt_custAdd.Text;
-            //rfqId = txt_RfQId.Text;
-            //txt = txt_rtqTxt.Text;
-
-            //RtQ rtq = new RtQ(rtqId, custName, custAdd, rfqId, txt, lst_customItems);
-            PDF_Preview viewer = new PDF_Preview(model);
+            RtQ rtq = new RtQ(rtqId, txt_CustomerName.Text, txt_custAdd.Text, rfqId.ToString(), txt_rtqTxt.Text, txt_customItems.Text, contact);
+            string form = "";
+            PDF_Preview viewer = new PDF_Preview(form);
             viewer.MdiParent = this.MdiParent;
             viewer.Show();
             this.Close();
+            deleteFile(filePath);
+            documents.Clear();
+        }
+        #endregion
+
+        #region Destructors
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            documents.Clear();
+            deleteFile(filePath);
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+            documents.Clear();
+            deleteFile(filePath);
         }
+        #endregion
 
         #region Extra Functions
         public void fillComboBox()
@@ -78,7 +107,76 @@ namespace SocketTechnologiesLtd
             }
             comboBox_rfq.Items.AddRange(docsItem);
         }
-        #endregion
 
+        public string getFileId(int id)
+        {
+            foreach(Document doc in documents)
+            {
+                if(id == doc.DocumentID)
+                {
+                    fileId = doc.DocumentPath;
+                }
+            }
+
+            return fileId;
+        }
+
+        public void fillFields(string pdfText)
+        {
+            custName = pdfText.Split('\n')[1];
+            custName = custName.Substring(0, custName.Length - 1);
+            txt_CustomerName.Text = custName;
+
+            custAdd = pdfText.Split('\n')[2];
+            custAdd += pdfText.Split('\n')[3];
+            custAdd += pdfText.Split('\n')[4];
+            txt_custAdd.Text = custAdd;
+
+            string text = "";
+            string custom = "";
+            for (int i = 0; i < pdfText.Length; i++)
+            {
+                text = pdfText.Split('\n')[i];
+                if (text == "CUSTOM ITEMS")
+                {
+                    for (int j = i; j < pdfText.Length; j++)
+                    {
+                        text = pdfText.Split('\n')[j];
+                        if (text == "Custom Part Name Specifications Quantity")
+                        {
+                            j++;
+                            while (text != " ")
+                            {
+                                text = pdfText.Split('\n')[j];
+                                custom += pdfText.Split('\n')[j] + "\r\n";
+                                j++;
+                            }
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+            txt_customItems.Text = custom;
+
+            for(int k = 0; k < pdfText.Length; k++)
+            {
+                text = pdfText.Split('\n')[k];
+                if(text == "__________________________________")
+                {
+                    contact = pdfText.Split('\n')[k + 1];
+                    break;
+                }
+            }
+        }
+
+        private void deleteFile(string path)
+        {
+            if (path != "")
+            {
+                File.Delete(path);
+            }
+        }
+        #endregion
     }
 }

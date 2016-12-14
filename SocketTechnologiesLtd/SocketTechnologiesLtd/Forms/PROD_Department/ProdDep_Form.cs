@@ -45,5 +45,10 @@ namespace SocketTechnologiesLtd
             fgtn.Dock = DockStyle.Fill;
             fgtn.Show();
         }
+
+        private void btn_ManageProduct_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

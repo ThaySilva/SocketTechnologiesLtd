@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.searchID_tile = new MetroFramework.Controls.MetroTile();
+            this.comboBox_fsr = new MetroFramework.Controls.MetroComboBox();
             this.custID_tb = new MetroFramework.Controls.MetroTextBox();
             this.cpoID_label = new MetroFramework.Controls.MetroLabel();
             this.btn_Cancel = new MetroFramework.Controls.MetroTile();
@@ -38,7 +38,6 @@
             this.type_cb = new MetroFramework.Controls.MetroComboBox();
             this.fsrID_tb = new MetroFramework.Controls.MetroTextBox();
             this.text_tb = new MetroFramework.Controls.MetroTextBox();
-            this.WorkOrderID_tb = new MetroFramework.Controls.MetroTextBox();
             this.type_label = new MetroFramework.Controls.MetroLabel();
             this.custID_label = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -49,7 +48,7 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.searchID_tile);
+            this.metroPanel1.Controls.Add(this.comboBox_fsr);
             this.metroPanel1.Controls.Add(this.custID_tb);
             this.metroPanel1.Controls.Add(this.cpoID_label);
             this.metroPanel1.Controls.Add(this.btn_Cancel);
@@ -58,7 +57,6 @@
             this.metroPanel1.Controls.Add(this.type_cb);
             this.metroPanel1.Controls.Add(this.fsrID_tb);
             this.metroPanel1.Controls.Add(this.text_tb);
-            this.metroPanel1.Controls.Add(this.WorkOrderID_tb);
             this.metroPanel1.Controls.Add(this.type_label);
             this.metroPanel1.Controls.Add(this.custID_label);
             this.metroPanel1.Controls.Add(this.metroLabel1);
@@ -76,25 +74,23 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // searchID_tile
+            // comboBox_fsr
             // 
-            this.searchID_tile.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.searchID_tile.Location = new System.Drawing.Point(639, 111);
-            this.searchID_tile.Name = "searchID_tile";
-            this.searchID_tile.Size = new System.Drawing.Size(81, 27);
-            this.searchID_tile.Style = MetroFramework.MetroColorStyle.Orange;
-            this.searchID_tile.TabIndex = 58;
-            this.searchID_tile.Text = "Search ID";
-            this.searchID_tile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.searchID_tile.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.searchID_tile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.comboBox_fsr.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox_fsr.FormattingEnabled = true;
+            this.comboBox_fsr.ItemHeight = 23;
+            this.comboBox_fsr.Location = new System.Drawing.Point(404, 123);
+            this.comboBox_fsr.Name = "comboBox_fsr";
+            this.comboBox_fsr.Size = new System.Drawing.Size(194, 29);
+            this.comboBox_fsr.TabIndex = 59;
+            this.comboBox_fsr.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.comboBox_fsr.SelectedIndexChanged += new System.EventHandler(this.comboBox_fsr_SelectedIndexChanged);
             // 
             // custID_tb
             // 
             this.custID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.custID_tb.Location = new System.Drawing.Point(404, 286);
             this.custID_tb.Name = "custID_tb";
-            this.custID_tb.ReadOnly = true;
             this.custID_tb.Size = new System.Drawing.Size(194, 27);
             this.custID_tb.TabIndex = 46;
             this.custID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -187,15 +183,6 @@
             this.text_tb.TabIndex = 37;
             this.text_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // WorkOrderID_tb
-            // 
-            this.WorkOrderID_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.WorkOrderID_tb.Location = new System.Drawing.Point(404, 111);
-            this.WorkOrderID_tb.Name = "WorkOrderID_tb";
-            this.WorkOrderID_tb.Size = new System.Drawing.Size(194, 27);
-            this.WorkOrderID_tb.TabIndex = 36;
-            this.WorkOrderID_tb.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // type_label
             // 
             this.type_label.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -287,12 +274,11 @@
         private MetroFramework.Controls.MetroComboBox type_cb;
         private MetroFramework.Controls.MetroTextBox fsrID_tb;
         private MetroFramework.Controls.MetroTextBox text_tb;
-        private MetroFramework.Controls.MetroTextBox WorkOrderID_tb;
         private MetroFramework.Controls.MetroButton btn_Exit;
         private MetroFramework.Controls.MetroTile btn_Cancel;
         private MetroFramework.Controls.MetroTile btn_Create;
         private MetroFramework.Controls.MetroTextBox custID_tb;
         private MetroFramework.Controls.MetroLabel cpoID_label;
-        private MetroFramework.Controls.MetroTile searchID_tile;
+        private MetroFramework.Controls.MetroComboBox comboBox_fsr;
     }
 }

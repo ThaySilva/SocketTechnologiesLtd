@@ -62,8 +62,9 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public LineItem(IProduct _product, int _quantity, double _linePrice, double _vat, double _lineTotal)
+        public LineItem(int _lineID, IProduct _product, int _quantity, double _linePrice, double _vat, double _lineTotal)
         {
+            this.lineID = _lineID;
             this.product = _product;
             this.quantity = _quantity;
             this.vat = _vat;

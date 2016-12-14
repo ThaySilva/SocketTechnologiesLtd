@@ -12,6 +12,7 @@ namespace BusinessEntities
         private int docId;
         private string docPath;
         private DateTime dateCreated;
+        private bool response;
         #endregion
 
         #region Instance Properties
@@ -32,6 +33,12 @@ namespace BusinessEntities
             get { return dateCreated; }
             set { dateCreated = value; }
         }
+
+        public bool Response
+        {
+            get { return response; }
+            set { response = value; }
+        }
         #endregion
 
         #region Constructors
@@ -45,6 +52,14 @@ namespace BusinessEntities
             this.docId = Id;
             this.docPath = path;
             this.dateCreated = date;
+        }
+
+        public Document(int Id, string path, DateTime date, bool resp)
+        {
+            this.docId = Id;
+            this.docPath = path;
+            this.dateCreated = date;
+            this.response = resp;
         }
         #endregion
     }

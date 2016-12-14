@@ -19,6 +19,7 @@ namespace SocketTechnologiesLtd
 
         public Container(IModel _Model)
         {
+            Model = _Model;
             InitializeComponent();
             this.IsMdiContainer = true;
             this.ControlBox = false;
@@ -49,6 +50,11 @@ namespace SocketTechnologiesLtd
         private void Close(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Container_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

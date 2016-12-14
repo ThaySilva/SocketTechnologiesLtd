@@ -190,14 +190,14 @@
             this.AccManageInvoicesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.AccManageInvoicesPanel.Controls.Add(this.btn_IssueCustomerInvoice, 1, 2);
             this.AccManageInvoicesPanel.Controls.Add(this.btn_ViewSupplierInvoice, 1, 1);
-            this.AccManageInvoicesPanel.Location = new System.Drawing.Point(23, 62);
+            this.AccManageInvoicesPanel.Location = new System.Drawing.Point(23, 60);
             this.AccManageInvoicesPanel.Name = "AccManageInvoicesPanel";
             this.AccManageInvoicesPanel.RowCount = 4;
             this.AccManageInvoicesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.AccManageInvoicesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.AccManageInvoicesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.AccManageInvoicesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.AccManageInvoicesPanel.Size = new System.Drawing.Size(936, 500);
+            this.AccManageInvoicesPanel.Size = new System.Drawing.Size(939, 505);
             this.AccManageInvoicesPanel.TabIndex = 23;
             this.AccManageInvoicesPanel.Visible = false;
             // 
@@ -206,9 +206,9 @@
             this.btn_IssueCustomerInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_IssueCustomerInvoice.Location = new System.Drawing.Point(315, 253);
+            this.btn_IssueCustomerInvoice.Location = new System.Drawing.Point(316, 255);
             this.btn_IssueCustomerInvoice.Name = "btn_IssueCustomerInvoice";
-            this.btn_IssueCustomerInvoice.Size = new System.Drawing.Size(306, 119);
+            this.btn_IssueCustomerInvoice.Size = new System.Drawing.Size(307, 120);
             this.btn_IssueCustomerInvoice.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_IssueCustomerInvoice.TabIndex = 12;
             this.btn_IssueCustomerInvoice.Text = "Issue Customer Invoice";
@@ -225,9 +225,9 @@
             this.btn_ViewSupplierInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ViewSupplierInvoice.Location = new System.Drawing.Point(315, 128);
+            this.btn_ViewSupplierInvoice.Location = new System.Drawing.Point(316, 129);
             this.btn_ViewSupplierInvoice.Name = "btn_ViewSupplierInvoice";
-            this.btn_ViewSupplierInvoice.Size = new System.Drawing.Size(306, 119);
+            this.btn_ViewSupplierInvoice.Size = new System.Drawing.Size(307, 120);
             this.btn_ViewSupplierInvoice.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_ViewSupplierInvoice.TabIndex = 10;
             this.btn_ViewSupplierInvoice.Text = "Log Supplier Invoice";

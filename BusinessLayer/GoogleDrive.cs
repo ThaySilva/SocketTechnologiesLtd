@@ -20,7 +20,7 @@ namespace BusinessLayer
 
         public static DriveService getService()
         {
-            string[] scopes = new string[] { DriveService.Scope.Drive };
+            string[] scopes = new string[] { DriveService.Scope.Drive, DriveService.Scope.DriveMetadata };
             string AppName = "sockettechnologiesltd";
 
             try
@@ -67,7 +67,6 @@ namespace BusinessLayer
 
             FilesResource.CreateMediaUpload request;
 
-           // System.IO.MemoryStream stream = new System.IO.MemoryStream(pdfBytes);
             using (var stream = new FileStream(filePath, FileMode.Open))
             {
                 request = service.Files.Create(fileMetadata, stream, contentType);
@@ -85,9 +84,21 @@ namespace BusinessLayer
 
             using (var memoryStream = new MemoryStream())
             {
+                request.MediaDownloader.ProgressChanged += (IDownloadProgress progress) => 
+                {
+                    switch (progress.Status)
+                    {
+                        case DownloadStatus.Downloading:
+                            break;
+                        case DownloadStatus.Completed:
+                            break;
+                        case DownloadStatus.Failed:
+                            break;
+                    }
+                };
                 request.Download(memoryStream);
 
-                using (var filestream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+                using (var filestream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
                 {
                     filestream.Write(memoryStream.GetBuffer(), 0, memoryStream.GetBuffer().Length);
                 }

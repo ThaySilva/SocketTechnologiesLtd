@@ -37,16 +37,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(696, 413);
+            this.ClientSize = new System.Drawing.Size(783, 747);
             this.DisplayHeader = false;
-            this.Movable = false;
             this.Name = "Container";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Container";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.TopMost = true;
+            this.Load += new System.EventHandler(this.Container_Load);
             this.ResumeLayout(false);
 
         }

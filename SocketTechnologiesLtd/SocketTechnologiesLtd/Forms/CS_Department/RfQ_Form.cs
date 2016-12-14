@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
 using BusinessEntities;
+using DocumentWriter;
 
 namespace SocketTechnologiesLtd
 {
@@ -18,6 +19,23 @@ namespace SocketTechnologiesLtd
         private IModel model;
         List<ICustomer> customers;
         List<IProduct> products;
+        List<IProduct> customPart;
+        string rfqId = "";
+        IdIncrement id = new IdIncrement();
+        int custId;
+        Customer customer;
+        int partId;
+        List<IProduct> part = new List<IProduct>();
+        int amount;
+        int[] quantity = new int[50];
+        string[,] customParts = new string[50, 3];
+        int customPartId;
+        int customQty;
+        string customPartName;
+        string specs;
+        string[] deliveryDates;
+        int i, j;
+        string contact = "";
         #endregion
 
         #region Constructors
@@ -31,11 +49,16 @@ namespace SocketTechnologiesLtd
 
             customers = model.CustomerList;
             products = model.ProductList;
+            customPart = model.CustomProductList;
+            i = 0;
+            j = 0;
+
+            rfqId = Convert.ToString(id.getReportID("RequestForQuotation_Report"));
 
             populateListViews();
         }
 
-
+        #region Customer Functions
         private void btn_searchCust_Click(object sender, EventArgs e)
         {
             int id;
@@ -44,8 +67,6 @@ namespace SocketTechnologiesLtd
                 populateCustView(id);
             else
                 MessageBox.Show("You need to enter a number on the Id field!");
-
-            clearCustFields();
         }
 
         private void txt_custId_Click(object sender, EventArgs e)
@@ -56,15 +77,26 @@ namespace SocketTechnologiesLtd
 
         private void gridView_cust_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int custId = Convert.ToInt16(gridView_cust.Rows[e.RowIndex].Cells["CustomerID:"].Value);
+            custId = Convert.ToInt16(gridView_cust.Rows[e.RowIndex].Cells["CustomerID:"].Value);
             fillFields(custId);
         }
 
         private void btn_selectCust_Click(object sender, EventArgs e)
         {
-
+            foreach(Customer cust in customers)
+            {
+                if(custId == cust.Customer_ID)
+                {
+                    customer = cust;
+                    btn_selectCust.Enabled = false;
+                    gridView_cust.Enabled = false;
+                    btn_searchCust.Enabled = false;
+                }
+            }
         }
+        #endregion
 
+        #region Part Functions
         private void btn_searchPart_Click(object sender, EventArgs e)
         {
             int id;
@@ -83,13 +115,80 @@ namespace SocketTechnologiesLtd
 
         private void gridView_parts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int partId = Convert.ToInt16(gridView_parts.Rows[e.RowIndex].Cells["STL P/N:"].Value);
+            partId = Convert.ToInt16(gridView_parts.Rows[e.RowIndex].Cells["STL P/N:"].Value);
             txt_partId.Text = partId.ToString();
         }
+
+        private void btn_addSItem_Click(object sender, EventArgs e)
+        {
+            bool result = int.TryParse(txt_quantity.Text, out amount);
+            if (result)
+            {
+                foreach (Product prod in products)
+                {
+                    if (partId == prod.ProductId)
+                    {
+                        part.Add(prod);
+                        quantity[i] = amount;
+                        clearPartsFields();
+                    }
+                }
+                i++;
+            }
+            else
+                MessageBox.Show("You need to enter a number on the quantity field!");
+        }
+
+        private void btn_AddCustom_Click(object sender, EventArgs e)
+        {
+            bool qtyResult = int.TryParse(txt_CustomQty.Text, out customQty);
+            if (qtyResult)
+            {
+                if (txt_customPartName.Text != null && txt_CustomSpecs.Text != null)
+                {
+
+                    customPartName = txt_customPartName.Text;
+                    specs = txt_CustomSpecs.Text;
+                    customParts[j, 0] = customPartName;
+                    customParts[j, 1] = specs;
+                    customParts[j, 2] = customQty.ToString();
+                    j++;
+                    clearCustomFields();
+                }
+                else
+                    MessageBox.Show("You need to fill all the fields!");
+            }
+            else
+                MessageBox.Show("You need to enter a number on the Id field!");
+        }
+        #endregion
+
+        private void btn_Create_Click(object sender, EventArgs e)
+        {
+            if (validateDates() != null)
+            {
+                if (customer != null && part != null && customParts != null)
+                {
+                    string form = "";
+                    RfQ rfq = new RfQ(rfqId, customer, part, quantity, customParts, deliveryDates, contact);
+                    PDF_Preview viewer = new PDF_Preview(form);
+                    viewer.MdiParent = this.MdiParent;
+                    viewer.Text = "Request for Quotation";
+                    viewer.Show();
+                    this.Close();
+                }
+            }
+        }
+
         #endregion
 
         #region Destructors
         private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -207,7 +306,8 @@ namespace SocketTechnologiesLtd
                 {
                     txt_custId.Text = cust.Customer_ID.ToString();
                     txt_custName.Text = cust.CustCompanyName;
-                    //txt_custAdd.Text = cust.custAddress + ",\r\n" + cust.custAddLine2 + ",\r\n" + cust.custCounty;
+                    txt_custAdd.Text = cust.CustAddress[0] + ",\r\n" + cust.CustAddress[1] + ",\r\n" + cust.CustAddress[2];
+                    contact = cust.CustFirstName + " " + cust.CustLastName + ", Purchasing Manager";
                 }
             }
         }
@@ -217,6 +317,43 @@ namespace SocketTechnologiesLtd
             txt_custId.Text = null;
             txt_custName.Text = null;
             txt_custAdd.Text = null;
+        }
+
+        private void clearPartsFields()
+        {
+            txt_partId.Text = null;
+            txt_quantity.Text = null;
+        }
+
+        private void disableCustPartFields()
+        {
+            txt_customPartName.Enabled = false;
+            txt_CustomQty.Enabled = false;
+            txt_CustomSpecs.Enabled = false;
+        }
+
+        private void clearCustomFields()
+        {
+            txt_customPartName.Text = null;
+            txt_CustomQty.Text = null;
+            txt_CustomSpecs.Text = null;
+        }
+
+        private string[] validateDates()
+        {
+            if (dtPicker_qDate.Value > DateTime.UtcNow && txt_CDate != null && txt_SDate != null)
+            {
+                string qDate = dtPicker_qDate.Value.ToString("dd/MM/yyyy");
+                if (qDate != null)
+                {
+                    deliveryDates = new string[] { qDate, txt_CDate.Text, txt_SDate.Text };
+                    return deliveryDates;
+                }
+                else
+                    return null;
+            }
+            else
+                return null;
         }
         #endregion
     }

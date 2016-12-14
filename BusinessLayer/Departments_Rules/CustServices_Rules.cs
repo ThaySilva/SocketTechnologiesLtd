@@ -20,14 +20,14 @@ namespace BusinessLayer
             return data.ToList<String[]>();
         }
 
-        //public static void AddCustomer(int customer_ID, string custFirstName, string custLastName, string custCompanyName, string custPhoneNum, string custAddress, string custAddLine2, string custCounty)
-        //{
-        //    Guid uid = Guid.NewGuid();
-        //    GenericFactory<ICustomer>.Register(uid, () => new Customer(customer_ID, custFirstName, custLastName, custCompanyName, custPhoneNum, custAddress, custAddLine2, custCounty));
-        //    IEmployee emp = GenericFactory<IEmployee>.Create(uid);
-        //    _data.AddRow("Customer", new string[] { "customer_ID","custFirstName", "custLastName","custCompanyName", "custPhoneNum", "custAddress", "custAddLine2","custCounty" }, new string[] { customer_ID.ToString(), custFirstName, custLastName, custCompanyName, custPhoneNum, custAddress, custAddLine2, custCounty });
-        //    model.FillCustomerList();
-        //}
+        public static void AddCustomer(int customer_ID, string custFirstName, string custLastName, string custCompanyName, string custPhoneNum, string[] custAddress)
+        {
+            Guid uid = Guid.NewGuid();
+            GenericFactory<ICustomer>.Register(uid, () => new Customer(customer_ID, custFirstName, custLastName, custCompanyName, custPhoneNum, custAddress));
+            IEmployee emp = GenericFactory<IEmployee>.Create(uid);
+            _data.AddRow("Customer", new string[] { "customer_ID", "custFirstName", "custLastName", "custCompanyName", "custPhoneNum", "custAddress" }, new string[] { customer_ID.ToString(), custFirstName, custLastName, custCompanyName, custPhoneNum });
+            model.FillCustomerList();
+        }
 
         //public static void EditCustomer(int customer_ID, string firstName, string lastName, string companyName, string phone, string add1, string add2, string county)
         //{
@@ -48,7 +48,7 @@ namespace BusinessLayer
         //public static void DeleteCustomer(int customerID)
         //{
         //    var cust = model.CustomerList.First(c => c.customer_ID == customerID);
-            
+
 
         //    //if (MessageBox.Show("A Customer is associated with the selected employee, by deleting this employee the user account will also be deleted.\nAre you sure you want to continue?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.No)
         //    //{
@@ -66,5 +66,15 @@ namespace BusinessLayer
         //}
         #endregion
 
+        #region Add Custom Product
+        public static void AddCustomProduct(int prodId, string productName, string productDescription, int quantity)
+        {
+            Guid uid = Guid.NewGuid();
+            GenericFactory<IProduct>.Register(uid, () => new Product(prodId, productName, productDescription, quantity));
+            IProduct prod = GenericFactory<IProduct>.Create(uid);
+            _data.AddRow("CustomProduct", new string[] { "CustomProduct_ID", "productName", "manufacturingInstructions", "quantity" }, new string[] { prodId.ToString(), productName, productDescription, quantity.ToString()});
+            model.FillUserList();
+        }
+        #endregion
     }
 }

@@ -28,18 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbAddress2AddCust = new System.Windows.Forms.TextBox();
-            this.tbAddress1AddCust = new System.Windows.Forms.TextBox();
+            this.groupBox_addCustomer = new System.Windows.Forms.GroupBox();
+            this.tb_CompanyName = new System.Windows.Forms.TextBox();
+            this.tb_FirstName = new System.Windows.Forms.TextBox();
+            this.tb_LastName = new System.Windows.Forms.TextBox();
+            this.tb_add3 = new System.Windows.Forms.TextBox();
             this.tbFirstNameAddCust = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tbLastNameAddCust = new System.Windows.Forms.TextBox();
-            this.tbEmailAddCust = new System.Windows.Forms.TextBox();
-            this.tbAddress3AddCust = new System.Windows.Forms.TextBox();
-            this.tbPhoneAddCust = new System.Windows.Forms.TextBox();
-            this.tbCompanyNameAddCust = new System.Windows.Forms.TextBox();
+            this.tb_Add2 = new System.Windows.Forms.TextBox();
+            this.tb_Phone = new System.Windows.Forms.TextBox();
+            this.tb_add1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,95 +56,150 @@
             this.btnBackAddCust = new System.Windows.Forms.Button();
             this.custIDlbl = new System.Windows.Forms.Label();
             this.tbCustomer_ID = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_addCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBox_addCustomer
             // 
-            this.groupBox1.Controls.Add(this.tbAddress2AddCust);
-            this.groupBox1.Controls.Add(this.tbAddress1AddCust);
-            this.groupBox1.Controls.Add(this.tbFirstNameAddCust);
-            this.groupBox1.Controls.Add(this.tbLastNameAddCust);
-            this.groupBox1.Controls.Add(this.tbEmailAddCust);
-            this.groupBox1.Controls.Add(this.tbAddress3AddCust);
-            this.groupBox1.Controls.Add(this.tbPhoneAddCust);
-            this.groupBox1.Controls.Add(this.tbCompanyNameAddCust);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(201, 42);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(362, 303);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Customer Details";
+            this.groupBox_addCustomer.Controls.Add(this.tb_CompanyName);
+            this.groupBox_addCustomer.Controls.Add(this.tb_FirstName);
+            this.groupBox_addCustomer.Controls.Add(this.tb_LastName);
+            this.groupBox_addCustomer.Controls.Add(this.tb_add3);
+            this.groupBox_addCustomer.Controls.Add(this.tbFirstNameAddCust);
+            this.groupBox_addCustomer.Controls.Add(this.textBox6);
+            this.groupBox_addCustomer.Controls.Add(this.textBox5);
+            this.groupBox_addCustomer.Controls.Add(this.textBox4);
+            this.groupBox_addCustomer.Controls.Add(this.textBox3);
+            this.groupBox_addCustomer.Controls.Add(this.textBox2);
+            this.groupBox_addCustomer.Controls.Add(this.textBox1);
+            this.groupBox_addCustomer.Controls.Add(this.tbLastNameAddCust);
+            this.groupBox_addCustomer.Controls.Add(this.tb_Add2);
+            this.groupBox_addCustomer.Controls.Add(this.tb_Phone);
+            this.groupBox_addCustomer.Controls.Add(this.tb_add1);
+            this.groupBox_addCustomer.Controls.Add(this.label8);
+            this.groupBox_addCustomer.Controls.Add(this.label7);
+            this.groupBox_addCustomer.Controls.Add(this.label5);
+            this.groupBox_addCustomer.Controls.Add(this.label4);
+            this.groupBox_addCustomer.Controls.Add(this.label3);
+            this.groupBox_addCustomer.Controls.Add(this.label2);
+            this.groupBox_addCustomer.Controls.Add(this.label1);
+            this.groupBox_addCustomer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox_addCustomer.Location = new System.Drawing.Point(201, 42);
+            this.groupBox_addCustomer.Name = "groupBox_addCustomer";
+            this.groupBox_addCustomer.Size = new System.Drawing.Size(672, 447);
+            this.groupBox_addCustomer.TabIndex = 0;
+            this.groupBox_addCustomer.TabStop = false;
+            this.groupBox_addCustomer.Text = "Customer Details";
             // 
-            // tbAddress2AddCust
+            // tb_CompanyName
             // 
-            this.tbAddress2AddCust.Location = new System.Drawing.Point(151, 164);
-            this.tbAddress2AddCust.Name = "tbAddress2AddCust";
-            this.tbAddress2AddCust.Size = new System.Drawing.Size(165, 20);
-            this.tbAddress2AddCust.TabIndex = 15;
+            this.tb_CompanyName.Location = new System.Drawing.Point(260, 91);
+            this.tb_CompanyName.Name = "tb_CompanyName";
+            this.tb_CompanyName.Size = new System.Drawing.Size(235, 20);
+            this.tb_CompanyName.TabIndex = 17;
             // 
-            // tbAddress1AddCust
+            // tb_FirstName
             // 
-            this.tbAddress1AddCust.Location = new System.Drawing.Point(151, 135);
-            this.tbAddress1AddCust.Name = "tbAddress1AddCust";
-            this.tbAddress1AddCust.Size = new System.Drawing.Size(165, 20);
-            this.tbAddress1AddCust.TabIndex = 14;
+            this.tb_FirstName.Location = new System.Drawing.Point(260, 126);
+            this.tb_FirstName.Name = "tb_FirstName";
+            this.tb_FirstName.Size = new System.Drawing.Size(235, 20);
+            this.tb_FirstName.TabIndex = 16;
+            // 
+            // tb_LastName
+            // 
+            this.tb_LastName.Location = new System.Drawing.Point(260, 165);
+            this.tb_LastName.Name = "tb_LastName";
+            this.tb_LastName.Size = new System.Drawing.Size(235, 20);
+            this.tb_LastName.TabIndex = 15;
+            // 
+            // tb_add3
+            // 
+            this.tb_add3.Location = new System.Drawing.Point(260, 270);
+            this.tb_add3.Name = "tb_add3";
+            this.tb_add3.Size = new System.Drawing.Size(235, 20);
+            this.tb_add3.TabIndex = 14;
             // 
             // tbFirstNameAddCust
             // 
-            this.tbFirstNameAddCust.Location = new System.Drawing.Point(151, 72);
+            this.tbFirstNameAddCust.Location = new System.Drawing.Point(-361, 69);
             this.tbFirstNameAddCust.Name = "tbFirstNameAddCust";
             this.tbFirstNameAddCust.Size = new System.Drawing.Size(165, 20);
             this.tbFirstNameAddCust.TabIndex = 13;
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(-290, 113);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(165, 20);
+            this.textBox6.TabIndex = 12;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(-290, 104);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(165, 20);
+            this.textBox5.TabIndex = 12;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(-290, 115);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(165, 20);
+            this.textBox4.TabIndex = 12;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(-290, 113);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(165, 20);
+            this.textBox3.TabIndex = 12;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(-290, 118);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(165, 20);
+            this.textBox2.TabIndex = 12;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(-290, 117);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(165, 20);
+            this.textBox1.TabIndex = 12;
+            // 
             // tbLastNameAddCust
             // 
-            this.tbLastNameAddCust.Location = new System.Drawing.Point(151, 104);
+            this.tbLastNameAddCust.Location = new System.Drawing.Point(-290, 117);
             this.tbLastNameAddCust.Name = "tbLastNameAddCust";
             this.tbLastNameAddCust.Size = new System.Drawing.Size(165, 20);
             this.tbLastNameAddCust.TabIndex = 12;
             // 
-            // tbEmailAddCust
+            // tb_Add2
             // 
-            this.tbEmailAddCust.Location = new System.Drawing.Point(151, 262);
-            this.tbEmailAddCust.Name = "tbEmailAddCust";
-            this.tbEmailAddCust.Size = new System.Drawing.Size(165, 20);
-            this.tbEmailAddCust.TabIndex = 11;
+            this.tb_Add2.Location = new System.Drawing.Point(260, 235);
+            this.tb_Add2.Name = "tb_Add2";
+            this.tb_Add2.Size = new System.Drawing.Size(235, 20);
+            this.tb_Add2.TabIndex = 10;
             // 
-            // tbAddress3AddCust
+            // tb_Phone
             // 
-            this.tbAddress3AddCust.Location = new System.Drawing.Point(151, 195);
-            this.tbAddress3AddCust.Name = "tbAddress3AddCust";
-            this.tbAddress3AddCust.Size = new System.Drawing.Size(165, 20);
-            this.tbAddress3AddCust.TabIndex = 10;
+            this.tb_Phone.Location = new System.Drawing.Point(260, 308);
+            this.tb_Phone.Name = "tb_Phone";
+            this.tb_Phone.Size = new System.Drawing.Size(235, 20);
+            this.tb_Phone.TabIndex = 9;
             // 
-            // tbPhoneAddCust
+            // tb_add1
             // 
-            this.tbPhoneAddCust.Location = new System.Drawing.Point(151, 230);
-            this.tbPhoneAddCust.Name = "tbPhoneAddCust";
-            this.tbPhoneAddCust.Size = new System.Drawing.Size(165, 20);
-            this.tbPhoneAddCust.TabIndex = 9;
-            // 
-            // tbCompanyNameAddCust
-            // 
-            this.tbCompanyNameAddCust.Location = new System.Drawing.Point(151, 37);
-            this.tbCompanyNameAddCust.Name = "tbCompanyNameAddCust";
-            this.tbCompanyNameAddCust.Size = new System.Drawing.Size(165, 20);
-            this.tbCompanyNameAddCust.TabIndex = 8;
+            this.tb_add1.Location = new System.Drawing.Point(260, 202);
+            this.tb_add1.Name = "tb_add1";
+            this.tb_add1.Size = new System.Drawing.Size(235, 20);
+            this.tb_add1.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 195);
+            this.label8.Location = new System.Drawing.Point(93, 277);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 13);
             this.label8.TabIndex = 7;
@@ -147,25 +208,16 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(38, 230);
+            this.label7.Location = new System.Drawing.Point(92, 315);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 13);
             this.label7.TabIndex = 6;
             this.label7.Text = "Phone Number:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 262);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Email:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 135);
+            this.label5.Location = new System.Drawing.Point(93, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 4;
@@ -174,7 +226,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 164);
+            this.label4.Location = new System.Drawing.Point(93, 242);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 3;
@@ -183,7 +235,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 72);
+            this.label3.Location = new System.Drawing.Point(94, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 2;
@@ -192,7 +244,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 104);
+            this.label2.Location = new System.Drawing.Point(93, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 1;
@@ -201,7 +253,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 37);
+            this.label1.Location = new System.Drawing.Point(94, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
@@ -209,28 +261,28 @@
             // 
             // btnClearAddCust
             // 
-            this.btnClearAddCust.Location = new System.Drawing.Point(201, 351);
+            this.btnClearAddCust.Location = new System.Drawing.Point(201, 514);
             this.btnClearAddCust.Name = "btnClearAddCust";
-            this.btnClearAddCust.Size = new System.Drawing.Size(87, 29);
+            this.btnClearAddCust.Size = new System.Drawing.Size(138, 41);
             this.btnClearAddCust.TabIndex = 1;
             this.btnClearAddCust.Text = "CLEAR";
             this.btnClearAddCust.UseVisualStyleBackColor = true;
+            this.btnClearAddCust.Click += new System.EventHandler(this.btnClearAddCust_Click);
             // 
             // btnSaveAddCust
             // 
-            this.btnSaveAddCust.Location = new System.Drawing.Point(340, 351);
+            this.btnSaveAddCust.Location = new System.Drawing.Point(475, 514);
             this.btnSaveAddCust.Name = "btnSaveAddCust";
-            this.btnSaveAddCust.Size = new System.Drawing.Size(87, 29);
+            this.btnSaveAddCust.Size = new System.Drawing.Size(138, 41);
             this.btnSaveAddCust.TabIndex = 2;
             this.btnSaveAddCust.Text = "SAVE";
             this.btnSaveAddCust.UseVisualStyleBackColor = true;
-            
             // 
             // btnBackAddCust
             // 
-            this.btnBackAddCust.Location = new System.Drawing.Point(476, 351);
+            this.btnBackAddCust.Location = new System.Drawing.Point(735, 514);
             this.btnBackAddCust.Name = "btnBackAddCust";
-            this.btnBackAddCust.Size = new System.Drawing.Size(87, 29);
+            this.btnBackAddCust.Size = new System.Drawing.Size(138, 41);
             this.btnBackAddCust.TabIndex = 3;
             this.btnBackAddCust.Text = "BACK";
             this.btnBackAddCust.UseVisualStyleBackColor = true;
@@ -257,20 +309,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 403);
+            this.ClientSize = new System.Drawing.Size(1112, 728);
             this.Controls.Add(this.tbCustomer_ID);
             this.Controls.Add(this.custIDlbl);
             this.Controls.Add(this.btnBackAddCust);
             this.Controls.Add(this.btnSaveAddCust);
             this.Controls.Add(this.btnClearAddCust);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox_addCustomer);
             this.Name = "AddCustomer";
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "AddCustomer";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.AddCustomer_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_addCustomer.ResumeLayout(false);
+            this.groupBox_addCustomer.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,18 +330,14 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbAddress2AddCust;
-        private System.Windows.Forms.TextBox tbAddress1AddCust;
+        private System.Windows.Forms.GroupBox groupBox_addCustomer;
         private System.Windows.Forms.TextBox tbFirstNameAddCust;
         private System.Windows.Forms.TextBox tbLastNameAddCust;
-        private System.Windows.Forms.TextBox tbEmailAddCust;
-        private System.Windows.Forms.TextBox tbAddress3AddCust;
-        private System.Windows.Forms.TextBox tbPhoneAddCust;
-        private System.Windows.Forms.TextBox tbCompanyNameAddCust;
+        private System.Windows.Forms.TextBox tb_Add2;
+        private System.Windows.Forms.TextBox tb_Phone;
+        private System.Windows.Forms.TextBox tb_add1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -300,5 +348,15 @@
         private System.Windows.Forms.Button btnBackAddCust;
         private System.Windows.Forms.Label custIDlbl;
         private System.Windows.Forms.TextBox tbCustomer_ID;
+        private System.Windows.Forms.TextBox tb_CompanyName;
+        private System.Windows.Forms.TextBox tb_FirstName;
+        private System.Windows.Forms.TextBox tb_LastName;
+        private System.Windows.Forms.TextBox tb_add3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

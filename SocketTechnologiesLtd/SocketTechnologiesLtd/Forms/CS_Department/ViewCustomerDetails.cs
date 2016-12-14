@@ -7,10 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DocumentWriter;
 using BusinessLayer;
 using BusinessEntities;
-using DocumentWriter;
-using DataAccessLayer;
 
 namespace SocketTechnologiesLtd
 {
@@ -24,18 +23,22 @@ namespace SocketTechnologiesLtd
         #region Constructors
         public ViewCustomerDetails(IModel _Model)
         {
-            
+            //populateCustView();
             InitializeComponent();
             this.ControlBox = false;
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
-            customers = model.CustomerList;
             model = _Model;
-            populateCustView();
+            customers = model.CustomerList;
+         //   model.FillDocumentList("RequestForQuotation_Report", "0");
+          //  documents = model.DocumentList;
+
         }
 
         private void ViewCustomerDetails_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'stldb2DataSet.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter1.Fill(this.stldb2DataSet.Customer);
             //TODO: This line of code loads data into the 'stldb1DataSet.Customer' table.You can move, or remove it, as needed.
             this.customerTableAdapter.Fill(this.stldb1DataSet.Customer);
 
@@ -54,6 +57,30 @@ namespace SocketTechnologiesLtd
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             AddCustomer ac = new AddCustomer();
+            ac.MdiParent = this.MdiParent;
+            ac.Dock = DockStyle.Fill;
+            ac.Show();
+            ////if (validateFields())
+            ////{
+            //    ICustomer duplicateCustomer = model.CustomerList.FirstOrDefault(cust => cust.CustLastName == cusName.Text.Trim());
+
+            //    if (duplicateCustomer == null)
+            //    {
+            //    try
+            //    {
+            //        CustServices_Rules.AddCustomer(Convert.ToInt32(cusName.Text), "", "", "", "", new string[] {"", "", ""});
+
+            //            MessageBox.Show("The customer " + cusName.Text + " was successfully created!");
+            //            this.Close();
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message);
+            //        }
+            //    }
+            //    else
+            //        MessageBox.Show("The customer " + cusName.Text + " already exists please try another company name!");
+            //}
         }
 
         private void btnEditCustomer_Click(object sender, EventArgs e)
@@ -127,7 +154,20 @@ namespace SocketTechnologiesLtd
                 
             }
 
-            customerGridView.DataSource = Customers;
+            //customerGridView.DataSource = Customers;
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.customerTableAdapter1.FillBy(this.stldb2DataSet.Customer);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
     #endregion

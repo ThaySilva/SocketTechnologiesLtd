@@ -45,22 +45,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbCustomerSearch = new System.Windows.Forms.TextBox();
             this.btnBackViewCust = new System.Windows.Forms.Button();
-            this.customerGridView = new System.Windows.Forms.DataGridView();
-            this.stldb1DataSet = new SocketTechnologiesLtd.stldb1DataSet();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stldb1DataSet = new SocketTechnologiesLtd.stldb1DataSet();
             this.customerTableAdapter = new SocketTechnologiesLtd.stldb1DataSetTableAdapters.CustomerTableAdapter();
-            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.custFirstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.custLastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.custCompanyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.custPhoneNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.custAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.custAddLine2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.custCountyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lb_customers = new System.Windows.Forms.ListBox();
+            this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.stldb2DataSet = new SocketTechnologiesLtd.stldb2DataSet();
+            this.customerTableAdapter1 = new SocketTechnologiesLtd.stldb2DataSetTableAdapters.CustomerTableAdapter();
             this.gbCustomerDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stldb1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stldb1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stldb2DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmailViewCust
@@ -255,89 +251,48 @@
             this.btnBackViewCust.Text = "BACK";
             this.btnBackViewCust.UseVisualStyleBackColor = false;
             // 
-            // customerGridView
+            // customerBindingSource
             // 
-            this.customerGridView.AutoGenerateColumns = false;
-            this.customerGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.customerGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.customerIDDataGridViewTextBoxColumn,
-            this.custFirstNameDataGridViewTextBoxColumn,
-            this.custLastNameDataGridViewTextBoxColumn,
-            this.custCompanyNameDataGridViewTextBoxColumn,
-            this.custPhoneNumDataGridViewTextBoxColumn,
-            this.custAddressDataGridViewTextBoxColumn,
-            this.custAddLine2DataGridViewTextBoxColumn,
-            this.custCountyDataGridViewTextBoxColumn});
-            this.customerGridView.DataSource = this.customerBindingSource;
-            this.customerGridView.GridColor = System.Drawing.SystemColors.Control;
-            this.customerGridView.Location = new System.Drawing.Point(23, 122);
-            this.customerGridView.Name = "customerGridView";
-            this.customerGridView.Size = new System.Drawing.Size(507, 507);
-            this.customerGridView.TabIndex = 89;
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.stldb1DataSet;
             // 
             // stldb1DataSet
             // 
             this.stldb1DataSet.DataSetName = "stldb1DataSet";
             this.stldb1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.stldb1DataSet;
-            // 
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
             // 
-            // customerIDDataGridViewTextBoxColumn
+            // lb_customers
             // 
-            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "customer_ID";
-            this.customerIDDataGridViewTextBoxColumn.HeaderText = "customer_ID";
-            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
-            this.customerIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lb_customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_customers.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.customerBindingSource1, "customer_ID", true));
+            this.lb_customers.DataSource = this.customerBindingSource1;
+            this.lb_customers.DisplayMember = "customer_ID";
+            this.lb_customers.FormattingEnabled = true;
+            this.lb_customers.Location = new System.Drawing.Point(23, 132);
+            this.lb_customers.Name = "lb_customers";
+            this.lb_customers.Size = new System.Drawing.Size(278, 511);
+            this.lb_customers.TabIndex = 90;
+            this.lb_customers.ValueMember = "customer_ID";
             // 
-            // custFirstNameDataGridViewTextBoxColumn
+            // customerBindingSource1
             // 
-            this.custFirstNameDataGridViewTextBoxColumn.DataPropertyName = "custFirstName";
-            this.custFirstNameDataGridViewTextBoxColumn.HeaderText = "custFirstName";
-            this.custFirstNameDataGridViewTextBoxColumn.Name = "custFirstNameDataGridViewTextBoxColumn";
+            this.customerBindingSource1.DataMember = "Customer";
+            this.customerBindingSource1.DataSource = this.stldb2DataSet;
             // 
-            // custLastNameDataGridViewTextBoxColumn
+            // stldb2DataSet
             // 
-            this.custLastNameDataGridViewTextBoxColumn.DataPropertyName = "custLastName";
-            this.custLastNameDataGridViewTextBoxColumn.HeaderText = "custLastName";
-            this.custLastNameDataGridViewTextBoxColumn.Name = "custLastNameDataGridViewTextBoxColumn";
+            this.stldb2DataSet.DataSetName = "stldb2DataSet";
+            this.stldb2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // custCompanyNameDataGridViewTextBoxColumn
+            // customerTableAdapter1
             // 
-            this.custCompanyNameDataGridViewTextBoxColumn.DataPropertyName = "custCompanyName";
-            this.custCompanyNameDataGridViewTextBoxColumn.HeaderText = "custCompanyName";
-            this.custCompanyNameDataGridViewTextBoxColumn.Name = "custCompanyNameDataGridViewTextBoxColumn";
-            // 
-            // custPhoneNumDataGridViewTextBoxColumn
-            // 
-            this.custPhoneNumDataGridViewTextBoxColumn.DataPropertyName = "custPhoneNum";
-            this.custPhoneNumDataGridViewTextBoxColumn.HeaderText = "custPhoneNum";
-            this.custPhoneNumDataGridViewTextBoxColumn.Name = "custPhoneNumDataGridViewTextBoxColumn";
-            // 
-            // custAddressDataGridViewTextBoxColumn
-            // 
-            this.custAddressDataGridViewTextBoxColumn.DataPropertyName = "custAddress";
-            this.custAddressDataGridViewTextBoxColumn.HeaderText = "custAddress";
-            this.custAddressDataGridViewTextBoxColumn.Name = "custAddressDataGridViewTextBoxColumn";
-            // 
-            // custAddLine2DataGridViewTextBoxColumn
-            // 
-            this.custAddLine2DataGridViewTextBoxColumn.DataPropertyName = "custAddLine2";
-            this.custAddLine2DataGridViewTextBoxColumn.HeaderText = "custAddLine2";
-            this.custAddLine2DataGridViewTextBoxColumn.Name = "custAddLine2DataGridViewTextBoxColumn";
-            // 
-            // custCountyDataGridViewTextBoxColumn
-            // 
-            this.custCountyDataGridViewTextBoxColumn.DataPropertyName = "custCounty";
-            this.custCountyDataGridViewTextBoxColumn.HeaderText = "custCounty";
-            this.custCountyDataGridViewTextBoxColumn.Name = "custCountyDataGridViewTextBoxColumn";
+            this.customerTableAdapter1.ClearBeforeFill = true;
             // 
             // ViewCustomerDetails
             // 
@@ -345,7 +300,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1112, 728);
-            this.Controls.Add(this.customerGridView);
+            this.Controls.Add(this.lb_customers);
             this.Controls.Add(this.btnBackViewCust);
             this.Controls.Add(this.gbCustomerDetails);
             this.Controls.Add(this.btnAddCustomerViewCust);
@@ -360,9 +315,10 @@
             this.Load += new System.EventHandler(this.ViewCustomerDetails_Load);
             this.gbCustomerDetails.ResumeLayout(false);
             this.gbCustomerDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stldb1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stldb1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stldb2DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,17 +341,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbCustomerSearch;
         private System.Windows.Forms.Button btnBackViewCust;
-        private System.Windows.Forms.DataGridView customerGridView;
         private stldb1DataSet stldb1DataSet;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private stldb1DataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn custFirstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn custLastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn custCompanyNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn custPhoneNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn custAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn custAddLine2DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn custCountyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ListBox lb_customers;
+        private stldb2DataSet stldb2DataSet;
+        private System.Windows.Forms.BindingSource customerBindingSource1;
+        private stldb2DataSetTableAdapters.CustomerTableAdapter customerTableAdapter1;
     }
 }

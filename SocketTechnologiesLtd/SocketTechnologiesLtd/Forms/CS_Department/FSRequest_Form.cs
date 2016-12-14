@@ -9,23 +9,32 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DocumentWriter;
 using BusinessLayer;
+using BusinessEntities;
 
 namespace SocketTechnologiesLtd
 {
     public partial class FSRequest_Form : MetroFramework.Forms.MetroForm
     {
         string fsrID = "";
+        string custID = "";
+        List<IWorkOrder> workOrders;
+        IModel model;
         IdIncrement id = new IdIncrement();
-        public FSRequest_Form()
+
+        public FSRequest_Form(IModel _Model)
         {
             InitializeComponent();
             this.ControlBox = false;
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
 
+            model = _Model;
+            model.WorkOrderList.Clear();
+            model.FillWorkOrderList();
+            workOrders = model.WorkOrderList;
+            fillComboBox();
+
             fsrID = Convert.ToString(id.getReportID("FieldServiceRequest_Report"));
-
-
             fsrID_tb.Text = fsrID;
 
         }
@@ -37,56 +46,26 @@ namespace SocketTechnologiesLtd
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
-            string custID = "", text = "", WorkOrderID = "", comboType = "";
-            custID = custID_tb.Text;
+            string text = "", WorkOrderID = "", comboType = "";
+
+            
             text = text_tb.Text;
-            WorkOrderID = WorkOrderID_tb.Text;
+            WorkOrderID = comboBox_fsr.Text;
             comboType = type_cb.Text;
 
-            if (custID == "")
+            if (WorkOrderID == "")
             {
-                MessageBox.Show("Please enter a Work Order ID and press the search button.");
-            }
-            else if (WorkOrderID == "")
-            {
-
-            }
-            else if (custID == "")
-            {
-
-            }
-            else if (text == "")
-            {
-
+                MessageBox.Show("Please select a Work Order ID from the dropdown menu.");
             }
             else
             {
                 fsrRequest fsr = new fsrRequest(fsrID, custID, WorkOrderID, text, comboType);
                 MessageBox.Show("Field Service Request successfully created!");
-                this.Close();
 
-                switch (comboType)
-                {
-                    case "Technical Enquiry":
-                        TE_Form te = new TE_Form();
-                        te.txt_TEtext.Text = text;
-                        te.MdiParent = this.MdiParent;
-                        te.Dock = DockStyle.Fill;
-                        te.Show();
-                        break;
-                    case "Customer Order Enquiry":
-                        COE_Form coe = new COE_Form();
-                        coe.MdiParent = this.MdiParent;
-                        coe.Dock = DockStyle.Fill;
-                        coe.Show();
-                        break;
-                    case "Returned Goods":
-                        RGA_RequestFrom rga = new RGA_RequestFrom();
-                        rga.MdiParent = this.MdiParent;
-                        rga.Dock = DockStyle.Fill;
-                        rga.Show();
-                        break;
-                }
+                PDF_Preview viewer = new PDF_Preview(comboType);
+                viewer.MdiParent = this.MdiParent;
+                viewer.Show();
+                this.Close();
             }
         }
 
@@ -95,7 +74,37 @@ namespace SocketTechnologiesLtd
             this.Close();
         }
 
-        
+        private void searchID_tile_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void fillComboBox()
+        {
+            int i = 0;
+            string[] workOrdersID = new string[workOrders.Count];
+
+            foreach(WorkOrder wo in workOrders)
+            {
+                workOrdersID[i] = wo.WorkOrderID.ToString();
+                i++;
+            }
+
+            comboBox_fsr.Items.AddRange(workOrdersID);
+        }
+
+        private void comboBox_fsr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (WorkOrder wo in workOrders)
+            {
+                string WorkOrderID;
+                WorkOrderID = comboBox_fsr.SelectedItem.ToString();
+                if (WorkOrderID == wo.WorkOrderID.ToString())
+                {
+                    custID_tb.Text = wo.CustomerID.ToString();
+                    custID = wo.CustomerID.ToString();
+                }
+            }
+        }
     }
 }

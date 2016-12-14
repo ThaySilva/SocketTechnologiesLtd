@@ -98,6 +98,7 @@
             this.btn_ManageProduct.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_ManageProduct.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_ManageProduct.UseTileImage = true;
+            this.btn_ManageProduct.Click += new System.EventHandler(this.btn_ManageProduct_Click);
             // 
             // btn_ManagePS
             // 
@@ -198,14 +199,14 @@
             this.ProdWeeklyReportsPanel.Controls.Add(this.btn_WOReports, 1, 1);
             this.ProdWeeklyReportsPanel.Controls.Add(this.btn_LTReport, 2, 2);
             this.ProdWeeklyReportsPanel.Controls.Add(this.btn_FGTReport, 2, 1);
-            this.ProdWeeklyReportsPanel.Location = new System.Drawing.Point(23, 63);
+            this.ProdWeeklyReportsPanel.Location = new System.Drawing.Point(23, 401);
             this.ProdWeeklyReportsPanel.Name = "ProdWeeklyReportsPanel";
             this.ProdWeeklyReportsPanel.RowCount = 4;
             this.ProdWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ProdWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ProdWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ProdWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ProdWeeklyReportsPanel.Size = new System.Drawing.Size(936, 496);
+            this.ProdWeeklyReportsPanel.Size = new System.Drawing.Size(936, 158);
             this.ProdWeeklyReportsPanel.TabIndex = 11;
             this.ProdWeeklyReportsPanel.Visible = false;
             // 
@@ -214,9 +215,9 @@
             this.btn_PMRPReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_PMRPReport.Location = new System.Drawing.Point(237, 251);
+            this.btn_PMRPReport.Location = new System.Drawing.Point(237, 81);
             this.btn_PMRPReport.Name = "btn_PMRPReport";
-            this.btn_PMRPReport.Size = new System.Drawing.Size(228, 118);
+            this.btn_PMRPReport.Size = new System.Drawing.Size(228, 33);
             this.btn_PMRPReport.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_PMRPReport.TabIndex = 8;
             this.btn_PMRPReport.Text = "Generate PMRP Report";
@@ -232,9 +233,9 @@
             this.btn_WOReports.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_WOReports.Location = new System.Drawing.Point(237, 127);
+            this.btn_WOReports.Location = new System.Drawing.Point(237, 42);
             this.btn_WOReports.Name = "btn_WOReports";
-            this.btn_WOReports.Size = new System.Drawing.Size(228, 118);
+            this.btn_WOReports.Size = new System.Drawing.Size(228, 33);
             this.btn_WOReports.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_WOReports.TabIndex = 9;
             this.btn_WOReports.Text = "Generate Work Orders Report";
@@ -250,9 +251,9 @@
             this.btn_LTReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_LTReport.Location = new System.Drawing.Point(471, 251);
+            this.btn_LTReport.Location = new System.Drawing.Point(471, 81);
             this.btn_LTReport.Name = "btn_LTReport";
-            this.btn_LTReport.Size = new System.Drawing.Size(228, 118);
+            this.btn_LTReport.Size = new System.Drawing.Size(228, 33);
             this.btn_LTReport.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_LTReport.TabIndex = 10;
             this.btn_LTReport.Text = "Generate Lot Travellers Report";
@@ -268,9 +269,9 @@
             this.btn_FGTReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_FGTReport.Location = new System.Drawing.Point(471, 127);
+            this.btn_FGTReport.Location = new System.Drawing.Point(471, 42);
             this.btn_FGTReport.Name = "btn_FGTReport";
-            this.btn_FGTReport.Size = new System.Drawing.Size(228, 118);
+            this.btn_FGTReport.Size = new System.Drawing.Size(228, 33);
             this.btn_FGTReport.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_FGTReport.TabIndex = 7;
             this.btn_FGTReport.Text = "Generate FGTN Report";

@@ -175,7 +175,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Movable = false;
             this.Name = "Login_Form";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;

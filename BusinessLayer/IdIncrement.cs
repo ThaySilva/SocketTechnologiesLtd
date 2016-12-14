@@ -16,7 +16,7 @@ namespace BusinessLayer
         private int userId;
         private int employeeId;
         private int customerId;
-        private int purchaseOrderNo;
+        private int lineItemID;
 
         List<IUser> user = model.UserList;
         List<IEmployee> emp = model.EmployeeList;
@@ -48,19 +48,19 @@ namespace BusinessLayer
         }
         #endregion
 
-        //#region lineID
-        //public void setLineItemId()
-        //{
-        //    lineID = lineItem[lineItem.Count() - 1].LineID;
-        //}
-        
-        //public int getLineItemId()
-        //{
-        //    setLineItemId();
-        //    return lineID;
-        //}
-        
-        //#endregion
+        #region lineID
+        public void setLineItemId()
+        {
+            lineItemID = lineItem[lineItem.Count() - 1].LineID + 1;
+        }
+
+        public int getLineItemId()
+        {
+            setLineItemId();
+            return lineItemID;
+        }
+
+        #endregion
 
         #region CustomerID
         public void setCustId()

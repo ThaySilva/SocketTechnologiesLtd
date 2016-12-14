@@ -266,6 +266,7 @@
             this.btn_ViewTERes.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_ViewTERes.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_ViewTERes.UseTileImage = true;
+            this.btn_ViewTERes.Click += new System.EventHandler(this.btn_ViewTERes_Click);
             // 
             // btn_CreateFSRes
             // 

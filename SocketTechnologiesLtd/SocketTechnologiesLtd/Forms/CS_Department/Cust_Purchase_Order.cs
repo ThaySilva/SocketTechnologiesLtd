@@ -16,13 +16,23 @@ namespace SocketTechnologiesLtd
     public partial class Cust_Purchase_Order : MetroFramework.Forms.MetroForm
     {
 
-        IdIncrement PON = new IdIncrement();
-        IdIncrement LineNo = new IdIncrement();
+        
+        
+
 
         #region Instance Attributes
         private IModel model;
-        #endregion
+        IdIncrement PON = new IdIncrement();
+        IdIncrement quoteRef = new IdIncrement();
         
+        List<ICustomer> customers;
+        List<IProduct> products;
+        List<IDocument> documents;
+        string cpoId = "";
+        string fileId = "";
+        int line_ID = 0;
+        #endregion
+
 
         public Cust_Purchase_Order(IModel _Model)
         {
@@ -31,23 +41,26 @@ namespace SocketTechnologiesLtd
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
             model = _Model;
+           
 
-            //cust_purc_no_box.Text = PON.getPON().ToString();
-            //line_no_box.Text = LineNo.g
+
+            cust_purc_no_box.Text = PON.getReportID("CustomerPurchaseOrder_Report").ToString();
+            //quote_Ref_box.Text = quoteRef.getReportID("").ToString();
+            products = model.ProductList;
+            customers = model.CustomerList;
+            model.FillDocumentList("Quotation_Out");
+            model.FillDocumentList("CustomerPurchaseOrder_Report", false);
+
+            documents = model.DocumentList;
+            fillCustomer_comboBox();
+            fillproduct_ComboBox();
+            fillReportComboBox();
+           
+             
 
         }
 
         private void Cust_Purchase_Order_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroLabel3_Click(object sender, EventArgs e)
         {
 
         }
@@ -57,38 +70,34 @@ namespace SocketTechnologiesLtd
 
         }
 
-        private void metroTextBox10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private Boolean validateFields()
-        {
-            if (product_ComboBox.SelectedIndex == -1)
-                MessageBox.Show("Please select a product!");
-            else if(quote_Ref_box.Text == "")
-                MessageBox.Show("Please enter a quote Reference!");
-            else if (quantity_box.Text == "")
-                MessageBox.Show("Please enter a Quantity value!");
-            else if (unit_price_box.Text == "")
-                //auto-fill when possible
-                MessageBox.Show("Please enter a price!");
-           // else if (line_price_box.Text == "")
-                //line price is quantity * price
-             //   MessageBox.Show("Please enter the employee's name!");
-            //else if (line_total_box.Text == "")
-            //    MessageBox.Show("Please enter the employee's last name!");
-            else if (date_box.Text == "")
-                MessageBox.Show("Please enter the date required!");
-            //else if (total_order_price_box.Text == "")
-            //    MessageBox.Show("Please select a department!");
+        //private Boolean validateFields()
+        //{
+        //    if (product_ComboBox.SelectedIndex == -1)
+        //        MessageBox.Show("Please select a product!");
+        //    else if(quote_Ref_box.Text == "")
+        //        MessageBox.Show("Please enter a quote Reference!");
+        //    else if (quantity_box.Text == "")
+        //        MessageBox.Show("Please enter a Quantity value!");
+        //    else if (unit_price_box.Text == "")
+        //        //auto-fill when possible
+        //        MessageBox.Show("Please enter a price!");
+        //   // else if (line_price_box.Text == "")
+        //        //line price is quantity * price
+        //     //   MessageBox.Show("Please enter the employee's name!");
+        //    //else if (line_total_box.Text == "")
+        //    //    MessageBox.Show("Please enter the employee's last name!");
+        //    else if (date_box.Text == "")
+        //        MessageBox.Show("Please enter the date required!");
+        //    //else if (total_order_price_box.Text == "")
+        //    //    MessageBox.Show("Please select a department!");
             
 
-            return false;
-        }
+        //    return false;
+        //}
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
+            //Dialog box when exiting
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
@@ -98,38 +107,194 @@ namespace SocketTechnologiesLtd
             else if (dialogResult == DialogResult.No)
             {
                 this.Show();
+                documents.Clear();
             }
         }
-        //private void populateCombo(int prodName)
-        //{
-        //    DataTable Product = new DataTable("STLProduct");
-
-        //    DataColumn c0 = new DataColumn("productName:");
-            
-
-        //    Product.Columns.Add(c0);
-            
-
-        //    DataRow row;
-
-        //    foreach (Product p in product)
-        //    {
-        //            row = Product.NewRow();
-
-        //        row["productName:"] = p.ProductName;
-                    
-
-        //        Product.Rows.Add(row);
-               
-        //    }
-
-        //    product_ComboBox.DataSource = Product;
-
-        //}
+      
 
         private void metroButton3_Click(object sender, EventArgs e)
         {
+            //open add customer window when working
             AddCustomer ac = new AddCustomer();
         }
+
+
+        #region Extra Functions
+        public void fillCustomer_comboBox()
+        {
+            int i = 0;
+            string[] cust = new string[customers.Count];
+            foreach (Customer cus in customers)
+            {
+                cust[i] = cus.CustCompanyName;
+                i++;
+            }
+            Customer_comboBox.Items.AddRange(cust);
+        }
+
+        public void fillproduct_ComboBox()
+        {
+            int i = 0;
+            string[] prods = new string[products.Count];
+            foreach (Product prod in products)
+            {
+                prods[i] = prod.ProductName;
+                i++;
+            }
+            product_ComboBox.Items.AddRange(prods);
+        }
+
+        public void fillReportComboBox()
+        {
+            int i = 0;
+            string[] docsItem = new string[documents.Count];
+            foreach (Document doc in documents)
+            {
+                docsItem[i] = doc.DocumentID.ToString();
+                i++;
+            }
+            quote_Ref_CBox.Items.AddRange(docsItem);
+        }
+
+        private void line_price_box_Click(object sender, EventArgs e)
+        {
+           
+            double linePrice, Vat, incVat;
+            if (quantity_box != null)
+            {
+                int qty = int.Parse(quantity_box.Text);
+                linePrice = Convert.ToDouble(unit_price_box.Text) * qty;
+                line_price_box.Text = linePrice.ToString("#.##");
+                Vat = (Convert.ToDouble(VAT_textBox.Text) / 100) * linePrice;
+                incVat = linePrice + Vat;
+                line_total_box.Text = incVat.ToString("#.##");
+            }
+        }
+
+        private void product_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            product_ComboBox.SelectedItem.ToString().Trim();
+            
+            foreach (Product prod in products)
+            {
+                if (prod.ProductName.Equals(product_ComboBox.SelectedItem.ToString().Trim()))
+                {
+                    unit_price_box.Text = prod.ProductPrice.ToString();
+                    VAT_textBox.Text = prod.ProductVAT.ToString();
+                }
+            }
+        }
+
+
+        //MyString = CStr(dateTimePicker1.Value.Date)
+        #endregion
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            ListViewItem lvi;
+            ListViewItem.ListViewSubItem lvsi1, lvsi2, lvsi3, lvsi4, lvsi5, lvsi6;
+            product_ComboBox.SelectedItem.Equals(null);
+            listView1.BeginUpdate();
+
+            
+            if(listView1 == null)
+            {
+                line_ID = 1;
+            }
+            else
+            {
+                line_ID++;
+            }
+
+            foreach (Product prod in products)
+            {
+                if (prod.ProductName.Equals(product_ComboBox.SelectedItem.ToString().Trim()))
+                {
+                    lvi = new ListViewItem();
+                    lvi.Text = line_ID.ToString();
+
+                    lvsi1 = new ListViewItem.ListViewSubItem();
+                    lvsi1.Text = prod.ProductName.ToString();
+                    lvi.SubItems.Add(lvsi1);
+
+                    lvsi2 = new ListViewItem.ListViewSubItem();
+                    lvsi2.Text = datePicker.Value.ToString("dd/MM/yyyy");
+                    lvi.SubItems.Add(lvsi2);
+
+                    lvsi3 = new ListViewItem.ListViewSubItem();
+                    lvsi3.Text = int.Parse(quantity_box.Text).ToString();
+                    lvi.SubItems.Add(lvsi3);
+
+                    lvsi4 = new ListViewItem.ListViewSubItem();
+                    lvsi4.Text = line_price_box.Text.ToString();
+                    lvi.SubItems.Add(lvsi4);
+
+                    lvsi5 = new ListViewItem.ListViewSubItem();
+                    lvsi5.Text = VAT_textBox.Text.ToString();
+                    lvi.SubItems.Add(lvsi5);
+
+                    lvsi6 = new ListViewItem.ListViewSubItem();
+                    lvsi6.Text = line_total_box.Text.ToString();
+                    lvi.SubItems.Add(lvsi6);
+
+                    listView1.Items.Add(lvi);
+                }
+            }
+            listView1.EndUpdate();
+            listView1.Enabled = true;
+            listView1.FullRowSelect = true;
+
+
+        }
+
+        private void metroButton2_Click_1(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                int selectedId = int.Parse(listView1.SelectedItems[0].SubItems[0].Text);
+                listView1.SelectedItems.Clear();
+            }
+            else
+            {
+                MessageBox.Show("You have to choose Member from the list first");
+            }
+        }
+
+        private void create_order_button_Click(object sender, EventArgs e)
+        {
+
+            Cust_Purchase_Order cusPurOrder = new Cust_Purchase_Order(model);
+
+
+
+
+
+
+        }
     }
+
+
+//    Order cusOrder = new Order();                             CODE FOR WORK ORDER
+
+
+//    Customer_comboBox.SelectedItem.ToString().Trim();
+//    int custID = 0;
+//            foreach (Customer cust in customers)
+//            {
+//                if (cust.CustCompanyName.Equals(Customer_comboBox.SelectedItem.ToString().Trim()))
+//                {
+//                    custID = cust.Customer_ID;
+//                    cusOrder.ClientID = custID;
+//                }
+//            }
+
+//           // int custOrderID;
+//            cusOrder.OrderID = Convert.ToInt16(cust_purc_no_box.Text);
+//            string date = datePicker.Value.ToString("dd/MM/yyyy");
+//datePicker.Text = date;
+//            cusOrder.DateRequired = datePicker.Value.Date;
+
+
+
+
 }

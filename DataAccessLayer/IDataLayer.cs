@@ -19,6 +19,8 @@ namespace DataAccessLayer
         void DeleteRowByKey(string table);
         void SetJoin(string thisTable, string joinedTable, string thisTableColumn, string joinedTableColumn);
         void SetCriteria(string column, string criteria);
+        void SetCriteria(string column, int criteria);
+        void SetCriteria(string column, bool criteria);
         void RemoveCriteria();
         void RemoveJoins();
         string GetMax(string table, string column);

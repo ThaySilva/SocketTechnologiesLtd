@@ -49,7 +49,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 60);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(714, 777);
+            this.metroPanel1.Size = new System.Drawing.Size(714, 757);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.VerticalScrollbarBarColor = true;
@@ -60,7 +60,7 @@
             // 
             this.btn_confirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_confirm.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_confirm.Location = new System.Drawing.Point(507, 724);
+            this.btn_confirm.Location = new System.Drawing.Point(502, 720);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.Size = new System.Drawing.Size(92, 34);
             this.btn_confirm.TabIndex = 15;
@@ -72,21 +72,22 @@
             // 
             this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_cancel.Location = new System.Drawing.Point(619, 724);
+            this.btn_cancel.Location = new System.Drawing.Point(622, 720);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(92, 34);
             this.btn_cancel.TabIndex = 14;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // pdfViewer
             // 
             this.pdfViewer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pdfViewer.Enabled = true;
-            this.pdfViewer.Location = new System.Drawing.Point(-17, -17);
+            this.pdfViewer.Location = new System.Drawing.Point(-17, -27);
             this.pdfViewer.Name = "pdfViewer";
             this.pdfViewer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfViewer.OcxState")));
-            this.pdfViewer.Size = new System.Drawing.Size(748, 720);
+            this.pdfViewer.Size = new System.Drawing.Size(748, 719);
             this.pdfViewer.TabIndex = 2;
             // 
             // btn_Exit
@@ -107,10 +108,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.CancelButton = this.btn_Exit;
-            this.ClientSize = new System.Drawing.Size(754, 857);
+            this.ClientSize = new System.Drawing.Size(754, 837);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.metroPanel1);
+            this.Movable = false;
             this.Name = "PDF_Preview";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.ResumeLayout(false);
