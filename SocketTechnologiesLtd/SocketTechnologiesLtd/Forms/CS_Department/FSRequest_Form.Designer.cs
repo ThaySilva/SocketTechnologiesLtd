@@ -79,7 +79,7 @@
             this.comboBox_fsr.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox_fsr.FormattingEnabled = true;
             this.comboBox_fsr.ItemHeight = 23;
-            this.comboBox_fsr.Location = new System.Drawing.Point(404, 123);
+            this.comboBox_fsr.Location = new System.Drawing.Point(404, 111);
             this.comboBox_fsr.Name = "comboBox_fsr";
             this.comboBox_fsr.Size = new System.Drawing.Size(194, 29);
             this.comboBox_fsr.TabIndex = 59;

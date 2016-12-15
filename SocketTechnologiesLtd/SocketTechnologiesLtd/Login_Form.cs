@@ -62,7 +62,7 @@ namespace SocketTechnologiesLtd
                         man.Show();
                         break;
                     case "4":
-                        ProdDep_Form prod = new ProdDep_Form();
+                        ProdDep_Form prod = new ProdDep_Form(Model);
                         prod.FormClosing += backToLogin;
                         prod.MdiParent = this.MdiParent;
                         prod.Dock = DockStyle.Fill;
@@ -78,7 +78,7 @@ namespace SocketTechnologiesLtd
                         pur.Show();
                         break;
                     case "6":
-                        StoDep_Form sto = new StoDep_Form();
+                        StoDep_Form sto = new StoDep_Form(Model);
                         sto.FormClosing += backToLogin;
                         sto.MdiParent = this.MdiParent;
                         sto.Dock = DockStyle.Fill;

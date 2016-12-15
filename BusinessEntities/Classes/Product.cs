@@ -15,6 +15,7 @@ namespace BusinessEntities
         private int productId;
         private string productName;
         private string productDescription;
+        private string productInstructions;
         private double productPrice;
         private double productVAT;
         private string[,] productMaterials;
@@ -38,6 +39,12 @@ namespace BusinessEntities
         public string ProductDescription
         {
             get { return productDescription; }
+            set { productDescription = value; }
+        }
+
+        public string ProductInstructions
+        {
+            get { return productInstructions; }
             set { productDescription = value; }
         }
 
@@ -94,6 +101,15 @@ namespace BusinessEntities
             this.productDescription = prodDescription;
             this.productPrice = prodPrice;
             this.productMaterials = prodMaterials;
+            this.ProductVAT = prodVAT;
+        }
+
+        public Product(int prodId, string prodName, string prodInstructions, double prodPrice, double prodVAT)
+        {
+            this.productId = prodId;
+            this.productName = prodName;
+            this.productInstructions = prodInstructions;
+            this.productPrice = prodPrice;
             this.ProductVAT = prodVAT;
         }
         #endregion

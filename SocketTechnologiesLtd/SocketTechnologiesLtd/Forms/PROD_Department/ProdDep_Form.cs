@@ -7,16 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
+using BusinessEntities;
+using DataAccessLayer;
 
 namespace SocketTechnologiesLtd
 {
     public partial class ProdDep_Form : MetroFramework.Forms.MetroForm
     {
-        public ProdDep_Form()
+
+        #region Instance Attributes
+        private IModel model;
+        #endregion
+
+        public ProdDep_Form(IModel _Model)
         {
             InitializeComponent();
             this.ControlBox = false;
-            this.btn_Exit.Hide();
+            model = _Model;
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)
@@ -48,7 +56,19 @@ namespace SocketTechnologiesLtd
 
         private void btn_ManageProduct_Click(object sender, EventArgs e)
         {
+            Edit_DeleteProduct p = new Edit_DeleteProduct(model);
+            p.MdiParent = this.MdiParent;
+            p.Dock = DockStyle.Fill;
+            p.Show();
 
+        }
+
+        private void btn_ProcessWorkOrder_Click(object sender, EventArgs e)
+        {
+            Create_PMRP pmrp = new Create_PMRP(model);
+            pmrp.MdiParent = this.MdiParent;
+            pmrp.Dock = DockStyle.Fill;
+            pmrp.Show();
         }
     }
 }

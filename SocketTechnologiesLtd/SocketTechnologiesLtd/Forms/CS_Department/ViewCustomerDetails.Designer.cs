@@ -28,84 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""}, -1, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.MenuText, null);
-            this.lblEmailViewCust = new System.Windows.Forms.Label();
             this.gbCustomerDetails = new System.Windows.Forms.GroupBox();
-            this.lblCustIDViewCust = new System.Windows.Forms.Label();
-            this.lblPhoneNoViewCust = new System.Windows.Forms.Label();
-            this.lblCusSurnameViewCust = new System.Windows.Forms.Label();
-            this.lblAddress2ViewCust = new System.Windows.Forms.Label();
-            this.lblAddress1ViewCust = new System.Windows.Forms.Label();
-            this.lblAddress3ViewCust = new System.Windows.Forms.Label();
-            this.lblCustFirstNameViewCust = new System.Windows.Forms.Label();
-            this.lblCompNameViewCust = new System.Windows.Forms.Label();
             this.btnAddCustomerViewCust = new System.Windows.Forms.Button();
             this.btnEditCustomerViewCust = new System.Windows.Forms.Button();
             this.btnDeleteCustomerViewCust = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tbCustomerSearch = new System.Windows.Forms.TextBox();
             this.btnBackViewCust = new System.Windows.Forms.Button();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stldb1DataSet = new SocketTechnologiesLtd.stldb1DataSet();
-            this.customerTableAdapter = new SocketTechnologiesLtd.stldb1DataSetTableAdapters.CustomerTableAdapter();
-            this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.stldb2DataSet = new SocketTechnologiesLtd.stldb2DataSet();
-            this.customerTableAdapter1 = new SocketTechnologiesLtd.stldb2DataSetTableAdapters.CustomerTableAdapter();
             this.groupBoxViewCustomers = new System.Windows.Forms.GroupBox();
-            this.lv_customers = new System.Windows.Forms.ListView();
-            this.CustomerID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.companyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PhoneCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.address1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.address2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.address3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.customerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.stldb2DataSet1 = new SocketTechnologiesLtd.stldb2DataSet1();
-            this.customerTableAdapter2 = new SocketTechnologiesLtd.stldb2DataSet1TableAdapters.CustomerTableAdapter();
-            this.gbCustomerDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stldb1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stldb2DataSet)).BeginInit();
+            this.dataGrid_Customer1 = new System.Windows.Forms.DataGridView();
+            this.customerTableAdapter3 = new SocketTechnologiesLtd.stldb2DataSet2TableAdapters.CustomerTableAdapter();
+            this.btn_Search = new MetroFramework.Controls.MetroTile();
             this.groupBoxViewCustomers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stldb2DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Customer1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblEmailViewCust
-            // 
-            this.lblEmailViewCust.AutoSize = true;
-            this.lblEmailViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailViewCust.Location = new System.Drawing.Point(122, 481);
-            this.lblEmailViewCust.Name = "lblEmailViewCust";
-            this.lblEmailViewCust.Size = new System.Drawing.Size(62, 24);
-            this.lblEmailViewCust.TabIndex = 23;
-            this.lblEmailViewCust.Text = "Email:";
             // 
             // gbCustomerDetails
             // 
             this.gbCustomerDetails.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gbCustomerDetails.Controls.Add(this.lblEmailViewCust);
-            this.gbCustomerDetails.Controls.Add(this.lblCustIDViewCust);
-            this.gbCustomerDetails.Controls.Add(this.lblPhoneNoViewCust);
-            this.gbCustomerDetails.Controls.Add(this.lblCusSurnameViewCust);
-            this.gbCustomerDetails.Controls.Add(this.lblAddress2ViewCust);
-            this.gbCustomerDetails.Controls.Add(this.lblAddress1ViewCust);
-            this.gbCustomerDetails.Controls.Add(this.lblAddress3ViewCust);
-            this.gbCustomerDetails.Controls.Add(this.lblCustFirstNameViewCust);
-            this.gbCustomerDetails.Controls.Add(this.lblCompNameViewCust);
             this.gbCustomerDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCustomerDetails.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbCustomerDetails.Location = new System.Drawing.Point(750, 81);
@@ -117,86 +57,6 @@
             this.gbCustomerDetails.TabStop = false;
             this.gbCustomerDetails.Text = "Customer Details";
             this.gbCustomerDetails.Enter += new System.EventHandler(this.gbCustomerDetails_Enter);
-            // 
-            // lblCustIDViewCust
-            // 
-            this.lblCustIDViewCust.AutoSize = true;
-            this.lblCustIDViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustIDViewCust.Location = new System.Drawing.Point(68, 72);
-            this.lblCustIDViewCust.Name = "lblCustIDViewCust";
-            this.lblCustIDViewCust.Size = new System.Drawing.Size(118, 24);
-            this.lblCustIDViewCust.TabIndex = 13;
-            this.lblCustIDViewCust.Text = "Customer ID:";
-            // 
-            // lblPhoneNoViewCust
-            // 
-            this.lblPhoneNoViewCust.AutoSize = true;
-            this.lblPhoneNoViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNoViewCust.Location = new System.Drawing.Point(90, 428);
-            this.lblPhoneNoViewCust.Name = "lblPhoneNoViewCust";
-            this.lblPhoneNoViewCust.Size = new System.Drawing.Size(101, 24);
-            this.lblPhoneNoViewCust.TabIndex = 12;
-            this.lblPhoneNoViewCust.Text = "Phone No:";
-            // 
-            // lblCusSurnameViewCust
-            // 
-            this.lblCusSurnameViewCust.AutoSize = true;
-            this.lblCusSurnameViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCusSurnameViewCust.Location = new System.Drawing.Point(28, 218);
-            this.lblCusSurnameViewCust.Name = "lblCusSurnameViewCust";
-            this.lblCusSurnameViewCust.Size = new System.Drawing.Size(160, 24);
-            this.lblCusSurnameViewCust.TabIndex = 11;
-            this.lblCusSurnameViewCust.Text = "Contact Surname:";
-            // 
-            // lblAddress2ViewCust
-            // 
-            this.lblAddress2ViewCust.AutoSize = true;
-            this.lblAddress2ViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress2ViewCust.Location = new System.Drawing.Point(89, 322);
-            this.lblAddress2ViewCust.Name = "lblAddress2ViewCust";
-            this.lblAddress2ViewCust.Size = new System.Drawing.Size(100, 24);
-            this.lblAddress2ViewCust.TabIndex = 9;
-            this.lblAddress2ViewCust.Text = "Address 2:";
-            // 
-            // lblAddress1ViewCust
-            // 
-            this.lblAddress1ViewCust.AutoSize = true;
-            this.lblAddress1ViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress1ViewCust.Location = new System.Drawing.Point(89, 269);
-            this.lblAddress1ViewCust.Name = "lblAddress1ViewCust";
-            this.lblAddress1ViewCust.Size = new System.Drawing.Size(100, 24);
-            this.lblAddress1ViewCust.TabIndex = 8;
-            this.lblAddress1ViewCust.Text = "Address 1:";
-            // 
-            // lblAddress3ViewCust
-            // 
-            this.lblAddress3ViewCust.AutoSize = true;
-            this.lblAddress3ViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress3ViewCust.Location = new System.Drawing.Point(89, 375);
-            this.lblAddress3ViewCust.Name = "lblAddress3ViewCust";
-            this.lblAddress3ViewCust.Size = new System.Drawing.Size(100, 24);
-            this.lblAddress3ViewCust.TabIndex = 7;
-            this.lblAddress3ViewCust.Text = "Address 3:";
-            // 
-            // lblCustFirstNameViewCust
-            // 
-            this.lblCustFirstNameViewCust.AutoSize = true;
-            this.lblCustFirstNameViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustFirstNameViewCust.Location = new System.Drawing.Point(10, 167);
-            this.lblCustFirstNameViewCust.Name = "lblCustFirstNameViewCust";
-            this.lblCustFirstNameViewCust.Size = new System.Drawing.Size(174, 24);
-            this.lblCustFirstNameViewCust.TabIndex = 6;
-            this.lblCustFirstNameViewCust.Text = "Contact First Name:";
-            // 
-            // lblCompNameViewCust
-            // 
-            this.lblCompNameViewCust.AutoSize = true;
-            this.lblCompNameViewCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompNameViewCust.Location = new System.Drawing.Point(38, 117);
-            this.lblCompNameViewCust.Name = "lblCompNameViewCust";
-            this.lblCompNameViewCust.Size = new System.Drawing.Size(152, 24);
-            this.lblCompNameViewCust.TabIndex = 5;
-            this.lblCompNameViewCust.Text = "Company Name:";
             // 
             // btnAddCustomerViewCust
             // 
@@ -266,6 +126,7 @@
             this.tbCustomerSearch.Name = "tbCustomerSearch";
             this.tbCustomerSearch.Size = new System.Drawing.Size(231, 28);
             this.tbCustomerSearch.TabIndex = 79;
+            this.tbCustomerSearch.Click += new System.EventHandler(this.tbCustomerSearch_Click);
             // 
             // btnBackViewCust
             // 
@@ -282,37 +143,10 @@
             this.btnBackViewCust.UseVisualStyleBackColor = false;
             this.btnBackViewCust.Click += new System.EventHandler(this.btnBackViewCust_Click);
             // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.stldb1DataSet;
-            // 
-            // stldb1DataSet
-            // 
-            this.stldb1DataSet.DataSetName = "stldb1DataSet";
-            this.stldb1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
-            // 
-            // customerBindingSource1
-            // 
-            this.customerBindingSource1.DataMember = "Customer";
-            this.customerBindingSource1.DataSource = this.stldb2DataSet;
-            // 
-            // stldb2DataSet
-            // 
-            this.stldb2DataSet.DataSetName = "stldb2DataSet";
-            this.stldb2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerTableAdapter1
-            // 
-            this.customerTableAdapter1.ClearBeforeFill = true;
-            // 
             // groupBoxViewCustomers
             // 
-            this.groupBoxViewCustomers.Controls.Add(this.lv_customers);
+            this.groupBoxViewCustomers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxViewCustomers.Controls.Add(this.dataGrid_Customer1);
             this.groupBoxViewCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.groupBoxViewCustomers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBoxViewCustomers.Location = new System.Drawing.Point(23, 136);
@@ -322,77 +156,40 @@
             this.groupBoxViewCustomers.TabStop = false;
             this.groupBoxViewCustomers.Text = "List of Customers";
             // 
-            // lv_customers
+            // dataGrid_Customer1
             // 
-            this.lv_customers.BackColor = System.Drawing.Color.DimGray;
-            this.lv_customers.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lv_customers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.CustomerID,
-            this.FirstName,
-            this.LastName,
-            this.companyName,
-            this.PhoneCol,
-            this.address1,
-            this.address2,
-            this.address3});
-            this.lv_customers.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.customerBindingSource2, "customer_ID", true));
-            this.lv_customers.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lv_customers.FullRowSelect = true;
-            this.lv_customers.GridLines = true;
-            this.lv_customers.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.lv_customers.Location = new System.Drawing.Point(15, 39);
-            this.lv_customers.Name = "lv_customers";
-            this.lv_customers.Size = new System.Drawing.Size(474, 450);
-            this.lv_customers.TabIndex = 0;
-            this.lv_customers.UseCompatibleStateImageBehavior = false;
-            this.lv_customers.SelectedIndexChanged += new System.EventHandler(this.lv_customers_SelectedIndexChanged);
+            this.dataGrid_Customer1.AllowUserToAddRows = false;
+            this.dataGrid_Customer1.AllowUserToDeleteRows = false;
+            this.dataGrid_Customer1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGrid_Customer1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dataGrid_Customer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGrid_Customer1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Customer1.Location = new System.Drawing.Point(20, 51);
+            this.dataGrid_Customer1.MultiSelect = false;
+            this.dataGrid_Customer1.Name = "dataGrid_Customer1";
+            this.dataGrid_Customer1.ReadOnly = true;
+            this.dataGrid_Customer1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGrid_Customer1.Size = new System.Drawing.Size(481, 366);
+            this.dataGrid_Customer1.TabIndex = 68;
+            this.dataGrid_Customer1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Customer1_CellContentClick);
             // 
-            // CustomerID
+            // customerTableAdapter3
             // 
-            this.CustomerID.Text = "ID";
+            this.customerTableAdapter3.ClearBeforeFill = true;
             // 
-            // FirstName
+            // btn_Search
             // 
-            this.FirstName.Text = "First Name";
-            // 
-            // LastName
-            // 
-            this.LastName.Text = "Last Name";
-            // 
-            // companyName
-            // 
-            this.companyName.Text = "Company Name";
-            // 
-            // PhoneCol
-            // 
-            this.PhoneCol.Text = "Phone";
-            // 
-            // address1
-            // 
-            this.address1.Text = "add1";
-            // 
-            // address2
-            // 
-            this.address2.Text = "add2";
-            // 
-            // address3
-            // 
-            this.address3.Text = "add3";
-            // 
-            // customerBindingSource2
-            // 
-            this.customerBindingSource2.DataMember = "Customer";
-            this.customerBindingSource2.DataSource = this.stldb2DataSet1;
-            // 
-            // stldb2DataSet1
-            // 
-            this.stldb2DataSet1.DataSetName = "stldb2DataSet1";
-            this.stldb2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerTableAdapter2
-            // 
-            this.customerTableAdapter2.ClearBeforeFill = true;
+            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Search.Location = new System.Drawing.Point(550, 81);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(172, 32);
+            this.btn_Search.Style = MetroFramework.MetroColorStyle.Orange;
+            this.btn_Search.TabIndex = 92;
+            this.btn_Search.Text = "Search ";
+            this.btn_Search.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Search.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_Search.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // ViewCustomerDetails
             // 
@@ -400,6 +197,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1112, 728);
+            this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.groupBoxViewCustomers);
             this.Controls.Add(this.btnBackViewCust);
             this.Controls.Add(this.gbCustomerDetails);
@@ -414,56 +212,25 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "View Customer Details";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.Load += new System.EventHandler(this.ViewCustomerDetails_Load);
-            this.gbCustomerDetails.ResumeLayout(false);
-            this.gbCustomerDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stldb1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stldb2DataSet)).EndInit();
             this.groupBoxViewCustomers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stldb2DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Customer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblEmailViewCust;
         private System.Windows.Forms.GroupBox gbCustomerDetails;
-        private System.Windows.Forms.Label lblCustIDViewCust;
-        private System.Windows.Forms.Label lblPhoneNoViewCust;
-        private System.Windows.Forms.Label lblCusSurnameViewCust;
-        private System.Windows.Forms.Label lblAddress2ViewCust;
-        private System.Windows.Forms.Label lblAddress1ViewCust;
-        private System.Windows.Forms.Label lblAddress3ViewCust;
-        private System.Windows.Forms.Label lblCustFirstNameViewCust;
-        private System.Windows.Forms.Label lblCompNameViewCust;
         private System.Windows.Forms.Button btnAddCustomerViewCust;
         private System.Windows.Forms.Button btnEditCustomerViewCust;
         private System.Windows.Forms.Button btnDeleteCustomerViewCust;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbCustomerSearch;
         private System.Windows.Forms.Button btnBackViewCust;
-        private stldb1DataSet stldb1DataSet;
-        private System.Windows.Forms.BindingSource customerBindingSource;
-        private stldb1DataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
-        private stldb2DataSet stldb2DataSet;
-        private System.Windows.Forms.BindingSource customerBindingSource1;
-        private stldb2DataSetTableAdapters.CustomerTableAdapter customerTableAdapter1;
         private System.Windows.Forms.GroupBox groupBoxViewCustomers;
-        private stldb2DataSet1 stldb2DataSet1;
-        private System.Windows.Forms.BindingSource customerBindingSource2;
-        private stldb2DataSet1TableAdapters.CustomerTableAdapter customerTableAdapter2;
-        private System.Windows.Forms.ListView lv_customers;
-        private System.Windows.Forms.ColumnHeader CustomerID;
-        private System.Windows.Forms.ColumnHeader FirstName;
-        private System.Windows.Forms.ColumnHeader LastName;
-        private System.Windows.Forms.ColumnHeader companyName;
-        private System.Windows.Forms.ColumnHeader PhoneCol;
-        private System.Windows.Forms.ColumnHeader address1;
-        private System.Windows.Forms.ColumnHeader address2;
-        private System.Windows.Forms.ColumnHeader address3;
+        private stldb2DataSet2TableAdapters.CustomerTableAdapter customerTableAdapter3;
+        private MetroFramework.Controls.MetroTile btn_Search;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGrid_Customer1;
     }
 }

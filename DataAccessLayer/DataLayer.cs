@@ -57,7 +57,8 @@ namespace DataAccessLayer
         public void OpenConnection()
         {
             con = new SqlConnection();
-            con.ConnectionString = "Data Source=sql3.student.litdom.lit.ie\\Team5;Initial Catalog=stldb;Integrated Security=True;User ID=Team5;Password=5ma5T";    //on college machine
+            //con.ConnectionString = "Data Source=sql3.student.litdom.lit.ie\\Team5;Initial Catalog=stldb;Integrated Security=True;User ID=Team5;Password=5ma5T";    //on college machine
+            con.ConnectionString = "Data Source=sql3.student.litdom.lit.ie\\Team5;Initial Catalog=stldb2;Integrated Security=True;User ID=Team5;Password=5ma5T";
             //con.ConnectionString = "Data Source=mssql4.gear.host;Initial Catalog=stldb2;User ID=stldb2;Password=alpha2omega!";        //outside connection
             try
             {

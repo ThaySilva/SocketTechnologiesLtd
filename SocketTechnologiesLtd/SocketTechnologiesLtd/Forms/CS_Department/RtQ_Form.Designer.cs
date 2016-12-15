@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RtQ_Form));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.lst_customItems = new System.Windows.Forms.DataGridView();
             this.comboBox_rfq = new MetroFramework.Controls.MetroComboBox();
             this.btn_Cancel = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
@@ -44,7 +45,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txt_rtqTxt = new MetroFramework.Controls.MetroTextBox();
             this.btn_Exit = new MetroFramework.Controls.MetroButton();
-            this.lst_customItems = new System.Windows.Forms.DataGridView();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lst_customItems)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +80,18 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // lst_customItems
+            // 
+            this.lst_customItems.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lst_customItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.lst_customItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lst_customItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lst_customItems.Enabled = false;
+            this.lst_customItems.Location = new System.Drawing.Point(38, 203);
+            this.lst_customItems.Name = "lst_customItems";
+            this.lst_customItems.Size = new System.Drawing.Size(395, 150);
+            this.lst_customItems.TabIndex = 40;
             // 
             // comboBox_rfq
             // 
@@ -257,17 +269,6 @@
             this.btn_Exit.Text = "Exit";
             this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
-            // 
-            // lst_customItems
-            // 
-            this.lst_customItems.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lst_customItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.lst_customItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lst_customItems.Enabled = false;
-            this.lst_customItems.Location = new System.Drawing.Point(38, 203);
-            this.lst_customItems.Name = "lst_customItems";
-            this.lst_customItems.Size = new System.Drawing.Size(496, 150);
-            this.lst_customItems.TabIndex = 40;
             // 
             // RtQ_Form
             // 

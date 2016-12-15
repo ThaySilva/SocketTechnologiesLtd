@@ -71,12 +71,13 @@ namespace SocketTechnologiesLtd
         private void btn_Create_Click(object sender, EventArgs e)
         {
             RtQ rtq = new RtQ(rtqId, txt_CustomerName.Text, txt_custAdd.Text, rfqId.ToString(), txt_rtqTxt.Text, lst_customItems, contact);
-            string form = "";
+            Common_Rules.UpdateDocumentResponse("RequestForQuotation_Report", rfqId.ToString());
+            string[] form = null;
             PDF_Preview viewer = new PDF_Preview(form);
+            viewer.Text = "Refusal to Quote";
             viewer.MdiParent = this.MdiParent;
             viewer.Show();
             this.Close();
-            deleteFile(filePath);
             documents.Clear();
         }
         #endregion
@@ -86,14 +87,12 @@ namespace SocketTechnologiesLtd
         {
             this.Close();
             documents.Clear();
-            deleteFile(filePath);
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
             documents.Clear();
-            deleteFile(filePath);
         }
         #endregion
 
@@ -171,14 +170,6 @@ namespace SocketTechnologiesLtd
                     contact = pdfText.Split('\n')[k + 1];
                     break;
                 }
-            }
-        }
-
-        private void deleteFile(string path)
-        {
-            if (path != "")
-            {
-                File.Delete(path);
             }
         }
         #endregion

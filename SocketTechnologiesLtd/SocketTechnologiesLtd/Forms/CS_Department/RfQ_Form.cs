@@ -25,10 +25,10 @@ namespace SocketTechnologiesLtd
         int custId;
         Customer customer;
         int partId;
-        List<IProduct> part = new List<IProduct>();
+        List<IProduct> standardPart;
+        List<IProduct> parts = new List<IProduct>();
         List<IProduct> customPart = new List<IProduct>();
         int amount;
-        int[] quantity = new int[50];
         int customPartId;
         int customQty;
         string customPartName;
@@ -49,6 +49,7 @@ namespace SocketTechnologiesLtd
 
             customers = model.CustomerList;
             products = model.ProductList;
+            standardPart = model.StandardProductList;
             customProducts = model.CustomProductList;
             i = 0;
 
@@ -128,12 +129,11 @@ namespace SocketTechnologiesLtd
                 {
                     if (partId == prod.ProductId)
                     {
-                        part.Add(prod);
-                        quantity[i] = amount;
+                        parts.Add(new Product(prod.ProductId, prod.ProductName, prod.ProductDescription, amount, rfqId));
+                        standardPart.Add(new Product(prod.ProductId, prod.ProductName, prod.ProductDescription, amount, rfqId));
                         clearPartsFields();
                     }
                 }
-                i++;
             }
             else
                 MessageBox.Show("You need to enter a number on the quantity field!");
@@ -166,13 +166,13 @@ namespace SocketTechnologiesLtd
         {
             if (validateDates() != null)
             {
-                if (customer != null && part != null && customPart != null)
+                if (customer != null && parts != null && customPart != null)
                 {
-                    string form = "";
-                    RfQ rfq = new RfQ(rfqId.ToString(), customer, part, quantity, customPart, deliveryDates, contact);
+                    string[] form = null;
+                    RfQ rfq = new RfQ(rfqId.ToString(), customer, parts, customPart, deliveryDates, contact);
                     PDF_Preview viewer = new PDF_Preview(form);
-                    viewer.MdiParent = this.MdiParent;
                     viewer.Text = "Request for Quotation";
+                    viewer.MdiParent = this.MdiParent;
                     viewer.Show();
                     customPart.Clear();
                     this.Close();
@@ -186,15 +186,33 @@ namespace SocketTechnologiesLtd
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
-            customPart.Clear();
             deleteCustomProduct();
+            customPart.Clear();
+
+            foreach(Product part in parts)
+            {
+                foreach(Product prod in standardPart)
+                {
+                    if (part.ProductId == prod.ProductId)
+                        standardPart.Remove(part);
+                }
+            }
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
-            customPart.Clear();
             deleteCustomProduct();
+            customPart.Clear();
+
+            foreach (Product part in parts)
+            {
+                foreach (Product prod in standardPart)
+                {
+                    if (part.ProductId == prod.ProductId)
+                        standardPart.Remove(part);
+                }
+            }
         }
         #endregion
 
@@ -364,10 +382,7 @@ namespace SocketTechnologiesLtd
         {
             foreach (Product custom in customPart)
             {
-                if (rfqId == custom.RFQ_ID)
-                {
-                    CustServices_Rules.DeleteCustomProduct(custom.ProductName);
-                }
+                CustServices_Rules.DeleteCustomProduct(custom.ProductName);
             }
         }
         #endregion

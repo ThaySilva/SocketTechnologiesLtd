@@ -15,10 +15,9 @@ namespace SocketTechnologiesLtd
 {
     public partial class AddNewEmployee : MetroFramework.Forms.MetroForm
     {
-        IdIncrement id = new IdIncrement();
-
         #region Instance Attributes
         private IModel model;
+        IdIncrement id = new IdIncrement();
         #endregion
 
         #region Constructors
@@ -30,8 +29,8 @@ namespace SocketTechnologiesLtd
             this.TopMost = true;
             model = _Model;
 
-            txt_userId.Text = id.getUserId().ToString();
-            txt_employeeId.Text = id.getEmpId().ToString();
+            txt_userId.Text = id.getUserID().ToString();
+            txt_employeeId.Text = id.getEmployeeID().ToString();
         }
 
         private void btn_Create_Click(object sender, EventArgs e)

@@ -247,6 +247,7 @@
             this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_password.Location = new System.Drawing.Point(651, 148);
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(194, 27);
             this.txt_password.TabIndex = 54;
             this.txt_password.Theme = MetroFramework.MetroThemeStyle.Dark;

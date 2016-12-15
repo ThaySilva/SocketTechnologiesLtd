@@ -14,6 +14,7 @@ namespace BusinessLayer
         List<IEmployee> EmployeeList { get; }
         List<ICustomer> CustomerList { get; }
         List<IProduct> ProductList { get; }
+        List<IProduct> StandardProductList { get; }
         List<IProduct> CustomProductList { get; }
         List<IDocument> DocumentList { get; }
         List<ILineItem> LineItemList { get; }

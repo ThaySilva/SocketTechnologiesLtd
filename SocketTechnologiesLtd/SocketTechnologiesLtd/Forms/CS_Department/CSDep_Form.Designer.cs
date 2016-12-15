@@ -322,6 +322,7 @@
             this.btn_ViewCOS.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_ViewCOS.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_ViewCOS.UseTileImage = true;
+            this.btn_ViewCOS.Click += new System.EventHandler(this.btn_ViewCOS_Click);
             // 
             // btn_CreateCPO
             // 

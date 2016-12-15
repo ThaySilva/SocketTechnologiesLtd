@@ -80,7 +80,7 @@ namespace SocketTechnologiesLtd
 
         private void btn_CreateQO_Click(object sender, EventArgs e)
         {
-            QO_Form qo = new QO_Form();
+            QO_Form qo = new QO_Form(model);
             qo.MdiParent = this.MdiParent;
             qo.Dock = DockStyle.Fill;
             qo.Show();
@@ -88,7 +88,8 @@ namespace SocketTechnologiesLtd
 
         private void btn_CreateTE_Click(object sender, EventArgs e)
         {
-            TE_Form te = new TE_Form();
+            TE_Form te = new TE_Form(model);
+            te.setFields("Purchase Order ID:", "3","Standard Parts:", "2");
             te.MdiParent = this.MdiParent;
             te.Dock = DockStyle.Fill;
             te.Show();
@@ -196,8 +197,15 @@ namespace SocketTechnologiesLtd
             this.btn_Logout.Show();
         }
 
+
         #endregion
 
-       
+        private void btn_ViewCOS_Click(object sender, EventArgs e)
+        {
+            Customer_Order_Status cos = new Customer_Order_Status(model);
+            cos.MdiParent = this.MdiParent;
+            cos.Dock = DockStyle.Fill;
+            cos.Show();
+        }
     }
 }

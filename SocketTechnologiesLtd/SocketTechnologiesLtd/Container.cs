@@ -23,8 +23,8 @@ namespace SocketTechnologiesLtd
             InitializeComponent();
             this.IsMdiContainer = true;
             this.ControlBox = false;
-            this.Bounds = Screen.PrimaryScreen.Bounds;
-            this.TopMost = true;
+            //this.Bounds = Screen.PrimaryScreen.Bounds;
+            //this.TopMost = true;
             this.BackColor = Color.Black;
 
             MdiClient client;

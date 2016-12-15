@@ -78,7 +78,7 @@
             this.ProdHomeScreenPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ProdHomeScreenPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ProdHomeScreenPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ProdHomeScreenPanel.Size = new System.Drawing.Size(936, 499);
+            this.ProdHomeScreenPanel.Size = new System.Drawing.Size(936, 465);
             this.ProdHomeScreenPanel.TabIndex = 8;
             // 
             // btn_ManageProduct
@@ -86,9 +86,9 @@
             this.btn_ManageProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ManageProduct.Location = new System.Drawing.Point(315, 169);
+            this.btn_ManageProduct.Location = new System.Drawing.Point(315, 158);
             this.btn_ManageProduct.Name = "btn_ManageProduct";
-            this.btn_ManageProduct.Size = new System.Drawing.Size(306, 160);
+            this.btn_ManageProduct.Size = new System.Drawing.Size(306, 149);
             this.btn_ManageProduct.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_ManageProduct.TabIndex = 7;
             this.btn_ManageProduct.Text = "Manage Product";
@@ -107,7 +107,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_ManagePS.Location = new System.Drawing.Point(315, 3);
             this.btn_ManagePS.Name = "btn_ManagePS";
-            this.btn_ManagePS.Size = new System.Drawing.Size(306, 160);
+            this.btn_ManagePS.Size = new System.Drawing.Size(306, 149);
             this.btn_ManagePS.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_ManagePS.TabIndex = 9;
             this.btn_ManagePS.Text = "Manage Production Schedule";
@@ -123,9 +123,9 @@
             this.btn_CreateFGTN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_CreateFGTN.Location = new System.Drawing.Point(627, 169);
+            this.btn_CreateFGTN.Location = new System.Drawing.Point(627, 158);
             this.btn_CreateFGTN.Name = "btn_CreateFGTN";
-            this.btn_CreateFGTN.Size = new System.Drawing.Size(306, 160);
+            this.btn_CreateFGTN.Size = new System.Drawing.Size(306, 149);
             this.btn_CreateFGTN.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_CreateFGTN.TabIndex = 10;
             this.btn_CreateFGTN.Text = "Create Finished Goods Transfer Note";
@@ -142,9 +142,9 @@
             this.btn_ProdWeeklyReports.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ProdWeeklyReports.Location = new System.Drawing.Point(315, 335);
+            this.btn_ProdWeeklyReports.Location = new System.Drawing.Point(315, 313);
             this.btn_ProdWeeklyReports.Name = "btn_ProdWeeklyReports";
-            this.btn_ProdWeeklyReports.Size = new System.Drawing.Size(306, 161);
+            this.btn_ProdWeeklyReports.Size = new System.Drawing.Size(306, 149);
             this.btn_ProdWeeklyReports.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_ProdWeeklyReports.TabIndex = 6;
             this.btn_ProdWeeklyReports.Text = "Generate Weekly Reports";
@@ -161,9 +161,9 @@
             this.btn_ProcessWorkOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ProcessWorkOrder.Location = new System.Drawing.Point(3, 169);
+            this.btn_ProcessWorkOrder.Location = new System.Drawing.Point(3, 158);
             this.btn_ProcessWorkOrder.Name = "btn_ProcessWorkOrder";
-            this.btn_ProcessWorkOrder.Size = new System.Drawing.Size(306, 160);
+            this.btn_ProcessWorkOrder.Size = new System.Drawing.Size(306, 149);
             this.btn_ProcessWorkOrder.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_ProcessWorkOrder.TabIndex = 8;
             this.btn_ProcessWorkOrder.Text = "Process Work Order";
@@ -173,6 +173,7 @@
             this.btn_ProcessWorkOrder.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btn_ProcessWorkOrder.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_ProcessWorkOrder.UseTileImage = true;
+            this.btn_ProcessWorkOrder.Click += new System.EventHandler(this.btn_ProcessWorkOrder_Click);
             // 
             // btn_Exit
             // 
@@ -199,14 +200,14 @@
             this.ProdWeeklyReportsPanel.Controls.Add(this.btn_WOReports, 1, 1);
             this.ProdWeeklyReportsPanel.Controls.Add(this.btn_LTReport, 2, 2);
             this.ProdWeeklyReportsPanel.Controls.Add(this.btn_FGTReport, 2, 1);
-            this.ProdWeeklyReportsPanel.Location = new System.Drawing.Point(23, 401);
+            this.ProdWeeklyReportsPanel.Location = new System.Drawing.Point(23, 61);
             this.ProdWeeklyReportsPanel.Name = "ProdWeeklyReportsPanel";
             this.ProdWeeklyReportsPanel.RowCount = 4;
             this.ProdWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ProdWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ProdWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ProdWeeklyReportsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ProdWeeklyReportsPanel.Size = new System.Drawing.Size(936, 158);
+            this.ProdWeeklyReportsPanel.Size = new System.Drawing.Size(936, 464);
             this.ProdWeeklyReportsPanel.TabIndex = 11;
             this.ProdWeeklyReportsPanel.Visible = false;
             // 
@@ -215,9 +216,9 @@
             this.btn_PMRPReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_PMRPReport.Location = new System.Drawing.Point(237, 81);
+            this.btn_PMRPReport.Location = new System.Drawing.Point(237, 235);
             this.btn_PMRPReport.Name = "btn_PMRPReport";
-            this.btn_PMRPReport.Size = new System.Drawing.Size(228, 33);
+            this.btn_PMRPReport.Size = new System.Drawing.Size(228, 110);
             this.btn_PMRPReport.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_PMRPReport.TabIndex = 8;
             this.btn_PMRPReport.Text = "Generate PMRP Report";
@@ -233,9 +234,9 @@
             this.btn_WOReports.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_WOReports.Location = new System.Drawing.Point(237, 42);
+            this.btn_WOReports.Location = new System.Drawing.Point(237, 119);
             this.btn_WOReports.Name = "btn_WOReports";
-            this.btn_WOReports.Size = new System.Drawing.Size(228, 33);
+            this.btn_WOReports.Size = new System.Drawing.Size(228, 110);
             this.btn_WOReports.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_WOReports.TabIndex = 9;
             this.btn_WOReports.Text = "Generate Work Orders Report";
@@ -251,9 +252,9 @@
             this.btn_LTReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_LTReport.Location = new System.Drawing.Point(471, 81);
+            this.btn_LTReport.Location = new System.Drawing.Point(471, 235);
             this.btn_LTReport.Name = "btn_LTReport";
-            this.btn_LTReport.Size = new System.Drawing.Size(228, 33);
+            this.btn_LTReport.Size = new System.Drawing.Size(228, 110);
             this.btn_LTReport.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_LTReport.TabIndex = 10;
             this.btn_LTReport.Text = "Generate Lot Travellers Report";
@@ -269,9 +270,9 @@
             this.btn_FGTReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_FGTReport.Location = new System.Drawing.Point(471, 42);
+            this.btn_FGTReport.Location = new System.Drawing.Point(471, 119);
             this.btn_FGTReport.Name = "btn_FGTReport";
-            this.btn_FGTReport.Size = new System.Drawing.Size(228, 33);
+            this.btn_FGTReport.Size = new System.Drawing.Size(228, 110);
             this.btn_FGTReport.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_FGTReport.TabIndex = 7;
             this.btn_FGTReport.Text = "Generate FGTN Report";
@@ -286,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 585);
+            this.ClientSize = new System.Drawing.Size(982, 551);
             this.Controls.Add(this.ProdWeeklyReportsPanel);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.ProdHomeScreenPanel);

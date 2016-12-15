@@ -12,7 +12,8 @@ namespace BusinessEntities
 
         #region Instance Properties
         private int lineID;
-        private IProduct product;
+        private int productID;
+        private double unitPrice;
         private int quantity;
         private double linePrice;
         private double vat;
@@ -26,12 +27,16 @@ namespace BusinessEntities
             set { lineID = value; }
         }
 
-        public IProduct LineItemProduct
+        public int LineItemProductID
         {
-            get { return product; }
-            set { product = value; }
+            get { return productID; }
+            set { productID = value; }
         }
-
+        public double UnitPrice
+        {
+            get { return unitPrice; }
+            set{ unitPrice = value; }
+        }
         public int Quantity
         {
             get { return quantity; }
@@ -40,7 +45,7 @@ namespace BusinessEntities
 
         public double GetLinePrice()
         {
-            return linePrice = quantity * product.ProductPrice;
+            return linePrice = quantity * unitPrice;
         }
 
         public double VAT
@@ -53,7 +58,7 @@ namespace BusinessEntities
         {
             return lineTotal = linePrice + vat;
         }
-
+       
         #endregion
 
         #region Constructor
@@ -62,10 +67,26 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public LineItem(int _lineID, IProduct _product, int _quantity, double _linePrice, double _vat, double _lineTotal)
+        public LineItem(int _quantity, double _unitPrice,  double _linePrice, double _vat, int _productId)
+        {
+            this.productID = _productId;
+            this.unitPrice = _unitPrice;
+            this.quantity = _quantity;
+            this.vat = _vat;
+        }
+        public LineItem(int _lineID, int _quantity, double _unitPrice, double _linePrice, double _vat, int _productId)
         {
             this.lineID = _lineID;
-            this.product = _product;
+            this.productID = _productId;
+            this.unitPrice = _unitPrice;
+            this.quantity = _quantity;
+            this.vat = _vat;
+        }
+        public LineItem(int _lineID, int _productId, double _unitPrice, int _quantity, double _linePrice, double _vat, double _lineTotal)
+        {
+            this.lineID = _lineID;
+            this.productID = _productId;
+            this.unitPrice = _unitPrice;
             this.quantity = _quantity;
             this.vat = _vat;
         }

@@ -21,7 +21,7 @@ namespace DocumentWriter
             throw new System.NotImplementedException();
         }
 
-        public RfQ(string id, Customer customer, List<IProduct> standardParts, int[] standarQty, List<IProduct> customParts, string[] requiredDates, string contact)
+        public RfQ(string id, Customer customer, List<IProduct> standardParts, List<IProduct> customParts, string[] requiredDates, string contact)
         {
             string name = "RfQ" + id + ".pdf";
             string path = "..\\..\\Reports\\" + name;
@@ -68,7 +68,7 @@ namespace DocumentWriter
             doc.Add(Chunk.NEWLINE);
 
             PdfPTable table = new PdfPTable(3);
-            float[] widths = new float[] { 180f, 180f, 180f };
+            float[] widths = new float[] { 60f, 260f, 180f };
             table.SetTotalWidth(widths);
             table.LockedWidth = true;
             table.HorizontalAlignment = Element.ALIGN_LEFT;
@@ -79,7 +79,7 @@ namespace DocumentWriter
             {
                 table.AddCell(prod.ProductId.ToString());
                 table.AddCell(prod.ProductName);
-                table.AddCell(standarQty[i].ToString());
+                table.AddCell(prod.Quantity.ToString());
                 i++;
             }
             doc.Add(table);

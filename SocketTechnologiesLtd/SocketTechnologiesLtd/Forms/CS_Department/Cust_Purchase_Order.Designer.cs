@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cust_Purchase_Order));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.quote_Ref_CBox = new MetroFramework.Controls.MetroComboBox();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
@@ -41,13 +46,6 @@
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.Customer_comboBox = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.product_ComboBox = new MetroFramework.Controls.MetroComboBox();
             this.ccancel_button = new MetroFramework.Controls.MetroButton();
@@ -67,10 +65,12 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.Return_button = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.metroButton2);
             this.panel1.Controls.Add(this.quote_Ref_CBox);
             this.panel1.Controls.Add(this.datePicker);
@@ -79,7 +79,6 @@
             this.panel1.Controls.Add(this.metroLabel11);
             this.panel1.Controls.Add(this.Customer_comboBox);
             this.panel1.Controls.Add(this.metroLabel10);
-            this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.metroButton1);
             this.panel1.Controls.Add(this.product_ComboBox);
             this.panel1.Controls.Add(this.ccancel_button);
@@ -102,6 +101,65 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1301, 742);
             this.panel1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
+            this.dataGridView1.Location = new System.Drawing.Point(608, 97);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(690, 419);
+            this.dataGridView1.TabIndex = 59;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Line ID";
+            this.Column1.MaxInputLength = 3;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Product Name";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Quantity";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 50;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Line Price";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 50;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Vat";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 50;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Line Total";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 75;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "ProductID";
+            this.Column7.Name = "Column7";
             // 
             // metroButton2
             // 
@@ -194,57 +252,6 @@
             this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel10.UseMnemonic = false;
             // 
-            // listView1
-            // 
-            this.listView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7});
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
-            this.listView1.Location = new System.Drawing.Point(628, 111);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(691, 419);
-            this.listView1.TabIndex = 49;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Line ID";
-            this.columnHeader1.Width = 48;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Product";
-            this.columnHeader2.Width = 187;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Quantity";
-            this.columnHeader4.Width = 61;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Line Price";
-            this.columnHeader5.Width = 92;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Vat";
-            this.columnHeader6.Width = 51;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Total Line Price";
-            this.columnHeader7.Width = 95;
-            // 
             // metroButton1
             // 
             this.metroButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -282,7 +289,7 @@
             // create_order_button
             // 
             this.create_order_button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.create_order_button.Location = new System.Drawing.Point(1035, 545);
+            this.create_order_button.Location = new System.Drawing.Point(459, 545);
             this.create_order_button.Name = "create_order_button";
             this.create_order_button.Size = new System.Drawing.Size(90, 34);
             this.create_order_button.TabIndex = 44;
@@ -458,6 +465,7 @@
             this.Load += new System.EventHandler(this.Cust_Purchase_Order_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,9 +474,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroComboBox product_ComboBox;
         private MetroFramework.Controls.MetroButton ccancel_button;
@@ -494,10 +499,14 @@
         private MetroFramework.Controls.MetroButton metroButton3;
         private System.Windows.Forms.DateTimePicker datePicker;
         private MetroFramework.Controls.MetroComboBox quote_Ref_CBox;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
         private MetroFramework.Controls.MetroButton metroButton2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

@@ -98,7 +98,7 @@ namespace SocketTechnologiesLtd
                 RGArequest rga = new RGArequest(rgaID, custName, custID, workOrderID, text);
                 MessageBox.Show("RGA Request successfully created!");
 
-                string comboType = "";
+                string[] comboType = { };
                 PDF_Preview viewer = new PDF_Preview(comboType);
                 viewer.MdiParent = this.MdiParent;
                 viewer.Show();

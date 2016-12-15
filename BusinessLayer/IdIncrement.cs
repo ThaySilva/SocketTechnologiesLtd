@@ -26,27 +26,38 @@ namespace BusinessLayer
         List<ILineItem> lineItem = model.LineItemList;
 
         #region UserID
-        public void setUserId()
+        public int getUserID()
         {
-            userId = user[user.Count - 1].UserID;
-        }
-        public int getUserId()
-        {
-            setUserId();
-            return userId;
+            string id = _data.GetMax("Users", "user_ID");
+
+            if (id != null && id != "")
+            {
+                int i = (int.Parse(id) + 1);
+                return i;
+            }
+            else
+            {
+                return 1;
+            }
+
         }
         #endregion
 
         #region EmployeeID
-        public void setEmpId()
+        public int getEmployeeID()
         {
-            employeeId = emp[emp.Count() - 1].EmployeeID;
-        }
+            string id = _data.GetMax("Employee", "employee_ID");
 
-        public int getEmpId()
-        {
-            setEmpId();
-            return employeeId;
+            if (id != null && id != "")
+            {
+                int i = (int.Parse(id) + 1);
+                return i;
+            }
+            else
+            {
+                return 1;
+            }
+
         }
         #endregion
 
@@ -82,16 +93,20 @@ namespace BusinessLayer
         }
         #endregion
 
-        #region lineID
-        public void setLineItemId()
-        {
-            lineItemID = lineItem[lineItem.Count() - 1].LineID + 1;
-        }
-
+        #region LineID
         public int getLineItemId()
         {
-            setLineItemId();
-            return lineItemID;
+            string id = _data.GetMax("STL_LineItem", "STLLineItem_ID");
+
+            if (id != null && id != "")
+            {
+                int i = (int.Parse(id) + 1);
+                return i;
+            }
+            else
+            {
+                return 1;
+            }
         }
 
         #endregion

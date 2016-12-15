@@ -35,24 +35,24 @@
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.btn_CreateRfQ = new MetroFramework.Controls.MetroTile();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -61,11 +61,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(14, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(818, 417);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 0;
@@ -156,89 +156,6 @@
             this.btn_CreateRfQ.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btn_CreateRfQ.UseTileImage = true;
             // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.Controls.Add(this.tableLayoutPanel2);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(810, 378);
-            this.metroTabPage2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "Materials";
-            this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.metroTile2, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.metroTile3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroTile4, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(810, 378);
-            this.tableLayoutPanel2.TabIndex = 6;
-            // 
-            // metroTile2
-            // 
-            this.metroTile2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroTile2.Location = new System.Drawing.Point(3, 255);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(804, 120);
-            this.metroTile2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTile2.TabIndex = 8;
-            this.metroTile2.Text = "Reports";
-            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.metroTile2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.metroTile2.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile2.UseTileImage = true;
-            // 
-            // metroTile3
-            // 
-            this.metroTile3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroTile3.Location = new System.Drawing.Point(3, 129);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(804, 120);
-            this.metroTile3.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTile3.TabIndex = 7;
-            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.metroTile3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.metroTile3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile3.UseTileImage = true;
-            // 
-            // metroTile4
-            // 
-            this.metroTile4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroTile4.Location = new System.Drawing.Point(3, 3);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(804, 120);
-            this.metroTile4.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTile4.TabIndex = 4;
-            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.metroTile4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile4.UseTileImage = true;
-            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.tableLayoutPanel3);
@@ -324,6 +241,89 @@
             this.metroTile8.UseTileImage = true;
             this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click);
             // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.tableLayoutPanel2);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(810, 378);
+            this.metroTabPage2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "Materials";
+            this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.metroTile2, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.metroTile3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.metroTile4, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(810, 378);
+            this.tableLayoutPanel2.TabIndex = 6;
+            // 
+            // metroTile2
+            // 
+            this.metroTile2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroTile2.Location = new System.Drawing.Point(3, 255);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(804, 120);
+            this.metroTile2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile2.TabIndex = 8;
+            this.metroTile2.Text = "Reports";
+            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroTile2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroTile2.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile2.UseTileImage = true;
+            // 
+            // metroTile3
+            // 
+            this.metroTile3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroTile3.Location = new System.Drawing.Point(3, 129);
+            this.metroTile3.Name = "metroTile3";
+            this.metroTile3.Size = new System.Drawing.Size(804, 120);
+            this.metroTile3.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile3.TabIndex = 7;
+            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroTile3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroTile3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile3.UseTileImage = true;
+            // 
+            // metroTile4
+            // 
+            this.metroTile4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroTile4.Location = new System.Drawing.Point(3, 3);
+            this.metroTile4.Name = "metroTile4";
+            this.metroTile4.Size = new System.Drawing.Size(804, 120);
+            this.metroTile4.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile4.TabIndex = 4;
+            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroTile4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile4.UseTileImage = true;
+            // 
             // metroButton1
             // 
             this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -353,10 +353,10 @@
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.metroTabPage2.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.metroTabPage2.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

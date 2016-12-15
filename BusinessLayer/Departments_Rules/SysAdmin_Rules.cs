@@ -27,7 +27,7 @@ namespace BusinessLayer
             Guid uid = Guid.NewGuid();
             GenericFactory<IEmployee>.Register(uid, () => new Employee(employeeID, firstName, lastName, phoneNum, deptId, userId));
             IEmployee emp = GenericFactory<IEmployee>.Create(uid);
-            _data.AddRow("Employee",new string[] { "empFirstName", "empLastName", "empPhoneNum", "department_ID", "User_user_ID" }, new string[] { firstName, lastName, phoneNum, deptId.ToString(), userId.ToString() });
+            _data.AddRow("Employee",new string[] { "employee_ID", "empFirstName", "empLastName", "empPhoneNum", "department_ID", "User_user_ID" }, new string[] { employeeID.ToString(), firstName, lastName, phoneNum, deptId.ToString(), userId.ToString() });
             model.FillEmployeeList();
         }
 
@@ -77,7 +77,7 @@ namespace BusinessLayer
             Guid uid = Guid.NewGuid();
             GenericFactory<IUser>.Register(uid, () => new User(userId, username, password));
             IUser user = GenericFactory<IUser>.Create(uid);
-            _data.AddRow("Users", new string[] {"userName", "password" }, new string[] { username, password});
+            _data.AddRow("Users", new string[] {"user_ID", "userName", "password" }, new string[] {userId.ToString(), username, password});
             model.FillUserList();
         }
 

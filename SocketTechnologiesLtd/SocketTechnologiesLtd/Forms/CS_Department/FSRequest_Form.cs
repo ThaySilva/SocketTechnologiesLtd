@@ -46,7 +46,7 @@ namespace SocketTechnologiesLtd
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
-            string text = "", WorkOrderID = "", comboType = "";
+            string text = "", WorkOrderID = "",comboType = "";
 
             
             text = text_tb.Text;
@@ -62,9 +62,9 @@ namespace SocketTechnologiesLtd
                 fsrRequest fsr = new fsrRequest(fsrID, custID, WorkOrderID, text, comboType);
                 MessageBox.Show("Field Service Request successfully created!");
 
-                PDF_Preview viewer = new PDF_Preview(comboType);
-                viewer.MdiParent = this.MdiParent;
-                viewer.Show();
+                //PDF_Preview viewer = new PDF_Preview(comboType);
+                //viewer.MdiParent = this.MdiParent;
+                //viewer.Show();
                 this.Close();
             }
         }

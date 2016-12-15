@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDF_Preview));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.btn_confirm = new MetroFramework.Controls.MetroButton();
-            this.btn_cancel = new MetroFramework.Controls.MetroButton();
             this.pdfViewer = new AxAcroPDFLib.AxAcroPDF();
             this.btn_Exit = new MetroFramework.Controls.MetroButton();
+            this.btn_cancel = new MetroFramework.Controls.MetroButton();
+            this.btn_confirm = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pdfViewer)).BeginInit();
             this.SuspendLayout();
@@ -56,38 +56,14 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // btn_confirm
-            // 
-            this.btn_confirm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_confirm.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_confirm.Location = new System.Drawing.Point(502, 720);
-            this.btn_confirm.Name = "btn_confirm";
-            this.btn_confirm.Size = new System.Drawing.Size(92, 34);
-            this.btn_confirm.TabIndex = 15;
-            this.btn_confirm.Text = "Confirm";
-            this.btn_confirm.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_cancel.Location = new System.Drawing.Point(622, 720);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(92, 34);
-            this.btn_cancel.TabIndex = 14;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
             // pdfViewer
             // 
             this.pdfViewer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pdfViewer.Enabled = true;
-            this.pdfViewer.Location = new System.Drawing.Point(-17, -27);
+            this.pdfViewer.Location = new System.Drawing.Point(3, 3);
             this.pdfViewer.Name = "pdfViewer";
             this.pdfViewer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfViewer.OcxState")));
-            this.pdfViewer.Size = new System.Drawing.Size(748, 719);
+            this.pdfViewer.Size = new System.Drawing.Size(711, 711);
             this.pdfViewer.TabIndex = 2;
             // 
             // btn_Exit
@@ -101,6 +77,30 @@
             this.btn_Exit.Text = "Exit";
             this.btn_Exit.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_cancel.Location = new System.Drawing.Point(622, 720);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(92, 34);
+            this.btn_cancel.TabIndex = 14;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_confirm
+            // 
+            this.btn_confirm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_confirm.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_confirm.Location = new System.Drawing.Point(502, 720);
+            this.btn_confirm.Name = "btn_confirm";
+            this.btn_confirm.Size = new System.Drawing.Size(92, 34);
+            this.btn_confirm.TabIndex = 15;
+            this.btn_confirm.Text = "Confirm";
+            this.btn_confirm.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
             // 
             // PDF_Preview
             // 
@@ -125,9 +125,9 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroButton btn_Exit;
         private AxAcroPDFLib.AxAcroPDF pdfViewer;
         private MetroFramework.Controls.MetroButton btn_confirm;
         private MetroFramework.Controls.MetroButton btn_cancel;
+        private MetroFramework.Controls.MetroButton btn_Exit;
     }
 }

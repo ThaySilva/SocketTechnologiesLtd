@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DocumentWriter;
 using BusinessLayer;
 using BusinessEntities;
+using DataAccessLayer;
 
 namespace SocketTechnologiesLtd
 {
@@ -18,42 +19,28 @@ namespace SocketTechnologiesLtd
         #region Instance Attributes
         private IModel model;
         List<ICustomer> customers;
+        private DataLayer dataL;
+        int cusId = 0;
         #endregion
 
         #region Constructors
         public ViewCustomerDetails(IModel _Model)
         {
-            //populateCustView();
+
             InitializeComponent();
             this.ControlBox = false;
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.TopMost = true;
             model = _Model;
             customers = model.CustomerList;
-        
+            List<String[]> custList = CustServices_Rules.GetCustomer();
+            
+
+            //PopulateListView(lv_customers, custList);
 
         }
 
-        private void ViewCustomerDetails_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'stldb2DataSet1.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter2.Fill(this.stldb2DataSet1.Customer);
-            // TODO: This line of code loads data into the 'stldb2DataSet.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter1.Fill(this.stldb2DataSet.Customer);
-            //TODO: This line of code loads data into the 'stldb1DataSet.Customer' table.You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.stldb1DataSet.Customer);
-
-        }
-
-        private void metroPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
@@ -65,30 +52,22 @@ namespace SocketTechnologiesLtd
 
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
-            
-            if (lv_customers.SelectedItems.Count != 0)
-            {
-                String id = lv_customers.SelectedItems[0].SubItems[0].Text;
-                if (id != null)
-                {
-                    EditCustomerDetails ec = new EditCustomerDetails(Convert.ToInt16(id));
-                    ec.MdiParent = this.MdiParent;
-                    ec.Dock = DockStyle.Fill;
-                    ec.Show();
-                }
-            }
+            EditCustomerDetails ec = new EditCustomerDetails(model);
+            ec.MdiParent = this.MdiParent;
+            ec.Dock = DockStyle.Fill;
+            ec.Show();
+
         }
 
-private void btnDeleteCustomer_Click(object sender, EventArgs e)
+        private void btnDeleteCustomer_Click(object sender, EventArgs e)
         {
-        
-            if (lv_customers.SelectedItems.Count != 0)
+
+            if (cusId != 0)
             {
-                String id = lv_customers.SelectedItems[0].SubItems[0].Text;
-                if (MessageBox.Show("Are you sure you want to delete the customer " + id +" ?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete the customer ?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    CustServices_Rules.DeleteCustomer(Convert.ToInt16(id));
-                    MessageBox.Show("The customer " + id  +" was successfully deleted!");
+                    CustServices_Rules.DeleteCustomer(cusId);
+                    MessageBox.Show("The customer was successfully deleted!");
                     this.Close();
                 }
             }
@@ -111,112 +90,133 @@ private void btnDeleteCustomer_Click(object sender, EventArgs e)
         #endregion
 
         #region Extra Functions
-        private void populateCustView()
+        //private void SetCustomerDetails(string custId, string compName, string FirstName, string LastName, string phone, string Address1, string Address2, string Address3)
+        //{
+        //    lblCustIDViewCust.Text = custId;
+        //    lblCompNameViewCust.Text = compName;
+        //    lblCustFirstNameViewCust.Text = FirstName;
+        //    lblCusSurnameViewCust.Text = LastName;
+        //    lblAddress1ViewCust.Text = Address1;
+        //    lblAddress2ViewCust.Text = Address2;
+        //    lblAddress3ViewCust.Text = Address3;
+        //    lblPhoneNoViewCust.Text = phone;
+        //}
+        
+
+        private void btnBackViewCust_Click(object sender, EventArgs e)
         {
-            DataTable Customers = new DataTable("Customers");
+            this.Close();
+        }
+
+        private void tbCustomerSearch_TextChanged(object sender, EventArgs e)
+        {
+            
+            populateListView();
+        }
+
+
+        private void populateListView()
+        {
+            DataTable customer = new DataTable("Customer");
 
             DataColumn c0 = new DataColumn("CustomerID:");
             DataColumn c1 = new DataColumn("First Name:");
             DataColumn c2 = new DataColumn("Last Name:");
             DataColumn c3 = new DataColumn("Company Name:");
             DataColumn c4 = new DataColumn("Phone:");
-            DataColumn c5 = new DataColumn("Address 1:");
+            DataColumn c5 = new DataColumn("Address:");
             DataColumn c6 = new DataColumn("Address 2:");
-            DataColumn c7 = new DataColumn("County:");
+            DataColumn c7 = new DataColumn("Address 3:");
 
+            customer.Columns.Add(c0);
+            customer.Columns.Add(c1);
+            customer.Columns.Add(c2);
+            customer.Columns.Add(c3);
+            customer.Columns.Add(c4);
+            customer.Columns.Add(c5);
+            customer.Columns.Add(c6);
+            customer.Columns.Add(c7);
 
+            DataRow row;
 
-            Customers.Columns.Add(c0);
-            Customers.Columns.Add(c1);
-            Customers.Columns.Add(c2);
-            Customers.Columns.Add(c3);
-            Customers.Columns.Add(c4);
-            Customers.Columns.Add(c5);
-            Customers.Columns.Add(c6);
-            Customers.Columns.Add(c7);
-
-            DataRow cRow;
-
-            foreach (Customer cust in customers)
+            foreach (Customer c in customers)
             {
+
+                row = customer.NewRow();
+
+                row["CustomerID:"] = c.Customer_ID.ToString();
+                row["First Name:"] = c.CustFirstName;
+                row["Last Name:"] = c.CustLastName;
+                row["Company Name:"] = c.CustCompanyName;
+                row["Phone:"] = c.CustPhoneNum;
+                row["Address:"] = c.CustAddress[0];
+                row["Address 2:"] = c.CustAddress[1];
+                row["Address 3:"] = c.CustAddress[2];
+
+
+                customer.Rows.Add(row);
                 
-                    cRow = Customers.NewRow();
-
-                    //cRow["CustomerID:"] = cust.customer_ID.ToString();
-                    //cRow["First Name:"] = cust.custFirstName.ToString();
-                    //cRow["Last Name:"] = cust.custLastName.ToString();
-                    //cRow["Company Name:"] = cust.custCompanyName.ToString();
-                    //cRow["Phone:"] = cust.custPhoneNum.ToString();
-                    //cRow["Address 1:"] = cust.custAddress.ToString();
-                    //cRow["Address 2:"] = cust.custAddLine2.ToString();
-                    //cRow["County:"] = cust.custCounty.ToString();
-
-                    Customers.Rows.Add(cRow);
-                
             }
 
-            //customerGridView.DataSource = Customers;
-           
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.customerTableAdapter1.FillBy(this.stldb2DataSet.Customer);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            //dataGridCustomer.DataSource = customer;
 
         }
 
-        private void SetCustomerDetails(string custId, string compName, string FirstName, string LastName, string phone, string Address1, string Address2, string Address3)
+        private void fillFields(int cusID)
         {
-            lblCustIDViewCust.Text = custId;
-            lblCompNameViewCust.Text = compName;
-            lblCustFirstNameViewCust.Text = FirstName;
-            lblCusSurnameViewCust.Text = LastName;
-            lblAddress1ViewCust.Text = Address1;
-            lblAddress2ViewCust.Text = Address2;
-            lblAddress3ViewCust.Text = Address3;
-            lblPhoneNoViewCust.Text = phone;
-        }
-        private void lv_customers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // check whether an item is selected
-            if (lv_customers.SelectedItems.Count != 0)
+            foreach (Customer c in customers)
             {
-                // Enable buttons
-               btnDeleteCustomerViewCust.Enabled = true;
-               btnEditCustomerViewCust.Enabled = true;
 
-                // get id of selected employee
-                string id = lv_customers.SelectedItems[0].SubItems[0].Text;
+                if (c.Customer_ID == cusID)
+                {
+                    tbCustomerSearch.Text = c.Customer_ID.ToString();
+                }
 
-                // get details of a customer that is associated with selected customer
-                 
-
-                // use these details to populate the textboxes
-                SetCustomerDetails(customers[0].ToString(), customers[1].ToString(), customers[2].ToString(), customers[3].ToString(), customers[4].ToString(), customers[5].ToString(), customers[6].ToString(), customers[7].ToString());
             }
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            int id;
+            bool result = int.TryParse(tbCustomerSearch.Text, out id);
+            if (result)
+                populateListView();
             else
-            {
-                // if SelectedItems.Count is zero, reset labels
-                SetCustomerDetails("", "", "", "", "", "", "", "");
+                MessageBox.Show("You need to enter a number on the Id field!");
 
-                // disable buttons
-                btnDeleteCustomerViewCust.Enabled = false;
-                btnEditCustomerViewCust.Enabled = false;
-            }
+            tbCustomerSearch.Text = null;
         }
 
-        private void btnBackViewCust_Click(object sender, EventArgs e)
+        private void fillFields1(int cusID)
         {
-            this.Close();
+            foreach (Customer c in customers)
+            {
+
+                if (c.Customer_ID == cusID)
+                {
+                    //tb_Fname.Text = c.CustFirstName;
+                    //tb_Lname.Text = c.CustLastName;
+                    //tb_companyName.Text = c.CustCompanyName;
+                    //tb_Phone.Text = c.CustPhoneNum;
+                    //tb_add1.Text = c.CustAddress[0];
+                    //tb_add2.Text = c.CustAddress[1];
+                    //tb_add3.Text = c.CustAddress[2];
+                }
+            }
+
+        }
+        private void dataGrid_Customer1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cusId = Convert.ToInt32(dataGrid_Customer1.Rows[e.RowIndex].Cells["Customer_ID:"].Value);
+
+            fillFields1(cusId);
+        }
+
+        private void tbCustomerSearch_Click(object sender, EventArgs e)
+        {
+            populateListView();
         }
     }
-    #endregion
 }
+    #endregion
 #endregion

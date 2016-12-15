@@ -20,26 +20,31 @@ namespace BusinessLayer
             return data.ToList<String[]>();
         }
 
-        public static void AddCustomer(int customer_ID, string custFirstName, string custLastName, string custCompanyName, string custPhoneNum, string[] custAddress)
+        public static void AddCustomer(int customer_ID, string custFirstName, string custLastName, string custCompanyName, string custPhoneNum, string[]custAddress)
         {
             Guid uid = Guid.NewGuid();
             GenericFactory<ICustomer>.Register(uid, () => new Customer(customer_ID, custFirstName, custLastName, custCompanyName, custPhoneNum, custAddress));
-            IEmployee emp = GenericFactory<IEmployee>.Create(uid);
-            _data.AddRow("Customer", new string[] { "customer_ID", "custFirstName", "custLastName", "custCompanyName", "custPhoneNum", "custAddress" }, new string[] { customer_ID.ToString(), custFirstName, custLastName, custCompanyName, custPhoneNum });
+            ICustomer cus = GenericFactory<ICustomer>.Create(uid);
+            _data.AddRow("Customer", new string[] { "customer_ID", "custFirstName", "custLastName", "custCompanyName", "custPhoneNum","custAddress", "custAddLine2", "custCounty" }, new string[] { customer_ID.ToString(), custFirstName, custLastName, custCompanyName, custPhoneNum, custAddress[0], custAddress[1],custAddress[2] });
             model.FillCustomerList();
         }
         public static void EditCustomer(int customer_ID, string custFirstName, string custLastName, string custCompanyName, string custPhoneNum, string[] custAddress)
         {
             _data.RemoveCriteria();
             _data.SetCriteria("customer_ID", customer_ID.ToString());
-            _data.UpdateRowsByKey("Customer", new string[] { "customer_ID", "custFirstName", "custLastName", "custCompanyName", "custPhoneNum", "custAddress" }, new string[] { customer_ID.ToString(), custFirstName, custLastName, custCompanyName, custPhoneNum });
+            _data.UpdateRowsByKey("Customer", new string[] { "customer_ID", "custFirstName", "custLastName", "custCompanyName", "custPhoneNum", "custAddress", "custAddLine2", "custCounty" }, new string[] { customer_ID.ToString(), custFirstName, custLastName, custCompanyName, custPhoneNum, custAddress[0], custAddress[1], custAddress[2] });
 
-            var cus = model.CustomerList.First();
-            cus.CustFirstName = custFirstName;
-            cus.CustLastName = custLastName;
-            cus.CustCompanyName = custCompanyName;
-            cus.CustPhoneNum = custPhoneNum;
-            cus.CustAddress = custAddress;
+            model.FillCustomerList();
+
+            //var cus = model.CustomerList.First();
+            //cus.Customer_ID = customer_ID;
+            //cus.CustFirstName = custFirstName;
+            //cus.CustLastName = custLastName;
+            //cus.CustCompanyName = custCompanyName;
+            //cus.CustPhoneNum = custPhoneNum;
+            //cus.CustAddress[0] = custAddress.ToString();
+            //cus.CustAddress[1] = custAddress.ToString();
+            //cus.CustAddress[2] = custAddress.ToString();
         }
 
         public static void DeleteCustomer(int customerID)
@@ -63,15 +68,16 @@ namespace BusinessLayer
             Guid uid = Guid.NewGuid();
             GenericFactory<IProduct>.Register(uid, () => new Product(prodId, productName, productDescription, quantity, rfqId));
             IProduct prod = GenericFactory<IProduct>.Create(uid);
-            _data.AddRow("CustomProduct", new string[] { "CustomProduct_ID", "productName", "manufacturingInstructions", "quantity", "Rfq_ID" }, new string[] { prodId.ToString(), productName, productDescription, quantity.ToString(), rfqId.ToString()});
+            _data.AddRow("CustomProduct", new string[] { "CustomProduct_ID", "productName", "description", "quantity", "Rfq_ID" }, new string[] { prodId.ToString(), productName, productDescription, quantity.ToString(), rfqId.ToString()});
             model.FillUserList();
         }
 
         public static void DeleteCustomProduct(string prodName)
         {
+            model.FillCustomProductList();
             var prod = model.CustomProductList.First(p => p.ProductName == prodName);
             _data.RemoveCriteria();
-            _data.SetCriteria("CustomProduct_ID", prodName);
+            _data.SetCriteria("productName", "'" + prodName + "'");
             _data.DeleteRowByKey("CustomProduct");
             model.CustomProductList.Remove(prod);
         }

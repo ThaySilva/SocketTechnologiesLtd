@@ -16,21 +16,31 @@ namespace SocketTechnologiesLtd
     public partial class PDF_Preview : MetroFramework.Forms.MetroForm
     {
         #region Instance Attributes
-        Common_Rules rules = new Common_Rules();
-        string formName = "";
-
         private static IDataLayer _data = DataLayer.GetInstance();
         private static IModel model = Model.GetInstance(_data);
+
+        Common_Rules rules = new Common_Rules();
+        string formName = "";
+        string reference = "";
+        string custId = "";
+        string text = "";
         #endregion
 
         #region Constructors
-        public PDF_Preview(string form)
+        public PDF_Preview(string[] form)
         {
             InitializeComponent();
             this.ControlBox = false;
             this.TopMost = true;
 
-            formName = form;
+            if (form != null)
+            {
+                formName = form[0];
+                reference = form[1];
+                custId = form[2];
+                text = form[3];
+            }
+
             LoadPDF(rules.getPdfPath(), rules.getPdfName());
         }
 
@@ -53,7 +63,7 @@ namespace SocketTechnologiesLtd
             switch (form)
             {
                 case "Technical Enquiry":
-                    TE_Form te = new TE_Form();
+                    TE_Form te = new TE_Form(model);
                     //te.txt_TEtext.Text = text;
                     te.MdiParent = this.MdiParent;
                     te.Dock = DockStyle.Fill;

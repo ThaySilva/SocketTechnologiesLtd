@@ -15,19 +15,17 @@ namespace SocketTechnologiesLtd
 {
     public partial class Cust_Purchase_Order : MetroFramework.Forms.MetroForm
     {
-
-        
-        
-
-
         #region Instance Attributes
         private IModel model;
         IdIncrement PON = new IdIncrement();
         IdIncrement quoteRef = new IdIncrement();
-        
+        IdIncrement lineID = new IdIncrement();
+        IdIncrement wOID = new IdIncrement();
+
         List<ICustomer> customers;
         List<IProduct> products;
         List<IDocument> documents;
+        List<IWorkOrder> workOrder;
         //string cpoId = "";
         //string fileId = "";
         int line_ID = 0;
@@ -46,10 +44,13 @@ namespace SocketTechnologiesLtd
 
             cust_purc_no_box.Text = PON.getReportID("CustomerPurchaseOrder_Report").ToString();
             //quote_Ref_box.Text = quoteRef.getReportID("").ToString();
+            line_ID = lineID.getLineItemId(); 
             products = model.ProductList;
             customers = model.CustomerList;
              model.FillDocumentList("Quotation_Out_Report");
-          //  model.FillDocumentList("CustomerPurchaseOrder_Report", false);
+            wOID.getReportID("WorkOrder").ToString();
+           // model.FillWorkOrderList("WorkOrder");
+            //  model.FillDocumentList("CustomerPurchaseOrder_Report", false);
 
             documents = model.DocumentList;
             fillCustomer_comboBox();
@@ -191,67 +192,47 @@ namespace SocketTechnologiesLtd
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            ListViewItem lvi;
-            ListViewItem.ListViewSubItem lvsi1, lvsi2, lvsi3, lvsi4, lvsi5, lvsi6;
-            product_ComboBox.SelectedItem.Equals(null);
-            listView1.BeginUpdate();
+           
 
-            
-            if(listView1 == null)
-            {
-                line_ID = 1;
-            }
-            else
+            if(dataGridView1 != null)
             {
                 line_ID++;
             }
-
+         
             foreach (Product prod in products)
             {
                 if (prod.ProductName.Equals(product_ComboBox.SelectedItem.ToString().Trim()))
                 {
-                    LineItem Item = new LineItem(line_ID, prod, Convert.ToInt16(quantity_box.Text), Convert.ToDouble(line_price_box.Text), Convert.ToDouble(VAT_textBox.Text), Convert.ToDouble(line_total_box.Text));
-                    lvi = new ListViewItem();
-                    lvi.Text = Item.LineID.ToString();
+                    LineItem Item = new LineItem(line_ID, prod.ProductId, Convert.ToDouble(unit_price_box.Text), Convert.ToInt16(quantity_box.Text), Convert.ToDouble(line_price_box.Text), Convert.ToDouble(VAT_textBox.Text), Convert.ToDouble(line_total_box.Text));
+                  
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(dataGridView1);  // this line was missing
+                    row.Cells[0].Value = line_ID.ToString();
+                    row.Cells[1].Value = prod.ProductName.ToString();
+                    row.Cells[2].Value = Item.Quantity.ToString();
+                    row.Cells[3].Value = Item.GetLinePrice().ToString();
+                    row.Cells[4].Value = Item.VAT.ToString();
+                    row.Cells[5].Value = Item.GetLineTotal().ToString();
+                    row.Cells[6].Value = prod.ProductId.ToString();
 
-                    lvsi1 = new ListViewItem.ListViewSubItem();
-                    lvsi1.Text = Item.LineItemProduct.ProductName.ToString();
-                    lvi.SubItems.Add(lvsi1);
 
-                    lvsi3 = new ListViewItem.ListViewSubItem();
-                    lvsi3.Text = Item.Quantity.ToString();
-                    lvi.SubItems.Add(lvsi3);
+                    dataGridView1.Rows.Add(row);
 
-                    lvsi4 = new ListViewItem.ListViewSubItem();
-                    lvsi4.Text = Item.GetLinePrice().ToString();
-                    lvi.SubItems.Add(lvsi4);
-
-                    lvsi5 = new ListViewItem.ListViewSubItem();
-                    lvsi5.Text = Item.VAT.ToString();
-                    lvi.SubItems.Add(lvsi5);
-
-                    lvsi6 = new ListViewItem.ListViewSubItem();
-                    lvsi6.Text = Item.GetLineTotal().ToString();
-                    lvi.SubItems.Add(lvsi6);
-
-                    listView1.Items.Add(lvi);
                 }
 
             }
-            listView1.EndUpdate();
-            listView1.Enabled = true;
-            listView1.FullRowSelect = true;
-
-
+            //listView1.EndUpdate();
+            //listView1.Enabled = true;
+            //listView1.FullRowSelect = true;
         }
 
         private void metroButton2_Click_1(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                foreach (ListViewItem eachItem in listView1.SelectedItems)
+                foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
                 {
-                    listView1.Items.Remove(eachItem);
+                    dataGridView1.Rows.RemoveAt(item.Index);
                 }
             }
             else
@@ -262,14 +243,41 @@ namespace SocketTechnologiesLtd
 
         private void create_order_button_Click(object sender, EventArgs e)
         {
+            string id = null;
+            string qty = null;
+            string unit = null;
+            string linePrice = null;
+            string Vat = null;
+            string prodID = null;
+            
+                foreach (DataGridViewRow item in dataGridView1.Rows)
+                {
+                    if (dataGridView1 != null)
+                    {
+                        
+                        id = item.Cells[0].Value.ToString();
+                        qty = item.Cells[2].Value.ToString();
+                        unit = item.Cells[3].Value.ToString();
+                        linePrice = item.Cells[4].Value.ToString();
+                        Vat = item.Cells[5].Value.ToString();
+                        prodID = item.Cells[6].Value.ToString();
 
-            //CustomerPurchaseOrder cusPurOrder = new CustomerPurchaseOrder();
+                        //LineItem Item = new LineItem(Convert.ToInt16(id), Convert.ToInt16(qty), Convert.ToDouble(unit), Convert.ToDouble(linePrice), Convert.ToDouble(Vat), Convert.ToInt16(prodID));
+
+                        Production_Rules.AddLineItem(Convert.ToInt16(id), Convert.ToInt16(qty), Convert.ToDouble(unit), Convert.ToDouble(linePrice), Convert.ToDouble(Vat), Convert.ToInt16(prodID));
+                      //  Production_Rules.AddWorkOrder(Convert.ToInt16(wOID), Convert.ToInt16(Customer_comboBox.SelectedIndex), Convert.ToInt16(prodID), Convert.ToInt16(qty), Convert.ToDateTime(datePicker));
+                    //Production_Rules.AddCPOOrder();
+
+                    this.dataGridView1.Rows.Remove(item);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No items in list!! Add items before creating order.");
+                    }
 
 
-
-
-
-
+                }
+            
         }
     }
 

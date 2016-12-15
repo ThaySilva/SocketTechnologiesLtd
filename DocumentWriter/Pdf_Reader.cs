@@ -33,15 +33,16 @@ namespace DocumentWriter
 
                     s = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(s)));
                     text = text + s;
-                    return text;
                 }
                 reader.Close();
+                File.Delete(filePath);
             }
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
                 return null;
             }
+
             return text;
         }
     }

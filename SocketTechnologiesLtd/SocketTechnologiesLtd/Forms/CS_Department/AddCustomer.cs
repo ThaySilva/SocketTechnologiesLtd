@@ -50,13 +50,13 @@ namespace SocketTechnologiesLtd
         {
             if (validateFields())
             {
-                ICustomer duplicateCustomer = model.CustomerList.FirstOrDefault(cust => cust.CustFirstName == tb_FirstName.Text.Trim());
+               // ICustomer duplicateCustomer = model.CustomerList.FirstOrDefault(cust => cust.CustFirstName == tb_FirstName.Text.Trim());
 
-                if (duplicateCustomer == null)
-                {
+                //if (duplicateCustomer ==)
+                //{
                     try
                     {
-                        CustServices_Rules.AddCustomer(Convert.ToInt32(tbCustomer_ID.Text), tb_CompanyName.Text, tb_FirstName.Text, tb_LastName.Text, tb_Phone.Text, new string[] { tb_add1.Text, tb_Add2.Text, tb_add3.Text });
+                        CustServices_Rules.AddCustomer(Convert.ToInt32(tbCustomer_ID.Text), tb_FirstName.Text, tb_LastName.Text, tb_CompanyName.Text, tb_Phone.Text, new string[] { tb_add1.Text, tb_Add2.Text, tb_add3.Text });
 
                         MessageBox.Show("The customer " + tb_CompanyName.Text + " was successfully created!");
                         this.Close();
@@ -69,29 +69,52 @@ namespace SocketTechnologiesLtd
                 else
                     MessageBox.Show("The customer " + tb_CompanyName.Text + " already exists please try another company name!");
             }
-        }
+       // }
         #endregion
 
         #region Extra Functions
         private Boolean validateFields()
         {
-            if (tb_FirstName.Text == "")
+            if (tb_FirstName.Text == " ")
+            {
                 MessageBox.Show("Please enter a first name!");
-            else if (tb_LastName.Text == "")
+                return false;
+            }
+            else if (tb_LastName.Text == " ".Trim())
+            {
                 MessageBox.Show("Please enter a last name");
-            else if (tb_Phone.Text == "")
+                return false;
+            }
+            else if (tb_Phone.Text == " ".Trim())
+            {
                 MessageBox.Show("Please enter phone number!");
-            else if (tb_CompanyName.Text == "")
+                return false;
+            }
+            else if (tb_CompanyName.Text == " ".Trim())
+            {
                 MessageBox.Show("Please enter company name!");
-            else if (tb_add1.Text == "")
+                return false;
+            }
+            else if (tb_add1.Text == " ".Trim())
+            {
                 MessageBox.Show("Please enter address 1");
-            else if (tb_Add2.Text == "")
+                return false;
+            }
+            else if (tb_Add2.Text == " ".Trim())
+            {
                 MessageBox.Show("Please enter address 2");
-            else if (tb_add3.Text == "")
+                return false;
+            }
+            else if (tb_add3.Text == " ".Trim())
+            {
                 MessageBox.Show("Please enter address 3");
+                return false;
+            }
             else
-                MessageBox.Show("Please check all fields are filled in.");
-            return false;
+            {
+                //MessageBox.Show("Please check all fields are filled in.");
+                return true;
+            }
 
         }
     }

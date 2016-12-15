@@ -24,6 +24,7 @@ namespace BusinessLayer
         private List<ICustomer> customerList;
         private List<IMaterial> materialsList;
         private List<IProduct> productList;
+        private List<IProduct> standardProductList;
         private List<IProduct> customProductList;
         private List<IDocument> documentList;
         private List<ILineItem> lineItemList;
@@ -75,6 +76,11 @@ namespace BusinessLayer
             get { return productList; }
         }
 
+        public List<IProduct> StandardProductList
+        {
+            get { return standardProductList; }
+        }
+
         public List<IProduct> CustomProductList
         {
             get { return customProductList; }
@@ -119,6 +125,7 @@ namespace BusinessLayer
             customerList = new List<ICustomer>();
             materialsList = new List<IMaterial>();
             productList = new List<IProduct>();
+            standardProductList = new List<IProduct>();
             customProductList = new List<IProduct>();
             documentList = new List<IDocument>();
             lineItemList = new List<ILineItem>();
@@ -140,7 +147,7 @@ namespace BusinessLayer
         }
         #endregion
 
-         #region Fill Lists
+        #region Fill Lists
         public void FillEmployeeList()
         {
             List<string[]> employeeData = DataLayer.GetTableData("employee");
@@ -267,7 +274,7 @@ namespace BusinessLayer
             foreach (String[] row in lineItemData)
             {
                 Guid uid = Guid.NewGuid();
-              //  GenericFactory<ILineItem>.Register(uid, () => new LineItem(Convert.ToInt16(row[0]), row[1], row[2], row[3], row[4]));
+                GenericFactory<ILineItem>.Register(uid, () => new LineItem(Convert.ToInt16(row[0]), Convert.ToInt16(row[1]), Convert.ToDouble(row[2]), Convert.ToDouble(row[3]), Convert.ToDouble(row[4]), Convert.ToInt16(row[5])));
                 ILineItem lineItem = GenericFactory<ILineItem>.Create(uid);
                 LineItemList.Add(lineItem);
             }
@@ -275,6 +282,8 @@ namespace BusinessLayer
 
         public void FillWorkOrderList()
         {
+            List<string[]> lineItemData = DataLayer.GetTableData("WorkOrder");
+
             string[] columns = { "WorkOrder_ID", "dateRequired", "Customer_customer_ID", "Quantity" };
             List<string[]> workOrderData = DataLayer.GetTableData("WorkOrder", columns);
 

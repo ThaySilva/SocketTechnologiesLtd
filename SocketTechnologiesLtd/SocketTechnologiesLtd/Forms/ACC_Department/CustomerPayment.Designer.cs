@@ -55,6 +55,7 @@
             this.lvOrderList.TabIndex = 104;
             this.lvOrderList.UseCompatibleStateImageBehavior = false;
             this.lvOrderList.View = System.Windows.Forms.View.Details;
+            this.lvOrderList.SelectedIndexChanged += new System.EventHandler(this.lvOrderList_SelectedIndexChanged);
             // 
             // invoiceID
             // 

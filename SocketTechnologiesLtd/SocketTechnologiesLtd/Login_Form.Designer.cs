@@ -180,7 +180,6 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Socket Technologies Ltd";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.TopMost = true;
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

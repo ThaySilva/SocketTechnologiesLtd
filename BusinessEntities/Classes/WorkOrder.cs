@@ -55,7 +55,7 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public WorkOrder(int _orderID, int _CustID, int _partNum, int _quantity, DateTime _dateRequired)
+        public WorkOrder(int _orderID,  int _CustID, int _partNum, int _quantity, DateTime _dateRequired )
         {
             this.workOrderID = _orderID;
             this.customerID = _CustID;

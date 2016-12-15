@@ -34,5 +34,10 @@ namespace SocketTechnologiesLtd
         {
 
         }
+
+        private void lvOrderList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace BusinessLayer
         public string getPdfPath() { return pdfPath; }
         #endregion
 
-        #region Set Upload Functions
+        #region Upload and Download Functions
         public static void setUpload(string name, string path, string FolderId)
         {
             uploadName = name;
@@ -83,6 +83,13 @@ namespace BusinessLayer
         public static void AddDocument(string table, string fileId, string date)
         {
             _data.AddRow(table, new string[] { "pathAddress", "dateCreated"}, new string[] { fileId, date});
+        }
+
+        public static void UpdateDocumentResponse(string table, string fileId)
+        {
+            _data.RemoveCriteria();
+            _data.SetCriteria("reportID", fileId);
+            _data.UpdateRowsByKey(table, new string[] { "responded" }, new string[] { "1" });
         }
         #endregion
     }
